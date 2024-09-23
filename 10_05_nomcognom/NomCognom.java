@@ -16,7 +16,7 @@ public class NomCognom {
 
 
         // obté el cognom
-        System.out.println("Cognoms?");
+        System.out.println("Primer cognom?");
         String cognom = scanner.nextLine();
 
         // Mostra resultat
