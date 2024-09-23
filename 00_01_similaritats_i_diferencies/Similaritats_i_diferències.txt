@@ -1,0 +1,27 @@
+// Similaritats i diferències
+// Iker Rivera Garcia
+// 23/09/2024
+
+// Pregunta 1. Què fa el programa?
+Calcula el área de un círculo
+
+// Pregunta 2. Elements comuns
+En todos los ejemplos se definen variables, se lee el input del usuario, se el texto en numero, se calcula el resultado y se muestra el resultado.
+
+// Entrada/sortida
+- Sortida
+C: printf(...)
+Python: print(...)
+Java: System.out.println(...);
+Kotlin: System.out.println(...);
+
+- Entrada
+C: scanf(...) y se asigna lo leido a radi;
+Python: input(...);
+Java / Kotlin: Se declara un BufferedReader y se utiliza la función readLine();
+
+// Variables
+Se declaran PI, área y radi.
+
+// Preferència
+Me gusta más python por lo simple que es.
