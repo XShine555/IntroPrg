@@ -16,7 +16,7 @@
             System.out.println(String.format("El número pensat és %s", numeroPensat));
 
             // Multiplica'l per 3
-            System.out.print(String.format("Quan el multipliques per 3 obtens %s", numero));
+            System.out.println(String.format("Quan el multipliques per 3 obtens %s", numero));
 
             // Suma-li 6
             numero += 6;
