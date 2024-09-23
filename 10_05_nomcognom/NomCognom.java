@@ -20,6 +20,6 @@ public class NomCognom {
         String cognom = scanner.nextLine();
 
         // Mostra resultat
-        System.out.println("Ei " + nom + ", tinc una amiga que també és " +  cognom);
+        System.out.println("Ei " + nom + ", tinc una amiga que també és " +  cognom + ".");
     }
 }
