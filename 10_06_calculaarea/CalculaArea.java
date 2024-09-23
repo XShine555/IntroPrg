@@ -6,7 +6,7 @@ public class CalculaArea {
         System.out.println("Càlcul de l'àrea d'un cercle");
         System.out.println("Introduïu el radi:");
         String linia = Entrada.readLine();
-        System.out.println("Introduïu les unitats:");
+        System.out.println("Introduïu les unitats (ex. cm):");
         String unitats = Entrada.readLine();
         float radi = Float.parseFloat(linia);
         float area =  (float)Math.PI * radi * radi;
