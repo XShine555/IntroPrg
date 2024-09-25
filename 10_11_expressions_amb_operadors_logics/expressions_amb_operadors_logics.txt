@@ -1,0 +1,21 @@
+Enunciat
+
+En aquest exercici construiràs expressions de les següents afirmacions.
+
+Pots fer servir tots els operadors aritmètics, relacionals i els lògics &&, || i !.
+
+En alguns casos, podràs simplificar les expressions fent servir operadors relacionals diferents. Et proposo que incloguis les dues (o més opcions) de manera que practiquis els operadors lògics. Per la mateixa raó, intenta evitar necessitar crear variables temporals.
+
+la Clara és més jove que tu. edadClara < miEdad;
+
+la Clara i el Marc són més joves que tu. edadClara < miEdad && edadMarc < miEdad;
+
+la Clara és més jove que tu i tu ets més jove que el Marc. edadClara < miEdad && miEdad < edadMarc;
+
+la Clara no és més jove que el Marc. edadClara > edadMarc;
+
+no és cert que el Marc sigui més jove que la Clara. edadMarc > edadClara;
+
+Ni el Marc és més jove que la Clara ni tu ets més jove que el Marc. edadMarc > edadClara && edadMarc > miEdad;
+
+Tu ets més gran que la Clara i el Marc junts o bé la Clara i el Marc tenen la mateixa edat. miEdad > edadClara + edadMarc || edadClara == edadMarc;
