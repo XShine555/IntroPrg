@@ -1,5 +1,5 @@
 /*
-* CAlcula el area de un circulo.
+* Calcula el area de un circulo.
 * Primero se introduce el numero y despues la unidad.
 */
 public class CalculaArea {
