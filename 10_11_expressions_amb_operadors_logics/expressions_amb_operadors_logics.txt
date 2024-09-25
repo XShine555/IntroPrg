@@ -19,3 +19,7 @@ no és cert que el Marc sigui més jove que la Clara. edadMarc > edadClara;
 Ni el Marc és més jove que la Clara ni tu ets més jove que el Marc. edadMarc > edadClara && edadMarc > miEdad;
 
 Tu ets més gran que la Clara i el Marc junts o bé la Clara i el Marc tenen la mateixa edat. miEdad > edadClara + edadMarc || edadClara == edadMarc;
+
+8. La suma de la edad de Clara y Marc es mayor a 21. edadClara + edadMarc > 21;
+
+9. Tu edad mas la de Clara es mayor que la de Marc. edadClara + edadClara > edadMarc;
