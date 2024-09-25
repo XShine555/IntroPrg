@@ -1,0 +1,75 @@
+Enunciat
+
+Fent servir taules de veritat, comprova que les següents expressions són equivalents:
+
+true && A, A
+
+true	A	&&
+
+true	true	true
+
+true	false	false
+
+A && A, A
+
+A	&&
+
+true	true
+
+false	false
+
+A || false, A
+
+A	false	||
+
+true	false	true
+
+false	false	false
+
+A || A, A
+
+A	A	||
+
+true	true	true
+
+false	false	false
+
+A && false, false
+
+A	false	&&
+
+true	false	false
+
+false	false	false
+
+A || true, true
+
+A	true	||
+
+true	true	true
+
+false	true	true
+
+! (A && B), !A || !B
+
+A	B	&&	||
+
+true	true	true	false
+
+true	false	false	true
+
+false	true	false	true
+
+false	false	false	false
+
+! (A || B), !A && !B
+
+A	B	||	&&
+
+true	true	false	false
+
+false	true	false	true
+
+true	false	false	true
+
+false	false	true	true
