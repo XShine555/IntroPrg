@@ -1,0 +1,43 @@
+Enunciat
+
+Composa una taula de veritat per cadascuna de les següents afirmacions:
+
+la Clara és major d'edat o bé la Clara és més jove que el Marc
+
+1. La Clara es mayor de edad	La Clara es mas joven que el Marc	La Clara es mas joven que el Marc o es mayor de edad
+
+2.	Verdadero			Verdadero				Verdadero
+
+3.	Falso				Verdadero				Verdadero
+
+4.	Falso				Falso					Falso
+
+5.	Verdadero			Falso					Verdadero
+
+Al menys un de vosaltres, la Clara, el Marc o tu, és major d'edat
+
+1. Soy mayor de edad	La Clara es mayor de edad	El Marc es mayor de edad	Al menos uno es mayor de edad
+
+	Verdadero		Verdadero			Verdadero			Verdadero
+	
+	Falso			Verdadero			Verdadero			Verdadero
+
+	Verdadero		Falso				Verdadero			Verdadero
+
+	Verdadero		Verdadero			Falso				Verdadero
+
+	Falso			Falso				Falso				Falso
+
+la Clara és major d'edat, i tu ets major que el Marc però no major que la Clara
+
+1. La Clara es mayor de edad	Soy mayor que el Marc pero no que la Clara
+
+	Verdadero			Falso
+
+	Falso				Verdadero
+
+	Falso				Falso
+
+Atenció a la coma! Fa de parèntesis per separar la primera subexpressió de la resta!
+
+
