@@ -1,5 +1,6 @@
 /*
-* █████
+* CAlcula el area de un circulo.
+* Primero se introduce el numero y despues la unidad.
 */
 public class CalculaArea {
     public static void main(String[] args) {
