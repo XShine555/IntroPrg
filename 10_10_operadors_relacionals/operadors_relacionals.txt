@@ -25,3 +25,7 @@ tens tants companys a classe com anys. compañerosEnClase == años;
 el Renat té quatre potes. piernasRenat > 4;
 
 estem a més de 28 graus. grados > 28
+
+11. Tu edad es menor a 21. tuEdad < 21;
+
+12. El color de tu camisa es rojo. colorCamiseta == "Rojo";
