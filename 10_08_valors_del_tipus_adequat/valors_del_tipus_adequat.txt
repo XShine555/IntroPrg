@@ -1,0 +1,15 @@
+Considera variables que hagin de referenciar a les següents dades:
+
+la teva talla de sabates. Double
+
+la data del teu aniversari. Date
+
+el teu nom. String
+
+el color de fons del teu escriptori. String / Enum con los colores disponibles.
+
+si t'agrada o no el gust de la llimona. Bool
+
+la lletra de la teva cançó preferida. String
+
+la llista de pel·lícules i llibres que més t'han marcat. List<String>
