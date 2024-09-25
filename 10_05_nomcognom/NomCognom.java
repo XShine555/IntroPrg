@@ -8,16 +8,14 @@ import java.util.*;
 
 public class NomCognom {
     public static void main(String[] args) {
-	Scanner scanner = new Scanner(System.in);
-
         // obté el nom
         System.out.println("Nom?");
-        String nom = scanner.nextLine();
+        String nom = Entrada.readLine();
 
 
         // obté el cognom
         System.out.println("Primer cognom?");
-        String cognom = scanner.nextLine();
+        String cognom = Entrada.readLine();
 
         // Mostra resultat
         System.out.println("Ei " + nom + ", tinc una amiga que també és " +  cognom + ".");
