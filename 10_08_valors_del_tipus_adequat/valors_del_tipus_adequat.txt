@@ -1,6 +1,6 @@
 Considera variables que hagin de referenciar a les següents dades:
 
-la teva talla de sabates. Double
+la teva talla de sabates. double
 
 la data del teu aniversari. Date
 
@@ -8,7 +8,7 @@ el teu nom. String
 
 el color de fons del teu escriptori. String / Enum con los colores disponibles.
 
-si t'agrada o no el gust de la llimona. Bool
+si t'agrada o no el gust de la llimona. bool
 
 la lletra de la teva cançó preferida. String
 
