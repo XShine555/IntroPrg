@@ -47,14 +47,14 @@ int edadClara = 15;
 int miEdad = 18;
 int edadMarc = 19;
 
-1. edadClara >= 18		
+1. edadClara >= 18		miEdad > edadMarc && miEdad < edadClara		
+
+	Falso				Falso
 
 	Verdadero			Falso
 
 	Falso				Verdadero
 
-	Falso				Falso
+	Verdadero			Verdadero
 
 Atenció a la coma! Fa de parèntesis per separar la primera subexpressió de la resta!
-
-
