@@ -19,7 +19,7 @@ public class CalculadoraSenzilla {
 				result = num1*num2;
 				break;
 			case "/":
-				if (num1 == 0.0) {
+				if (num2 == 0.0) {
 					System.out.println("No es pot dividir entre 0");
 					return;
 				}
