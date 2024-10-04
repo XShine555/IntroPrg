@@ -2,7 +2,7 @@ public class CalculadoraSenzilla {
 	public static void main(String[] args) {
 		System.out.println("Operand1?");
 		float num1 = Float.parseFloat(Entrada.readLine());
-		System.out.println("Operador");
+		System.out.println("Operador?");
 		String op = Entrada.readLine();
 		System.out.println("Operand2?");
 		float num2 = Float.parseFloat(Entrada.readLine());
