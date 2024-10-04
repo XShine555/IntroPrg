@@ -8,8 +8,11 @@ public class Semafor {
 		else if (color.equals("groc")) {
 			System.out.println("corre!");
 		}
-		else {
+		else if (color.equals("verd")) {
 			System.out.println("passa");
+		}
+		else {
+			System.out.println("ves a l'oculista");
 		}
 	}
 }
