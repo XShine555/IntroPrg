@@ -19,6 +19,6 @@ public class MesosAnys {
 			lastYear--;
 		}
 
-		System.out.println(String.format("Mes anterior %s/%s i mes seguent %s/%s", lastMonth, lastYear, nextMonth, nextYear) );
+		System.out.println(String.format("Mes anterior %s/%s i mes següent %s/%s", lastMonth, lastYear, nextMonth, nextYear) );
 	}
 }
