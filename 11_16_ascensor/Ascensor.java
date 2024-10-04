@@ -28,6 +28,7 @@ public class Ascensor {
 					case "baixar dos" -> "planta baixa";
 					default -> "error";
 				};
+				break;
 			default:
 				nuevoPis = "error";
 				break;
