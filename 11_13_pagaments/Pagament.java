@@ -8,7 +8,7 @@ public class Pagament {
 		int total = preu - paga;
 
 		if (total == 0) {
-			System.out.println("No sobra in falta res");
+			System.out.println("No sobra ni falta res");
 		}
 		else if (total > 0) {
 			System.out.format("Falten %s€", total);
