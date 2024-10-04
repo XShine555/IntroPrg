@@ -1,6 +1,6 @@
 public class CalculadoraSenzilla {
 	public static void main(String[] args) {
-		System.out.println("Operand 1?");
+		System.out.println("Operand1?");
 		float num1 = Float.parseFloat(Entrada.readLine());
 		System.out.println("Operador");
 		String op = Entrada.readLine();
