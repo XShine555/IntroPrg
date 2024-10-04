@@ -6,14 +6,14 @@ public class MesosAnys {
 		int year = Integer.parseInt(Entrada.readLine());
 
 		int nextMonth = month + 1;
-		int nextYear = year + 1;
+		int nextYear = year;
 		if (nextMonth > 12) {
 			nextMonth = 1;
 			nextYear++;
 		}
 
 		int lastMonth = month - 1;
-		int lastYear = year - 1;
+		int lastYear = year;
 		if (lastMonth < 1) {
 			lastMonth = 12;
 			lastYear--;
