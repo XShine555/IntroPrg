@@ -3,7 +3,7 @@ public class CalculadoraSenzilla {
 		System.out.println("Operand1?");
 		double num1 = Double.parseDouble(Entrada.readLine());
 		System.out.println("Operador?");
-		String op = Entrada.readLine().charAt(0);
+		char op = Entrada.readLine().charAt(0);
 		System.out.println("Operand2?");
 		double num2 = Double.parseDouble(Entrada.readLine());
 
