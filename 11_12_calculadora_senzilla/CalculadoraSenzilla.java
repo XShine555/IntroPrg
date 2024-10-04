@@ -29,6 +29,6 @@ public class CalculadoraSenzilla {
 				System.out.format("L'operador %s no està disponible", op);
 				return;
 		}
-		System.out.format("%f %s %d = %f", num1, op, num2, result);
+		System.out.format("%s %s %s = %s", num1, op, num2, result);
 	}
 }
