@@ -6,6 +6,6 @@
 public class ParellSenar {
     public static void main(String[] args) {
         int numero = Integer.parseInt(args[0]);
-        System.out.println(numero % 2 == 0 ? String.format("Él número %s és parell", numero) : String.format("El número %s és senar", numero));
+        System.out.println(numero % 2 == 0 ? String.format("El número %s és parell", numero) : String.format("El número %s és senar", numero));
     }
 }
