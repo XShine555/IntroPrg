@@ -2,13 +2,13 @@ public class MetgeVirtual {
 	public static void main(String[] args) {
 		System.out.println("esternuts? (sí o no)");
 		String estornuda = Entrada.readLine();
-		if (estornuda.equals("sí")) {
+		if (estornuda.equals("si") || estornuda.equals("sí")) {
 			System.out.println("mal de cap? (sí o no)");
 			String malDeCabeza = Entrada.readLine();
-			if (malDeCabeza == "sí") {
+			if (malDeCabeza.equals("si") || malDeCabeza.equals("sí")) {
 				System.out.println("problemes d'estómac? (sí o no)");
 				String problemasDeEstomago = Entrada.readLine();
-				if (problemasDeEstomago == "sí") {
+				if (problemasDeEstomago.equals("sí")) {
 					System.out.println("pren àcid acetil salicílic");
 				}
 				else {
@@ -20,7 +20,7 @@ public class MetgeVirtual {
 		else {
 			System.out.println("tos? (sí o no)");
 			String tos = Entrada.readLine();
-			if (tos == "sí") {
+			if (tos.equals("si") || tos.equals("sí")) {
 				System.out.println("edad?");
 				int edad = Integer.parseInt(Entrada.readLine());
 				if (edad > 12) {
