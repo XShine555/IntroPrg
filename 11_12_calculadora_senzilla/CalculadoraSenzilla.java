@@ -1,24 +1,24 @@
 public class CalculadoraSenzilla {
 	public static void main(String[] args) {
 		System.out.println("Operand1?");
-		float num1 = Float.parseFloat(Entrada.readLine());
+		double num1 = Double.parseDouble(Entrada.readLine());
 		System.out.println("Operador?");
-		String op = Entrada.readLine();
+		String op = Entrada.readLine().charAt(0);
 		System.out.println("Operand2?");
-		float num2 = Float.parseFloat(Entrada.readLine());
+		double num2 = Double.parseDouble(Entrada.readLine());
 
-		float result = 0f;
+		double result = 0f;
 		switch (op) {
-			case "+":
+			case '+':
 				result = num1+num2;
 				break;
-			case "-":
+			case '-':
 				result = num1-num2;
 				break;
-			case "*":
+			case '*':
 				result = num1*num2;
 				break;
-			case "/":
+			case '/':
 				if (num2 == 0.0) {
 					System.out.println("No es pot dividir entre 0");
 					return;
@@ -26,9 +26,9 @@ public class CalculadoraSenzilla {
 				result = num1/num2;
 				break;
 			default:
-				System.out.println(String.format("L'operador %s no està disponible", op));
+				System.out.format("L'operador %s no està disponible", op);
 				return;
 		}
-		System.out.println(String.format("%s %s %s = %s", num1, op, num2, result));
+		System.out.format("%f %s %f = %f", num1, op, num2, result);
 	}
 }
