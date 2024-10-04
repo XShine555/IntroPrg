@@ -8,7 +8,6 @@ public class CalculadoraSenzilla {
 		float num2 = Float.parseFloat(Entrada.readLine());
 
 		float result = 0f;
-
 		switch (op) {
 			case "+":
 				result = num1+num2;
@@ -24,6 +23,8 @@ public class CalculadoraSenzilla {
 					System.out.println("No es pot dividir entre 0");
 					return;
 				}
+				result = num1/num2;
+				break;
 			default:
 				System.out.println(String.format("L'operador %s no està disponible", op));
 				return;
