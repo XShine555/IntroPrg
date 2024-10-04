@@ -1,3 +1,10 @@
+/*
+ * Exercici 11_06. El classificador d'autocaravanes
+ * 04/10/2024
+ * Iker Rivera Garcia
+ * Programa que clasifica las autocaravanas dependiendo del precio. 
+ */
+
 public class ClassificaCaravana {
 	public static void main(String[] args) {
 		int precio = Integer.parseInt(args[0]);

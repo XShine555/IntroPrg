@@ -1,3 +1,10 @@
+/*
+ * Exercici 11_15. El nombre de fills
+ * 04/10/2024
+ * Iker Rivera Garcia
+ * Un programa que dependiendo de los hijos que tengas muestra un mensaje por consola u otro.
+ */
+
 public class Fills {
 	public static void main(String[] args) {
 		System.out.println("Quants fills tens?");

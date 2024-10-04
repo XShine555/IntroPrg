@@ -1,4 +1,7 @@
 /*
+ * Exercici 11_02. Dos en ordre
+ * 04/10/2024
+ * Iker Rivera Garcia 
  * Programa que ordena dos nombres
  */
 public class DosEnOrdre {

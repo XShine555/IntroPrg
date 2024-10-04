@@ -1,3 +1,10 @@
+/*
+ * Exercici 11_14. La guia de semàfors
+ * 04/10/2024
+ * Iker Rivera Garcia
+ * Programa que dependiendo del color del semáforo dice: espera, corre, pasa o ves al oculista.
+ */
+
 public class Semafor {
 	public static void main(String[] args) {
 		System.out.println("Color?");

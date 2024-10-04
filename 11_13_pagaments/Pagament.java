@@ -1,3 +1,10 @@
+/*
+ * Exercici 11_13. Pagaments
+ * 04/10/2024
+ * Iker Rivera Garcia
+ * Calcula sobre un precio si faltan, sobran o no faltan ni sobra dinero.
+ */
+
 public class Pagament {
 	public static void main(String[] args) {
 		System.out.println("Preu?");
@@ -5,16 +12,14 @@ public class Pagament {
 		System.out.println("Paga?");
 		int paga = Integer.parseInt(Entrada.readLine());
 
-		int total = preu - paga;
-
-		if (total == 0) {
-			System.out.println("No sobra ni falta res");
+		if (preu > paga) {
+			System.out.format("Falten %d€", preu - paga);
 		}
-		else if (total > 0) {
-			System.out.format("Falten %s€", total);
+		else if (preu < paga) {
+			System.out.format("Sobren %d€", paga - preu);
 		}
 		else {
-			System.out.format("Sobren %s€", Math.abs(total));
+			System.out.println("No sobra ni falta res");
 		}
 	}
 }

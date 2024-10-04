@@ -1,3 +1,10 @@
+/*
+ * Exercici 11_11. Tres en ordre
+ * 04/10/2024
+ * Iker Rivera Garcia
+ * Programa que ordena tres números de menor a mayor, usando Arrays.Sort();
+ */
+
 import java.util.Arrays;
 
 public class TresEnOrdre {
@@ -12,6 +19,6 @@ public class TresEnOrdre {
 		int[] intArray = {arg1, arg2, arg3};
 		Arrays.sort(intArray);
 
-		System.out.println(String.format("%s, %s i %s", intArray[0], intArray[1], intArray[2]));
+		System.out.format("%d, %d i %d", intArray[0], intArray[1], intArray[2]);
 	}
 }

@@ -1,3 +1,10 @@
+/*
+ * Exercici 11_16. L'ascensor
+ * 04/10/2024
+ * Iker Rivera Garcia
+ * Programa que simula un ascensor y te permite ir de planta a planta.
+ */
+
 public class Ascensor {
 	public static void main(String[] args) {
 		System.out.println("pis?");

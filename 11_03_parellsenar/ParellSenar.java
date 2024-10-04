@@ -1,4 +1,7 @@
-/*
+/* 
+ * Exercici 11_03. Parells i senars
+ * 04/10/2024
+ * Iker Rivera Garcia 
  * Programa que indica si el número proporcionat com a primer argument
  * és parell o senar.
  * Si no s'especifica cap número, el resultat és indeterminat.

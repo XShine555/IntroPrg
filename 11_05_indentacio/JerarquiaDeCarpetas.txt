@@ -1,3 +1,9 @@
+/*
+ * Exercici 11_05. Els blocs d'un programa
+ * 04/10/2024
+ * Iker Rivera Garcia 
+ */
+
 public class DosEnOrdre
 └── public static void main(String[] args)
     ├── System.out.println("Primer?");

@@ -1,3 +1,10 @@
+/*
+ * Exercici 11_10. Mesos i anys
+ * 04/10/2024
+ * Iker Rivera Garcia
+ *Programa que calcula el mes siguiente y el anterior.
+ */
+
 public class MesosAnys {
 	public static void main(String[] args) {
 		System.out.println("Mes?");
@@ -19,6 +26,6 @@ public class MesosAnys {
 			lastYear--;
 		}
 
-		System.out.println(String.format("Mes anterior %s/%s i mes següent %s/%s", lastMonth, lastYear, nextMonth, nextYear) );
+		System.out.format("Mes anterior %d/%d i mes següent %d/%d", lastMonth, lastYear, nextMonth, nextYear);
 	}
 }
