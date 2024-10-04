@@ -7,10 +7,10 @@ public class ParellSenar {
     public static void main(String[] args) {
         int numero = Integer.parseInt(args[0]);
         if (numero % 2 == 0) {
-		System.out.println(String.format("El número %s es parell", numero));
+		System.out.println(String.format("El número %s és parell", numero));
 	}
 	else {
-		System.out.println(String.format("El número %s es senar", numero));
+		System.out.println(String.format("El número %s és senar", numero));
 	}
     }
 }
