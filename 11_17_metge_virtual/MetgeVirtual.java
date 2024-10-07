@@ -25,7 +25,7 @@ public class MetgeVirtual {
 					System.out.println("pren carmel de mel");
 				}
 				else {
-					System.out.println("prem carmel d’eucaliptus");
+					System.out.println("pren carmel d’eucaliptus");
 				}
 			}
 		}
@@ -40,7 +40,7 @@ public class MetgeVirtual {
 					System.out.println("pren carmel de mel");
 				}
 				else {
-					System.out.println("prem carmel d’eucaliptus");
+					System.out.println("pren carmel d’eucaliptus");
 				}
 			}
 		}
