@@ -22,7 +22,7 @@ public class MetgeVirtual {
 				System.out.println("edat?");
 				int edad = Integer.parseInt(Entrada.readLine());
 				if (edad < 12) {
-					System.out.println("pren un caramel de mel");
+					System.out.println("pren caramel de mel");
 				}
 				else {
 					System.out.println("caramel d’eucaliptus");
@@ -37,7 +37,7 @@ public class MetgeVirtual {
 				System.out.println("edat?");
 				int edad = Integer.parseInt(Entrada.readLine());
 				if (edad < 12) {
-					System.out.println("pren un caramel de mel");
+					System.out.println("pren caramel de mel");
 				}
 				else {
 					System.out.println("caramel d’eucaliptus");
