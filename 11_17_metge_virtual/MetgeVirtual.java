@@ -16,22 +16,22 @@ public class MetgeVirtual {
 				}
 			}
 			else {
-			System.out.println("tos? (sí o no)");
-			String tos = Entrada.readLine();
-			if (tos.equals("si") || tos.equals("sí")) {
-				System.out.println("edat?");
-				int edad = Integer.parseInt(Entrada.readLine());
-				if (edad < 12) {
-					System.out.println("pren carmel de mel");
+				System.out.println("tos? (sí o no)");
+				String tos = Entrada.readLine();
+				if (tos.equals("si") || tos.equals("sí")) {
+					System.out.println("edat?");
+					int edad = Integer.parseInt(Entrada.readLine());
+					if (edad < 12) {
+						System.out.println("pren carmel de mel");
+					}
+					else {
+						System.out.println("pren carmel d'eucaliptus");
+					}
 				}
 				else {
-					System.out.println("pren carmel d'eucaliptus");
+					System.out.println("vine a la consulta");
 				}
 			}
-			else {
-				System.out.println("vine a la consulta");
-			}
-		}
 		}
 		else {
 			System.out.println("tos? (sí o no)");
