@@ -15,6 +15,20 @@ public class MetgeVirtual {
 					System.out.println("prem aspirina");
 				}
 			}
+			else {
+			System.out.println("tos? (sí o no)");
+			String tos = Entrada.readLine();
+			if (tos.equals("si") || tos.equals("sí")) {
+				System.out.println("edad?");
+				int edad = Integer.parseInt(Entrada.readLine());
+				if (edad > 12) {
+					System.out.println("pren un caramel de mel");
+				}
+				else {
+					System.out.println("caramel d’eucaliptus");
+				}
+			}
+		}
 		}
 		else {
 			System.out.println("tos? (sí o no)");
