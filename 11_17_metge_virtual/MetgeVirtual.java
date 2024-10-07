@@ -12,7 +12,7 @@ public class MetgeVirtual {
 					System.out.println("prem paracetamol");
 				}
 				else {
-					System.out.println("pren una aspirina.");
+					System.out.println("prem una aspirina.");
 				}
 				return;
 			}
