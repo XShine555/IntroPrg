@@ -46,6 +46,9 @@ public class MetgeVirtual {
 					System.out.println("pren carmel d'eucaliptus");
 				}
 			}
+			else {
+				System.out.println("vine a la consulta");
+			}
 		}
 	}
 }
