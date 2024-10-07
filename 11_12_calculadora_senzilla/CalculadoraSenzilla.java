@@ -22,7 +22,7 @@ public class CalculadoraSenzilla {
 				System.out.format("%s %s %s = %s", num1, op, num2, num1-num2);
 				break;
 			case '*':
-				System.out.format("%s %s %s = %s", num1, op, num2, num1-num2);
+				System.out.format("%s %s %s = %s", num1, op, num2, num1*num2);
 			case '/':
 				if (num2 == 0) {
 					System.out.println("No es pot dividir entre 0");
