@@ -21,7 +21,7 @@ public class MetgeVirtual {
 			if (tos.equals("si") || tos.equals("sí")) {
 				System.out.println("edat?");
 				int edad = Integer.parseInt(Entrada.readLine());
-				if (edad > 12) {
+				if (edad < 12) {
 					System.out.println("pren un caramel de mel");
 				}
 				else {
@@ -36,7 +36,7 @@ public class MetgeVirtual {
 			if (tos.equals("si") || tos.equals("sí")) {
 				System.out.println("edat?");
 				int edad = Integer.parseInt(Entrada.readLine());
-				if (edad > 12) {
+				if (edad < 12) {
 					System.out.println("pren un caramel de mel");
 				}
 				else {
