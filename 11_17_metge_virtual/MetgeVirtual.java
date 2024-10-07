@@ -9,7 +9,7 @@ public class MetgeVirtual {
 				System.out.println("problemes d'estòmac? (sí o no)");
 				String problemasDeEstomago = Entrada.readLine();
 				if (problemasDeEstomago.equals("sí")) {
-					System.out.println("pren paracetamol");
+					System.out.println("prem paracetamol");
 				}
 				else {
 					System.out.println("pren una aspirina.");
