@@ -1,3 +1,10 @@
+/*
+*  11_17_metge_virtual
+*  Iker Rivera Garcia
+*  9/10/2024
+*  Programa senzillo que dependiendo de lo que repsonda el usuario da un diagnostico u otro.
+*/
+
 public class MetgeVirtual {
 	public static void main(String[] args) {
 		System.out.println("esternuts? (sí o no)");
@@ -25,7 +32,7 @@ public class MetgeVirtual {
 						System.out.println("pren un carmel de mel");
 					}
 					else {
-						System.out.println("pren carmel d'eucaliptus");
+						System.out.println("pren un carmel d'eucaliptus");
 					}
 				}
 				else {
