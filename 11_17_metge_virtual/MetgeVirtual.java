@@ -6,7 +6,7 @@ public class MetgeVirtual {
 			System.out.println("mal de cap? (sí o no)");
 			String malDeCabeza = Entrada.readLine();
 			if (malDeCabeza.equals("si") || malDeCabeza.equals("sí")) {
-				System.out.println("problemes d'estòmac? (sí o no)");
+				System.out.println("problemes d'estómac? (sí o no)");
 				String problemasDeEstomago = Entrada.readLine();
 				if (problemasDeEstomago.equals("sí")) {
 					System.out.println("prem paracetamol");
