@@ -1,51 +1,41 @@
 /*
-*  11_17_metge_virtual
-*  Iker Rivera Garcia
-*  9/10/2024
-*  Programa senzillo que dependiendo de lo que repsonda el usuario da un diagnostico u otro.
+ * 11_17_metge_virtual
+ * Iker Rivera Garcia
+ * 10/09/2024
+ * Un medico virtual que te da un diagnostico dependiendo de las respuestas.
 */
 
 public class MetgeVirtual {
 	public static void main(String[] args) {
+		boolean tieneEstornudos = false, tieneProblemasEstomago = false, tieneMalDeCabeza = false, tieneTos = false;
+
 		System.out.println("esternuts? (sí o no)");
-		String estornuda = Entrada.readLine();
-		if (estornuda.equals("si") || estornuda.equals("sí")) {
+		tieneEstornudos = Entrada.readLine().equals("sí");
+
+		if (tieneEstornudos) {
 			System.out.println("mal de cap? (sí o no)");
-			String malDeCabeza = Entrada.readLine();
-			if (malDeCabeza.equals("si") || malDeCabeza.equals("sí")) {
+			tieneMalDeCabeza = Entrada.readLine().equals("sí");
+
+			if (tieneMalDeCabeza) {
 				System.out.println("problemes d'estómac? (sí o no)");
-				String problemasDeEstomago = Entrada.readLine();
-				if (problemasDeEstomago.equals("sí")) {
+				tieneProblemasEstomago = Entrada.readLine().equals("sí");
+
+				if (tieneProblemasEstomago) {
 					System.out.println("pren paracetamol");
 				}
 				else {
 					System.out.println("pren aspirina");
 				}
 			}
-			else {
-				System.out.println("tos? (sí o no)");
-				String tos = Entrada.readLine();
-				if (tos.equals("si") || tos.equals("sí")) {
-					System.out.println("edat?");
-					int edad = Integer.parseInt(Entrada.readLine());
-					if (edad < 12) {
-						System.out.println("pren un carmel de mel");
-					}
-					else {
-						System.out.println("pren un carmel d'eucaliptus");
-					}
-				}
-				else {
-					System.out.println("vine a la consulta");
-				}
-			}
 		}
-		else {
+		if (!tieneMalDeCabeza) {
 			System.out.println("tos? (sí o no)");
-			String tos = Entrada.readLine();
-			if (tos.equals("si") || tos.equals("sí")) {
+			tieneTos = Entrada.readLine().equals("sí");
+
+			if (tieneTos) {
 				System.out.println("edat?");
 				int edad = Integer.parseInt(Entrada.readLine());
+
 				if (edad < 12) {
 					System.out.println("pren un carmel de mel");
 				}
@@ -53,9 +43,9 @@ public class MetgeVirtual {
 					System.out.println("pren un carmel d'eucaliptus");
 				}
 			}
-			else {
-				System.out.println("vine a la consulta");
-			}
+		}
+		if (!tieneMalDeCabeza && !tieneTos) {
+			System.out.println("vine a la consulta");
 		}
 	}
 }
