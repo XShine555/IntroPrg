@@ -3,6 +3,7 @@ public class SumaNotes {
 		int valor;
 		int suma = 0;
 		for (;;) {
+			System.out.println("Introdueix una nota");
 			valor = Integer.parseInt(Entrada.readLine());
 			if (valor < 0 || valor > 100) {
 				break;
