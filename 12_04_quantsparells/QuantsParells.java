@@ -7,7 +7,7 @@ public class QuantsParells {
 			if (valor < 0) {
 				break;
 			}
-			if (valor % 2 == 0) {
+			else if (valor % 2 == 0) {
 				par++;
 			}
 		}
