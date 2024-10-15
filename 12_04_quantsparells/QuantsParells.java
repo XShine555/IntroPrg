@@ -7,10 +7,10 @@ public class QuantsParells {
 			if (valor < 0) {
 				break;
 			}
-			else if (valor % 2 == 0) {
+			if (valor % 2 == 0) {
 				par++;
 			}
 		}
-		System.out.format("Nombre de parells introduïts: %", par);
+		System.out.format("Nombre de parells introduïts: %s", par);
 	}
 }
