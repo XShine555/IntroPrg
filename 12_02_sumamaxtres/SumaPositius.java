@@ -1,3 +1,11 @@
+/*
+ * Exercici 12_02. Suma com a molt tres positius
+ * Iker Rivera Garcia
+ * 16/09/2024
+ * Programa que te pedirá tres números positivos, acaso que pongas un número negativo, en este caso ya no te pedirá el resto.
+*/
+
+
 public class SumaPositius {
     public static void main(String[] args) {
 
