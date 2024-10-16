@@ -1,3 +1,10 @@
+/*
+ * Exercici 12_01. Suma tres positius
+ * Iker Rivera Garcia
+ * 16/09/2924
+ * Programa que suma dos numeros si son positivos.
+*/
+
 public class SumaPositius {
     public static void main(String[] args) {
 
