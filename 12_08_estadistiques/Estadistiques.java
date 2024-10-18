@@ -1,6 +1,6 @@
 public class Estadistiques {
 	public static void main(String[] args) {
-		float contador = 0;
+		double contador = 0;
 
 		System.out.println("Introdueix un valor");
 		int valor = Integer.parseInt(Entrada.readLine());
