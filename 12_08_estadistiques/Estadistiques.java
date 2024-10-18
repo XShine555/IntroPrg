@@ -6,6 +6,10 @@ public class Estadistiques {
 		int value = Integer.parseInt(Entrada.readLine());
 		int min = value, max = value, total = 0;
 
+		if (value >= 0) {
+			contador++;
+		}
+
 		while (value >= 0) {
 			System.out.println("Introdueix un valor");
 			value = Integer.parseInt(Entrada.readLine());
