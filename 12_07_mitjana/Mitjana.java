@@ -1,6 +1,6 @@
 public class Mitjana {
 	public static void main(String[] args) {
-		int contador = 0;
+		float contador = 0;
 		int total = 0;
 		for (; ;) {
 			System.out.println("Introdueix un valor");
