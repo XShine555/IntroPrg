@@ -14,5 +14,6 @@ public class Lloro {
 			}
 			System.out.println("El lloro repeteix: " + input);
 		}
+		System.out.println("Adéu");
 	}
 }
