@@ -16,7 +16,7 @@ public class Estadistiques {
 				valor = Integer.parseInt(Entrada.readLine());
 
 				if (valor >= 0) {
-					if (min < valor) {
+					if (valor < min) {
 						min = valor;
 					}
 					if (valor > max) {
