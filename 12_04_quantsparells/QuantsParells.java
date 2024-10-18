@@ -8,15 +8,14 @@
 public class QuantsParells {
 	public static void main(String[] args) {
 		int par = 0;
-		for (;;) {
-			System.out.println("Introdueix un valor");
-			int valor = Integer.parseInt(Entrada.readLine());
-			if (valor < 0) {
-				break;
-			}
+		System.out.println("Introdueix un valor");
+		int valor = Integer.parseInt(Entrada.readLine());
+		while (valor >= 0) {
 			if (valor % 2 == 0) {
 				par++;
 			}
+			System.out.println("Introdueix un valor");
+			valor = Integer.parseInt(Entrada.readLine());
 		}
 		System.out.format("Nombre de parells introduïts: %s", par);
 	}
