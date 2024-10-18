@@ -8,7 +8,9 @@ public class SequenciaCreixent {
 
 			System.out.println("Introdueix un valor:");
 			value = Integer.parseInt(Entrada.readLine());
-			cont++;
+			if (value > last) {
+				cont++;
+			}
 		}
 		while (value > last);
 		System.out.println("Longitud de la seqüència creixent: " + cont);
