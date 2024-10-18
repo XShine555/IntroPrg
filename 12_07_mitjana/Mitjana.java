@@ -2,21 +2,23 @@ public class Mitjana {
 	public static void main(String[] args) {
 		float contador = 0;
 		int total = 0;
-		for (; ;) {
-			System.out.println("Introdueix un valor");
-			int value = Integer.parseInt(Entrada.readLine());
-			if (value < 0 || value > 100) {
-				break;
-			}
+
+		System.out.println("Introdueix un valor");
+		int value = Integer.parseInt(Entrada.readLine());
+
+		while (value >= 0) {
 			contador++;
 			total += value;
+
+			System.out.println("Introdueix un valor");
+			value = Integer.parseInt(Entrada.readLine());
 		}
+
 		if (contador == 0) {
 			System.out.println("Cap nota vàlida introduïda");
 		}
 		else {
-			float value = total / contador;
-			System.out.format("La mitjana de les notes vàlides és %s", value);
+			System.out.format("La mitjana de les notes vàlides és %s", total / contador);
 		}
 	}
 }
