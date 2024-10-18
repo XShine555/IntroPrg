@@ -20,6 +20,7 @@ public class Estadistiques {
 		if (contador == 0) {
 			System.out.println("Cap valor vàlid introduït");
 		} else {
+			System.out.println(min);
 			System.out.println("El mínim és: " + min);
 			System.out.println("La mitjana és: " + total / contador);
 			System.out.println("El màxim és: " + max);
