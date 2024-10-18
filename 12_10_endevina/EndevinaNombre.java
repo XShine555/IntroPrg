@@ -8,10 +8,10 @@ public class EndevinaNombre {
 			valorInput = Integer.parseInt(Entrada.readLine());
 
 			String message;
-			if (valorInput > valorPensado) {
+			if (valorInput < valorPensado) {
 				message = "És més gran que " + valorInput;
 			}
-			else if (valorInput < valorPensado) {
+			else if (valorInput > valorPensado) {
 				message = "És més petit que " + valorInput;
 			}
 			else if (valorInput > 100) {
