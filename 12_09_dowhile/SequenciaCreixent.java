@@ -11,6 +11,6 @@ public class SequenciaCreixent {
 			cont++;
 		}
 		while (value > last);
-		System.out.println("Longitud de la següència creixent: " + cont);
+		System.out.println("Longitud de la seqüència creixent: " + cont);
 	}
 }
