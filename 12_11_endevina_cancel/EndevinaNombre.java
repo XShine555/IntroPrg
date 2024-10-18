@@ -1,18 +1,18 @@
 public class EndevinaNombre {
 	public static void main(String[] args) {
 		int valorInput = 0;
-		boolean isCancelado = false;
+		boolean getOut = false;
 		int valorPensado = Integer.parseInt(args[0]);
 		System.out.println("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
-		while (valorPensado != valorInput || !isCancelado) {
+		while (valorPensado != valorInput && !getOut) {
 			System.out.println("Introdueix un valor");
 			String valorString = Entrada.readLine();
 
 			if (valorString.isBlank()){
-				isCancelado = true;
+				getOut = true;
 			}
 			else {
-				valorInput = Integer.parseInt(Entrada.readLine());
+				valorInput = Integer.parseInt(valorString);
 
 				String message;
 				if (valorInput > 100) {
