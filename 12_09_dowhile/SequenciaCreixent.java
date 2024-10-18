@@ -6,7 +6,7 @@ public class SequenciaCreixent {
 		do {
 			last = value;
 
-			System.out.println("Introdueix un valor");
+			System.out.println("Introdueix un valor:");
 			value = Integer.parseInt(Entrada.readLine());
 			cont++;
 		}
