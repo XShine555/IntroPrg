@@ -1,15 +1,16 @@
 public class TrobaMaxim {
 	public static void main(String[] args) {
 		int maxValue = 0;
-		for (; ;) {
+
+		System.out.println("Introdueix un valor");
+		int value = Integer.parseInt(Entrada.readLine());
+
+		while (value >= 0) {
+			if (value > maxValue) {
+				maxValue = value;
+			}
 			System.out.println("Introdueix un valor");
-			int input = Integer.parseInt(Entrada.readLine());
-			if (input < 0) {
-				break;
-			}
-			if (input > maxValue) {
-				maxValue = input;
-			}
+			value = Integer.parseInt(Entrada.readLine());
 		}
 		System.out.println("El màxim és " + maxValue);
 	}
