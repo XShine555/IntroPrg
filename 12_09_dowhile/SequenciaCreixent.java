@@ -1,4 +1,4 @@
-public class DoWhile {
+public class SequenciaCreixent {
 	public static void main(String[] args) {
 		int value = 0;
 		int last = 0;
