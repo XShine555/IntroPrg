@@ -6,7 +6,7 @@ public class Mitjana {
 		System.out.println("Introdueix un valor");
 		int value = Integer.parseInt(Entrada.readLine());
 
-		while (value >= 0) {
+		while (value >= 0 && value <= 100) {
 			contador++;
 			total += value;
 
