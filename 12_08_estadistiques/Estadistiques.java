@@ -1,17 +1,21 @@
 public class Estadistiques {
 	public static void main(String[] args) {
 		float contador = 0;
-		int min = 0, max = 0, total = 0;
-		for (; ;) {
+
+		System.out.println("Introdueix un valor");
+		int value = Integer.parseInt(Entrada.readLine());
+		int min = value, max = value, total = 0;
+
+		while (value >= 0) {
 			System.out.println("Introdueix un valor");
-			int value = Integer.parseInt(Entrada.readLine());
+			value = Integer.parseInt(Entrada.readLine());
 			if (value < 0) {
 				break;
 			}
 			if (value > max) {
 				max = value;
 			}
-			else if (value < min) {
+			if (value < min) {
 				min = value;
 			}
 			contador++;
