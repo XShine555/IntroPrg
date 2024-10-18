@@ -5,7 +5,7 @@ public class Estadistiques {
 		for (; ;) {
 			System.out.println("Introdueix un valor");
 			int value = Integer.parseInt(Entrada.readLine());
-			if (value < 0 || value > 100) {
+			if (value < 0) {
 				break;
 			}
 			if (value < min) {
