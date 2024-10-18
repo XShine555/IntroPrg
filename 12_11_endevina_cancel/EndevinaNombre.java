@@ -4,7 +4,7 @@ public class EndevinaNombre {
 		boolean isCancelado = false;
 		int valorPensado = Integer.parseInt(args[0]);
 		System.out.println("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
-		while (valorPensado != valorInput && !isCancelado) {
+		while (valorPensado != valorInput || !isCancelado) {
 			System.out.println("Introdueix un valor");
 			String valorString = Entrada.readLine();
 
