@@ -8,11 +8,11 @@ public class Estadistiques {
 			if (value < 0) {
 				break;
 			}
-			if (value < min) {
-				min = value;
-			}
 			if (value > max) {
 				max = value;
+			}
+			else if (value < min) {
+				min = value;
 			}
 			contador++;
 			total += value;
