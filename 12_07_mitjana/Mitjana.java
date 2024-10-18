@@ -15,7 +15,7 @@ public class Mitjana {
 			System.out.println("Cap nota vàlida introduïda");
 		}
 		else {
-			float value = total / contador;
+			double value = total / contador;
 			System.out.println("La mitjana de les notes vàlides és " + value);
 		}
 	}
