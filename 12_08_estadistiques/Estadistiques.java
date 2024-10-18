@@ -1,33 +1,12 @@
 public class Estadistiques {
 	public static void main(String[] args) {
 		float contador = 0;
+		int min = 0, max = 0, total = 0;
 
-		System.out.println("Introdueix un valor");
-		int value = Integer.parseInt(Entrada.readLine());
-		int min = value, max = value, total = 0;
-
-		if (value >= 0) {
-			contador++;
-		}
-
-		while (value >= 0) {
-			System.out.println("Introdueix un valor");
-			value = Integer.parseInt(Entrada.readLine());
-			if (value < 0) {
-				break;
-			}
-			if (value > max) {
-				max = value;
-			}
-			if (value < min) {
-				min = value;
-			}
-			contador++;
-			total += value;
-		}
 		if (contador == 0) {
 			System.out.println("Cap valor vàlid introduït");
-		} else {
+		}
+		else {
 			System.out.println("El mínim és: " + min);
 			System.out.println("La mitjana és: " + total / contador);
 			System.out.println("El màxim és: " + max);
