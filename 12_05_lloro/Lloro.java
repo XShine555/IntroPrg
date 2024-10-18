@@ -9,7 +9,7 @@ public class Lloro {
 		System.out.println("El lloro espera paraula:");
 		String input = Entrada.readLine();
 
-		while (!input.isEmpty()) {
+		while (!input.isBlank()) {
 			System.out.println("El lloro repeteix: " + input);
 			System.out.println("El lloro espera paraula:");
 			input = Entrada.readLine();
