@@ -8,7 +8,7 @@ public class Estadistiques {
 			if (value < 0) {
 				break;
 			}
-			if (value < min) {
+			if (value > min) {
 				min = value;
 			}
 			if (value > max) {
