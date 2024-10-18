@@ -2,7 +2,7 @@ public class EndevinaNombre {
 	public static void main(String[] args) {
 		int valorInput = 0;
 		int valorPensado = Integer.parseInt(args[0]);
-		do {
+		while (valorPensado != valorInput) {
 			System.out.println("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
 			valorInput = Integer.parseInt(Entrada.readLine());
 
@@ -24,6 +24,5 @@ public class EndevinaNombre {
 			}
 			System.out.println(message);
 		}
-		while (valorPensado != valorInput);
 	}
 }
