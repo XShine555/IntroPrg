@@ -6,13 +6,13 @@
 */
 public class Lloro {
 	public static void main(String[] args) {
-		for (; ;) {
-			System.out.println("El lloro espera paraula:");
-			String input = Entrada.readLine();
-			if (input.isBlank()) {
-				break;
-			}
+		System.out.println("El lloro espera paraula:");
+		String input = Entrada.readLine();
+
+		while (!input.isEmpty()) {
 			System.out.println("El lloro repeteix: " + input);
+			System.out.println("El lloro espera paraula: ");
+			input = Entrada.readLine();
 		}
 		System.out.println("Adéu");
 	}
