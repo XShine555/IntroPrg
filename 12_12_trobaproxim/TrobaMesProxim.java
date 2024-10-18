@@ -1,4 +1,4 @@
-public class TrobaMexProxim {
+public class TrobaMesProxim {
 	public static void main(String[] args) {
 		System.out.println("Introdueix l'àncora");
 		int ref = Integer.parseInt(Entrada.readLine());
