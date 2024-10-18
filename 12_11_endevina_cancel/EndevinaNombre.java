@@ -10,6 +10,7 @@ public class EndevinaNombre {
 
 			if (valorString.isBlank()){
 				getOut = true;
+				System.out.println("Cancel·lat!");
 			}
 			else {
 				valorInput = Integer.parseInt(valorString);
