@@ -19,10 +19,13 @@ public class TrobaMesProxim {
 				do {
 					int difference = Math.abs(initialValue - userValue);
 
-					if (difference < differenceValue) {
+					if (difference <= differenceValue) {
 
 						if (userValue < nearValue) {
 							differenceValue = difference;
+							nearValue = userValue;
+						}
+						else if (difference == differenceValue && userValue < nearValue) {
 							nearValue = userValue;
 						}
 					}
