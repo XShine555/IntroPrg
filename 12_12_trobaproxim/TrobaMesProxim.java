@@ -1,28 +1,39 @@
 public class TrobaMesProxim {
 	public static void main(String[] args) {
 		System.out.println("Introdueix l'àncora");
-		int ref = Integer.parseInt(Entrada.readLine());
-		if (ref < 0) {
+		int initialValue = Integer.parseInt(Entrada.readLine());
+
+		if (initialValue < 0) {
 			System.out.println("Àncora no vàlida");
 		}
 		else {
-			int valor = 0;
-			int prox = Integer.MAX_VALUE;
-			do {
-				System.out.println("Introdueix un valor");
-				valor = Integer.parseInt(Entrada.readLine());
+			int userValue = 0, nearValue = Integer.MAX_VALUE, differenceValue = Integer.MAX_VALUE;
 
-				if (valor >= 0 && Math.abs(ref - valor) < Math.abs(ref - prox) ) {
-					prox = valor;
+			System.out.println("Introdueix un valor");
+			userValue = Integer.parseInt(Entrada.readLine());
+
+			if (userValue < 0) {
+				System.out.println("No s'ha introduït cap valor positiu");
+			}
+			else {
+				do {
+					int difference = Math.abs(initialValue - userValue);
+
+					if (difference < differenceValue) {
+
+						if (userValue < nearValue) {
+							differenceValue = difference;
+							nearValue = userValue;
+						}
+					}
+
+					System.out.println("Introdueix un valor");
+					userValue = Integer.parseInt(Entrada.readLine());
 				}
-			}
-			while (valor >= 0);
+				while (userValue > -1);
 
-			String message = "El valor introduït més pròxim a " + ref + " és " + prox;
-			if (valor < 0 && prox == Integer.MAX_VALUE) {
-				message = "No s'ha introduït cap valor positiu";
+				System.out.println(String.format("El valor introduït més pròxim a %s és %s", initialValue, nearValue));
 			}
-			System.out.println(message);
 		}
 	}
 }
