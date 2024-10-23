@@ -19,15 +19,12 @@ public class TrobaMesProxim {
 				do {
 					int difference = Math.abs(initialValue - userValue);
 
-					if (difference <= differenceValue) {
-
-						if (userValue < nearValue) {
-							differenceValue = difference;
-							nearValue = userValue;
-						}
-						else if (difference == differenceValue && userValue < nearValue) {
-							nearValue = userValue;
-						}
+					if (difference < differenceValue) {
+						nearValue = userValue;
+						differenceValue = difference;
+					}
+					else if (difference == differenceValue && userValue < nearValue) {
+						nearValue = userValue;
 					}
 
 					System.out.println("Introdueix un valor");
