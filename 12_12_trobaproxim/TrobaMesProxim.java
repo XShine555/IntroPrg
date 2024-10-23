@@ -12,7 +12,7 @@ public class TrobaMesProxim {
 				System.out.println("Introdueix un valor");
 				valor = Integer.parseInt(Entrada.readLine());
 
-				if (Math.abs(ref - valor) < prox) {
+				if (valor >= 0 && Math.abs(ref - valor) < prox) {
 					prox = valor;
 				}
 			}
