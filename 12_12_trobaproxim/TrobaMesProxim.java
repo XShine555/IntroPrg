@@ -19,7 +19,7 @@ public class TrobaMesProxim {
 			while (valor >= 0);
 
 			String message = "El valor introduït més pròxim a " + ref + " és " + prox;
-			if (valor < 0 && prox == ref) {
+			if (valor < 0 && prox == Integer.MAX_VALUE) {
 				message = "No s'ha introduït cap valor positiu";
 			}
 			System.out.println(message);
