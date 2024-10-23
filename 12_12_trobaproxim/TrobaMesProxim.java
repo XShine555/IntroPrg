@@ -7,14 +7,22 @@ public class TrobaMesProxim {
 		}
 		else {
 			int valor = 0;
-			int prox = 0;
-			while (valor >= 0) {
+			int prox = ref;
+			do {
 				System.out.println("Introdueix un valor");
 				valor = Integer.parseInt(Entrada.readLine());
 
-				
+				if (Math.abs(ref - valor) < prox) {
+					prox = valor;
+				}
 			}
-			System.out.println("El valor introduït més pròxim a " + ref + " és " + prox);
+			while (valor >= 0);
+
+			String message = "El valor introduït més pròxim a " + ref + " és " + prox;
+			if (valor < 0 && prox == ref) {
+				message = "No s'ha introduït cap valor positiu";
+			}
+			System.out.println(message);
 		}
 	}
 }
