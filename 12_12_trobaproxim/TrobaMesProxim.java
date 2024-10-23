@@ -7,7 +7,7 @@ public class TrobaMesProxim {
 		}
 		else {
 			int valor = 0;
-			int prox = ref;
+			int prox = Integer.MAX_VALUE;
 			do {
 				System.out.println("Introdueix un valor");
 				valor = Integer.parseInt(Entrada.readLine());
