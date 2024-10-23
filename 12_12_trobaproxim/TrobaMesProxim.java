@@ -1,3 +1,10 @@
+/*
+ * Exercici 12_12. Troba el més pròxim
+ * Iker Rivera Garcia
+ * 24/10/2024
+ * Muestra el número más pequeño basándose en un número que el usuario ha introducido anteriormente.
+*/
+
 public class TrobaMesProxim {
 	public static void main(String[] args) {
 		System.out.println("Introdueix l'àncora");
