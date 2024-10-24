@@ -28,8 +28,8 @@ public class HistoricEdats {
 						};
 						System.out.println(message);
 					}
+					System.out.println("Adéu " + nom);
 				}
-			System.out.println("Adéu " + nom);
 			}
 		}
 	}
