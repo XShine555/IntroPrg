@@ -9,7 +9,7 @@ public class NaturalsEntre {
 
 		int currentNum = numInicial;
 
-		while (currentNum < numFinal) {
+		while (currentNum <= numFinal) {
 			System.out.println(currentNum);
 			currentNum += numSalto;
 		}
