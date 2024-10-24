@@ -3,7 +3,7 @@ public class NaturalsEntre {
 		System.out.println("Valor inicial?");
 		int numInicial = Integer.parseInt(Entrada.readLine());
 
-		if (numInicial <= 0) {
+		if (numInicial < 0) {
 			System.out.println("Valor no vàlid");
 		}
 		else {
