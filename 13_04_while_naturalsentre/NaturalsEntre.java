@@ -7,7 +7,7 @@ public class NaturalsEntre {
 		System.out.println("Salt?");
 		int numSalto = Integer.parseInt(Entrada.readLine());
 
-		int currentNum = 0;
+		int currentNum = numInicial;
 
 		while (currentNum < numFinal) {
 			System.out.println(currentNum);
