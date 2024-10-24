@@ -27,7 +27,7 @@ public class HistoricEdats {
 						String message = switch (thisEdat) {
 							case 0 -> String.format("El %s vau néixer", thisAny);
 							case 1 -> String.format("El %s teníeu %s any", thisAny, thisEdat);
-							default -> String.format("El %s teníeu %s any", thisAny, thisEdat);
+							default -> String.format("El %s teníeu %s anys", thisAny, thisEdat);
 						};
 						System.out.println(message);
 					}
