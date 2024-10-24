@@ -5,7 +5,7 @@ public class NaturalsParells {
 			System.out.format("Cap valor parell creixent entre 1 i %s", value);
 		}
 		else if (value % 2 == 0) {
-			for (int i = value; i < value; i += 2) {
+			for (int i = 0; i < value; i += 2) {
 				System.out.println(i);
 			}
 		}
