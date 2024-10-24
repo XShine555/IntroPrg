@@ -10,16 +10,21 @@ public class NaturalsEntre {
 			System.out.println("Valor final?");
 			int numFinal = Integer.parseInt(Entrada.readLine());
 
-			System.out.println("Salt?");
-			int numSalto = Integer.parseInt(Entrada.readLine());
-
-			if (numSalto < 0 || numFinal < 0 || numInicial > numFinal ) {
+			if (numFinal < 0 || numInicial > numFinal) {
 				System.out.println("Valor no vàlid");
 			}
 			else {
-				while (numInicial <= numFinal) {
-					System.out.println(numInicial);
-					numInicial += numSalto;
+				System.out.println("Salt?");
+				int numSalto = Integer.parseInt(Entrada.readLine());
+
+				if (numSalto < 0) {
+					System.out.println("Valor no vàlid");
+				}
+				else {
+					while (numInicial <= numFinal) {
+						System.out.println(numInicial);
+						numInicial += numSalto;
+					}
 				}
 			}
 		}
