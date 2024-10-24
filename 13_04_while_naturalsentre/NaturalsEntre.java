@@ -1,7 +1,8 @@
 public class NaturalsEntre {
 	public static void main(String[] args) {
 		System.out.println("Valor inicial?");
-		int numInicial = Integer.parseInt(Entrada.readLine());
+		String stringInicial = Entrada.readLine();
+		int numInicial = Integer.parseInt(stringInicial);
 		System.out.println("Valor final?");
 		String stringFinal = Entrada.readLine();
 		int numFinal = Integer.parseInt(stringFinal);
