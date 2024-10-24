@@ -9,9 +9,14 @@ public class NaturalsEntre {
 		System.out.println("Salt?");
 		int numSalto = Integer.parseInt(Entrada.readLine());
 
-		while (numInicial <= numFinal) {
-			System.out.println(numInicial);
-			numInicial += numSalto;
+		if (numInicial < 0 || numInicial < 0 || numFinal < 0 || numInicial > numFinal ) {
+			System.out.println("Valor no vàlid");
+		}
+		else {
+			while (numInicial <= numFinal) {
+				System.out.println(numInicial);
+				numInicial += numSalto;
+			}
 		}
 	}
 }
