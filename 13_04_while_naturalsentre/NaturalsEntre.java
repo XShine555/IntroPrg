@@ -9,11 +9,6 @@ public class NaturalsEntre {
 		System.out.println("Salt?");
 		int numSalto = Integer.parseInt(Entrada.readLine());
 
-		if (numSalto == 0 || numInicial < numInicial) {
-			System.out.println("fatal");
-			return;
-		}
-
 		while (numInicial <= numFinal) {
 			System.out.println(numInicial);
 			numInicial += numSalto;
