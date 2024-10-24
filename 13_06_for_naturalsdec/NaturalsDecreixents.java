@@ -5,7 +5,7 @@ public class NaturalsDecreixents {
 			System.out.format("Cap valor decreixent entre %s i 1", value);
 		}
 		else {
-			for (int i = value; i > 0; i++) {
+			for (int i = value; i > 0; i--) {
 				System.out.println(i);
 			}
 		}
