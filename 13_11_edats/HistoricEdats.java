@@ -10,10 +10,7 @@ public class HistoricEdats {
 			System.out.println("edat?");
 			int edat = Integer.parseInt(Entrada.readLine());
 
-			if (edat < 0) {
-				System.out.println("Entrada incorrecta");
-			}
-			else {
+			
 				System.out.println("any actual?");
 				int any = Integer.parseInt(Entrada.readLine());
 
@@ -36,4 +33,3 @@ public class HistoricEdats {
 			}
 		}
 	}
-}
