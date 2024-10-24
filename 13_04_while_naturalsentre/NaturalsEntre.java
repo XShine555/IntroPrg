@@ -3,11 +3,12 @@ public class NaturalsEntre {
 		System.out.println("Valor inicial?");
 		int numInicial = Integer.parseInt(Entrada.readLine());
 		System.out.println("Valor final?");
-		int numFinal = Integer.parseInt(Entrada.readLine());
+		String stringFinal = Entrada.readLine();
+		int numFinal = Integer.parseInt(stringFinal);
 		System.out.println("Salt?");
 		int numSalto = Integer.parseInt(Entrada.readLine());
 
-		while (numInicial < numFinal) {
+		while (numInicial <= numFinal) {
 			System.out.println(numInicial);
 			numInicial += numSalto;
 		}
