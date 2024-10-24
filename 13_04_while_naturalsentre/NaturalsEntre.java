@@ -3,21 +3,21 @@ public class NaturalsEntre {
 		System.out.println("Valor inicial?");
 		int numInicial = Integer.parseInt(Entrada.readLine());
 
-		if (numInicial < 0) {
+		if (numInicial <= 0) {
 			System.out.println("Valor no vàlid");
 		}
 		else {
 			System.out.println("Valor final?");
 			int numFinal = Integer.parseInt(Entrada.readLine());
 
-			if (numFinal < 0 || numInicial > numFinal) {
+			if (numFinal <= 0 || numInicial > numFinal) {
 				System.out.println("Valor no vàlid");
 			}
 			else {
 				System.out.println("Salt?");
 				int numSalto = Integer.parseInt(Entrada.readLine());
 
-				if (numSalto < 0) {
+				if (numSalto <= 0) {
 					System.out.println("Valor no vàlid");
 				}
 				else {
