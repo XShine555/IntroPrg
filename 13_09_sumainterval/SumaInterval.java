@@ -5,8 +5,15 @@ public class SumaInterval {
 		System.out.println("segon?");
 		int segon = Integer.parseInt(Entrada.readLine());
 
+		int max = primer, min = segon;
+
+		if (segon > primer) {
+			max = segon;
+			min = primer;
+		}
+
 		int lastValue = 0;
-		for (int i = segon; i <= primer; i++) {
+		for (int i = min; i <= max; i++) {
 			int sum = lastValue + i;
 			System.out.println(String.format("%s + %s = %s", lastValue, i, sum));
 			lastValue = sum;
