@@ -1,3 +1,10 @@
+/*
+ * Exercici 13_11. Històric d'edats
+ * Iker Rivera Garcia
+ * 25/10/2024
+ * Programa que dependiendo de la edad del usuario y el año actual devuelve los años que tenía el usuario en cada año.
+*/
+
 public class HistoricEdats {
     public static void main(String[] args) {
         System.out.println("nom?");
