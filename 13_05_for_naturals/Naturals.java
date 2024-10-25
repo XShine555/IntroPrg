@@ -1,3 +1,10 @@
+/*
+ * Exercici 13_05. Els primers naturals novament
+ * Iker Rivera Garcia
+ * 25/10/2024
+ * Cuenta del 1 al 10 con un bucle for.
+*/
+
 public class Naturals {
 	public static void main(String[] args) {
 		int num = Integer.parseInt(args[0]);
