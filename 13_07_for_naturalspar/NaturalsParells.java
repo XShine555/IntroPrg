@@ -1,3 +1,10 @@
+/*
+ * Exercici 13_07. Els primers parells novament
+ * Iker Rivera Garcia
+ * 25/10/2024
+ * Programa que cuenta del 0 al X con números par.
+*/
+
 public class NaturalsParells {
 	public static void main(String[] args) {
 		int value = Integer.parseInt(args[0]);
