@@ -1,3 +1,10 @@
+/*
+ * Exercici 13_08. Naturals de principi a fi novament
+ * Iker Rivera Garcia
+ * 25/10/2024
+ * Programa que cuenta de X a X sumando X
+*/
+
 public class NaturalsEntre {
 	public static void main(String[] args) {
 		System.out.println("Valor inicial?");
