@@ -10,11 +10,16 @@ public class QuadratNombres {
 		System.out.println("Valor final?");
 		int value = Integer.parseInt(Entrada.readLine());
 
-		for (int i = 0; i < value; i++) {
-			for (int j = 1; j <= value; j++) {
-				System.out.print(" " + j + " ");
+		if (value < 1 || value > 9) {
+			System.out.println("Valor inadequat");
+		}
+		else {
+			for (int i = 0; i < value; i++) {
+				for (int j = 1; j <= value; j++) {
+					System.out.print(" " + j + " ");
+				}
+				System.out.println();
 			}
-			System.out.println();
 		}
 	}
 }
