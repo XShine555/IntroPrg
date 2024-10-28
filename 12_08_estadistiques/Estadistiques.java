@@ -1,3 +1,10 @@
+/*
+ * Exercici 12_08. Estadístiques
+ * Iker Rivera Garcia
+ * 27/10/2024
+ * Programa que pide números hasta que introduzcas uno negativo y calcula el mínimo, la media y el máximo.
+*/
+
 public class Estadistiques {
 	public static void main(String[] args) {
 		double contador = 0;
