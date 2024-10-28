@@ -1,3 +1,10 @@
+/*
+ * Exercici 12_07. La nota mitjana
+ * Iker Rivera Garcia
+ * 28/10/2024
+ * Programa que suma las notas de los alumnos y devuelve una media de los números válidos
+*/
+
 public class Mitjana {
 	public static void main(String[] args) {
 		float contador = 0;
