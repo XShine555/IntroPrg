@@ -16,9 +16,7 @@ public class QuadratNombres {
 		else {
 			for (int i = 0; i < value; i++) {
 				for (int j = 1; j <= value; j++) {
-					String message = j >= value ? "" : " ";
-
-					System.out.print(" " + j + message);
+					System.out.print(" " + j);
 				}
 				System.out.println();
 			}
