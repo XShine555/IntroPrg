@@ -1,3 +1,10 @@
+/*
+ * Exercici 12_11. Endevina amb cancel·lació
+ * Iker Rivera Garcia
+ * 28/10/2024
+ * Programa que te pedirá un número del 1 al 100 hasta que encierres un número que haya elegido o hayas puesto un mensaje en blanco.
+*/
+
 public class EndevinaNombre {
 	public static void main(String[] args) {
 		int valorInput = 0;
