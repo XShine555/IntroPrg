@@ -21,7 +21,10 @@ public class Triangle {
 					}
 					else {
 						int num = row - dotsLeft;
-
+						if (num >= 9) {
+							num = length - num - 1;
+						}
+						System.out.print(num);
 					}
 				}
 				System.out.println();
