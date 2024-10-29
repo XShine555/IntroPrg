@@ -20,9 +20,9 @@ public class Triangle {
 						System.out.print(".");
 					}
 					else {
-						int num = row - dotsLeft;
-						if (num >= 9) {
-							num = length - num - 1;
+						int num = row;
+						if (row >= 10) {
+							num = length - row - 1;
 						}
 						System.out.print(num);
 					}
