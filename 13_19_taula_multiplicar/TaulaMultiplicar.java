@@ -5,9 +5,13 @@ public class TaulaMultiplicar {
 	int arg1 = Integer.parseInt(args[2]);
 	int arg2 = Integer.parseInt(args[3]);
 
+	boolean sameNumber = arg1 == arg2;
+
 	for (int firstNumber = start; firstNumber <= end; firstNumber++) {
 		System.out.println(String.format("%s x %s = %s", firstNumber, arg1, firstNumber * arg1) );
-		System.out.println(String.format("%s x %s = %s", firstNumber, arg2, firstNumber * arg2) );
+		if (!sameNumber) {
+			System.out.println(String.format("%s x %s = %s", firstNumber, arg2, firstNumber * arg2) );
+		}
 	}
     }
 }
