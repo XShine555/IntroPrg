@@ -1,8 +1,10 @@
 public class Rombos {
 	public static void main(String[] args) {
-		int length = 19, height = 10;
+		int length = 19, height = 20;
+		int realHeight = height - 1;
 
 		int mid = (length / 2);
+		int midHeight = height / 2;
 
 		System.out.println("quants?");
 		int value = Integer.parseInt(Entrada.readLine());
@@ -11,44 +13,29 @@ public class Rombos {
 
 			for (int col = 0; col < height; col++) {
 
-				int dotsLeft = mid - col;
-				int dotsRight =  mid + col;
+				int iCol = col >= midHeight ? realHeight % col : col % midHeight;
+				int dotsLeft = mid - iCol;
+				int dotsRight =  mid + iCol;
 
-				for (int row = 0; row < length; row++) {
-
-					if (row < dotsLeft || row > dotsRight) {
-						System.out.print(".");
-					}
-					else {
-						int num = row;
-						if (row >= 10) {
-							num = length - row - 1;
-						}
-						System.out.print(num);
-					}
-				}
-				System.out.println();
-			}
-
-			for (int col = height; col > 0; col--) {
-				
-				int dotsLeft = mid - col;
-				int dotsRight =  mid + col;
-
-				for (int row = length; row > 0; row--) {
+				if (col != midHeight) {
+					for (int row = 0; row < length; row++) {
 
 					if (row < dotsLeft || row > dotsRight) {
 						System.out.print(".");
 					}
 					else {
-						int num = row;
+						int num = row % mid;
+						if (row % 2 != 0 && num == 0) {
+							num = 9;
+						}
 						if (row >= 10) {
 							num = length - row - 1;
 						}
 						System.out.print(num);
+						}
 					}
+					System.out.println();
 				}
-				System.out.println();
 			}
 		}
 	}
