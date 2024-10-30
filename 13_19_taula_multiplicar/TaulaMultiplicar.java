@@ -8,9 +8,8 @@ public class TaulaMultiplicar {
 	boolean sameNumber = arg1 == arg2;
 
 	for (int firstNumber = start; firstNumber <= end; firstNumber++) {
-		System.out.println(String.format("%s x %s = %s", firstNumber, arg1, firstNumber * arg1) );
-		if (!sameNumber) {
-			System.out.println(String.format("%s x %s = %s", firstNumber, arg2, firstNumber * arg2) );
+		for (int secondNumber = arg1; secondNumber <= arg2; secondNumber++) {
+			System.out.println(String.format("%s x %s = %s", firstNumber, secondNumber, firstNumber * secondNumber) );
 		}
 	}
     }
