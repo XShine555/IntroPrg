@@ -39,9 +39,12 @@ public class RectanglesAMida {
 		}
 		while (secondNumber > 0 && !inputString.isBlank());
 
-		String countRectMsg = countRect > 0 ? "Rectangles: " + countRect : "Cap rectangle dibuixat";
-
-		System.out.println(countRectMsg);
-		System.out.println("Punts: " + punts);
+		if (countRect > 0) {
+			System.out.println("Rectangles: " + countRect);
+			System.out.println("Punts: " + punts);
+		}
+		else {
+			System.out.println("Cap rectangle dibuixat");
+		}
 	}
 }
