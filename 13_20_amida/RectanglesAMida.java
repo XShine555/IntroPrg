@@ -3,6 +3,7 @@ public class RectanglesAMida {
 		int firstNumber = 1;
 
 		int countRect = 0;
+		int punts = 0;
 
 		System.out.println(firstNumber + " x ?");
 		int secondNumber = Integer.parseInt(Entrada.readLine());
@@ -18,7 +19,11 @@ public class RectanglesAMida {
 					}
 					else {
 						if (x == -1) { System.out.print(y % 10 + " "); }
-						else { System.out.print("*"); }
+						else
+						{
+							System.out.print("*");
+							punts++;
+							}
 					}
 				}
 				System.out.println();
@@ -31,5 +36,6 @@ public class RectanglesAMida {
 		String countRectMsg = countRect > 0 ? "Rectangles: " + countRect : "Cap rectangle dibuixat";
 
 		System.out.println(countRectMsg);
+		System.out.println("Punts: " + punts);
 	}
 }
