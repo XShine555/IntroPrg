@@ -1,3 +1,10 @@
+/*
+ * Exercici 13_20. A Mida
+ * Iker Rivera Garcia
+ * 07/11/2024
+ * Programa que dibuja rectángulos dependiendo del tamaño que el usuario indique.
+*/
+
 public class RectanglesAMida {
 	public static void main(String[] args) {
 		int firstNumber = 1;
