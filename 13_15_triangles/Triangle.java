@@ -1,3 +1,10 @@
+/*
+ * Exercici 13_15. Triangles
+ * Iker Rivera Garcia
+ * 7/11/2024
+ * Programa que dibuja un triángulo las veces diga el usuario.
+*/
+
 public class Triangle {
 	public static void main(String[] args) {
 		int length = 19, height = 10;
