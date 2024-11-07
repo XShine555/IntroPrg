@@ -1,3 +1,10 @@
+/*
+ * Exercici 13_16. Rombos
+ * Iker Rivera Garcia
+ * 07/11/2024
+ * Programa que dibuja un rombo las veces que diga el usuario.
+*/
+
 public class Rombos {
 	public static void main(String[] args) {
 		int length = 19, height = 20;
