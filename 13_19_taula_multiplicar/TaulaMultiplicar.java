@@ -1,3 +1,10 @@
+/*
+ * Exercici 13_19. La taula de multiplicar a mida
+ * Iker Rivera Garcia
+ * 07/11/2024
+ * Programa que dibuja una tabla de multiplicar dependiendo de los números que ponga el usuario.
+*/
+
 public class TaulaMultiplicar {
     public static void main(String[] args) {
 	int start = Integer.parseInt(args[0]);
