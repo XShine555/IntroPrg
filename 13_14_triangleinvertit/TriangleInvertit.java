@@ -1,3 +1,10 @@
+/*
+ * Exercici 13_14. Un triangle invertit
+ * Iker Rivera Garcia
+ * 07/11/2024
+ * Programa que cuenta del número que se haya introducido al 1.
+*/
+
 public class TriangleInvertit {
 	public static void main(String[] args) {
 		System.out.println("Nombre?");
