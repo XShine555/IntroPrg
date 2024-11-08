@@ -10,7 +10,7 @@ public class InformeCaracter {
 			System.out.println("Error");
 		}
 		else {
-			char character = text.charAt(pos);
+			char character = text.charAt(pos - 1);
 
 			System.out.format("Character.getName('%s'): %s%n", character, Character.getName(character));
 			System.out.format("Character.isDigit('%s'): %s%n", character, Character.isDigit(character));
