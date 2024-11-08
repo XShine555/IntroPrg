@@ -6,7 +6,7 @@ public class InformeCaracter {
 		System.out.println("Posició?");
 		int pos = Integer.parseInt(Entrada.readLine());
 
-		if (text.length() < pos) {
+		if (text.length() < pos && pos > 0) {
 			System.out.println("Error");
 		}
 		else {
