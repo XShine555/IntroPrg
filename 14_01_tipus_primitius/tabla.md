@@ -1,0 +1,3 @@
+| Tipo |	Bits	|	Minimo	|	Maximo	|	Ejemplo	|
+| byte |	-128	|	-128	|	127	|	127	|
+|short |
