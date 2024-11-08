@@ -6,5 +6,5 @@
 |long  |	64	|	-2^63	|	2^63	|	66	|
 |float |	32	|	-	|	-	|	1.1F	|
 |double|	64	|	-	|	-	|	1.3	|
-|bolean|	1	|	0	|	1	|	true	|
+|bolean|	1	|	true	|	false	|	true	|
 |char  |	16	|	0	|	65363	|	'\u0000'|	
