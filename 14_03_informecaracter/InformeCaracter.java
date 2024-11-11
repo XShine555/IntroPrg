@@ -11,7 +11,7 @@ public class InformeCaracter {
 			int pos = Integer.parseInt(Entrada.readLine());
 
 			if (text.length() < pos || pos < 0) {
-				System.out.println("Error");
+				System.out.println("Fora de rang");
 			}
 			else {
 				char character = text.charAt(pos);
