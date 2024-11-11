@@ -24,16 +24,16 @@ public class ManipulaString {
         // Una composició formada per la primera lletra de la paraula en
         // majúscules, seguida de les següents tres lletres en minúscules. Per
         // exemple, si la paraula és «nEkAnE», resultatà en «Neka».
-        System.out.format("La composició de quatre primeres és %s%s%n", paraula.substring(0, 1).toUpperCase(), paraula.substring(1, 4).toLowerCase());
+        System.out.format("La composició de quatre primeres és \"%s%s\"%n", paraula.substring(0, 1).toUpperCase(), paraula.substring(1, 4).toLowerCase());
 
         // Mostra una composició formada per la darrera lletra de la paraula,
         // seguida de les tres primeres. (ex. si la paraula és «Nekane»
         // mostrarà «eNek»)
-        System.out.format("La composició de quatre és %s%s%n", paraula.substring(paraula.length()-1), paraula.substring(0, 3));
+        System.out.format("La composició de quatre és \"%s%s\"%n", paraula.substring(paraula.length()-1), paraula.substring(0, 3));
 
         // Com en el cas anterior però ara corregint les majúscules i
         // minúscules de manera que la primera sigui majúscules i la resta en
         // minúscules.  (ex. si la paraula és «Nekane» mostrarà «Enek»)
-        System.out.format("La composició de quatre corregint majúscules és %s%s%n", paraula.substring(paraula.length()-1).toUpperCase(), paraula.substring(0, 3).toLowerCase());
+        System.out.format("La composició de quatre corregint majúscules és \"%s%s\"%n", paraula.substring(paraula.length()-1).toUpperCase(), paraula.substring(0, 3).toLowerCase());
     }
 }
