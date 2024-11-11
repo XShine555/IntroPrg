@@ -3,6 +3,10 @@ public class InformeCaracter {
 		System.out.println("Text?");
 		String text = Entrada.readLine();
 
+		if (text.isBlank()) {
+			System.out.println("Error");
+		}
+
 		System.out.println("Posició?");
 		int pos = Integer.parseInt(Entrada.readLine());
 
