@@ -34,7 +34,7 @@ public class ManipulaString {
 	        	// Mostra una composició formada per la darrera lletra de la paraula,
         		// seguida de les tres primeres. (ex. si la paraula és «Nekane»
         		// mostrarà «eNek»
-			String firstThreeAndLast = paraula.substring(0, 1) + firstFour.substring(0, 3);
+			String firstThreeAndLast = paraula.substring(length - 1) + firstFour.substring(0, 3);
         		System.out.format("La composició de quatre és \"%s\"%n", firstThreeAndLast);
 
 			// Com en el cas anterior però ara corregint les majúscules i
