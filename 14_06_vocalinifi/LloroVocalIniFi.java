@@ -4,13 +4,10 @@ public class LloroVocalIniFi {
                 String userInput = Entrada.readLine();
 
                 while (!userInput.isBlank()) {
-                        char firstChar = userInput.charAt(0);
-			char lastChar = userInput.charAt(userInput.length() - 1);
-
+			String upper = userInput.toUpperCase();
 			if (
-				(firstChar == 'a' || firstChar == 'e' || firstChar == 'i' || firstChar == 'o' || firstChar == 'u')
-				&& (lastChar == 'a' || lastChar == 'e' || lastChar == 'i' || lastChar == 'o' || lastChar == 'u')
-			) {
+			(upper.startsWith("A") || upper.startsWith("E") || upper.startsWith("I") || upper.startsWith("O") || upper.startsWith("U"))
+			&& (upper.endsWith("A") || upper.endsWith("E") || upper.endsWith("I") || upper.endsWith("O") || upper.endsWith("U"))) {
 				System.out.format("Repeteixo: %s%n", userInput);
 			}
 
