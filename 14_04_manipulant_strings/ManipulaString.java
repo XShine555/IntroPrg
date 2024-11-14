@@ -14,10 +14,12 @@ public class ManipulaString {
 	if (length > 1) {
 		// Mostra la segona lletra de la paraula
 		System.out.format("La segona lletra és '%s'%n", paraula.charAt(1));
+	}
 
-		// Mostra la darrera lletra de la paraula
-        	System.out.format("La darrera lletra és '%s'%n", paraula.charAt(length - 1));
+	// Mostra la darrera lletra de la paraula
+        System.out.format("La darrera lletra és '%s'%n", paraula.charAt(length - 1));
 
+	if (length > 1) {
 		// Mostra la penúltima lletra de la paraula
 	        System.out.format("La penúltima lletra és '%s'%n", paraula.charAt(length - 2));
 	}
