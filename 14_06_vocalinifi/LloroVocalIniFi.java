@@ -5,9 +5,9 @@ public class LloroVocalIniFi {
 
                 while (!userInput.isBlank()) {
 			String upper = userInput.toUpperCase();
-			if (
-			(upper.startsWith("A") || upper.startsWith("E") || upper.startsWith("I") || upper.startsWith("O") || upper.startsWith("U"))
-			&& (upper.endsWith("A") || upper.endsWith("E") || upper.endsWith("I") || upper.endsWith("O") || upper.endsWith("U"))) {
+			char vocal = upper.charAt(0);
+			boolean esVocal = vocal == 'A' || vocal == 'E' || vocal == 'I' || vocal == 'O' || vocal == 'U';
+			if (esVocal && upper.endsWith(String.valueOf(vocal))) {
 				System.out.format("Repeteixo: %s%n", userInput);
 			}
 
