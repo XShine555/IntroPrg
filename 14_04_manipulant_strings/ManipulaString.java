@@ -18,13 +18,14 @@ public class ManipulaString {
 		// Mostra la darrera lletra de la paraula
         	System.out.format("La darrera lletra és '%s'%n", paraula.charAt(length - 1));
 
-        	// Mostra la penúltima lletra de la paraula
+		// Mostra la penúltima lletra de la paraula
 	        System.out.format("La penúltima lletra és '%s'%n", paraula.charAt(length - 2));
+	}
 
-        	// Mostra la paraula amb totes les lletres en majúscules
-        	System.out.format("La paraula en majúscules és \"%s\"%n", paraula.toUpperCase());
+	// Mostra la paraula amb totes les lletres en majúscules
+        System.out.format("La paraula en majúscules és \"%s\"%n", paraula.toUpperCase());
 
-		if (length > 3) {
+	if (length > 3) {
 			// Una composició formada per la primera lletra de la paraula en
        			// majúscules, seguida de les següents tres lletres en minúscules. Per
 		 	// exemple, si la paraula és «nEkAnE», resultatà en «Neka».
@@ -44,5 +45,4 @@ public class ManipulaString {
         		System.out.format("La composició de quatre corregint majúscules és \"%s\"%n", firstThreeAndLastMayus);
 		}
 	}
-}
 }
