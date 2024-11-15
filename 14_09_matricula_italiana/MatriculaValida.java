@@ -11,7 +11,8 @@ public class MatriculaValida {
 			boolean isValid = true;
 
 			for (int i = 0; i <= firstPart.length() -1; i++) {
-				if (!Character.isLetter(firstPart.charAt(i))) {
+				char thisChar = firstPart.charAt(i);
+				if (!Character.isLetter(thisChar) || !Character.isUpperCase(thisChar) || thisChar == 'Ç' || thisChar == 'À' || thisChar == 'Ñ' || thisChar == 'ß' || thisChar == 'I' || thisChar == 'O' || thisChar == 'Q' || thisChar == 'U') {
 					isValid = false;
 				}
 			}
@@ -25,7 +26,8 @@ public class MatriculaValida {
 			}
 			if (isValid) {
 				for (int i = 0; i <= thirdPart.length() - 1; i++) {
-					if (!Character.isLetter(thirdPart.charAt(i))) {
+					char thisChar = thirdPart.charAt(i);
+					if (!Character.isLetter(thisChar) || !Character.isUpperCase(thisChar) || thisChar == 'Ç' || thisChar == 'À' || thisChar == 'Ñ' || thisChar == 'ß' || thisChar == 'I' || thisChar == 'O' || thisChar == 'Q' || thisChar == 'U') {
 						isValid = false;
 					}
 				}
