@@ -26,5 +26,6 @@ public class ExtremsPermutats {
 			System.out.println("Ves introduïnt texts (finalitza amb INTRO sol)");
 			userInput = Entrada.readLine();
 		}
+		System.out.println("Adéu");
 	}
 }
