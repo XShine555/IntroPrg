@@ -1,3 +1,10 @@
+/*
+ * Exercici 14_02. Informe d'un String
+ * Iker Rivera Garcia
+ * 15/11/2024
+ * Programa que muestra información sobre el texto introducido.
+*/
+
 public class InformeString {
 	public static void main(String[] args) {
 		System.out.println("Text principal?");
