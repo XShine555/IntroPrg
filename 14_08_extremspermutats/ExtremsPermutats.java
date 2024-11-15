@@ -19,7 +19,7 @@ public class ExtremsPermutats {
 				rotateLastSection += lastSection.charAt(i);
 			}
 
-			if (firstSection.equals(lastSection) || firstSection.equals(rotateLastSection)) {
+			if (firstSection.equals(lastSection)) {
 				System.out.format("Repeteix: %s%n", userInput);
 			}
 
