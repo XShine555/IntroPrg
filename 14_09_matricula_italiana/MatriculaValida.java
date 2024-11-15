@@ -10,25 +10,25 @@ public class MatriculaValida {
 
 			boolean isValid = true;
 
-			for (int i = 0; i < firstPart.length() -1; i++) {
+			for (int i = 0; i <= firstPart.length() -1; i++) {
 				if (!Character.isLetter(firstPart.charAt(i))) {
 					isValid = false;
 				}
 			}
 
 			if (isValid) {
-				for (int i = 0; i < secondPart.length() - 1; i++) {
+				for (int i = 0; i <= secondPart.length() - 1; i++) {
 					if (!Character.isDigit(secondPart.charAt(i))) {
 						isValid = false;
 					}
 				}
 			}
 			if (isValid) {
-				for (int i = 0; i < thirdPart.length() - 1; i++) {
+				for (int i = 0; i <= thirdPart.length() - 1; i++) {
 					if (!Character.isLetter(thirdPart.charAt(i))) {
 						isValid = false;
 					}
-				};
+				}
 			}
 
 			String msg = isValid ? "És una matrícula italiana vàlida" : "No és una matrícula italiana vàlida";
