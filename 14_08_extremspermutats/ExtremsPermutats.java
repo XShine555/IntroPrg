@@ -19,11 +19,10 @@ public class ExtremsPermutats {
 				rotateLastSection += lastSection.charAt(i);
 			}
 
-			if (firstSection.equals(lastSection)) {
+			if (firstSection.equals(lastSection) || firstSection.equals(rotateLastSection)) {
 				System.out.format("Repeteix: %s%n", userInput);
 			}
 
-			System.out.println("Ves introduïnt texts (finalitza amb INTRO sol)");
 			userInput = Entrada.readLine();
 		}
 		System.out.println("Adéu");
