@@ -1,3 +1,10 @@
+/*
+ * Exercici 14_05. Inicia amb vocal minúscula
+ * Iker Rivera Garcia
+ * 15/11/2024
+ * Programa que repite la palabra que pones si empieza por vocal minúscula.
+*/
+
 public class IniciaVocal {
 	public static void main(String[] args) {
 		System.out.println("El lloro pregunta paraula que comenci amb vocal en minúscules");
