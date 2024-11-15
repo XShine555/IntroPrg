@@ -2,7 +2,7 @@
  * Exercici 14_08. Extrems permutats
  * Iker Rivera Garcia
  * 15/11/2024
- *
+ * Programa que repetirá palabras permutadas de las letras de los extremos.
 */
 
 public class ExtremsPermutats {
@@ -20,14 +20,15 @@ public class ExtremsPermutats {
         			if (Character.isLetter(firstSection.charAt(0)) && Character.isLetter(firstSection.charAt(1)) &&
             			Character.isLetter(lastSection.charAt(0)) && Character.isLetter(lastSection.charAt(1))) {
 
-				String rotateLastSection = "";
-				for (int i = lastSection.length() - 1; i > -1; i--) {
-					rotateLastSection += lastSection.charAt(i);
-				}
+					String rotateLastSection = "";
+					for (int i = lastSection.length() - 1; i > -1; i--) {
+						rotateLastSection += lastSection.charAt(i);
+					}
 
-				if (firstSection.equalsIgnoreCase(lastSection) || firstSection.equalsIgnoreCase(rotateLastSection)) {
-					System.out.format("Repeteix: %s%n", userInput);
-				}}
+					if (firstSection.equalsIgnoreCase(lastSection) || firstSection.equalsIgnoreCase(rotateLastSection)) {
+						System.out.format("Repeteix: %s%n", userInput);
+					}
+				}
 
 			}
 
