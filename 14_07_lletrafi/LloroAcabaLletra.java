@@ -12,10 +12,8 @@ public class LloroAcabaLletra  {
 
                 while (!userInput.isBlank()) {
 			String upper = userInput.toUpperCase();
-			char lastChar = upper.charAt(upper.length() - 1);
 
-			boolean esVocal = lastChar == 'A' || lastChar == 'E' || lastChar == 'I' || lastChar == 'O' || lastChar == 'U';
-			if (!esVocal && upper.endsWith(String.valueOf(lastChar))) {
+			if (!upper.endsWith("A") && !upper.endsWith("E") && !upper.endsWith("I") && !upper.endsWith("O") && !upper.endsWith("U")) {
 				System.out.format("Repeteixo: %s%n", userInput);
 			}
 
