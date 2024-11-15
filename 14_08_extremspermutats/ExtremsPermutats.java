@@ -14,10 +14,7 @@ public class ExtremsPermutats {
 			String firstSection = userInput.substring(0, 2);
 			String lastSection = userInput.substring(userInput.length() - 2);
 
-			if (userInput.length() < 4) {
-				continue;
-			}
-
+			if (userInput.length() > 3) {
 			String rotateLastSection = "";
 			for (int i = lastSection.length() - 1; i > -1; i--) {
 				rotateLastSection += lastSection.charAt(i);
@@ -25,6 +22,8 @@ public class ExtremsPermutats {
 
 			if (firstSection.equalsIgnoreCase(lastSection) || firstSection.equalsIgnoreCase(rotateLastSection)) {
 				System.out.format("Repeteix: %s%n", userInput);
+			}
+
 			}
 
 			userInput = Entrada.readLine();
