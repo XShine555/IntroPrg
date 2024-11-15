@@ -11,10 +11,14 @@ public class ExtremsPermutats {
 		String userInput = Entrada.readLine();
 
 		while (!userInput.isBlank()) {
+			int inputLength = userInput.length();
 
 			if (userInput.length() > 1) {
 				String firstSection = userInput.substring(0, 2);
-				String lastSection = userInput.substring(userInput.length() - 2);
+				String lastSection = userInput.substring(inputLength - 2);
+
+        			if (Character.isLetter(firstSection.charAt(0)) && Character.isLetter(firstSection.charAt(1)) &&
+            			Character.isLetter(lastSection.charAt(0)) && Character.isLetter(lastSection.charAt(1))) {
 
 				String rotateLastSection = "";
 				for (int i = lastSection.length() - 1; i > -1; i--) {
@@ -23,7 +27,7 @@ public class ExtremsPermutats {
 
 				if (firstSection.equalsIgnoreCase(lastSection) || firstSection.equalsIgnoreCase(rotateLastSection)) {
 					System.out.format("Repeteix: %s%n", userInput);
-				}
+				}}
 
 			}
 
