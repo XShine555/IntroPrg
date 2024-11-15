@@ -14,6 +14,10 @@ public class ExtremsPermutats {
 			String firstSection = userInput.substring(0, 2);
 			String lastSection = userInput.substring(userInput.length() - 2);
 
+			if (userInput.length() < 4) {
+				continue;
+			}
+
 			String rotateLastSection = "";
 			for (int i = lastSection.length() - 1; i > -1; i--) {
 				rotateLastSection += lastSection.charAt(i);
