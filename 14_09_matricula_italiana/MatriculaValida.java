@@ -1,3 +1,10 @@
+/*
+ * Exercici 14_09. Matrícules italianes
+ * Iker Rivera Garcia
+ * 15/11/2024
+ * Programa que comprueba si las matrículas italianas son válidas.
+*/
+
 public class MatriculaValida {
 	public static void main(String[] args) {
 		System.out.println("Introduïu una matrícula");
