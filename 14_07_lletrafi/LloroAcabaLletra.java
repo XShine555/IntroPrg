@@ -12,9 +12,19 @@ public class LloroAcabaLletra  {
 
                 while (!userInput.isBlank()) {
 			String upper = userInput.toUpperCase();
-
-			if (!upper.endsWith("A") && !upper.endsWith("E") && !upper.endsWith("I") && !upper.endsWith("O") && !upper.endsWith("U")) {
-				System.out.format("Repeteixo: %s%n", userInput);
+			char searchChar = Character.MIN_VALUE;
+			for (int i = upper.length() - 1; i > 0; i--) {
+				char thisChar = upper.charAt(i);
+				if (Character.isLetter(thisChar)) {
+					searchChar = thisChar;
+					break;
+				}
+			}
+			if (searchChar != Character.MIN_VALUE) {
+				String lastChar = String.valueOf(searchChar);
+				if (!lastChar.endsWith("A") && !lastChar.endsWith("E") && !lastChar.endsWith("I") && !lastChar.endsWith("O") && !lastChar.endsWith("U")) {
+					System.out.format("Repeteixo: %s%n", userInput);
+				}
 			}
 
                         System.out.println("Paraula?");
