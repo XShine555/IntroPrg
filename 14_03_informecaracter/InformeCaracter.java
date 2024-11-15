@@ -1,3 +1,10 @@
+/*
+ * Exercici 14_03. Informe d'un caràcter
+ * Iker Rivera Garcia
+ * 15/11/2024
+ * Programa que muestra información sobre el primer carácter del texto introducido.
+*/
+
 public class InformeCaracter {
 	public static void main(String[] args) {
 		System.out.println("Text?");
