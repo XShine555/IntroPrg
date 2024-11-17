@@ -11,10 +11,8 @@ public class AnalitzaCaracter {
 
             int textLen = text.length();
 
-            if (position < 0) {
-                position = textLen + position;
-            } else if (position > textLen - 1) {
-                position = position % textLen;
+            if (position < 0 || position > textLen - 1) {
+                position = (position % textLen + textLen) % textLen;
             }
 
             char selectedChar = text.charAt(position);
