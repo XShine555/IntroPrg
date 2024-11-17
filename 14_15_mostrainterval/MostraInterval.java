@@ -12,6 +12,12 @@ public class MostraInterval {
         int end = Integer.parseInt(Entrada.readLine());
         end = Math.max(0, Math.min(textLen - 1, end));
 
+        if (start > end) {
+            int temp = start;
+            start = end;
+            end = temp;
+        }
+
         for (int i = start; i <= end; i++) {
             char iChar = text.charAt(i);
             System.out.println(iChar);
