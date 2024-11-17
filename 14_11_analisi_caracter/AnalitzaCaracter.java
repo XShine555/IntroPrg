@@ -3,12 +3,12 @@ public class AnalitzaCaracter {
         System.out.println("Text?");
         String text = Entrada.readLine();
 
-        System.out.println("Posició?");
-        int position = Integer.parseInt(Entrada.readLine());
-
         if (text.isBlank()) {
             System.out.println("Text buit");
         } else {
+            System.out.println("Posició?");
+            int position = Integer.parseInt(Entrada.readLine());
+
             int textLen = text.length();
 
             if (position < 0) {
