@@ -25,7 +25,7 @@ public class AnalitzaCaracter {
                 String mayusOrMinus = Character.isUpperCase(selectedChar) ? "majúscula" : "minúscula";
                 message += String.format("una lletra %s", mayusOrMinus);
             } else if (Character.isDigit(selectedChar)) {
-                message += String.format("un digit");
+                message += String.format("un dígit");
             }
             else {
                 message += "una altra cosa";
