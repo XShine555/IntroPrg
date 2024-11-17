@@ -32,7 +32,6 @@ public class Distribuidor {
                 }
             }
 
-            System.out.println("Introduïu texts (INTRO per finalitzar)");
             text = Entrada.readLine();
         }
 
