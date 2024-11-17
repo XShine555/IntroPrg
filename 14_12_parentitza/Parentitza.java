@@ -1,3 +1,10 @@
+/*
+ * Exercici 14_12. Lletres entre parèntesis
+ * Iker Rivera Garcia
+ * 15/11/2024
+ * Programa que pone las letras dentro de paréntesis.
+ */
+
 public class Parentitza {
     public static void main(String[] args) {
         System.out.println("Text?");
