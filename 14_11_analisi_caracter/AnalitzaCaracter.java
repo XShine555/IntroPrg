@@ -13,7 +13,7 @@ public class AnalitzaCaracter {
 
             if (position < 0) {
                 position = textLen + position;
-            } else if (position > textLen) {
+            } else if (position > textLen - 1) {
                 position = position % textLen;
             }
 
