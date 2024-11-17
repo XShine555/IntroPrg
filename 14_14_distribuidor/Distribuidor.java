@@ -15,12 +15,13 @@ public class Distribuidor {
                     }
                 } else if (Character.isLetter(iChar)) {
                     char upperChar = Character.toUpperCase(iChar);
+
                     if (upperChar == 'À' || upperChar == 'A' || upperChar == 'È' || upperChar == 'E' || upperChar == 'É'
                             || upperChar == 'I' || upperChar == 'Ï' || upperChar == 'Ò' || upperChar == 'O'
                             || upperChar == 'Ó'
                             || upperChar == 'U' || upperChar == 'Ú' || upperChar == 'Ü') {
                         if (!vowels.contains(String.valueOf(iChar))) {
-                            vowels += iChar;
+                            vowels += upperChar;
                         }
                     } else if (!consonants.contains(String.valueOf(iChar))) {
                         consonants += upperChar;
