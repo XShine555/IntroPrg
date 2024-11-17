@@ -1,6 +1,6 @@
 public class Distribuidor {
     public static void main(String[] args) {
-        System.out.println("Introduïu texts (INTRO per finalitzar)");
+        System.out.println("Introduïu texts (INTRO Per finalitzar)");
         String text = Entrada.readLine();
 
         String vowels = "", consonants = "", names = "", symbols = "";
