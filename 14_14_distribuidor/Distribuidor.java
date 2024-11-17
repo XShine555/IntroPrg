@@ -20,10 +20,10 @@ public class Distribuidor {
                             || upperChar == 'I' || upperChar == 'Ï' || upperChar == 'Ò' || upperChar == 'O'
                             || upperChar == 'Ó'
                             || upperChar == 'U' || upperChar == 'Ú' || upperChar == 'Ü') {
-                        if (!vowels.contains(String.valueOf(iChar))) {
+                        if (!vowels.contains(String.valueOf(upperChar))) {
                             vowels += upperChar;
                         }
-                    } else if (!consonants.contains(String.valueOf(iChar))) {
+                    } else if (!consonants.contains(String.valueOf(upperChar))) {
                         consonants += upperChar;
                     }
                 } else if (!Character.isWhitespace(iChar)) {
