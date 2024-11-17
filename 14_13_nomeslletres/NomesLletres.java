@@ -7,11 +7,11 @@ public class NomesLletres {
             char iChar = text.charAt(i);
 
             if (Character.isLetter(iChar)) {
-                if (i == text.length() - 1) {
+                if (i < 1) {
                     System.out.print(iChar);
                 }
-                else{
-                    System.out.print(iChar + ", ");
+                else {
+                    System.out.print(", " + iChar);
                 }
             }
         }
