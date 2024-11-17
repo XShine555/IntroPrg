@@ -6,19 +6,19 @@ public class Distribuidor {
         String vowels = "", consonants = "", names = "", symbols = "";
 
         while (!text.isBlank()) {
-            String upperText = text.toUpperCase();
-
-            for (int i = 0; i < upperText.length(); i++) {
-                char iChar = upperText.charAt(i);
+            for (int i = 0; i < text.length(); i++) {
+                char iChar = text.charAt(i);
 
                 if (Character.isDigit(iChar)) {
                     if (!names.contains(String.valueOf(iChar))) {
                         names += iChar;
                     }
                 } else if (Character.isLetter(iChar)) {
-                    if (iChar == 'À' || iChar == 'A' || iChar == 'È' || iChar == 'E' || iChar == 'É' || iChar == 'I'
-                            || iChar == 'Ï' || iChar == 'Ò' || iChar == 'O' || iChar == 'Ó' || iChar == 'U'
-                            || iChar == 'Ú' || iChar == 'Ü') {
+                    char upperChar = Character.toUpperCase(iChar);
+                    if (upperChar == 'À' || upperChar == 'A' || upperChar == 'È' || upperChar == 'E' || upperChar == 'É'
+                            || upperChar == 'I' || upperChar == 'Ï' || upperChar == 'Ò' || upperChar == 'O'
+                            || upperChar == 'Ó'
+                            || upperChar == 'U' || upperChar == 'Ú' || upperChar == 'Ü') {
                         if (!vowels.contains(String.valueOf(iChar))) {
                             vowels += iChar;
                         }
