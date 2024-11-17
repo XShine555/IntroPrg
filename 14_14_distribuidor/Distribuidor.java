@@ -23,7 +23,7 @@ public class Distribuidor {
                             vowels += iChar;
                         }
                     } else if (!consonants.contains(String.valueOf(iChar))) {
-                        consonants += iChar;
+                        consonants += upperChar;
                     }
                 } else if (!Character.isWhitespace(iChar)) {
                     if (!symbols.contains(String.valueOf(iChar))) {
