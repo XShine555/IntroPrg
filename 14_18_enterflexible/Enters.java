@@ -16,11 +16,11 @@ public class Enters {
 
             for (int i = 0; i < text.length() && isNumber; i++) {
                 char iChar = text.charAt(i);
-                boolean isSymbol = iChar == '+' || iChar == '-' || iChar == '*' || iChar == '/' || iChar == '%'
-                        || iChar == '.' || iChar == '_';
+                boolean isSymbolOrInvalid = (iChar == '+' || iChar == '-' || iChar == '*' || iChar == '/' || iChar == '%'
+                        || iChar == '.' || iChar == '_') || Character.isLetter(iChar);
 
                 // Sí hay un símbolo al al final.
-                if (i == textLen - 1 && isSymbol) {
+                if (i == textLen - 1 && isSymbolOrInvalid) {
                     isNumber = false;
                 }
                 // Si es un símbolo comprobar que no tenga duplicados y sea válido.
@@ -30,7 +30,7 @@ public class Enters {
                     boolean isPriorSymbol = priorChar == '+' || priorChar == '-' || priorChar == '*' || priorChar == '/' || priorChar == '%'
                     || priorChar == '.' || priorChar == '_';
 
-                    if (isSymbol && isPriorSymbol) {
+                    if (isSymbolOrInvalid && isPriorSymbol) {
                         isNumber = false;
                     }
                 }
