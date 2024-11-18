@@ -28,8 +28,8 @@ public class Enters {
                 else if (i > 0) {
                     char priorChar = text.charAt(i - 1);
 
-                    boolean isPriorSymbol = priorChar == '+' || priorChar == '-' || priorChar == '*' || priorChar == '/' || priorChar == '%'
-                    || priorChar == '.' || priorChar == '_';
+                    boolean isPriorSymbol = (priorChar == '+' || priorChar == '-' || priorChar == '*' || priorChar == '/' || priorChar == '%'
+                    || priorChar == '.' || priorChar == '_') || Character.isLetter(iChar);
 
                     if (isSymbolOrInvalid && isPriorSymbol) {
                         isNumber = false;
