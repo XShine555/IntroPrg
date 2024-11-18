@@ -30,13 +30,13 @@ public class Enters {
 
                     boolean isPriorSymbol = priorChar == '+' || priorChar == '-' || priorChar == '*' || priorChar == '/' || priorChar == '%'
                     || priorChar == '.' || priorChar == '_';
-                    
+
                     if (isSymbolOrInvalid && isPriorSymbol) {
                         isNumber = false;
                     }
                 }
                 // En caso de que empiece por "." O "-" es inválido.
-                else if (iChar == '.' || iChar == '_') {
+                else if (iChar == '.' || iChar == '_' || Character.isLetter(iChar)) {
                     isNumber = false;
                 }
                 /*else if (isSymbol) {
