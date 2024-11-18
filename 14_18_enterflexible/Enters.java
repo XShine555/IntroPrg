@@ -39,12 +39,7 @@ public class Enters {
                         }
                     }
                     else {
-                        char nextChar = text.charAt(i + 1);
-                        
-                        boolean isNextSymbol = nextChar == '+' || nextChar == '-' || nextChar == '*' || nextChar == '/' || nextChar == '%'
-                        || nextChar == '.' || nextChar == '_';
-                        
-                        if (isNextSymbol) {
+                        if (iChar == '.' || iChar == '_') {
                             isNumber = false;
                         }
                     }
