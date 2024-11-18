@@ -17,7 +17,6 @@ public class ConteDarrer {
                     if (iChar == toFind) {
                         foundAnything = true;
                     }
-                    System.out.println(iChar);
                 }
 
                 canExit = !foundAnything;
