@@ -8,10 +8,11 @@
 public class Enters {
     public static void main(String[] args) {
         System.out.println("Introdueix texts (enter sol per finalitzar)");
-        String text = Entrada.readLine().replace(" ", "");
+        String text = Entrada.readLine();
 
         while (!text.isBlank()) {
             boolean isNumber = true;
+            text = text.replace(" ", "");
             int textLen = text.length();
 
             for (int i = 0; i < text.length() && isNumber; i++) {
@@ -29,7 +30,7 @@ public class Enters {
 
                     boolean isPriorSymbol = priorChar == '+' || priorChar == '-' || priorChar == '*' || priorChar == '/' || priorChar == '%'
                     || priorChar == '.' || priorChar == '_';
-
+                    
                     if (isSymbolOrInvalid && isPriorSymbol) {
                         isNumber = false;
                     }
