@@ -24,9 +24,11 @@ public class ConteDarrer {
                     System.out.println("bé");
                 }
             }
-            toFind = Character.toUpperCase(text.charAt(text.length() - 1));
+            if (!canExit) {
+                toFind = Character.toUpperCase(text.charAt(text.length() - 1));
 
-            text = Entrada.readLine();
+                text = Entrada.readLine();
+            }
         }
 
         System.out.println("Adéu");
