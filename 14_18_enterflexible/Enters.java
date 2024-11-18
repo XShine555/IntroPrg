@@ -8,11 +8,10 @@
  public class Enters {
     public static void main(String[] args) {
         System.out.println("Introdueix texts (enter sol per finalitzar)");
-        String text = Entrada.readLine();
+        String text = Entrada.readLine().replace(" ", "");
 
         while (!text.isBlank()) {
             boolean isNumber = true;
-            int textLen = text.length();
 
             for (int i = 0; i < text.length() && isNumber; i++) {
                 char iChar = text.charAt(i);
