@@ -5,29 +5,50 @@
  * Programa que indica si un texto es entero o no (ampliación).
  */
 
- public class Enters {
+public class Enters {
     public static void main(String[] args) {
         System.out.println("Introdueix texts (enter sol per finalitzar)");
         String text = Entrada.readLine().replace(" ", "");
 
         while (!text.isBlank()) {
             boolean isNumber = true;
+            int textLen = text.length();
 
             for (int i = 0; i < text.length() && isNumber; i++) {
                 char iChar = text.charAt(i);
-                boolean isSymbol = iChar == '+' || iChar == '-' || iChar == '*' || iChar == '/' || iChar == '%';
-                if (isSymbol && i == text.length() - 1) {
+                boolean isSymbol = iChar == '+' || iChar == '-' || iChar == '*' || iChar == '/' || iChar == '%'
+                        || iChar == '.' || iChar == '_';
+
+                // Sí hay un símbolo al principio o al final.
+                if ((i == 0 || i == textLen - 1) && isSymbol) {
+                    isNumber = false;
+                }
+                // Si es un símbolo comprobar que no tenga duplicados y sea válido.
+                else if (isSymbol) {
+                    char priorChar = text.charAt(i - 1);
+                    char nextChar = text.charAt(i + 1);
+                    
+                    boolean isPriorSymbol = priorChar == '+' || priorChar == '-' || priorChar == '*' || priorChar == '/' || priorChar == '%'
+                    || priorChar == '.' || priorChar == '_';
+                    boolean isNextSymbol = nextChar == '+' || nextChar == '-' || nextChar == '*' || nextChar == '/' || nextChar == '%'
+                    || nextChar == '.' || nextChar == '_';
+
+                    if (isNextSymbol && isPriorSymbol) {
+                        isNumber = false;
+                    }
+                }
+
+                /*if (isSymbol && i == text.length() - 1) {
                     isNumber = false;
                 } else if (!Character.isDigit(iChar) && !isSymbol) {
-                    if (i > 0 && i != text.length() -1 && (iChar == '.' || iChar == '_')) {
+                    if (i > 0 && i != text.length() - 1 && (iChar == '.' || iChar == '_')) {
                         char lastChar = text.charAt(i - 1);
                         char nextChar = text.charAt(i + 1);
-    
+
                         if (!Character.isDigit(lastChar) || !Character.isDigit(nextChar)) {
                             isNumber = false;
                         }
-                    }
-                    else {
+                    } else {
                         isNumber = false;
                     }
                 } else if (i > 0) {
@@ -38,7 +59,7 @@
                     if (isLastCharSymbol && isSymbol) {
                         isNumber = false;
                     }
-                }
+                }*/
             }
 
             if (isNumber) {
