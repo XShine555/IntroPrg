@@ -24,8 +24,7 @@ public class Enters {
                     isNumber = false;
                 }
                 // Si es un símbolo comprobar que no tenga duplicados y sea válido.
-                else if (isSymbol && i > 1) {
-
+                else if (isSymbol) {
                     if (i > 1) {
                         char priorChar = text.charAt(i - 1);
                         char nextChar = text.charAt(i + 1);
@@ -36,6 +35,16 @@ public class Enters {
                         || nextChar == '.' || nextChar == '_';
                         
                         if (isNextSymbol && isPriorSymbol) {
+                            isNumber = false;
+                        }
+                    }
+                    else {
+                        char nextChar = text.charAt(i + 1);
+                        
+                        boolean isNextSymbol = nextChar == '+' || nextChar == '-' || nextChar == '*' || nextChar == '/' || nextChar == '%'
+                        || nextChar == '.' || nextChar == '_';
+                        
+                        if (isNextSymbol) {
                             isNumber = false;
                         }
                     }
