@@ -20,7 +20,6 @@
                     isNumber = false;
                 } else if (!Character.isDigit(iChar) && !isSymbol) {
                     if (i > 0 && i != text.length() -1 && (iChar == '.' || iChar == '_')) {
-                        System.out.println("Here");
                         char lastChar = text.charAt(i - 1);
                         char nextChar = text.charAt(i + 1);
     
