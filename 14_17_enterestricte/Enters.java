@@ -15,9 +15,9 @@ public class Enters {
 
             for (int i = 0; i < text.length() && isNumber; i++) {
                 char iChar = text.charAt(i);
-                if (!Character.isDigit(iChar) && (iChar != '+' || iChar != '-' || iChar != '*' || iChar != '/' || iChar != '%') ) {
+                if (!Character.isDigit(iChar) && (iChar != '+' && iChar != '-' && iChar != '*' && iChar != '/' && iChar != '%')) {
                     isNumber = false;
-                }
+                }                
             }
 
             if (isNumber) {
