@@ -46,7 +46,7 @@ public class Distribuidor {
             System.out.format("Nombres: %s%n", names);
         }
         if (symbols.length() > 0) {
-            System.out.format("Simbols: %s%n", symbols);
+            System.out.format("Símbols: %s%n", symbols);
         }
     }
 }
