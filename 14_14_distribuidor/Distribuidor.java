@@ -1,3 +1,10 @@
+/*
+ * Exercici 14_14. Distribuidor
+ * Iker Rivera Garcia
+ * 18/11/2024
+ * Distribuye los caracteres por su categoría.
+ */
+
 public class Distribuidor {
     public static void main(String[] args) {
         System.out.println("Introduïu texts (INTRO per finalitzar)");
