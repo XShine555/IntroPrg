@@ -35,56 +35,10 @@ public class Enters {
                         isNumber = false;
                     }
                 }
-                // En caso de que empiece por "." O "-" es inválido.
-                else if (iChar == '.' || iChar == '_' || Character.isLetter(iChar)) {
+                else {
                     isNumber = false;
                 }
-                /*else if (isSymbol) {
-                    if (i > 0) {
 
-                    
-                        
-                        if (isNextSymbol && isPriorSymbol) {
-                            isNumber = false;
-                        }
-
-                        System.out.println(priorChar);
-                        System.out.println(nextChar);
-                    }
-                    else {
-                        char nextChar = text.charAt(i + 1);
-                        
-                        boolean isNextSymbol = nextChar == '+' || nextChar == '-' || nextChar == '*' || nextChar == '/' || nextChar == '%'
-                        || nextChar == '.' || nextChar == '_';
-                        
-                        if (isNextSymbol && (iChar == '.' || iChar == '_')) {
-                            isNumber = false;
-                        }
-                    }
-                }
-
-                /*if (isSymbol && i == text.length() - 1) {
-                    isNumber = false;
-                } else if (!Character.isDigit(iChar) && !isSymbol) {
-                    if (i > 0 && i != text.length() - 1 && (iChar == '.' || iChar == '_')) {
-                        char lastChar = text.charAt(i - 1);
-                        char nextChar = text.charAt(i + 1);
-
-                        if (!Character.isDigit(lastChar) || !Character.isDigit(nextChar)) {
-                            isNumber = false;
-                        }
-                    } else {
-                        isNumber = false;
-                    }
-                } else if (i > 0) {
-                    char lastChar = text.charAt(i - 1);
-                    boolean isLastCharSymbol = lastChar == '+' || lastChar == '-' || lastChar == '*' || lastChar == '/'
-                            || lastChar == '%';
-
-                    if (isLastCharSymbol && isSymbol) {
-                        isNumber = false;
-                    }
-                }*/
             }
 
             if (isNumber) {
