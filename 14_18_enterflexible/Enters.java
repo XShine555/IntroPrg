@@ -17,7 +17,8 @@ public class Enters {
 
             for (int i = 0; i < text.length() && isNumber; i++) {
                 char iChar = text.charAt(i);
-                boolean isSymbolOrInvalid = (iChar == '+' || iChar == '-' || iChar == '*' || iChar == '/' || iChar == '%'
+                boolean isSymbolOrInvalid = (iChar == '+' || iChar == '-' || iChar == '*' || iChar == '/'
+                        || iChar == '%'
                         || iChar == '.' || iChar == '_') || Character.isLetter(iChar);
 
                 // Sí hay un símbolo al al final.
@@ -28,17 +29,18 @@ public class Enters {
                 else if (i > 0) {
                     char priorChar = text.charAt(i - 1);
 
-                    boolean isPriorSymbol = (priorChar == '+' || priorChar == '-' || priorChar == '*' || priorChar == '/' || priorChar == '%'
-                    || priorChar == '.' || priorChar == '_') || Character.isLetter(iChar);
+                    boolean isPriorSymbol = (priorChar == '+' || priorChar == '-' || priorChar == '*'
+                            || priorChar == '/' || priorChar == '%'
+                            || priorChar == '.' || priorChar == '_') || Character.isLetter(iChar);
 
                     if (isSymbolOrInvalid && isPriorSymbol) {
                         isNumber = false;
                     }
                 }
-                else {
+                // En caso de que empiece por "." O "-" es inválido.
+                else if (iChar == '.' || iChar == '_' || Character.isLetter(iChar)) {
                     isNumber = false;
                 }
-
             }
 
             if (isNumber) {
