@@ -21,7 +21,6 @@ public class MatriculaValida {
 				char thisChar = firstPart.charAt(i);
 				if (!Character.isLetter(thisChar) || !Character.isUpperCase(thisChar) || thisChar == 'Ç' || thisChar == 'À' || thisChar == 'Ñ' || thisChar == 'ß' || thisChar == 'I' || thisChar == 'O' || thisChar == 'Q' || thisChar == 'U') {
 					isValid = false;
-					break;
 				}
 			}
 
@@ -29,7 +28,6 @@ public class MatriculaValida {
 				for (int i = 0; i <= secondPart.length() - 1; i++) {
 					if (!Character.isDigit(secondPart.charAt(i))) {
 						isValid = false;
-						break;
 					}
 				}
 			}
@@ -38,7 +36,6 @@ public class MatriculaValida {
 					char thisChar = thirdPart.charAt(i);
 					if (!Character.isLetter(thisChar) || !Character.isUpperCase(thisChar) || thisChar == 'Ç' || thisChar == 'À' || thisChar == 'Ñ' || thisChar == 'ß' || thisChar == 'I' || thisChar == 'O' || thisChar == 'Q' || thisChar == 'U') {
 						isValid = false;
-						break;
 					}
 				}
 			}
