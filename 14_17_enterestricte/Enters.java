@@ -15,9 +15,21 @@ public class Enters {
 
             for (int i = 0; i < text.length() && isNumber; i++) {
                 char iChar = text.charAt(i);
-                if (!Character.isDigit(iChar) && (iChar != '+' && iChar != '-' && iChar != '*' && iChar != '/' && iChar != '%')) {
+                boolean isSymbol = iChar == '+' || iChar == '-' || iChar == '*' || iChar == '/' || iChar == '%';
+
+                if (isSymbol && i == text.length() - 1) {
                     isNumber = false;
-                }                
+                } else if (!Character.isDigit(iChar) && !isSymbol) {
+                    isNumber = false;
+                } else if (i > 0) {
+                    char lastChar = text.charAt(i - 1);
+                    boolean isLastCharSymbol = lastChar == '+' || lastChar == '-' || lastChar == '*' || lastChar == '/'
+                            || lastChar == '%';
+
+                    if (isLastCharSymbol && isSymbol) {
+                        isNumber = false;
+                    }
+                }
             }
 
             if (isNumber) {
