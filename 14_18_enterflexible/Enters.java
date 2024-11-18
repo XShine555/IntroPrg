@@ -19,22 +19,25 @@ public class Enters {
                 boolean isSymbol = iChar == '+' || iChar == '-' || iChar == '*' || iChar == '/' || iChar == '%'
                         || iChar == '.' || iChar == '_';
 
-                // Sí hay un símbolo al principio o al final.
-                if ((i == 0 || i == textLen - 1) && isSymbol) {
+                // Sí hay un símbolo al al final.
+                if (i == textLen - 1 && isSymbol) {
                     isNumber = false;
                 }
                 // Si es un símbolo comprobar que no tenga duplicados y sea válido.
-                else if (isSymbol) {
-                    char priorChar = text.charAt(i - 1);
-                    char nextChar = text.charAt(i + 1);
-                    
-                    boolean isPriorSymbol = priorChar == '+' || priorChar == '-' || priorChar == '*' || priorChar == '/' || priorChar == '%'
-                    || priorChar == '.' || priorChar == '_';
-                    boolean isNextSymbol = nextChar == '+' || nextChar == '-' || nextChar == '*' || nextChar == '/' || nextChar == '%'
-                    || nextChar == '.' || nextChar == '_';
+                else if (isSymbol && i > 1) {
 
-                    if (isNextSymbol && isPriorSymbol) {
-                        isNumber = false;
+                    if (i > 1) {
+                        char priorChar = text.charAt(i - 1);
+                        char nextChar = text.charAt(i + 1);
+                        
+                        boolean isPriorSymbol = priorChar == '+' || priorChar == '-' || priorChar == '*' || priorChar == '/' || priorChar == '%'
+                        || priorChar == '.' || priorChar == '_';
+                        boolean isNextSymbol = nextChar == '+' || nextChar == '-' || nextChar == '*' || nextChar == '/' || nextChar == '%'
+                        || nextChar == '.' || nextChar == '_';
+                        
+                        if (isNextSymbol && isPriorSymbol) {
+                            isNumber = false;
+                        }
                     }
                 }
 
