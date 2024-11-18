@@ -24,22 +24,39 @@ public class Enters {
                     isNumber = false;
                 }
                 // Si es un símbolo comprobar que no tenga duplicados y sea válido.
-                else if (isSymbol) {
-                    if (i > 1) {
-                        char priorChar = text.charAt(i - 1);
-                        char nextChar = text.charAt(i + 1);
-                        
-                        boolean isPriorSymbol = priorChar == '+' || priorChar == '-' || priorChar == '*' || priorChar == '/' || priorChar == '%'
-                        || priorChar == '.' || priorChar == '_';
-                        boolean isNextSymbol = nextChar == '+' || nextChar == '-' || nextChar == '*' || nextChar == '/' || nextChar == '%'
-                        || nextChar == '.' || nextChar == '_';
+                else if (i > 0) {
+                    char priorChar = text.charAt(i - 1);
+
+                    boolean isPriorSymbol = priorChar == '+' || priorChar == '-' || priorChar == '*' || priorChar == '/' || priorChar == '%'
+                    || priorChar == '.' || priorChar == '_';
+
+                    if (isSymbol && isPriorSymbol) {
+                        isNumber = false;
+                    }
+                }
+                // En caso de que empiece por "." O "-" es inválido.
+                else if (iChar == '.' || iChar == '_') {
+                    isNumber = false;
+                }
+                /*else if (isSymbol) {
+                    if (i > 0) {
+
+                    
                         
                         if (isNextSymbol && isPriorSymbol) {
                             isNumber = false;
                         }
+
+                        System.out.println(priorChar);
+                        System.out.println(nextChar);
                     }
                     else {
-                        if (iChar == '.' || iChar == '_') {
+                        char nextChar = text.charAt(i + 1);
+                        
+                        boolean isNextSymbol = nextChar == '+' || nextChar == '-' || nextChar == '*' || nextChar == '/' || nextChar == '%'
+                        || nextChar == '.' || nextChar == '_';
+                        
+                        if (isNextSymbol && (iChar == '.' || iChar == '_')) {
                             isNumber = false;
                         }
                     }
