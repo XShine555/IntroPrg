@@ -10,7 +10,7 @@ public class MajusculitzaInicials {
 
             if (i > 0) {
                 char lastChar = userInput.charAt(i - 1);
-                if (Character.isWhitespace(lastChar)) {
+                if (!Character.isLetter(lastChar)) {
                     iChar = Character.toUpperCase(iChar);
                 }
                 else {
