@@ -1,3 +1,10 @@
+/*
+ * Exercici 15_03. Estadístiques d'un text
+ * Iker Rivera Garcia
+ * 21/11/2024
+ * Programa que muestra las estadísticas de un texto.
+ */
+
 public class InformeText {
     public static void main(String[] args) {
         System.out.println("Text?");
