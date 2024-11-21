@@ -19,7 +19,7 @@ public class Distribuidor {
                 if (Character.isDigit(iChar)) {
                     // String.Contains
                     boolean containsChar = false;
-                    for (int j = 0; j < names.length(); j++) {
+                    for (int j = 0; j < names.length() - 1; j++) {
                         var jChar = names.charAt(i);
                         if (iChar == jChar) {
                             containsChar = true;
@@ -41,7 +41,7 @@ public class Distribuidor {
                         }
                         // String.Contains
                         boolean containsChar = false;
-                        for (int j = 0; j < vowels.length(); j++) {
+                        for (int j = 0; j < vowels.length() - 1; j++) {
                             var jChar = vowels.charAt(i);
                             if (iChar == jChar) {
                                 containsChar = true;
@@ -54,7 +54,7 @@ public class Distribuidor {
                     } else {
                         // String.Contains
                         boolean containsChar = false;
-                        for (int j = 0; j < consonants.length(); j++) {
+                        for (int j = 0; j < consonants.length() - 1; j++) {
                             var jChar = consonants.charAt(i);
                             if (iChar == jChar) {
                                 containsChar = true;
@@ -68,7 +68,7 @@ public class Distribuidor {
                 } else if (!Character.isWhitespace(iChar)) {
                     // String.Contains
                     boolean containsChar = false;
-                    for (int j = 0; j < symbols.length(); j++) {
+                    for (int j = 0; j < symbols.length() - 1; j++) {
                         var jChar = symbols.charAt(i);
                         if (iChar == jChar) {
                             containsChar = true;
