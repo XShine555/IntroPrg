@@ -1,3 +1,10 @@
+/*
+ * Exercici 15_08. Codifica bàsic
+ * Iker Rivera Garcia
+ * 22/11/2024
+ * Programa que hace que cada letra de la 'a' a la 'z' avance a la siguiente letra.
+ */
+
 public class CodificaBasic {
     public static void main(String[] args) {
         System.out.println("Text?");
@@ -10,7 +17,6 @@ public class CodificaBasic {
             char iLowerChar = Character.toLowerCase(iChar); 
 
             if (iLowerChar >= 65 && iLowerChar <= 122 && !Character.isUpperCase(iChar)) {
-                //char iLowerChar = Character.toLowerCase(iChar);
                 int iNumericValue = (int)iLowerChar;
                 
                 int nextNumericValue = iNumericValue + 1;
