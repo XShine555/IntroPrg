@@ -1,3 +1,10 @@
+/*
+ * Exercici 14_20. Endevina amb control
+ * Iker Rivera Garcia
+ * 18/11/2024
+ * Programa que busca la palabra final mayúscula dentro del siguiente texto.
+ */
+
 public class ConteDarrer {
     public static void main(String[] args) {
         System.out.println("Introdueix texts (enter sol per finalitzar)");
