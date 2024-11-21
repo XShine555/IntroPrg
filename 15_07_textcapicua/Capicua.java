@@ -15,6 +15,6 @@ public class Capicua {
             reverseUserInput += userInput.charAt(i);
         }
 
-        System.out.println(userInput.equalsIgnoreCase(reverseUserInput) ? "És capicua" : "No és capicua");
+        System.out.println(userInput.equalsIgnoreCase(reverseUserInput) && !userInput.isBlank() ? "És capicua" : "No és capicua");
     }    
 }
