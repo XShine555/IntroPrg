@@ -23,15 +23,16 @@ public class ExtremsPermutats {
 					lastSection += userInput.charAt(i);
 				}
 
-        			if (Character.isLetter(firstSection.charAt(0)) && Character.isLetter(firstSection.charAt(1)) &&
-            			Character.isLetter(lastSection.charAt(0)) && Character.isLetter(lastSection.charAt(1))) {
+				if (Character.isLetter(firstSection.charAt(0)) && Character.isLetter(firstSection.charAt(1)) &&
+						Character.isLetter(lastSection.charAt(0)) && Character.isLetter(lastSection.charAt(1))) {
 
 					String rotateLastSection = "";
 					for (int i = lastSection.length() - 1; i > -1; i--) {
 						rotateLastSection += lastSection.charAt(i);
 					}
 
-					if (firstSection.equalsIgnoreCase(lastSection) || firstSection.equalsIgnoreCase(rotateLastSection)) {
+					if (firstSection.equalsIgnoreCase(lastSection)
+							|| firstSection.equalsIgnoreCase(rotateLastSection)) {
 						System.out.format("Repeteix: %s%n", userInput);
 					}
 				}
