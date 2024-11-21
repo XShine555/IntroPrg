@@ -12,11 +12,18 @@ public class Enters {
 
         while (!text.isBlank()) {
             boolean isNumber = true;
-            text = text.replace(" ", "");
-            int textLen = text.length();
-
-            for (int i = 0; i < text.length() && isNumber; i++) {
+            // Replace
+            String sanitizeString = "";
+            for (int i = 0; i < text.length(); i++) {
                 char iChar = text.charAt(i);
+                if (!Character.isWhitespace(iChar)) {
+                    sanitizeString += iChar;
+                }
+            }
+            int textLen = sanitizeString.length();
+
+            for (int i = 0; i < textLen; i++) {
+                char iChar = sanitizeString.charAt(i);
                 boolean isSymbolOrInvalid = (iChar == '+' || iChar == '-' || iChar == '*' || iChar == '/'
                         || iChar == '%'
                         || iChar == '.' || iChar == '_') || Character.isLetter(iChar);
@@ -27,7 +34,7 @@ public class Enters {
                 }
                 // Si es un símbolo comprobar que no tenga duplicados y sea válido.
                 else if (i > 0) {
-                    char priorChar = text.charAt(i - 1);
+                    char priorChar = sanitizeString.charAt(i - 1);
 
                     boolean isPriorSymbol = (priorChar == '+' || priorChar == '-' || priorChar == '*'
                             || priorChar == '/' || priorChar == '%'
