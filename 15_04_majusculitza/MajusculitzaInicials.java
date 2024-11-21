@@ -1,4 +1,4 @@
-public class Majusculitza {
+public class MajusculitzaInicials {
     public static void main(String[] args) {
         System.out.println("Text?");
         String userInput = Entrada.readLine();
