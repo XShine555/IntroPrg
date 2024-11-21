@@ -18,17 +18,17 @@ public class InformeText {
                 letterCount++;
 
                 if (Character.isLowerCase(iChar)) {
-                    mayusCount++;
+                    minusCount++;
 
                     if (iChar == 'a' || iChar == 'e' || iChar == 'i' || iChar == 'o'
                             || iChar == 'u' || iChar == 'à' || iChar == 'é' || iChar == 'è'
                             || iChar == 'í' || iChar == 'ï' || iChar == 'ó' || iChar == 'ò'
                             || iChar == 'ú' || iChar == 'ü') {
-                        vowelMayusCount++;
+                        vowelMinusCount++;
                         vowelCount++;
                     }
                 } else {
-                    minusCount++;
+                    mayusCount++;
                     if (iChar == 'A' || iChar == 'E' || iChar == 'I' || iChar == 'O'
                             || iChar == 'U' || iChar == 'À' || iChar == 'É' || iChar == 'È'
                             || iChar == 'Í' || iChar == 'Ï' || iChar == 'Ó' || iChar == 'Ò'
