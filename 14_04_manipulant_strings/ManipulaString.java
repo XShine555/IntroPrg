@@ -49,7 +49,7 @@ public class ManipulaString {
 			// minúscules de manera que la primera sigui majúscules i la resta en
 			// minúscules. (ex. si la paraula és «Nekane» mostrarà «Enek»)
 			String firstThreeAndLastMayus = "" + Character.toUpperCase(paraula.charAt(0));
-			for (int i = 0; i < paraula.length(); i++) {
+			for (int i = 1; i < paraula.length(); i++) {
 				firstThreeAndLastMayus += Character.toLowerCase(paraula.charAt(i));
 			}
 			System.out.format("La composició de quatre corregint majúscules és \"%s\"%n", firstThreeAndLastMayus);
