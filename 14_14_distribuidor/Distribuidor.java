@@ -76,7 +76,7 @@ public class Distribuidor {
                         }
                     }
                     if (!containsChar) {
-                        consonants += iChar;
+                        symbols += iChar;
                     }
                 }
             }
