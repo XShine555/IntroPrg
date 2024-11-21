@@ -1,5 +1,5 @@
 /*
- * Exercici 15_01. Vocals en majúscules
+ * Exercici 15_02. Comptant vocals
  * Iker Rivera Garcia
  * 21/11/2024
  * Programa que contará las vocales.
