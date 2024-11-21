@@ -17,7 +17,7 @@ public class InformeText {
             if (Character.isLetter(iChar)) {
                 letterCount++;
 
-                if (Character.isUpperCase(iChar)) {
+                if (Character.isLowerCase(iChar)) {
                     mayusCount++;
 
                     if (iChar == 'a' || iChar == 'e' || iChar == 'i' || iChar == 'o'
