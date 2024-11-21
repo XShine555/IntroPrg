@@ -50,7 +50,7 @@ public class InformeText {
         System.out.format("lletres en minúscules: %d (%.2f%%)%n", minusCount, 100.0 * minusCount / textLen);
         System.out.format("total lletres: %d (%.2f%%)%n", letterCount, 100.0 * letterCount / textLen);
         System.out.format("vocals en majúscules: %d (%.2f%%)%n", vowelMayusCount, 100.0 * vowelMayusCount / textLen);
-        System.out.format("vocals en minúscules: %d (%.2f%%)%n", vowelMinusCount, 100.0 * vowelMayusCount / textLen);
+        System.out.format("vocals en minúscules: %d (%.2f%%)%n", vowelMinusCount, 100.0 * vowelMinusCount / textLen);
         System.out.format("total vocals: %d (%.2f%%)%n", vowelCount, 100.0 * vowelCount / textLen);
         System.out.format("digits: %d (%.2f%%)%n", numberCount, 100.0 * numberCount / textLen);
         System.out.format("altres caràcters: %d (%.2f%%)%n", otherSymbols, 100.0 * otherSymbols / textLen);
