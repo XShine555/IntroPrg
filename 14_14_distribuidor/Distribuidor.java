@@ -43,7 +43,7 @@ public class Distribuidor {
                         boolean containsChar = false;
                         for (int j = 0; j < vowels.length(); j++) {
                             var jChar = vowels.charAt(j);
-                            if (iChar == jChar) {
+                            if (upperChar == jChar) {
                                 containsChar = true;
                                 break;
                             }
@@ -56,7 +56,7 @@ public class Distribuidor {
                         boolean containsChar = false;
                         for (int j = 0; j < consonants.length(); j++) {
                             var jChar = consonants.charAt(j);
-                            if (iChar == jChar) {
+                            if (upperChar == jChar) {
                                 containsChar = true;
                                 break;
                             }
