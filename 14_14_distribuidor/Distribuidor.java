@@ -17,7 +17,16 @@ public class Distribuidor {
                 char iChar = text.charAt(i);
 
                 if (Character.isDigit(iChar)) {
-                    if (!names.contains(String.valueOf(iChar))) {
+                    // String.Contains
+                    boolean containsChar = false;
+                    for (int j = 0; j < names.length(); j++) {
+                        var jChar = names.charAt(i);
+                        if (iChar == jChar) {
+                            containsChar = true;
+                            break;
+                        }
+                    }
+                    if (!containsChar) {
                         names += iChar;
                     }
                 } else if (Character.isLetter(iChar)) {
@@ -30,12 +39,44 @@ public class Distribuidor {
                         if (!vowels.contains(String.valueOf(upperChar))) {
                             vowels += upperChar;
                         }
-                    } else if (!consonants.contains(String.valueOf(upperChar))) {
-                        consonants += upperChar;
+                        // String.Contains
+                        boolean containsChar = false;
+                        for (int j = 0; j < vowels.length(); j++) {
+                            var jChar = vowels.charAt(i);
+                            if (iChar == jChar) {
+                                containsChar = true;
+                                break;
+                            }
+                        }
+                        if (!containsChar) {
+                            vowels += upperChar;
+                        }
+                    } else {
+                        // String.Contains
+                        boolean containsChar = false;
+                        for (int j = 0; j < consonants.length(); j++) {
+                            var jChar = consonants.charAt(i);
+                            if (iChar == jChar) {
+                                containsChar = true;
+                                break;
+                            }
+                        }
+                        if (!containsChar) {
+                            consonants += upperChar;
+                        }
                     }
                 } else if (!Character.isWhitespace(iChar)) {
-                    if (!symbols.contains(String.valueOf(iChar))) {
-                        symbols += iChar;
+                    // String.Contains
+                    boolean containsChar = false;
+                    for (int j = 0; j < symbols.length(); j++) {
+                        var jChar = symbols.charAt(i);
+                        if (iChar == jChar) {
+                            containsChar = true;
+                            break;
+                        }
+                    }
+                    if (!containsChar) {
+                        consonants += iChar;
                     }
                 }
             }
