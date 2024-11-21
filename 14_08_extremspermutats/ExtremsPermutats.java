@@ -14,8 +14,14 @@ public class ExtremsPermutats {
 			int inputLength = userInput.length();
 
 			if (userInput.length() > 1) {
-				String firstSection = userInput.substring(0, 2);
-				String lastSection = userInput.substring(inputLength - 2);
+				String firstSection = "";
+				for (int i = 0; i < 2; i++) {
+					firstSection += userInput.charAt(i);
+				}
+				String lastSection = "";
+				for (int i = inputLength - 2; i < inputLength; i++) {
+					lastSection += userInput.charAt(i);
+				}
 
         			if (Character.isLetter(firstSection.charAt(0)) && Character.isLetter(firstSection.charAt(1)) &&
             			Character.isLetter(lastSection.charAt(0)) && Character.isLetter(lastSection.charAt(1))) {
