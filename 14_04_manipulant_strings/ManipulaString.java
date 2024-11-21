@@ -35,6 +35,7 @@ public class ManipulaString {
 			for (int i = 1; i < 4; i++) {
 				firstFour += Character.toLowerCase(paraula.charAt(i));
 			}
+			System.out.format("La composició de quatre primeres és \"%s\"%n", firstFour);
 			// Mostra una composició formada per la darrera lletra de la paraula,
 			// seguida de les tres primeres. (ex. si la paraula és «Nekane»
 			// mostrarà «eNek»
