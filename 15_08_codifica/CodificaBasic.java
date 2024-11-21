@@ -8,7 +8,7 @@ public class CodificaBasic {
         for (int i = 0; i < textLen; i++) {
             char iChar = userInput.charAt(i);
 
-            if (Character.isLetter(iChar)) {
+            if (Character.isLetter(iChar) && !Character.isUpperCase(iChar)) {
                 char iLowerChar = Character.toLowerCase(iChar);
                 int iNumericValue = (int)iLowerChar;
                 
@@ -18,8 +18,6 @@ public class CodificaBasic {
                 if (nextNumericValue > 122) {
                     nextChar = 'a';
                 }
-
-                if (Character.isUpperCase(iChar)) nextChar = Character.toUpperCase(nextChar);
 
                 newText += nextChar;
             }else {
