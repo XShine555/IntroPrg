@@ -15,7 +15,7 @@ public class VocalsMajuscules {
             char iChar = userInput.charAt(i);
             boolean isMayus = iChar == 'a' || iChar == 'e' || iChar == 'i' || iChar == 'o' || iChar == 'u';
 
-            newText += isMayus ? Character.toUpperCase(iChar) : iChar;
+            newText += isMayus ? Character.toUpperCase(iChar) : Character.toLowerCase(iChar);
         }
 
         System.out.println(newText);
