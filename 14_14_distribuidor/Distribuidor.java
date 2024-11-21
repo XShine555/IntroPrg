@@ -19,8 +19,8 @@ public class Distribuidor {
                 if (Character.isDigit(iChar)) {
                     // String.Contains
                     boolean containsChar = false;
-                    for (int j = 0; j < names.length() - 1; j++) {
-                        var jChar = names.charAt(i);
+                    for (int j = 0; j < names.length(); j++) {
+                        var jChar = names.charAt(j);
                         if (iChar == jChar) {
                             containsChar = true;
                             break;
@@ -41,8 +41,8 @@ public class Distribuidor {
                         }
                         // String.Contains
                         boolean containsChar = false;
-                        for (int j = 0; j < vowels.length() - 1; j++) {
-                            var jChar = vowels.charAt(i);
+                        for (int j = 0; j < vowels.length(); j++) {
+                            var jChar = vowels.charAt(j);
                             if (iChar == jChar) {
                                 containsChar = true;
                                 break;
@@ -54,8 +54,8 @@ public class Distribuidor {
                     } else {
                         // String.Contains
                         boolean containsChar = false;
-                        for (int j = 0; j < consonants.length() - 1; j++) {
-                            var jChar = consonants.charAt(i);
+                        for (int j = 0; j < consonants.length(); j++) {
+                            var jChar = consonants.charAt(j);
                             if (iChar == jChar) {
                                 containsChar = true;
                                 break;
@@ -68,8 +68,8 @@ public class Distribuidor {
                 } else if (!Character.isWhitespace(iChar)) {
                     // String.Contains
                     boolean containsChar = false;
-                    for (int j = 0; j < symbols.length() - 1; j++) {
-                        var jChar = symbols.charAt(i);
+                    for (int j = 0; j < symbols.length(); j++) {
+                        var jChar = symbols.charAt(j);
                         if (iChar == jChar) {
                             containsChar = true;
                             break;
