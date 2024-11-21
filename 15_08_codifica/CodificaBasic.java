@@ -7,9 +7,10 @@ public class CodificaBasic {
         String newText = "";
         for (int i = 0; i < textLen; i++) {
             char iChar = userInput.charAt(i);
+            char iLowerChar = Character.toLowerCase(iChar); 
 
-            if (Character.isLetter(iChar) && !Character.isUpperCase(iChar)) {
-                char iLowerChar = Character.toLowerCase(iChar);
+            if (iLowerChar >= 65 && iLowerChar <= 122) {
+                //char iLowerChar = Character.toLowerCase(iChar);
                 int iNumericValue = (int)iLowerChar;
                 
                 int nextNumericValue = iNumericValue + 1;
@@ -20,7 +21,8 @@ public class CodificaBasic {
                 }
 
                 newText += nextChar;
-            }else {
+            }
+            else {
                 newText += iChar;
             }
         }
