@@ -1,5 +1,5 @@
 /*
- * Exercici 14_20. Endevina amb control
+ * Exercici 14_19. Endevina amb control
  * Iker Rivera Garcia
  * 18/11/2024
  * Programa que busca la palabra final mayúscula dentro del siguiente texto.

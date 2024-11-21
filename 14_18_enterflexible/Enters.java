@@ -1,5 +1,5 @@
 /*
- * Exercici 14_17. Enters estrictes
+ * Exercici 14_18. Enters estrictes
  * Iker Rivera Garcia
  * 18/11/2024
  * Programa que indica si un texto es entero o no (ampliación).
