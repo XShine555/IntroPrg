@@ -13,7 +13,7 @@ public class Enters {
         while (!text.isBlank()) {
             boolean isNumber = true;
 
-            for (int i = 0; i < text.length() && isNumber; i++) {
+            for (int i = 0; i < text.length(); i++) {
                 char iChar = text.charAt(i);
                 boolean isSymbol = iChar == '+' || iChar == '-' || iChar == '*' || iChar == '/' || iChar == '%';
 
