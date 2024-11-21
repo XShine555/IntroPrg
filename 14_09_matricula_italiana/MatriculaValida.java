@@ -13,9 +13,12 @@ public class MatriculaValida {
 		boolean isValid = true;
 
 		if (matricula.length() == 7) {
-			String firstPart = matricula.substring(0, 2);
-			String secondPart = matricula.substring(2, 5);
-			String thirdPart = matricula.substring(5, 7);
+			String firstPart = "";
+			for (int i = 0; i < 2; i++) firstPart += matricula.charAt(i);
+			String secondPart = "";
+			for (int i = 2; i < 5; i++) secondPart += matricula.charAt(i);
+			String thirdPart = "";
+			for (int i = 5; i < 7; i++) thirdPart += matricula.charAt(i);
 
 			for (int i = 0; i <= firstPart.length() -1; i++) {
 				char thisChar = firstPart.charAt(i);
