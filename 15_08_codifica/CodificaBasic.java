@@ -9,7 +9,7 @@ public class CodificaBasic {
             char iChar = userInput.charAt(i);
             char iLowerChar = Character.toLowerCase(iChar); 
 
-            if (iLowerChar >= 65 && iLowerChar <= 122) {
+            if (iLowerChar >= 65 && iLowerChar <= 122 && !Character.isUpperCase(iChar)) {
                 //char iLowerChar = Character.toLowerCase(iChar);
                 int iNumericValue = (int)iLowerChar;
                 
