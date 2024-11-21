@@ -16,7 +16,7 @@ public class NomesLletres {
             char iChar = text.charAt(i);
 
             if (Character.isLetter(iChar)) {
-                if (finalText.length() > 1) {
+                if (finalText.length() > 0) {
                     finalText += ", " + iChar;
                 }
                 else {
