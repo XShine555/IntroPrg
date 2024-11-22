@@ -14,11 +14,18 @@ public class MatriculaValida {
 
 		if (matricula.length() == 7) {
 			String firstPart = "";
-			for (int i = 0; i < 2; i++) firstPart += matricula.charAt(i);
 			String secondPart = "";
-			for (int i = 2; i < 5; i++) secondPart += matricula.charAt(i);
 			String thirdPart = "";
-			for (int i = 5; i < 7; i++) thirdPart += matricula.charAt(i);
+
+			for (int i = 0; i < matricula.length(); i++) {
+				if (i < 2) {
+					firstPart += matricula.charAt(i);
+				} else if (i < 5) {
+					secondPart += matricula.charAt(i);
+				} else if (i < 7) {
+					thirdPart += matricula.charAt(i);
+				}
+			}
 
 			for (int i = 0; i <= firstPart.length() -1; i++) {
 				char thisChar = firstPart.charAt(i);
