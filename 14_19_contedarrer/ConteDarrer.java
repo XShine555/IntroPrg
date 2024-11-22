@@ -19,7 +19,7 @@ public class ConteDarrer {
             }
             else {
                 boolean foundAnything = false;
-                for (int i = 0; i < text.length() && !foundAnything; i++) {
+                for (int i = 0; i < text.length(); i++) {
                     char iChar = Character.toUpperCase(text.charAt(i));
                     if (iChar == toFind) {
                         foundAnything = true;
