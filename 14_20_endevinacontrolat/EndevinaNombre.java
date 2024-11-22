@@ -1,3 +1,10 @@
+/*
+ * Exercici 14_20. Endevina amb control
+ * Iker Rivera Garcia
+ * 22/11/2024
+ * Programa donde tienes que adivinar el nombre y hace comprobaciones sobre si es un número, admite números positivos y negativos.
+ */
+
 public class EndevinaNombre {
     public static void main(String[] args) {
         int numberArg = Integer.parseInt(args[0]);
