@@ -1,6 +1,6 @@
 public class EndevinaNombre {
     public static void main(String[] args) {
-        int numberArg = Integer.parseInt(Entrada.readLine());
+        int numberArg = Integer.parseInt(args[0]);
 
         System.out.println("Nombre?");
         String userInput = Entrada.readLine();
@@ -29,7 +29,7 @@ public class EndevinaNombre {
             else {
                 System.out.println("Només nombres");
             }
-
+            System.out.println("Nombre?");
             userInput = Entrada.readLine();
         }
 
