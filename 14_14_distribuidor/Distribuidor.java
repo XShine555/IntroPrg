@@ -23,7 +23,6 @@ public class Distribuidor {
                         var jChar = names.charAt(j);
                         if (iChar == jChar) {
                             containsChar = true;
-                            break;
                         }
                     }
                     if (!containsChar) {
@@ -36,16 +35,12 @@ public class Distribuidor {
                             || upperChar == 'I' || upperChar == 'Ï' || upperChar == 'Ò' || upperChar == 'O'
                             || upperChar == 'Ó'
                             || upperChar == 'U' || upperChar == 'Ú' || upperChar == 'Ü') {
-                        if (!vowels.contains(String.valueOf(upperChar))) {
-                            vowels += upperChar;
-                        }
                         // String.Contains
                         boolean containsChar = false;
                         for (int j = 0; j < vowels.length(); j++) {
                             var jChar = vowels.charAt(j);
                             if (upperChar == jChar) {
                                 containsChar = true;
-                                break;
                             }
                         }
                         if (!containsChar) {
@@ -58,7 +53,6 @@ public class Distribuidor {
                             var jChar = consonants.charAt(j);
                             if (upperChar == jChar) {
                                 containsChar = true;
-                                break;
                             }
                         }
                         if (!containsChar) {
@@ -72,7 +66,6 @@ public class Distribuidor {
                         var jChar = symbols.charAt(j);
                         if (iChar == jChar) {
                             containsChar = true;
-                            break;
                         }
                     }
                     if (!containsChar) {
