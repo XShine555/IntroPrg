@@ -5,7 +5,9 @@ public class EndevinaNombre {
         System.out.println("Nombre?");
         String userInput = Entrada.readLine();
 
-        while (!userInput.isBlank()) {
+        boolean hasWin = false;
+
+        while (!userInput.isBlank() || hasWin) {
             boolean isNumber = true;
             for (int i = 0; i < userInput.length(); i++) {
                 char iChar = userInput.charAt(i);
@@ -26,7 +28,7 @@ public class EndevinaNombre {
                     System.out.println("Massa petit");
                 }
                 else {
-                    break;
+                    hasWin = true;
                 }
             }
             else {
@@ -37,6 +39,7 @@ public class EndevinaNombre {
             userInput = Entrada.readLine();
         }
 
-        System.out.println("Cancel·lat!");
+        String finalMsg = hasWin ? "Encertat!" : "Cancel·lat!";
+        System.out.println(finalMsg);
     }
 }
