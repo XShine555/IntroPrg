@@ -32,26 +32,26 @@ public class ManipulaString {
 			// majúscules, seguida de les següents tres lletres en minúscules. Per
 			// exemple, si la paraula és «nEkAnE», resultatà en «Neka».
 			String firstFour = "" + Character.toUpperCase(paraula.charAt(0));
-			for (int i = 1; i < 4; i++) {
-				firstFour += Character.toLowerCase(paraula.charAt(i));
-			}
+			firstFour += Character.toLowerCase(paraula.charAt(1));
+			firstFour += Character.toLowerCase(paraula.charAt(2));
+			firstFour += Character.toLowerCase(paraula.charAt(3));
 			System.out.format("La composició de quatre primeres és \"%s\"%n", firstFour);
 			// Mostra una composició formada per la darrera lletra de la paraula,
 			// seguida de les tres primeres. (ex. si la paraula és «Nekane»
 			// mostrarà «eNek»
 			String firstThreeAndLast = "" + paraula.charAt(length - 1);
-			for (int i = 0; i < 3; i++) {
-				firstThreeAndLast += paraula.charAt(i);
-			}
+			firstThreeAndLast += paraula.charAt(0);
+			firstThreeAndLast += paraula.charAt(1);
+			firstThreeAndLast += paraula.charAt(2);
 			System.out.format("La composició de quatre és \"%s\"%n", firstThreeAndLast);
 
 			// Com en el cas anterior però ara corregint les majúscules i
 			// minúscules de manera que la primera sigui majúscules i la resta en
 			// minúscules. (ex. si la paraula és «Nekane» mostrarà «Enek»)
 			String firstThreeAndLastMayus = "" + Character.toUpperCase(paraula.charAt(length - 1));
-			for (int i = 0; i < 3; i++) {
-				firstThreeAndLastMayus += Character.toLowerCase(paraula.charAt(i));
-			}
+			firstThreeAndLastMayus += Character.toLowerCase(paraula.charAt(0));
+			firstThreeAndLastMayus += Character.toLowerCase(paraula.charAt(1));
+			firstThreeAndLastMayus += Character.toLowerCase(paraula.charAt(2));
 			System.out.format("La composició de quatre corregint majúscules és \"%s\"%n", firstThreeAndLastMayus);
 		}
 	}
