@@ -22,13 +22,17 @@ public class EndevinaNombre {
                 else if (number > numberArg) {
                     System.out.println("Massa gran");
                 }
-                else {
+                else if (number < numberArg) {
                     System.out.println("Massa petit");
+                }
+                else {
+                    break;
                 }
             }
             else {
                 System.out.println("Només nombres");
             }
+
             System.out.println("Nombre?");
             userInput = Entrada.readLine();
         }
