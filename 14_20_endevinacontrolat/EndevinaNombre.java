@@ -7,7 +7,7 @@ public class EndevinaNombre {
 
         boolean hasWin = false;
 
-        while (!userInput.isBlank() && !hasWin) {
+        while (!userInput.isBlank()) {
             boolean isNumber = true;
             for (int i = 0; i < userInput.length(); i++) {
                 char iChar = userInput.charAt(i);
@@ -29,6 +29,7 @@ public class EndevinaNombre {
                 }
                 else {
                     hasWin = true;
+                    break;
                 }
             }
             else {
