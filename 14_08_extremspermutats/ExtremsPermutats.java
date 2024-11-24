@@ -14,7 +14,7 @@ public class ExtremsPermutats {
 			int inputLength = userInput.length();
 
 			if (inputLength > 1) {
-				String firstSection = "";
+				/*String firstSection = "";
 				for (int i = 0; i < 2; i++) {
 					firstSection += Character.toUpperCase(userInput.charAt(i));
 				}
@@ -44,8 +44,17 @@ public class ExtremsPermutats {
 					if (!isEqual) {
 						System.out.format("Repeteix: %s%n", userInput);
 					}
-				}
+				}*/
 
+				char firstChar1 = Character.toUpperCase(userInput.charAt(0));
+				char firstChar2 = Character.toUpperCase(userInput.charAt(1));
+
+				char lastChar1 = Character.toUpperCase(userInput.charAt(inputLength - 2));
+                char lastChar2 = Character.toUpperCase(userInput.charAt(inputLength - 1));
+
+				if ( (firstChar1 == lastChar1 && firstChar2 == lastChar2) || (firstChar1 == lastChar2 && firstChar2 == lastChar1) ) {
+					System.out.format("Repeteix: %s%n", userInput);
+				}
 			}
 
 			userInput = Entrada.readLine();
