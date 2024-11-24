@@ -34,13 +34,14 @@ public class ExtremsPermutats {
 					boolean isEqual = true;
 					for (int i = 0; i < rotateLastSection.length(); i++) {
 						char firstChar = firstSection.charAt(i);
-						char secondChar = rotateLastSection.charAt(i);
-						if (firstChar != secondChar){
+						char secondChar = lastSection.charAt(i);
+						char secondReversedChar = rotateLastSection.charAt(i);
+						if (firstChar != secondReversedChar || firstChar != secondChar){
 							isEqual = false;
 						}
 					}
 
-					if (isEqual) {
+					if (!isEqual) {
 						System.out.format("Repeteix: %s%n", userInput);
 					}
 				}
