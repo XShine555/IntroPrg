@@ -13,7 +13,7 @@ public class ExtremsPermutats {
 		while (!userInput.isBlank()) {
 			int inputLength = userInput.length();
 
-			if (userInput.length() > 1) {
+			if (inputLength > 1) {
 				String firstSection = "";
 				for (int i = 0; i < 2; i++) {
 					firstSection += Character.toUpperCase(userInput.charAt(i));
@@ -31,8 +31,16 @@ public class ExtremsPermutats {
 						rotateLastSection += Character.toUpperCase(lastSection.charAt(i));
 					}
 
-					if (firstSection.equals(lastSection)
-							|| firstSection.equals(rotateLastSection)) {
+					boolean isEqual = true;
+					for (int i = 0; i < rotateLastSection.length(); i++) {
+						char firstChar = firstSection.charAt(i);
+						char secondChar = rotateLastSection.charAt(i);
+						if (firstChar != secondChar){
+							isEqual = false;
+						}
+					}
+
+					if (isEqual) {
 						System.out.format("Repeteix: %s%n", userInput);
 					}
 				}
