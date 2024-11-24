@@ -52,10 +52,13 @@ public class ExtremsPermutats {
 				char lastChar1 = Character.toUpperCase(userInput.charAt(inputLength - 2));
                 char lastChar2 = Character.toUpperCase(userInput.charAt(inputLength - 1));
 
+				if (Character.isLetter(firstChar1) && Character.isLetter(firstChar2) &&
+					Character.isLetter(firstChar1) && Character.isLetter(firstChar2)) {
+
 				if ( (firstChar1 == lastChar1 && firstChar2 == lastChar2) || (firstChar1 == lastChar2 && firstChar2 == lastChar1) ) {
 					System.out.format("Repeteix: %s%n", userInput);
 				}
-			}
+			}}
 
 			userInput = Entrada.readLine();
 		}
