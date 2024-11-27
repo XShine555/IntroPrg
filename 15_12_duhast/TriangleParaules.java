@@ -5,24 +5,15 @@ public class TriangleParaules {
 
         int inputLen = userInput.length();
 
-        String tempText = "";
-        int maxIndex = 0, currentIndex = 0;
+        String totalText = "";
 
         for (int i = 0; i < inputLen; i++) {
             char iChar = userInput.charAt(i);
 
-            if (Character.isWhitespace(iChar) && currentIndex < maxIndex) {
+            totalText += iChar;
 
-                if (currentIndex < maxIndex) {
-                    tempText = "";
-                    maxIndex++;
-                    currentIndex = 0;
-                } else {
-                    
-                }
-            }
-            else {
-                tempText += userInput.charAt(iChar);
+            if (Character.isWhitespace(iChar) || i == inputLen - 1) {
+                System.out.println(totalText);
             }
         }
     }
