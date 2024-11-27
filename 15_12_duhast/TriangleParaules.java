@@ -10,11 +10,13 @@ public class TriangleParaules {
         for (int i = 0; i < inputLen; i++) {
             char iChar = userInput.charAt(i);
 
+            if (Character.isWhitespace(iChar))
+                System.out.println(totalText);
+
             totalText += iChar;
 
-            if (Character.isWhitespace(iChar) || i == inputLen - 1) {
+            if (i == inputLen - 1)
                 System.out.println(totalText);
-            }
         }
     }
 }
