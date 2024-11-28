@@ -30,7 +30,7 @@ public class Capicua {
             }
         }
 
-        boolean isValid = false;
+        boolean isValid = true;
 
         if (!sanitizeText.isBlank()) {
             for (int i = 0; i < sanitizeText.length(); i++) {
