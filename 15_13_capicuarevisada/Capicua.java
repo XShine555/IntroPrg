@@ -8,7 +8,7 @@ public class Capicua {
         for (int i = 0; i < inputLen; i++) {
             char iChar = userInput.charAt(i);
 
-            if (Character.isWhitespace(iChar) || !Character.isLetter(iChar) || !Character.isDigit(iChar))
+            if (Character.isWhitespace(iChar) && !Character.isLetter(iChar) && !Character.isDigit(iChar))
                 continue;
 
             char newChar = switch (iChar) {
