@@ -8,9 +8,7 @@ public class ParaulesReves {
 
         for (int i = userInput.length() - 1; i > -1; i--) {
             char iChar = userInput.charAt(i);
-            if (i == 0) {
-                tempString += iChar;
-            }
+            tempString += iChar;
 
             if (Character.isWhitespace(iChar) || i == 0) {
                 String thisResult = "";
@@ -20,11 +18,9 @@ public class ParaulesReves {
                 tempString = "";
                 result = thisResult + " " + result;
 
-            } else {
-                tempString += iChar;
             }
         }
 
-        System.err.println("a");
+        System.err.println(result);
     }    
 }
