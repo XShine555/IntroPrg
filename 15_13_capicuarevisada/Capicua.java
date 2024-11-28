@@ -6,7 +6,7 @@ public class Capicua {
 
         String sanitizeText = "";
         for (int i = 0; i < inputLen; i++) {
-            char iChar = userInput.charAt(i);
+            char iChar = Character.toLowerCase(userInput.charAt(i));
 
             if (Character.isWhitespace(iChar) || !Character.isLetter(iChar))
                 continue;
@@ -26,7 +26,7 @@ public class Capicua {
             };
 
 
-            if (iChar != '\'') {
+            if (newChar != '\'') {
                 sanitizeText += newChar;
             }
         }
@@ -39,7 +39,7 @@ public class Capicua {
     
                 if (firstChar != lastChar){
                     isValid = false;
-                    //System.out.println(firstChar + " != " + lastChar);
+                    System.out.println(firstChar + " != " + lastChar);
                     break;
                 }
                 else {
