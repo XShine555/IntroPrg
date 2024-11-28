@@ -25,13 +25,8 @@ public class Capicua {
                 default -> Character.toLowerCase(iChar);
             };
 
-            if (i != inputLen && iChar == 'l') {
-                char nextChar = userInput.charAt(i + 1);
-                if (nextChar != '\'') {
-                    sanitizeText += newChar;
-                }
-            }
-            else if (iChar != '\'') {
+
+            if (iChar != '\'') {
                 sanitizeText += newChar;
             }
         }
