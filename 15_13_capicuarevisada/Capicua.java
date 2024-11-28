@@ -39,7 +39,7 @@ public class Capicua {
     
                 if (firstChar != lastChar){
                     isValid = false;
-                    System.out.println(firstChar + " != " + lastChar);
+                    //System.out.println(firstChar + " != " + lastChar);
                     break;
                 }
             }
