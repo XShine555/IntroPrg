@@ -25,29 +25,25 @@ public class Capicua {
                 default -> Character.toLowerCase(iChar);
             };
 
-
             if (newChar != '\'') {
                 sanitizeText += newChar;
             }
         }
 
-        boolean isValid = !sanitizeText.isBlank();
-        if (isValid) {
+        boolean isValid = false;
+
+        if (!sanitizeText.isBlank()) {
             for (int i = 0; i < sanitizeText.length(); i++) {
                 char firstChar = sanitizeText.charAt(i);
                 char lastChar = sanitizeText.charAt(sanitizeText.length() - i - 1);
-    
-                if (firstChar != lastChar){
+
+                if (firstChar != lastChar) {
                     isValid = false;
-                    //System.out.println(firstChar + " != " + lastChar);
                     break;
-                }
-                else {
-                    //System.out.println(firstChar + " == " + lastChar);
                 }
             }
         }
 
         System.out.format("\"%s\" %s", userInput, isValid ? "és capicua" : "no és capicua");
-    }    
+    }
 }
