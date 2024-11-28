@@ -21,6 +21,6 @@ public class ParaulesReves {
             }
         }
 
-        System.err.println(result);
+        System.err.println("a");
     }    
 }
