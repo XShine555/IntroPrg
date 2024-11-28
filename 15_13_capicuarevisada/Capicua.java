@@ -8,7 +8,7 @@ public class Capicua {
         for (int i = 0; i < inputLen; i++) {
             char iChar = userInput.charAt(i);
 
-            if (Character.isWhitespace(iChar) || iChar == ',' || iChar == '.')
+            if (Character.isWhitespace(iChar) || !Character.isLetter(iChar) || !Character.isDigit(iChar))
                 continue;
 
             char newChar = switch (iChar) {
@@ -32,16 +32,10 @@ public class Capicua {
         }
 
         boolean isValid = !userInput.isBlank();
-        boolean anyLetter = false;
         if (isValid) {
             for (int i = 0; i < sanitizeText.length(); i++) {
                 char firstChar = sanitizeText.charAt(i);
                 char lastChar = sanitizeText.charAt(sanitizeText.length() - i - 1);
-
-                if (!Character.isLetter(firstChar) || !Character.isLetter(lastChar))
-                    continue;
-                else
-                    anyLetter = true;
     
                 if (firstChar != lastChar){
                     isValid = false;
@@ -50,6 +44,6 @@ public class Capicua {
             }
         }
 
-        System.out.format("\"%s\" %s", userInput, isValid && anyLetter ? "és capicua" : "no és capicua");
+        System.out.format("\"%s\" %s", userInput, isValid ? "és capicua" : "no és capicua");
     }    
 }
