@@ -36,14 +36,16 @@ public class Capicua {
             }
         }
 
-        boolean isValid = true;
-        for (int i = 0; i < sanitizeText.length(); i++) {
-            char firstChar = sanitizeText.charAt(i);
-            char lastChar = sanitizeText.charAt(sanitizeText.length() - i - 1);
-
-            if (firstChar != lastChar){
-                isValid = false;
-                break;
+        boolean isValid = !userInput.isBlank();
+        if (isValid) {
+            for (int i = 0; i < sanitizeText.length(); i++) {
+                char firstChar = sanitizeText.charAt(i);
+                char lastChar = sanitizeText.charAt(sanitizeText.length() - i - 1);
+    
+                if (firstChar != lastChar){
+                    isValid = false;
+                    break;
+                }
             }
         }
 
