@@ -9,11 +9,13 @@ public class TextReves {
         for (int i = 0; i < userInput.length(); i++) {
             char currentChar = userInput.charAt(i);
 
-            if (!Character.isLetter(currentChar))
+            if (!Character.isLetterOrDigit(currentChar))
                 finalText += currentChar;
             else {
-                while (!Character.isLetter(userInput.charAt(oppositeIndex))) {
+                char oppositeChar = userInput.charAt(oppositeIndex);
+                while (!Character.isLetterOrDigit(oppositeChar)) {
                     oppositeIndex--;
+                    oppositeChar = userInput.charAt(oppositeIndex);
                 }
                 finalText += userInput.charAt(oppositeIndex);
                 oppositeIndex--;
