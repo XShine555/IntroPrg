@@ -31,7 +31,7 @@ public class Capicua {
             }
         }
 
-        boolean isValid = !userInput.isBlank();
+        boolean isValid = !sanitizeText.isBlank();
         if (isValid) {
             for (int i = 0; i < sanitizeText.length(); i++) {
                 char firstChar = sanitizeText.charAt(i);
