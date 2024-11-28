@@ -36,6 +36,9 @@ public class Capicua {
             for (int i = 0; i < sanitizeText.length(); i++) {
                 char firstChar = sanitizeText.charAt(i);
                 char lastChar = sanitizeText.charAt(sanitizeText.length() - i - 1);
+
+                if (!Character.isLetter(firstChar) || !Character.isLetter(lastChar))
+                    continue;
     
                 if (firstChar != lastChar){
                     isValid = false;
