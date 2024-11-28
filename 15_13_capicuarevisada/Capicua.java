@@ -1,0 +1,52 @@
+public class Capicua {
+    public static void main(String[] args) {
+        System.out.println("Text?");
+        String userInput = Entrada.readLine();
+        int inputLen = userInput.length();
+
+        String sanitizeText = "";
+        for (int i = 0; i < inputLen; i++) {
+            char iChar = userInput.charAt(i);
+
+            if (!Character.isLetter(iChar))
+                continue;
+
+            char newChar = switch (iChar) {
+                case 'à' -> 'a';
+                case 'é' -> 'e';
+                case 'è' -> 'e';
+                case 'í' -> 'i';
+                case 'ï' -> 'i';
+                case 'ó' -> 'o';
+                case 'ò' -> 'o';
+                case 'ú' -> 'u';
+                case 'ù' -> 'u';
+                case 'ç' -> 'c';
+                default -> Character.toLowerCase(iChar);
+            };
+
+            if (i != inputLen && iChar == 'l') {
+                char nextChar = userInput.charAt(i + 1);
+                if (nextChar != '\'') {
+                    sanitizeText += newChar;
+                }
+            }
+            else if (iChar != '\'') {
+                sanitizeText += newChar;
+            }
+        }
+
+        boolean isValid = true;
+        for (int i = 0; i < sanitizeText.length(); i++) {
+            char firstChar = sanitizeText.charAt(i);
+            char lastChar = sanitizeText.charAt(sanitizeText.length() - i - 1);
+
+            if (firstChar != lastChar){
+                isValid = false;
+                break;
+            }
+        }
+
+        System.out.format("\"%s\" %s", userInput, isValid ? "és capicua" : "no és capicua");
+    }    
+}
