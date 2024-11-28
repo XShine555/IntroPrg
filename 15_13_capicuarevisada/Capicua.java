@@ -30,9 +30,9 @@ public class Capicua {
             }
         }
 
-        boolean isValid = true;
+        boolean isValid = !sanitizeText.isBlank();
 
-        if (!sanitizeText.isBlank()) {
+        if (isValid) {
             for (int i = 0; i < sanitizeText.length(); i++) {
                 char firstChar = sanitizeText.charAt(i);
                 char lastChar = sanitizeText.charAt(sanitizeText.length() - i - 1);
