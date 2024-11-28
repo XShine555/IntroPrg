@@ -8,9 +8,6 @@ public class Capicua {
         for (int i = 0; i < inputLen; i++) {
             char iChar = userInput.charAt(i);
 
-            if (!Character.isLetter(iChar))
-                continue;
-
             char newChar = switch (iChar) {
                 case 'à' -> 'a';
                 case 'é' -> 'e';
