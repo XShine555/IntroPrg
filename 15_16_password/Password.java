@@ -1,6 +1,5 @@
 public class Password {
     public static void main(String[] args) {
-        System.out.println("Text?");
         String userInput = Entrada.readLine();
 
         if (userInput.length() < 8 || userInput.length() > 16) {
