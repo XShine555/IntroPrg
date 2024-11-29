@@ -58,7 +58,7 @@ public class Password {
                         if (Character.isDigit(jChar))
                             thisType = "int";
                         else if (Character.isLetter(jChar))
-                            thisType = Character.isUpperCase(iChar) ? "string_mayus" : "string_minus";
+                            thisType = Character.isUpperCase(jChar) ? "string_mayus" : "string_minus";
                         else
                             thisType = "symbol";
 
