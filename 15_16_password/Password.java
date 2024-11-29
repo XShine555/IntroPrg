@@ -36,7 +36,7 @@ public class Password {
 
                     int repCount = 0;
                     String tempChars = "";
-                    for (int j = i; j > userInput.length() - 4; i--) {
+                    for (int j = i; j > userInput.length() - 4; j--) {
                         char jChar = userInput.charAt(j);
                         String thisType;
 
@@ -61,7 +61,6 @@ public class Password {
                             int firstNum = Integer.parseInt(tempChars.charAt(0) + "");
                             for (int j = 1; j < tempChars.length(); j++) {
                                 int num = Integer.parseInt(tempChars.charAt(j) + "");
-
                                 if (firstNum + 1 == num) {
                                     intPatron = true;
                                     isValid = false;
