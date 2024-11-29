@@ -36,7 +36,7 @@ public class Password {
 
                     int repCount = 0;
                     String tempChars = "";
-                    for (int j = i; j > userInput.length() - 4; j--) {
+                    for (int j = i; j > i - 4; j--) {
                         char jChar = userInput.charAt(j);
                         String thisType;
 
