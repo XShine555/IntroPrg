@@ -72,7 +72,7 @@ public class Password {
                         sameType = true;
                         isValid = false;
                     }
-                    else if (repCount >= 3) {
+                    if (repCount >= 3) {
                         int rep = 0;
 
                         if (lastType.equals("int")) {
