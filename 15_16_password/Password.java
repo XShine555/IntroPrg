@@ -36,8 +36,8 @@ public class Password {
                 if (Character.isDigit(iChar))
                     hasNumber = true;
 
-                System.out.println(iChar);
-                System.out.println(i);
+                //System.out.println(iChar);
+                //System.out.println(i);
                 if (i >= 3) {
                     String lastType;
 
