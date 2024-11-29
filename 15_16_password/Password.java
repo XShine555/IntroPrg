@@ -72,21 +72,23 @@ public class Password {
                     }
 
                     if (repCount >= 3 && lastType.equals("int")) {
-                        int rep = 0;
-
-                        int firstNum = Integer.parseInt(tempChars.charAt(0) + "");
-                        for (int j = 1; j < tempChars.length(); j++) {
-                            int num = Integer.parseInt(tempChars.charAt(j) + "");
-                            if (firstNum + 1 == num ||firstNum  - 1 == num) {
-                                rep++;
+                        boolean hasConsecutivePattern = true;
+                    
+                        for (int j = 0; j < tempChars.length() - 1; j++) {
+                            int current = Character.getNumericValue(tempChars.charAt(j));
+                            int next = Character.getNumericValue(tempChars.charAt(j + 1));
+                    
+                            if (Math.abs(next - current) != 1) {
+                                hasConsecutivePattern = false;
+                                break;
                             }
-                            firstNum = num;
                         }
-                        if (rep >= 3) {
+                    
+                        if (hasConsecutivePattern) {
                             intPatron = true;
                         }
                     }
-                    //System.out.println(tempChars);
+                    
                     if (repCount > 4) {
                         sameType = true;
                     }
