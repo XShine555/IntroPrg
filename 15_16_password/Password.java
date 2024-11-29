@@ -14,12 +14,9 @@ public class Password {
         boolean hasWhitespace = false;
         boolean intPatron = false;
 
-        boolean debounce = false;
-
         String previousChars = "";
 
         for (int i = 0; i < userInput.length(); i++) {
-            boolean isValid = true;
 
             char iChar = userInput.charAt(i);
 
