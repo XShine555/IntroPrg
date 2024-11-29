@@ -32,66 +32,65 @@ public class Password {
             }
 
             if (Character.isDigit(iChar))
-                    hasNumber = true;
+                hasNumber = true;
 
-                if (i + 1 >= 5) {
-                    String lastType;
+            if (i + 1 >= 5) {
+                String lastType;
 
-                    if (Character.isDigit(iChar))
-                        lastType = "int";
-                    else if (Character.isLetter(iChar))
-                        lastType = Character.isUpperCase(iChar) ? "string_mayus" : "string_minus";
+                if (Character.isDigit(iChar))
+                    lastType = "int";
+                else if (Character.isLetter(iChar))
+                    lastType = Character.isUpperCase(iChar) ? "string_mayus" : "string_minus";
+                else
+                    lastType = "symbol";
+
+                int repCount = 0;
+                String tempChars = "";
+
+                for (int j = i + 1 - 5; j <= i; j++) {
+                    char jChar = userInput.charAt(j);
+                    String thisType;
+
+                    if (Character.isDigit(jChar))
+                        thisType = "int";
+                    else if (Character.isLetter(jChar))
+                        thisType = Character.isUpperCase(jChar) ? "string_mayus" : "string_minus";
                     else
-                        lastType = "symbol";
+                        thisType = "symbol";
 
-                    int repCount = 0;
-                    String tempChars = "";
-
-                    for (int j = i + 1 - 5; j <= i; j++) {
-                        char jChar = userInput.charAt(j);
-                        String thisType;
-
-                        if (Character.isDigit(jChar))
-                            thisType = "int";
-                        else if (Character.isLetter(jChar))
-                            thisType = Character.isUpperCase(jChar) ? "string_mayus" : "string_minus";
-                        else
-                            thisType = "symbol";
-
-                        if (thisType.equals(lastType)) {
-                            repCount++;
-                            tempChars += jChar;
-                        }
-                    }
-
-                    if (repCount >= 3 && lastType.equals("int")) {
-                        int rep = 0;
-
-                        int firstNum = Integer.parseInt(tempChars.charAt(0) + "");
-                        for (int j = 1; j < tempChars.length(); j++) {
-                            int num = Integer.parseInt(tempChars.charAt(j) + "");
-                            if (firstNum + 1 == num ||firstNum  - 1 == num) {
-                                rep++;
-                            }
-                            firstNum = num;
-                        }
-                        if (rep >= 3) {
-                            intPatron = true;
-                        }
-                    }
-
-                    if (repCount > 4) {
-                        sameType = true;
+                    if (thisType.equals(lastType)) {
+                        repCount++;
+                        tempChars += jChar;
                     }
                 }
-        
-            //String.contains
+
+                if (repCount >= 3 && lastType.equals("int")) {
+                    int rep = 0;
+
+                    int firstNum = Integer.parseInt(tempChars.charAt(0) + "");
+                    for (int j = 1; j < tempChars.length(); j++) {
+                        int num = Integer.parseInt(tempChars.charAt(j) + "");
+                        if (firstNum + 1 == num || firstNum - 1 == num) {
+                            rep++;
+                        }
+                        firstNum = num;
+                    }
+                    if (rep >= 3) {
+                        intPatron = true;
+                    }
+                }
+
+                if (repCount > 4) {
+                    sameType = true;
+                }
+            }
+
+            // String.contains
             for (int j = 0; j < previousChars.length(); j++) {
                 char jChar = previousChars.charAt(j);
                 if (jChar == iChar)
                     repChar = true;
             }
-
 
             previousChars += iChar;
         }
@@ -116,5 +115,5 @@ public class Password {
             System.out.println("El password no pot contenir més de 3 números consecutius.");
         else
             System.out.println("El maleït password és vàlid!");
-    }    
+    }
 }
