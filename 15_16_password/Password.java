@@ -84,7 +84,7 @@ public class Password {
                             debounce = true;
                         }
                     }
-                    else if (repCount >= 4) {
+                    if (repCount >= 4) {
                         sameType = true;
                         debounce = true;
                     }
