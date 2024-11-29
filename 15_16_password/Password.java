@@ -38,7 +38,7 @@ public class Password {
 
                 //System.out.println(iChar);
                 //System.out.println(i);
-                if (i >= 3) {
+                if (i >= 4) {
                     String lastType;
 
                     if (Character.isDigit(iChar))
@@ -68,7 +68,10 @@ public class Password {
                         }
                     }
 
-                    if (repCount > 2) {
+                    if (repCount >= 4)
+                        sameType = true;
+
+                    if (repCount >= 3) {
                         isValid = false;
                         sameType = true;
                         int rep = 0;
