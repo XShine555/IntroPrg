@@ -70,11 +70,6 @@ public class Password {
                         }
                     }
 
-                    if (repCount >= 4) {
-                        sameType = true;
-                        if (whosFirst.isBlank())
-                            whosFirst = "sameType";
-                    }
                     if (repCount >= 3) {
                         int rep = 0;
 
@@ -94,6 +89,12 @@ public class Password {
                             if (whosFirst.isBlank())
                                 whosFirst = "intPatron";
                         }
+                    }
+
+                    if (repCount >= 4) {
+                        sameType = true;
+                        if (whosFirst.isBlank())
+                            whosFirst = "sameType";
                     }
                 }
             }
