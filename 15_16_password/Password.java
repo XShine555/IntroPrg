@@ -38,7 +38,7 @@ public class Password {
 
                 //System.out.println(iChar);
                 //System.out.println(i);
-                if (i >= 4) {
+                if (i + 1 >= 4) {
                     String lastType;
 
                     if (Character.isDigit(iChar))
@@ -51,7 +51,7 @@ public class Password {
                     int repCount = 0;
                     String tempChars = "";
                     //System.out.println("i: " + String.valueOf(i-4) + "/" + i);
-                    for (int j = i - 3; j <= i; j++) {
+                    for (int j = i + 1 - 4; j <= i; j++) {
                         char jChar = userInput.charAt(j);
                         String thisType;
 
@@ -68,12 +68,12 @@ public class Password {
                         }
                     }
 
-                    if (repCount >= 4)
+                    if (repCount >= 4 && !lastType.equals("int"))
                         sameType = true;
 
                     if (repCount >= 3) {
                         isValid = false;
-                        sameType = true;
+                        //sameType = true;
                         int rep = 0;
 
                         if (lastType.equals("int")) {
