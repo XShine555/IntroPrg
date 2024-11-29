@@ -51,6 +51,8 @@ public class Password {
                             repCount++;
                             tempChars += jChar;
                         }
+                        else
+                            break;
                     }
 
                     if (repCount > 3) {
@@ -61,11 +63,12 @@ public class Password {
                             int firstNum = Integer.parseInt(tempChars.charAt(0) + "");
                             for (int j = 1; j < tempChars.length(); j++) {
                                 int num = Integer.parseInt(tempChars.charAt(j) + "");
-                                if (firstNum + 1 == num) {
+                                if (firstNum + 1 == num ||firstNum  - 1 == num) {
                                     intPatron = true;
                                     isValid = false;
                                     break;
                                 }
+                                firstNum = num;
                             }
                         }
                     }
