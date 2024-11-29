@@ -64,6 +64,7 @@ public class Password {
 
                                 if (firstNum + 1 == num) {
                                     intPatron = true;
+                                    isValid = false;
                                     break;
                                 }
                             }
