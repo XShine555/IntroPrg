@@ -44,10 +44,7 @@ public class Password {
                     if (Character.isDigit(iChar))
                         lastType = "int";
                     else if (Character.isLetter(iChar))
-                        if (Character.isUpperCase(iChar))
-                            lastType = "string_mayus";
-                        else
-                            lastType = "string_minus";
+                        lastType = Character.isUpperCase(iChar) ? "string_mayus" : "string_minus";
                     else
                         lastType = "symbol";
 
