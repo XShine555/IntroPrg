@@ -12,6 +12,7 @@ public class Password {
         boolean repChar = false;
         boolean sameType = false;
         boolean hasWhitespace = false;
+        boolean intPatron = false;
 
         String previousChars = "";
 
@@ -33,6 +34,8 @@ public class Password {
                     else
                         lastType = "symbol";
 
+                    int repCount = 0;
+                    String tempChars = "";
                     for (int j = i; j > userInput.length() - 4; i--) {
                         char jChar = userInput.charAt(j);
                         String thisType;
@@ -45,9 +48,23 @@ public class Password {
                             thisType = "symbol";
 
                         if (thisType == lastType) {
-                            isValid = false;
-                            sameType = true;
-                            break;
+                            repCount++;
+                            tempChars += jChar;
+                        }
+                    }
+
+                    if (repCount > 3) {
+                        isValid = false;
+                        repChar = true;
+
+                        if (lastType == "int") {
+                            int firstNum = Integer.parseInt(tempChars.charAt(0) + "");
+                            for (int j = 1; j < tempChars.length(); j++) {
+                                int num = Integer.parseInt(tempChars.charAt(j) + "");
+
+                                if (firstNum + 1 == num)
+                                    intPatron = true;
+                            }
                         }
                     }
                 }
@@ -94,7 +111,7 @@ public class Password {
         else if (hasWhitespace)
             System.out.println("El password no pot contenir espais en blanc.");
         else if (sameType)
-            System.out.println("El password no pot contenir caràcters repetits.");
+            System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
         else
             System.out.println("Todo bien");
 
