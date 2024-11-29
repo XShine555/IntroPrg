@@ -122,6 +122,6 @@ public class Password {
         else if (intPatron)
             System.out.println("El password no pot contenir més de 3 números consecutius.");
         else
-            System.out.println("Todo bien");
+            System.out.println("El maleït password és vàlid!");
     }    
 }
