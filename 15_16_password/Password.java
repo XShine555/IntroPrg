@@ -86,7 +86,7 @@ public class Password {
                             intPatron = true;
                         }
                     }
-                    System.out.println(tempChars);
+                    //System.out.println(tempChars);
                     if (repCount > 4) {
                         sameType = true;
                     }
