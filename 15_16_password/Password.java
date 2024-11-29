@@ -68,12 +68,11 @@ public class Password {
                         }
                     }
 
-                    if (repCount >= 4 && !lastType.equals("int"))
+                    if (repCount >= 4)
                         sameType = true;
 
                     if (repCount >= 3) {
                         isValid = false;
-                        //sameType = true;
                         int rep = 0;
 
                         if (lastType.equals("int")) {
