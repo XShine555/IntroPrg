@@ -36,7 +36,7 @@ public class Password {
                 if (Character.isDigit(iChar))
                     hasNumber = true;
 
-                if (i + 1 >= 4) {
+                if (i + 1 >= 4 && (!sameType || !intPatron) ) {
                     String lastType;
 
                     if (Character.isDigit(iChar))
