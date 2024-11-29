@@ -56,11 +56,11 @@ public class Password {
                 mayusCount++;
             else if (Character.isLowerCase(iChar))
                 minusCount++;
-            else if (!Character.isLetterOrDigit(iChar) && iChar != ' ')
+            else if (!Character.isLetterOrDigit(iChar)) {
                 hasSymbol = true;
-            else if (Character.isWhitespace(iChar)) {
-                isValid = false;
-                hasWhitespace = true;
+
+                if (Character.isWhitespace(iChar))
+                    hasWhitespace = false;
             }
         
             // String.Contains
