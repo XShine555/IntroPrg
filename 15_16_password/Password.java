@@ -85,7 +85,7 @@ public class Password {
         else if (minusCount < 1)
             System.out.println("El password ha de contenir com a mínim una lletra minúscula.");
         else if (!hasSymbol)
-            System.out.println("no symbol.");
+            System.out.println("El password ha de contenir com a mínim un símbol.");
         else if (mayusCount < minusCount)
             System.out.println("mayus < minus");
         else if (repChar)
