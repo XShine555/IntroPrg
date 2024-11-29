@@ -68,11 +68,7 @@ public class Password {
                         }
                     }
 
-                    if (repCount >= 4) {
-                        sameType = true;
-                        debounce = true;
-                    }
-                    else if (repCount >= 3 && lastType.equals("int")) {
+                    if (repCount >= 3 && lastType.equals("int")) {
                         int rep = 0;
 
                         int firstNum = Integer.parseInt(tempChars.charAt(0) + "");
@@ -87,6 +83,10 @@ public class Password {
                             intPatron = true;
                             debounce = true;
                         }
+                    }
+                    if (repCount >= 4) {
+                        sameType = true;
+                        debounce = true;
                     }
                 }
             }
