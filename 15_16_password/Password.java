@@ -62,8 +62,10 @@ public class Password {
                             for (int j = 1; j < tempChars.length(); j++) {
                                 int num = Integer.parseInt(tempChars.charAt(j) + "");
 
-                                if (firstNum + 1 == num)
+                                if (firstNum + 1 == num) {
                                     intPatron = true;
+                                    break;
+                                }
                             }
                         }
                     }
