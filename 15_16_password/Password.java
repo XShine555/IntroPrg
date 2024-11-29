@@ -38,7 +38,7 @@ public class Password {
                 if (Character.isDigit(iChar))
                     hasNumber = true;
 
-                if (i + 1 >= 4 && !debounce) {
+                if (i + 1 >= 4) {
                     String lastType;
 
                     if (Character.isDigit(iChar))
