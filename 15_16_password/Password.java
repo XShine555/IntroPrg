@@ -85,7 +85,13 @@ public class Password {
                     }
                 }
         
-            repChar = previousChars.contains("" + iChar);
+            //String.contains
+            for (int j = 0; j < previousChars.length(); j++) {
+                char jChar = previousChars.charAt(j);
+                if (jChar == iChar)
+                    repChar = true;
+            }
+
 
             previousChars += iChar;
         }
