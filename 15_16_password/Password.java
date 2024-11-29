@@ -35,7 +35,10 @@ public class Password {
             }
 
             if (Character.isLetterOrDigit(iChar)) {
-                if (Character.isDigit(iChar))
+                
+            }
+
+            if (Character.isDigit(iChar))
                     hasNumber = true;
 
                 if (i + 1 >= 5) {
@@ -83,11 +86,11 @@ public class Password {
                             intPatron = true;
                         }
                     }
+                    System.out.println(tempChars);
                     if (repCount > 4) {
                         sameType = true;
                     }
                 }
-            }
         
             repChar = previousChars.contains("" + iChar);
 
