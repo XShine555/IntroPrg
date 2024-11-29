@@ -56,7 +56,7 @@ public class Password {
                 mayusCount++;
             else if (Character.isLowerCase(iChar))
                 minusCount++;
-            else if (!Character.isLetterOrDigit(iChar))
+            else if (!Character.isLetterOrDigit(iChar) && iChar != ' ')
                 hasSymbol = true;
             else if (Character.isWhitespace(iChar)) {
                 isValid = false;
