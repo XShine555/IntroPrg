@@ -64,13 +64,14 @@ public class Password {
             }
         
             // String.Contains
-            for (int j = 0; j < previousChars.length(); j++) {
+            /*for (int j = 0; j < previousChars.length(); j++) {
                 char jChar = userInput.charAt(j);
                 if (jChar == iChar)
                     isValid = false;
                     repChar = true;
                     break;
-            }
+            }*/
+            repChar = previousChars.contains("" + iChar);
 
             previousChars += iChar;
 
