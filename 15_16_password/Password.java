@@ -68,25 +68,22 @@ public class Password {
                         }
                     }
 
-                    if (repCount >= 4) {
-                        sameType = true;
-                    }
-                    if (repCount >= 3) {
+                    if (repCount >= 3 && lastType.equals("int")) {
                         int rep = 0;
 
-                        if (lastType.equals("int")) {
-                            int firstNum = Integer.parseInt(tempChars.charAt(0) + "");
-                            for (int j = 1; j < tempChars.length(); j++) {
-                                int num = Integer.parseInt(tempChars.charAt(j) + "");
-                                if (firstNum + 1 == num ||firstNum  - 1 == num) {
-                                    rep++;
-                                }
-                                firstNum = num;
+                        int firstNum = Integer.parseInt(tempChars.charAt(0) + "");
+                        for (int j = 1; j < tempChars.length(); j++) {
+                            int num = Integer.parseInt(tempChars.charAt(j) + "");
+                            if (firstNum + 1 == num ||firstNum  - 1 == num) {
+                                rep++;
                             }
+                            firstNum = num;
                         }
-
                         if (rep >= 3)
                             intPatron = true;
+                    }
+                    else if (repCount >= 4) {
+                        sameType = true;
                     }
                 }
             }
