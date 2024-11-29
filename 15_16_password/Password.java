@@ -119,7 +119,7 @@ public class Password {
             System.out.println("El password no pot contenir espais en blanc.");
         else if (sameType)
             if (intPatron)
-                System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
+                System.out.println("El password no pot contenir més de 3 números consecutius.");
             else
                 System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
         else
