@@ -14,6 +14,8 @@ public class Password {
         boolean hasWhitespace = false;
         boolean intPatron = false;
 
+        boolean debounce = false;
+
         String previousChars = "";
 
         for (int i = 0; i < userInput.length(); i++) {
@@ -36,7 +38,7 @@ public class Password {
                 if (Character.isDigit(iChar))
                     hasNumber = true;
 
-                if (i + 1 >= 4 && (!sameType || !intPatron) ) {
+                if (i + 1 >= 4 && !debounce) {
                     String lastType;
 
                     if (Character.isDigit(iChar))
@@ -77,11 +79,14 @@ public class Password {
                             }
                             firstNum = num;
                         }
-                        if (rep >= 3)
+                        if (rep >= 3) {
                             intPatron = true;
+                            debounce = true;
+                        }
                     }
                     else if (repCount >= 4) {
                         sameType = true;
+                        debounce = true;
                     }
                 }
             }
