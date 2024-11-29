@@ -38,7 +38,7 @@ public class Password {
                 if (Character.isDigit(iChar))
                     hasNumber = true;
 
-                if (i + 1 >= 4) {
+                if (i + 1 >= 5) {
                     String lastType;
 
                     if (Character.isDigit(iChar))
@@ -51,7 +51,7 @@ public class Password {
                     int repCount = 0;
                     String tempChars = "";
 
-                    for (int j = i + 1 - 4; j <= i; j++) {
+                    for (int j = i + 1 - 5; j <= i; j++) {
                         char jChar = userInput.charAt(j);
                         String thisType;
 
@@ -81,12 +81,10 @@ public class Password {
                         }
                         if (rep >= 3) {
                             intPatron = true;
-                            debounce = true;
                         }
                     }
                     if (repCount > 4) {
                         sameType = true;
-                        debounce = true;
                     }
                 }
             }
