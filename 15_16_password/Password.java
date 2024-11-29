@@ -80,18 +80,20 @@ public class Password {
 
         if (!hasNumber)
             System.out.println("El password ha de contenir com a mínim un numero.");
-        if (!hasSymbol)
+        else if (!hasSymbol)
             System.out.println("El password ha de contenir com a mínim una lletra majúscula.");
-        if (mayusCount < 1)
+        else if (mayusCount < 1)
             System.out.println("< 1 mayus");
-        if (minusCount < 1)
+        else if (minusCount < 1)
             System.out.println("< 1 minus");
-        if (mayusCount < minusCount)
+        else if (mayusCount < minusCount)
             System.out.println("mayus < minus");
-        if (repChar)
+        else if (repChar)
             System.out.println("char rep");
-        if (sameType)
+        else if (sameType)
             System.out.println("4 same type");
+        else
+            System.out.println("Todo bien");
 
         /*boolean isValid = userInput.length() >= 8 && userInput.length() < 16;
 
