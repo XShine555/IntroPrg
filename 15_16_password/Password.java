@@ -14,6 +14,8 @@ public class Password {
         boolean hasWhitespace = false;
         boolean intPatron = false;
 
+        String whosFirst = "";
+
         String previousChars = "";
 
         for (int i = 0; i < userInput.length(); i++) {
@@ -70,6 +72,8 @@ public class Password {
 
                     if (repCount >= 4) {
                         sameType = true;
+                        if (whosFirst.isBlank())
+                            whosFirst = "sameType";
                     }
                     if (repCount >= 3) {
                         int rep = 0;
@@ -85,8 +89,11 @@ public class Password {
                             }
                         }
 
-                        if (rep >= 3)
+                        if (rep >= 3) {
                             intPatron = true;
+                            if (whosFirst.isBlank())
+                                whosFirst = "intPatron";
+                        }
                     }
                 }
             }
@@ -118,9 +125,9 @@ public class Password {
             System.out.println("El password no pot contenir caràcters repetits.");
         else if (hasWhitespace)
             System.out.println("El password no pot contenir espais en blanc.");
-        else if (sameType)
+        else if (whosFirst.equals("sameType"))
             System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
-        else if (intPatron)
+        else if (whosFirst.equals("intPatron"))
             System.out.println("El password no pot contenir més de 3 números consecutius.");
         else
             System.out.println("Todo bien");
