@@ -47,7 +47,10 @@ public class Password {
                     if (Character.isDigit(iChar))
                         lastType = "int";
                     else if (Character.isLetter(iChar))
-                        lastType = "string";
+                        if (Character.isUpperCase(iChar))
+                            lastType = "string_mayus";
+                        else
+                            lastType = "string_minus";
                     else
                         lastType = "symbol";
 
@@ -61,7 +64,10 @@ public class Password {
                         if (Character.isDigit(jChar))
                             thisType = "int";
                         else if (Character.isLetter(jChar))
-                            thisType = "string";
+                            if (Character.isUpperCase(jChar))
+                                thisType = "string_mayus";
+                            else
+                                thisType = "string_minus";
                         else
                             thisType = "symbol";
 
@@ -72,23 +78,21 @@ public class Password {
                     }
 
                     if (repCount >= 3 && lastType.equals("int")) {
-                        boolean hasConsecutivePattern = true;
-                    
-                        for (int j = 0; j < tempChars.length() - 1; j++) {
-                            int current = Character.getNumericValue(tempChars.charAt(j));
-                            int next = Character.getNumericValue(tempChars.charAt(j + 1));
-                    
-                            if (Math.abs(next - current) != 1) {
-                                hasConsecutivePattern = false;
-                                break;
+                        int rep = 0;
+
+                        int firstNum = Integer.parseInt(tempChars.charAt(0) + "");
+                        for (int j = 1; j < tempChars.length(); j++) {
+                            int num = Integer.parseInt(tempChars.charAt(j) + "");
+                            if (firstNum + 1 == num ||firstNum  - 1 == num) {
+                                rep++;
                             }
+                            firstNum = num;
                         }
-                    
-                        if (hasConsecutivePattern) {
+                        if (rep >= 3) {
                             intPatron = true;
                         }
                     }
-                    
+
                     if (repCount > 4) {
                         sameType = true;
                     }
