@@ -109,7 +109,7 @@ public class Password {
         else if (mayusCount < minusCount)
             System.out.println("El password no pot contenir menys majúscules que minúscules.");
         else if (repChar)
-            System.out.println("El password no pot contenir caràcters repetits");
+            System.out.println("El password no pot contenir caràcters repetits.");
         else if (hasWhitespace)
             System.out.println("El password no pot contenir espais en blanc.");
         else if (sameType)
