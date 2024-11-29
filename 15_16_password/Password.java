@@ -68,11 +68,11 @@ public class Password {
                         }
                     }
 
-                    if (repCount >= 4)
+                    if (repCount >= 4) {
                         sameType = true;
-
-                    if (repCount >= 3) {
                         isValid = false;
+                    }
+                    else if (repCount >= 3) {
                         int rep = 0;
 
                         if (lastType.equals("int")) {
@@ -88,6 +88,7 @@ public class Password {
 
                         if (rep >= 3)
                             intPatron = true;
+                            isValid = false;
                     }
                 }
             }
@@ -104,8 +105,8 @@ public class Password {
 
             previousChars += iChar;
 
-            //if (!isValid)
-                //break;
+            if (!isValid)
+                break;
         }
 
         if (!hasNumber)
@@ -122,10 +123,10 @@ public class Password {
             System.out.println("El password no pot contenir caràcters repetits.");
         else if (hasWhitespace)
             System.out.println("El password no pot contenir espais en blanc.");
-        else if (intPatron)
-            System.out.println("El password no pot contenir més de 3 números consecutius.");
         else if (sameType)
             System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
+        else if (intPatron)
+            System.out.println("El password no pot contenir més de 3 números consecutius.");
         else
             System.out.println("Todo bien");
 
