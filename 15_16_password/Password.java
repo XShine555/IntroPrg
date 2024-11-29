@@ -55,7 +55,7 @@ public class Password {
 
                     if (repCount > 3) {
                         isValid = false;
-                        repChar = true;
+                        sameType = true;
 
                         if (lastType == "int") {
                             int firstNum = Integer.parseInt(tempChars.charAt(0) + "");
