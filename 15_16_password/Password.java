@@ -11,6 +11,7 @@ public class Password {
         int mayusCount = 0, minusCount = 0;
         boolean repChar = false;
         boolean sameType = false;
+        boolean hasWhitespace = false;
 
         String previousChars = "";
 
@@ -55,8 +56,10 @@ public class Password {
                 mayusCount++;
             else if (Character.isLowerCase(iChar))
                 minusCount++;
-            else if (Character.isWhitespace(iChar))
+            else if (Character.isWhitespace(iChar)) {
                 isValid = false;
+                hasWhitespace = true;
+            }
             else if (!Character.isLetterOrDigit(iChar))
                 hasSymbol = true;
         
@@ -78,7 +81,7 @@ public class Password {
         if (!hasNumber)
             System.out.println("El password ha de contenir com a mínim un numero.");
         else if (!hasSymbol)
-            System.out.println("No tiene simbolos");
+            System.out.println("El password ha de contenir com a mínim una lletra majúscula");
         else if (mayusCount < 1)
             System.out.println("< 1 mayus");
         else if (minusCount < 1)
