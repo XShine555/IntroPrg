@@ -22,17 +22,13 @@ public class Password {
 
             if (Character.isUpperCase(iChar))
                 mayusCount++;
-            if (Character.isLowerCase(iChar))
+            else if (Character.isLowerCase(iChar))
                 minusCount++;
-            if (!Character.isLetterOrDigit(iChar)) {
+            else if (!Character.isLetterOrDigit(iChar)) {
                 hasSymbol = true;
 
                 if (Character.isWhitespace(iChar))
                     hasWhitespace = true;
-            }
-
-            if (Character.isLetterOrDigit(iChar)) {
-                
             }
 
             if (Character.isDigit(iChar))
