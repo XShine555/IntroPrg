@@ -14,9 +14,12 @@ public class Password {
         boolean hasWhitespace = false;
         boolean intPatron = false;
 
+        boolean debounce = false;
+
         String previousChars = "";
 
         for (int i = 0; i < userInput.length(); i++) {
+            boolean isValid = true;
 
             char iChar = userInput.charAt(i);
 
@@ -31,6 +34,10 @@ public class Password {
                     hasWhitespace = true;
             }
 
+            if (Character.isLetterOrDigit(iChar)) {
+                
+            }
+
             if (Character.isDigit(iChar))
                     hasNumber = true;
 
@@ -40,7 +47,10 @@ public class Password {
                     if (Character.isDigit(iChar))
                         lastType = "int";
                     else if (Character.isLetter(iChar))
-                        lastType = Character.isUpperCase(iChar) ? "string_mayus" : "string_minus";
+                        if (Character.isUpperCase(iChar))
+                            lastType = "string_mayus";
+                        else
+                            lastType = "string_minus";
                     else
                         lastType = "symbol";
 
@@ -54,7 +64,10 @@ public class Password {
                         if (Character.isDigit(jChar))
                             thisType = "int";
                         else if (Character.isLetter(jChar))
-                            thisType = Character.isUpperCase(iChar) ? "string_mayus" : "string_minus";
+                            if (Character.isUpperCase(jChar))
+                                thisType = "string_mayus";
+                            else
+                                thisType = "string_minus";
                         else
                             thisType = "symbol";
 
