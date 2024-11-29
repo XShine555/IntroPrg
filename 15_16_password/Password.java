@@ -21,10 +21,24 @@ public class Password {
 
             char iChar = userInput.charAt(i);
 
-            if (Character.isDigit(iChar)) {
-                hasNumber = true;
+            if (Character.isUpperCase(iChar))
+                mayusCount++;
+            if (Character.isLowerCase(iChar))
+                minusCount++;
+            if (!Character.isLetterOrDigit(iChar)) {
+                hasSymbol = true;
 
-                if (i > 4) {
+                if (Character.isWhitespace(iChar))
+                    hasWhitespace = true;
+            }
+
+            if (Character.isLetterOrDigit(iChar)) {
+                if (Character.isDigit(iChar))
+                    hasNumber = true;
+
+                System.out.println(iChar);
+                System.out.println(i);
+                if (i >= 3) {
                     String lastType;
 
                     if (Character.isDigit(iChar))
@@ -36,7 +50,8 @@ public class Password {
 
                     int repCount = 0;
                     String tempChars = "";
-                    for (int j = i; j > i - 4; j--) {
+                    //System.out.println("i: " + String.valueOf(i-4) + "/" + i);
+                    for (int j = i - 3; j <= i; j++) {
                         char jChar = userInput.charAt(j);
                         String thisType;
 
@@ -47,42 +62,29 @@ public class Password {
                         else
                             thisType = "symbol";
 
-                        if (thisType == lastType) {
+                        if (thisType.equals(lastType)) {
                             repCount++;
                             tempChars += jChar;
                         }
-                        else
-                            break;
                     }
 
                     if (repCount > 3) {
                         isValid = false;
                         sameType = true;
 
-                        if (lastType == "int") {
+                        if (lastType.equals("int")) {
                             int firstNum = Integer.parseInt(tempChars.charAt(0) + "");
                             for (int j = 1; j < tempChars.length(); j++) {
                                 int num = Integer.parseInt(tempChars.charAt(j) + "");
                                 if (firstNum + 1 == num ||firstNum  - 1 == num) {
                                     intPatron = true;
                                     isValid = false;
-                                    break;
                                 }
                                 firstNum = num;
                             }
                         }
                     }
                 }
-            }
-            else if (Character.isUpperCase(iChar))
-                mayusCount++;
-            else if (Character.isLowerCase(iChar))
-                minusCount++;
-            else if (!Character.isLetterOrDigit(iChar)) {
-                hasSymbol = true;
-
-                if (Character.isWhitespace(iChar))
-                    hasWhitespace = true;
             }
         
             // String.Contains
@@ -97,8 +99,8 @@ public class Password {
 
             previousChars += iChar;
 
-            if (!isValid)
-                break;
+            //if (!isValid)
+                //break;
         }
 
         if (!hasNumber)
@@ -116,7 +118,10 @@ public class Password {
         else if (hasWhitespace)
             System.out.println("El password no pot contenir espais en blanc.");
         else if (sameType)
-            System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
+            if (intPatron)
+                System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
+            else
+                System.out.println("El password no pot contenir més de 4 caràcters seguits del mateix tipus.");
         else
             System.out.println("Todo bien");
 
