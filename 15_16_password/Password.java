@@ -88,6 +88,8 @@ public class Password {
             System.out.println("El password ha de contenir com a mínim un símbol.");
         else if (mayusCount < minusCount)
             System.out.println("El password no pot contenir menys majúscules que minúscules.");
+        else if (hasWhitespace)
+            System.out.println("El password no pot contenir espais en blanc.");
         else if (repChar)
             System.out.println("El password no pot contenir caràcters repetits");
         else if (sameType)
