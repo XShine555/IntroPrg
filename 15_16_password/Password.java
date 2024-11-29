@@ -70,7 +70,6 @@ public class Password {
 
                     if (repCount >= 4) {
                         sameType = true;
-                        isValid = false;
                     }
                     if (repCount >= 3) {
                         int rep = 0;
@@ -88,7 +87,6 @@ public class Password {
 
                         if (rep >= 3)
                             intPatron = true;
-                            isValid = false;
                     }
                 }
             }
@@ -104,9 +102,6 @@ public class Password {
             repChar = previousChars.contains("" + iChar);
 
             previousChars += iChar;
-
-            if (!isValid)
-                break;
         }
 
         if (!hasNumber)
