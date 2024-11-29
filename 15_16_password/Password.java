@@ -76,7 +76,7 @@ public class Password {
         }
 
         if (!hasNumber)
-            System.out.println("No tiene numeros");
+            System.out.println("El password ha de contenir com a mínim un numero.");
         else if (!hasSymbol)
             System.out.println("No tiene simbolos");
         else if (mayusCount < 1)
