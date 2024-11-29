@@ -94,7 +94,7 @@ public class Password {
         else if (hasWhitespace)
             System.out.println("El password no pot contenir espais en blanc.");
         else if (sameType)
-            System.out.println("4 same type");
+            System.out.println("El password no pot contenir caràcters repetits.");
         else
             System.out.println("Todo bien");
 
