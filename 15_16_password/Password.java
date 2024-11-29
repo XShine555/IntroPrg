@@ -60,7 +60,7 @@ public class Password {
                 hasSymbol = true;
 
                 if (Character.isWhitespace(iChar))
-                    hasWhitespace = false;
+                    hasWhitespace = true;
             }
         
             // String.Contains
