@@ -24,11 +24,13 @@ public class ParaulesReves {
                 //Reverse
                 String reverseString = "";
                 for (int j = 0; j < tempString.length(); j++) {
-                    if (Character.isLetterOrDigit(tempString.charAt(j))) {
-                        reverseString = tempString.charAt(j) + reverseString;
+                    char jChar = tempString.charAt(j);
+
+                    if (Character.isLetterOrDigit(jChar) || Character.isWhitespace(jChar)) {
+                        reverseString = jChar + reverseString;
                     }
                     else {
-                        reverseString += tempString.charAt(j);
+                        reverseString += jChar;
                     }
                 }
                 tempString = "";
