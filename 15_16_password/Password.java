@@ -66,14 +66,16 @@ public class Password {
                         thisType = "symbol";
 
                     // String.equals
-                    boolean equals = true;
-                    for (int c = 0; c < lastType.length()-1; c++) {
-                        char cChar = lastType.charAt(c);
-                        char thisTypeChar = thisType.charAt(i);
-
-                        if (cChar != thisTypeChar) {
-                            equals = false;
-                            break;
+                    boolean equals = lastType.length() == thisType.length();
+                    if (equals) {
+                        for (int c = 0; c < lastType.length(); c++) {
+                            char cChar = lastType.charAt(c);
+                            char thisTypeChar = thisType.charAt(i);
+    
+                            if (cChar != thisTypeChar) {
+                                equals = false;
+                                break;
+                            }
                         }
                     }
 
@@ -84,14 +86,16 @@ public class Password {
                 }
 
                 // String.equals
-                boolean equals = true;
-                for (int c = 0; c < lastType.length()-1; c++) {
-                    char cChar = lastType.charAt(c);
-                    char thisTypeChar = "int".charAt(i);
-
-                    if (cChar != thisTypeChar) {
-                        equals = false;
-                        break;
+                boolean equals = lastType.length() == "int".length();
+                if (equals) {
+                    for (int c = 0; c < lastType.length(); c++) {
+                        char cChar = lastType.charAt(c);
+                        char thisTypeChar = "int".charAt(i);
+    
+                        if (cChar != thisTypeChar) {
+                            equals = false;
+                            break;
+                        }
                     }
                 }
 
