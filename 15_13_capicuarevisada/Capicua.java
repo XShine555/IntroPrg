@@ -1,3 +1,10 @@
+/*
+ * Exercici 15_13. Texts capicua (versió avançada)
+ * Iker Rivera Garcia
+ * 2/11/2024
+ * Programa que comprueba que un texto sea capicúa ignorando faltas ortográficas o caracteres catalanes.
+ */
+
 public class Capicua {
     public static void main(String[] args) {
         System.out.println("Text?");
