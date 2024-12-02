@@ -18,6 +18,8 @@ public class ParaulesReves {
             char currentChar = userInput.charAt(i);
             if (Character.isLetterOrDigit(currentChar) || Character.isWhitespace(currentChar)) {
                 sanitizedText += currentChar;
+            } else if (currentChar == '\'' && i > 0 && Character.isLetter(userInput.charAt(i - 1))) {
+                sanitizedText += currentChar;
             }
         }
 
