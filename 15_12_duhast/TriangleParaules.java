@@ -1,3 +1,10 @@
+/*
+ * Exercici 15_12. Triangle de paraules
+ * Iker Rivera Garcia
+ * 2/11/2024
+ * Hace un triángulo con las palabras de un texto.
+ */
+
 public class TriangleParaules {
     public static void main(String[] args) {
         System.out.println("Text?");
