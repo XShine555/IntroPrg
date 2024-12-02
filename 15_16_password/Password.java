@@ -1,3 +1,10 @@
+/*
+ * Exercici 15_16. Maleïda contrasenya
+ * Iker Rivera Garcia
+ * 2/12/2024
+ * Programa que comprueba que una contraseña sea segura.
+ */
+
 public class Password {
     public static void main(String[] args) {
         String userInput = Entrada.readLine();
