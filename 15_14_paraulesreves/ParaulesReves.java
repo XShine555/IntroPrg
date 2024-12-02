@@ -35,9 +35,6 @@ public class ParaulesReves {
                 }
                 tempString = "";
                 result += reverseString;
-
-                if (Character.isWhitespace(iChar))
-                    result += " ";
             }
             else {
                 tempString += iChar;
