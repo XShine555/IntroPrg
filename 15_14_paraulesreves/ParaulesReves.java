@@ -10,78 +10,47 @@ public class ParaulesReves {
         System.out.println("Text?");
         String userInput = Entrada.readLine();
 
-        String result = "";
-        String tempString = "";
+        String sanitizedText = "";
+        String reversedString = "";
+        String temporalWord = "";
 
         for (int i = 0; i < userInput.length(); i++) {
-            char iChar = userInput.charAt(i);
-
-            if (i == userInput.length() - 1 && !Character.isWhitespace(iChar))  {
-                tempString += iChar;
-            }
-
-            if (Character.isWhitespace(iChar) || i == userInput.length() - 1) {
-                //Reverse
-                String reverseString = "";
-                for (int j = 0; j < tempString.length(); j++) {
-                    char jChar = tempString.charAt(j);
-
-                    if (Character.isLetterOrDigit(jChar)) {
-                        reverseString = jChar + reverseString;
-                    }
-                    else {
-                        reverseString += jChar;
-                    }
-                }
-                tempString = "";
-                result += reverseString;
-
-                if (Character.isWhitespace(iChar))
-                    result += " ";
-            }
-            else {
-                tempString += iChar;
+            char currentChar = userInput.charAt(i);
+            if (Character.isLetterOrDigit(currentChar) || Character.isWhitespace(currentChar)) {
+                sanitizedText += currentChar;
             }
         }
-/* 
-        for (int i = userInput.length() - 1; i > -1; i--) {
-            char iChar = userInput.charAt(i);
-            if (!Character.isLetterOrDigit(iChar) && !Character.isWhitespace(iChar)) {
-                continue;
+
+        for (int i = 0; i < sanitizedText.length(); i++) {
+            char currentChar = sanitizedText.charAt(i);
+
+            if (Character.isLetterOrDigit(currentChar)) {
+                temporalWord += currentChar;
             }
 
-            if (i == 0) {
-                tempString += iChar;
-            }
-
-            if (Character.isWhitespace(iChar) || i == 0) {
-                String thisResult = "";
-                for (int j = 0; j < tempString.length(); j++) {
-                    thisResult += tempString.charAt(j);
+            if (Character.isWhitespace(currentChar) || i == sanitizedText.length() - 1) {
+                for (int j = temporalWord.length() - 1; j >= 0; j--) {
+                    reversedString += temporalWord.charAt(j);
                 }
-                tempString = "";
-                if (result.length() > 0)
-                    result = " " + result;
-                result = thisResult + result;
+
+                temporalWord = "";
+            }
+        }
+
+        String finalOutput = "";
+        int reversedIndex = 0;
+
+        for (int i = 0; i < userInput.length(); i++) {
+            char originalChar = userInput.charAt(i);
+
+            if (Character.isLetterOrDigit(originalChar)) {
+                finalOutput += reversedString.charAt(reversedIndex);
+                reversedIndex++;
             } else {
-                tempString += iChar;
+                finalOutput += originalChar;
             }
         }
 
-        String newResult = "";
-        for (int i = 0; i < userInput.length(); i++) {
-            char iChar = userInput.charAt(i);
-
-            if (i < result.length() && Character.isLetterOrDigit(iChar)) {
-                char jChar = result.charAt(i);
-                newResult += jChar;
-            }
-            else {
-                //Complete
-                newResult += iChar;
-            }
-        }*/
-
-        System.out.println(result);
+        System.out.println(finalOutput);
     }    
 }
