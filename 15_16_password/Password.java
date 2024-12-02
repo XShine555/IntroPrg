@@ -65,13 +65,37 @@ public class Password {
                     else
                         thisType = "symbol";
 
-                    if (thisType.equals(lastType)) {
+                    // String.equals
+                    boolean equals = true;
+                    for (int c = 0; c < lastType.length(); c++) {
+                        char cChar = lastType.charAt(c);
+                        char thisTypeChar = thisType.charAt(i);
+
+                        if (cChar != thisTypeChar) {
+                            equals = false;
+                            break;
+                        }
+                    }
+
+                    if (equals) {
                         repCount++;
                         tempChars += jChar;
                     }
                 }
 
-                if (repCount >= 3 && lastType.equals("int")) {
+                // String.equals
+                boolean equals = true;
+                for (int c = 0; c < lastType.length(); c++) {
+                    char cChar = lastType.charAt(c);
+                    char thisTypeChar = "int".charAt(i);
+
+                    if (cChar != thisTypeChar) {
+                        equals = false;
+                        break;
+                    }
+                }
+
+                if (repCount >= 3 && equals) {
                     int rep = 0;
 
                     int firstNum = Integer.parseInt(tempChars.charAt(0) + "");
