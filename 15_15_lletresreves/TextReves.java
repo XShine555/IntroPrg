@@ -1,3 +1,10 @@
+/*
+ * Exercici 15_15. Les lletres del revés
+ * Iker Rivera Garcia
+ * 2/11/2024
+ * Programa que intercambia las letras a las del final de un texto ignorando caracteres especiales.
+ */
+
 public class TextReves {
     public static void main(String[] args) {
         System.out.println("Text?");
