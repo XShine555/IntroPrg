@@ -67,7 +67,7 @@ public class Password {
 
                     // String.equals
                     boolean equals = true;
-                    for (int c = 0; c < lastType.length(); c++) {
+                    for (int c = 0; c < lastType.length()-1; c++) {
                         char cChar = lastType.charAt(c);
                         char thisTypeChar = thisType.charAt(i);
 
@@ -85,7 +85,7 @@ public class Password {
 
                 // String.equals
                 boolean equals = true;
-                for (int c = 0; c < lastType.length(); c++) {
+                for (int c = 0; c < lastType.length()-1; c++) {
                     char cChar = lastType.charAt(c);
                     char thisTypeChar = "int".charAt(i);
 
