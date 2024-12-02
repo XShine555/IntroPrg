@@ -13,6 +13,35 @@ public class ParaulesReves {
         String result = "";
         String tempString = "";
 
+        for (int i = 0; i < userInput.length(); i++) {
+            char iChar = userInput.charAt(i);
+
+            if (i == userInput.length() - 1)  {
+                tempString += iChar;
+            }
+
+            if (Character.isWhitespace(iChar) || i == userInput.length() - 1) {
+                //Reverse
+                String reverseString = "";
+                for (int j = 0; j < tempString.length(); j++) {
+                    if (Character.isLetterOrDigit(tempString.charAt(j))) {
+                        reverseString = tempString.charAt(j) + reverseString;
+                    }
+                    else {
+                        reverseString += tempString.charAt(j);
+                    }
+                }
+                tempString = "";
+                result += reverseString;
+
+                if (Character.isWhitespace(iChar))
+                    result += " ";
+            }
+            else {
+                tempString += iChar;
+            }
+        }
+/* 
         for (int i = userInput.length() - 1; i > -1; i--) {
             char iChar = userInput.charAt(i);
             if (!Character.isLetterOrDigit(iChar) && !Character.isWhitespace(iChar)) {
@@ -49,8 +78,8 @@ public class ParaulesReves {
                 //Complete
                 newResult += iChar;
             }
-        }
+        }*/
 
-        System.out.println(newResult);
+        System.out.println(result);
     }    
 }
