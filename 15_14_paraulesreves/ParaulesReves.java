@@ -15,6 +15,9 @@ public class ParaulesReves {
 
         for (int i = userInput.length() - 1; i > -1; i--) {
             char iChar = userInput.charAt(i);
+            if (!Character.isLetterOrDigit(iChar))
+                continue;
+
             if (i == 0) {
                 tempString += iChar;
             }
