@@ -10,7 +10,9 @@ public class ParaulesReves {
         System.out.println("Text?");
         String userInput = Entrada.readLine();
 
-        String result = "";
+        System.out.println("a");
+
+        /*String result = "";
         String tempString = "";
 
         for (int i = userInput.length() - 1; i > -1; i--) {
@@ -33,6 +35,6 @@ public class ParaulesReves {
             }
         }
 
-        System.err.println(result);
+        System.err.println(result);*/
     }    
 }
