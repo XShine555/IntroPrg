@@ -15,8 +15,9 @@ public class ParaulesReves {
 
         for (int i = userInput.length() - 1; i > -1; i--) {
             char iChar = userInput.charAt(i);
-            if (!Character.isLetterOrDigit(iChar) && !Character.isWhitespace(iChar))
+            if (!Character.isLetterOrDigit(iChar) && !Character.isWhitespace(iChar)) {
                 continue;
+            }
 
             if (i == 0) {
                 tempString += iChar;
@@ -36,6 +37,20 @@ public class ParaulesReves {
             }
         }
 
-        System.out.println(result);
+        String newResult = "";
+        for (int i = 0; i < userInput.length(); i++) {
+            char iChar = userInput.charAt(i);
+
+            if (i < result.length() && Character.isLetterOrDigit(iChar)) {
+                char jChar = result.charAt(i);
+                newResult += jChar;
+            }
+            else {
+                //Complete
+                newResult += iChar;
+            }
+        }
+
+        System.out.println(newResult);
     }    
 }
