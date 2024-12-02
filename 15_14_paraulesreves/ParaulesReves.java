@@ -1,3 +1,10 @@
+/*
+ * Exercici 15_14. Paraules del revés
+ * Iker Rivera Garcia
+ * 2/11/2024
+ * Programa que pone las palabras del revés de un texto.
+ */
+
 public class ParaulesReves {
     public static void main(String[] args) {
         System.out.println("Text?");
