@@ -26,7 +26,7 @@ public class ParaulesReves {
                 for (int j = 0; j < tempString.length(); j++) {
                     char jChar = tempString.charAt(j);
 
-                    if (Character.isLetterOrDigit(jChar) || Character.isWhitespace(jChar)) {
+                    if (Character.isLetterOrDigit(jChar)) {
                         reverseString = jChar + reverseString;
                     }
                     else {
@@ -36,7 +36,7 @@ public class ParaulesReves {
                 tempString = "";
                 result += reverseString;
 
-                if (Character.isWhitespace(iChar) || i != userInput.length() - 1)
+                if (Character.isWhitespace(iChar))
                     result += " ";
             }
             else {
