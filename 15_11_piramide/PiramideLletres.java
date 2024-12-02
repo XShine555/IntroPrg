@@ -1,3 +1,10 @@
+/*
+ * Exercici 15_11. Una piràmide amb el nom
+ * Iker Rivera Garcia
+ * 2/11/2024
+ * Genera un triángulo con las letras del texto.
+ */
+
 public class PiramideLletres {
     public static void main(String[] args) {
         System.out.println("Text?");
