@@ -21,8 +21,6 @@ public class ParaulesReves {
             }
         }
 
-        System.out.println(sanitizedText);
-
         for (int i = 0; i < sanitizedText.length(); i++) {
             char currentChar = sanitizedText.charAt(i);
 
