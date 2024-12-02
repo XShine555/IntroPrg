@@ -16,7 +16,7 @@ public class ParaulesReves {
         for (int i = 0; i < userInput.length(); i++) {
             char iChar = userInput.charAt(i);
 
-            if (i == userInput.length() - 1)  {
+            if (i == userInput.length() - 1 && Character.isWhitespace(iChar))  {
                 tempString += iChar;
             }
 
