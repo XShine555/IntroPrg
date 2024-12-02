@@ -21,14 +21,16 @@ public class ParaulesReves {
             }
         }
 
+        System.out.println(sanitizedText);
+
         for (int i = 0; i < sanitizedText.length(); i++) {
             char currentChar = sanitizedText.charAt(i);
 
-            if (Character.isLetterOrDigit(currentChar) || currentChar == '\'') {
+            if (Character.isLetterOrDigit(currentChar)) {
                 temporalWord += currentChar;
             }
 
-            if (Character.isWhitespace(currentChar) || i == sanitizedText.length() - 1) {
+            if (Character.isWhitespace(currentChar) || i == sanitizedText.length() - 1 || currentChar == '\'') {
                 for (int j = temporalWord.length() - 1; j >= 0; j--) {
                     reversedString += temporalWord.charAt(j);
                 }
@@ -43,7 +45,7 @@ public class ParaulesReves {
         for (int i = 0; i < userInput.length(); i++) {
             char originalChar = userInput.charAt(i);
 
-            if (Character.isLetterOrDigit(originalChar) || originalChar == '\'') {
+            if (Character.isLetterOrDigit(originalChar)) {
                 finalOutput += reversedString.charAt(reversedIndex);
                 reversedIndex++;
             } else {
