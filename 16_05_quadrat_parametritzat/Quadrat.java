@@ -4,7 +4,7 @@ public class Quadrat {
     }
 
     public static void dibuixaQuadrat(int length) {
-        for (int y=0; y < 5; y++) {
+        for (int y=0; y < length; y++) {
             dibuixaLinia(length);
             System.out.println();
         }
