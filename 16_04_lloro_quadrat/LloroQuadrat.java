@@ -8,6 +8,8 @@ public class LloroQuadrat {
             System.out.println(getResponse(input));
         }
         while (!input.isBlank());
+
+        System.out.println("Adéu");
     }
 
     public static String getResponse(String input) {
