@@ -14,9 +14,9 @@ public class LloroQuadrat {
 
     public static void getResponse(String input) {
         if (input.equals("dibuixa quadrat"))
-            dibuixaLiniaQuadrat();
+            dibuixaQuadrat();
         else if (input.equals("dibuixa rectangle"))
-            dibuixaLiniaRectangle();
+            dibuixaRectangle();
         else
             System.out.println(String.format("El lloro repeteix: %s", input));
     }
@@ -36,13 +36,13 @@ public class LloroQuadrat {
 
     public static void dibuixaRectangle() {
         for (int y=0; y < 5; y++) {
-            dibuixaLiniaQuadrat();
+            dibuixaLiniaRectangle();
             System.out.println();
         }
     }
 
     public static void dibuixaLiniaRectangle() {
-        for (int x = 0; x < 5; x++) {
+        for (int x = 0; x < 10; x++) {
             System.out.print(" X");
         }
     }
