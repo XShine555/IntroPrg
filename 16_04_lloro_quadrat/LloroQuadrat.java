@@ -17,7 +17,7 @@ public class LloroQuadrat {
             dibuixaQuadrat();
         else if (input.equals("dibuixa rectangle"))
             dibuixaRectangle();
-        else
+        else if (!input.isBlank())
             System.out.println(String.format("El lloro repeteix: %s", input));
     }
 
