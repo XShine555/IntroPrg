@@ -1,5 +1,5 @@
 /*
- * Exercici 14_11. Analísis d'un caràcter
+ * Exercici 16_07. Anàlisi d'un caràcter
  * Iker Rivera Garcia
  * 15/11/2024
  * Programa que analiza un carácter de un texto dependiendo la posición que hayas puesto y te dice información sobre él.

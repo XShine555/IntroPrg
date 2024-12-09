@@ -1,3 +1,10 @@
+/*
+ * Exercici 14_15. Secció d'un String
+ * Iker Rivera Garcia
+ * 18/11/2024
+ * Muestra un rango de caracteres de un texto.
+ */
+
 public class MostraInterval {
     public static void main(String[] args) {
         System.out.println("text?");
