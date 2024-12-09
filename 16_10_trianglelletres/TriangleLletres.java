@@ -3,7 +3,7 @@ public class TriangleLletres {
         System.out.println("Text?");
         String userInput = Entrada.readLine();
 
-
+        dibuixaTriangle(userInput);
     }
 
     public static void dibuixaTriangle(String text) {
