@@ -1,3 +1,10 @@
+/*
+ * Exercici 16_17. Codifica bàsic
+ * Iker Rivera Garcia
+ * 09/12/2024
+ * Programa que hace que cada letra de la 'a' a la 'z' avance a la siguiente letra.
+ */
+
 public class CodificaBasic {
     public static void main(String[] args) {
         System.out.println("Text?");
