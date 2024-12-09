@@ -1,8 +1,8 @@
 /*
- * Exercici 16_03. Quadrats modulars
+ * Exercici 16_06. El quadrat re-parametritzat
  * Iker Rivera Garcia
  * 09/12/2024
- * Dibuja un cuadrado con la longitud que haya introducido el usuario.
+ * Dibuja un cuadrado con la longitud y el carácter que haya introducido el usuario.
  */
 
 public class Quadrat {
