@@ -1,7 +1,7 @@
 /*
  * Exercici 16_08. Secció d'un String
  * Iker Rivera Garcia
- * 18/11/2024
+ * 09/12/2024
  * Muestra un rango de caracteres de un texto.
  */
 
