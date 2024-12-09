@@ -1,5 +1,5 @@
 /*
- * Exercici 14_15. Secció d'un String
+ * Exercici 16_08. Secció d'un String
  * Iker Rivera Garcia
  * 18/11/2024
  * Muestra un rango de caracteres de un texto.
