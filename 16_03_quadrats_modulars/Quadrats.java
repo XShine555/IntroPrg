@@ -6,7 +6,7 @@ public class Quadrats {
     public static void dibuixaQuadrats() {
         System.out.println("Quants?");
         int amount = Integer.parseInt(Entrada.readLine());
-        for (int linia=amount; linia <= 5; linia++) {
+        for (int linia=1; linia <= amount; linia++) {
             dibuixaQuadrat();
         }
     }
