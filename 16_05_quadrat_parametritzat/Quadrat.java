@@ -1,5 +1,5 @@
 /*
- * Exercici 16_03. Quadrats modulars
+ * Exercici 16_05. El quadrat parametritzat
  * Iker Rivera Garcia
  * 09/12/2024
  * Dibuja un cuadrado con la longitud que haya introducido el usuario.
