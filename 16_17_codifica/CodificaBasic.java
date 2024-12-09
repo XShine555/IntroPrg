@@ -20,11 +20,9 @@ public class CodificaBasic {
         String newText = "";
         for (int i = 0; i < textLen; i++) {
             char iChar = text.charAt(i);
-            char iLowerChar = Character.toLowerCase(iChar); 
+            int iNumericValue = (int)iChar;
 
-            if (iLowerChar >= 97 && iLowerChar <= 122) {
-                int iNumericValue = (int)iLowerChar;
-                
+            if (iNumericValue >= 97 && iNumericValue <= 122) {
                 int nextNumericValue = ((iNumericValue - 97 + quants) % 26) + 97;
 
                 char nextChar = (char)(nextNumericValue);
