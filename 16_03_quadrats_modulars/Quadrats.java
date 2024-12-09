@@ -1,3 +1,10 @@
+/*
+ * Exercici 16_03. Quadrats modulars
+ * Iker Rivera Garcia
+ * 09/12/2024
+ * Dibuja un cuadrado 5 x 5 las veces que el usuario indique.
+ */
+
 public class Quadrats {
     public static void main(String[] args) {
         dibuixaQuadrats();
