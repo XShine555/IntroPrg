@@ -1,3 +1,10 @@
+/*
+ * Exercici 16_13. Només lletres
+ * Iker Rivera Garcia
+ * 09/12/2024
+ * Programa que une con "," las letras de un texto.
+ */
+
 public class NomesLletres {
     public static void main(String[] args) {
         System.out.println("Text?");
