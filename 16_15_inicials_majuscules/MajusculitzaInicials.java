@@ -1,3 +1,10 @@
+/*
+ * Exercici 16_15. Inicials en majúscules
+ * Iker Rivera Garcia
+ * 09/12/2024
+ * Programa que pone las letras en mayúscula si no hay una letra detrás.
+ */
+
 public class MajusculitzaInicials {
     public static void main(String[] args) {
         System.out.println("Text?");
