@@ -22,13 +22,13 @@ public class CodificaBasic {
             char iChar = text.charAt(i);
             char iLowerChar = Character.toLowerCase(iChar); 
 
-            if (iLowerChar >= 65 && iLowerChar <= 122 && !Character.isUpperCase(iChar)) {
+            if (iLowerChar >= 97 && iLowerChar <= 122) {
                 int iNumericValue = (int)iLowerChar;
                 
-                int nextNumericValue = iNumericValue + quants;
+                int nextNumericValue = (iNumericValue + quants) % 123;
 
-                if (nextNumericValue > 122) {
-                    nextNumericValue = 65 + (nextNumericValue - 122);
+                if (nextNumericValue < 97) {
+                    nextNumericValue += 97;
                 }
 
                 char nextChar = (char)(nextNumericValue);
