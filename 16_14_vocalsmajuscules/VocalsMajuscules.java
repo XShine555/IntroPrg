@@ -1,3 +1,10 @@
+/*
+ * Exercici 16_14. Vocals en majúscules
+ * Iker Rivera Garcia
+ * 09/12/2024
+ * Programa que convertirá las vocales en mayúscula.
+ */
+
 public class VocalsMajuscules {
     public static void main(String[] args) {
         System.out.println("Text?");
