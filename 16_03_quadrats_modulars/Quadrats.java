@@ -1,22 +1,22 @@
 public class Quadrats {
     public static void main(String[] args) {
-        dibuixaQuadrat();
-    }    
+        dibuixaQuadrats();
+    }
+
+    public static void dibuixaQuadrats() {
+        for (int linia=1; linia <= 5; linia++) {
+            dibuixaQuadrat();
+        }
+    }
 
     public static void dibuixaQuadrat() {
-        for (int linia=1; linia <= 5; linia++) {
+        for (int columna=1; columna <= 5; columna++) {
             dibuixaLinia();
-            System.out.println();
         }
+        System.out.println();
     }
 
     public static void dibuixaLinia() {
-        for (int columna=1; columna <= 5; columna++) {
-            dibuixaElement();
-        }
-    }
-
-    public static void dibuixaElement() {
         System.out.print(" X");
     }
 }
