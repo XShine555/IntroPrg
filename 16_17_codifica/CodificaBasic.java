@@ -26,11 +26,12 @@ public class CodificaBasic {
                 int iNumericValue = (int)iLowerChar;
                 
                 int nextNumericValue = iNumericValue + quants;
-                char nextChar = (char)(nextNumericValue);
 
                 if (nextNumericValue > 122) {
-                    nextChar = 'a';
+                    nextNumericValue = 65 + (nextNumericValue - 123);
                 }
+
+                char nextChar = (char)(nextNumericValue);
 
                 newText += nextChar;
             }
