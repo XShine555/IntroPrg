@@ -1,3 +1,10 @@
+/*
+ * Exercici 16_16. El text del revés
+ * Iker Rivera Garcia
+ * 09/12/2024
+ * Invierte el texto introducido.
+ */
+
 public class TextReves {
     public static void main(String[] args) {
         System.out.println("Text?");
