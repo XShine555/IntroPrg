@@ -1,3 +1,10 @@
+/*
+ * Exercici 16_09. Cadena continua
+ * Iker Rivera Garcia
+ * 09/12/2024
+ * Muestra un número de caracteres de un texto.
+ */
+
 public class CadenaContinua {
     public static void main(String[] args) {
         System.out.println("Text?");
