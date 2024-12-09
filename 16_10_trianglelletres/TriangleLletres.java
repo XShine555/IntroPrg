@@ -1,3 +1,10 @@
+/*
+ * Exercici 16_10. Un triangle de lletres
+ * Iker Rivera Garcia
+ * 09/12/2024
+ * Dibuja un triángulo con las letras de la frase.
+ */
+
 public class TriangleLletres {
     public static void main(String[] args) {
         System.out.println("Text?");
