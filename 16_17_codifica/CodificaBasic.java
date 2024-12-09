@@ -28,7 +28,7 @@ public class CodificaBasic {
                 int nextNumericValue = iNumericValue + quants;
 
                 if (nextNumericValue > 122) {
-                    nextNumericValue = 65 + (nextNumericValue - 123);
+                    nextNumericValue = 65 + (nextNumericValue - 122);
                 }
 
                 char nextChar = (char)(nextNumericValue);
