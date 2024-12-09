@@ -4,7 +4,9 @@ public class Quadrats {
     }
 
     public static void dibuixaQuadrats() {
-        for (int linia=1; linia <= 5; linia++) {
+        System.out.println("Quants?");
+        int amount = Integer.parseInt(Entrada.readLine());
+        for (int linia=amount; linia <= 5; linia++) {
             dibuixaQuadrat();
         }
     }
