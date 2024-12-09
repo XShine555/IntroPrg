@@ -25,7 +25,7 @@ public class CodificaBasic {
             if (iLowerChar >= 97 && iLowerChar <= 122) {
                 int iNumericValue = (int)iLowerChar;
                 
-                int nextNumericValue = (iNumericValue + quants) % 122;
+                int nextNumericValue = (iNumericValue + quants) % 123;
 
                 if (nextNumericValue < 97) {
                     nextNumericValue += 97;
