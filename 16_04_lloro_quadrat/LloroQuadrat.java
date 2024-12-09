@@ -1,3 +1,10 @@
+/*
+ * Exercici 16_04. El lloro quadrat
+ * Iker Rivera Garcia
+ * 09/12/2024
+ * Programa que es repite todo lo que diga el usuario acaso que ponga "dibuixa quadrat" o "dibuixa rectangle" que dibujara lo que el usuario haya pedido.
+ */
+
 public class LloroQuadrat {
     public static void main(String[] args) {
         String input = "";
