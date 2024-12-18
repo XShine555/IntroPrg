@@ -26,9 +26,9 @@ public class ComptaAiEs {
         int comptadorLetter2 = 0;
         for (int i=0; i < text.length(); i++) {
             if (text.charAt(i) == letter1) {
-                comptadorLetter1 += 1;
+                comptadorLetter1++;
             } else if (text.charAt(i) == letter2) {
-                comptadorE += 1;
+                comptadorLetter2++;;
             }
         }
         if (comptadorLetter1 > comptadorLetter2) {
