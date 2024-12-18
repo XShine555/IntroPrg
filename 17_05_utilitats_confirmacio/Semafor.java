@@ -22,8 +22,4 @@ public class Semafor {
 			System.out.println("ves a l'oculista");
 		}
 	}
-
-    public static boolean respostaABoolean() {
-        return true;
-    }
 }
