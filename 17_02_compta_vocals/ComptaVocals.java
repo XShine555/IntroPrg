@@ -6,17 +6,17 @@ public class ComptaVocals {
         System.out.println("Introdueix un text");
         String entrada = Entrada.readLine();
         mostraOcurrencies('a', quantesOcurrencies(entrada, 'a'));
-        mostraOcurrencies('e', quantesOcurrencies(entrada, 'e'));
-        mostraOcurrencies('i', quantesOcurrencies(entrada, 'i'));
-        mostraOcurrencies('o', quantesOcurrencies(entrada, 'o'));
-        mostraOcurrencies('u', quantesOcurrencies(entrada, 'u'));
         mostraOcurrencies('à', quantesOcurrencies(entrada, 'à'));
+        mostraOcurrencies('e', quantesOcurrencies(entrada, 'e'));
         mostraOcurrencies('è', quantesOcurrencies(entrada, 'è'));
         mostraOcurrencies('é', quantesOcurrencies(entrada, 'é'));
+        mostraOcurrencies('i', quantesOcurrencies(entrada, 'i'));
         mostraOcurrencies('í', quantesOcurrencies(entrada, 'í'));
         mostraOcurrencies('ï', quantesOcurrencies(entrada, 'ï'));
+        mostraOcurrencies('o', quantesOcurrencies(entrada, 'o'));
         mostraOcurrencies('ó', quantesOcurrencies(entrada, 'ó'));
         mostraOcurrencies('ò', quantesOcurrencies(entrada, 'ò'));
+        mostraOcurrencies('u', quantesOcurrencies(entrada, 'u'));
         mostraOcurrencies('ú', quantesOcurrencies(entrada, 'ú'));
         mostraOcurrencies('ü', quantesOcurrencies(entrada, 'ü'));
     }
