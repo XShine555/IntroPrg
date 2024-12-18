@@ -3,6 +3,8 @@
  */
 public class ComptaVocals {
     public static void main(String[] args) {
+        System.out.println("Introdueix un text");
+        String entrada = Entrada.readLine();
         mostraOcurrencies('a', quantesOcurrencies(entrada, 'a'));
         mostraOcurrencies('e', quantesOcurrencies(entrada, 'e'));
         mostraOcurrencies('i', quantesOcurrencies(entrada, 'i'));
