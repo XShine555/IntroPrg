@@ -58,6 +58,6 @@ public class MatriculaValida {
 	}
 
     public static boolean esLletraValidaPerMatriculaItaliana(char thisChar) {
-        return (!Character.isLetter(thisChar) || !Character.isUpperCase(thisChar) || thisChar == 'Ç' || thisChar == 'À' || thisChar == 'Ñ' || thisChar == 'ß' || thisChar == 'I' || thisChar == 'O' || thisChar == 'Q' || thisChar == 'U');
+        return (Character.isLetter(thisChar) || Character.isUpperCase(thisChar) || thisChar != 'Ç' || thisChar != 'À' || thisChar != 'Ñ' || thisChar != 'ß' || thisChar != 'I' || thisChar != 'O' || thisChar != 'Q' || thisChar != 'U');
     }
 }
