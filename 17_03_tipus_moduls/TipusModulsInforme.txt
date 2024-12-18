@@ -1,0 +1,79 @@
+nr. de línia en que apareix la crida o l'inici de la signatura
+signatura: nom del mòdul, tipus dels paràmetres/arguments (o el valor trobat si no el saps deduir) i tipus de valor de retorn (si té sentit)
+classificació en procediment, funció pura o funció impura, i sobretot, perquè has decidit aquesta classificació
+
+67. setEditable()
+Parámetro: Bool
+Impura ya que seguramente que la función sugiere que activa/desactiva el ser editable.
+
+69, 93, 100, 116 setText()
+Parámetro: String
+Impura ya que sugiere que cambia un String.
+
+70. setMinimumSize()
+Parámetro: Class Dimension
+Impura ya que sugiere que cambia una variable de tipo Dimension.
+
+72. OStrings.getString()
+Parámetro: String
+Pura ya que simplemente devuelve un String
+
+73. Core.getMainWindow()
+Parámetro: -
+Pura ya que simplemente obtiene la Main Window
+
+73. addDockable()
+Parámetro: Class DockableScrollPane
+Impura ya que sugiere que añade un DockableScrollPane
+
+76. getMachineTranslationClasses()
+Parámetro: -
+Pura ya que simplemente obtiene Class<?>
+
+78. add();
+Parámetro: IMachineTranslation
+Impura ya que añade a la lista una instancia del tipo IMachineTranslation
+
+78. newInstance();
+Parámetro: -
+Pura ya que devuelve una nueva instancia de Class<?>;
+
+80. log();
+Parámetro: Exception
+Impura ya que parece que muestra por consola/escribe un log.
+
+83. toArray();
+Parámetro: ArrayList<>
+Pura ya que convierte List<IMachineTranslation> a IMachineTranslation[]
+
+92, 98 mustBeSwingThread();
+Parámetro: -
+Pura ya que seguramente solo comprueba si se hace en otro Thread.
+
+126. getSrcText();
+Parámetro: -
+Pura ya que obtiene el Source Text de SourceTextEntry
+
+133. getProject();
+Parámetro: -
+Pura ya que obtiene el proyecto.
+
+133. getProjectProperties();
+Parámetro: -
+Pura ya que obtiene las propiedades
+
+135. getSourceLanguage();
+Parámetro: -
+Pura ya que obtiene el Source Language
+
+136. getTargetLanguage();
+Parámetro: -
+Pura ya que obtiene el Target Language
+
+143. getName();
+Parámetro: -
+Pura ya que obtiene el nombre
+
+144. getTranslation();
+Parámetro: Language, Language, String
+Pura ya que parece que solamente traduce el texto.
