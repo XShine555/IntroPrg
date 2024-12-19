@@ -1,5 +1,5 @@
 /*
- * ???
+ * Programa que junta las palabras con ,
  */
 public class NomesLletres{
     public static void main(String[] args) {

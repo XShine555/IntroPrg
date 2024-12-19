@@ -1,3 +1,7 @@
+/*
+ * Programa que repite lo que escribas si empieza o acaba por vocal, además necesita confirmación para salir.
+ */
+
 public class LloroVocalIniciFi {
     public static void main(String[] args) {
         boolean keepRunning = true;
