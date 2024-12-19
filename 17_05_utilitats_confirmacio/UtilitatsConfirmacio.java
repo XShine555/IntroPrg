@@ -1,10 +1,18 @@
 public class UtilitatsConfirmacio {
-	public static boolean respostaABoolean(String text) {
-		String[] upperCase = text.toUpperCase().split(" ");
-        for (String string : upperCase) {
-            if (string.equals("SI") || string.equals("SÍ"))
-                return true;
+    public static boolean respostaABoolean(String resposta) {
+        if (resposta.isBlank()) {
+            return false;
+        }
+        resposta = resposta.toLowerCase();
+        if (resposta.equals("s") || resposta.equals("y")) {
+            return true;
+        }
+        if (resposta.equals("sí") || resposta.equals("yes")) {
+            return true;
+        }
+        if (resposta.equals("si") || resposta.equals("vale") || resposta.equals("yeah")) {
+            return true;
         }
         return false;
-	}
+    }
 }
