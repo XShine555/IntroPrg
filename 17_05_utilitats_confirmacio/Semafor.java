@@ -26,4 +26,8 @@ public class Semafor {
 	public static boolean respostaABoolean(String text) {
 		return true;
 	}
+
+	class UtilitatsConfirmacio {
+		
+	}
 }
