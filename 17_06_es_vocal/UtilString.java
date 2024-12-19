@@ -4,6 +4,6 @@ public class UtilString {
         return character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u' ||
                character == 'à' || character == 'á' || character == 'è' || character == 'é' || character == 'ì' ||
                character == 'í' || character == 'ò' || character == 'ó' || character == 'ù' || character == 'ú' ||
-               character == 'ü';
+               character == 'ü' || character == 'ï';
     }    
 }
