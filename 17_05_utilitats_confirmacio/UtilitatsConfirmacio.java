@@ -4,15 +4,13 @@ public class UtilitatsConfirmacio {
             return false;
         }
         resposta = resposta.toLowerCase();
-        if (resposta.equals("s") || resposta.equals("y")) {
-            return true;
+        String withoutSpaces = "";
+
+        for (int i = 0; i < resposta.length(); i++) {
+            char iChar = resposta.charAt(i);
+            if (!Character.isWhitespace(iChar))
+                withoutSpaces += iChar;
         }
-        if (resposta.equals("sí") || resposta.equals("yes")) {
-            return true;
-        }
-        if (resposta.equals("si") || resposta.equals("vale") || resposta.equals("yeah")) {
-            return true;
-        }
-        return false;
+        return withoutSpaces.equals("s") || withoutSpaces.equals("y") || withoutSpaces.equals("sí") || withoutSpaces.equals("yes") || withoutSpaces.equals("si") || withoutSpaces.equals("vale") || withoutSpaces.equals("yeah");
     }
 }
