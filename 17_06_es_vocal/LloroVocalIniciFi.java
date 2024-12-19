@@ -11,16 +11,15 @@ public class LloroVocalIniciFi {
                 String response = Entrada.readLine();
 
                 if (UtilitatsConfirmacio.respostaABoolean(response))
-                    break;
-            }
-            else {
+                    keepRunning = false;
+            } else {
                 char firstChar = input.charAt(0);
-                char lastChar = input.charAt(input.length()-1);
+                char lastChar = input.charAt(input.length() - 1);
 
                 if (UtilString.esVocal(firstChar) || UtilString.esVocal(lastChar))
                     System.out.println("El lloro diu: " + input);
             }
         }
-		System.out.println("Adéu");
-	}
+        System.out.println("Adéu");
+    }
 }
