@@ -15,7 +15,7 @@ public class LloroVocalIniciFi {
             }
             else {
                 char firstChar = input.charAt(0);
-                char lastChar = input.charAt(input.length());
+                char lastChar = input.charAt(input.length()-1);
 
                 if (UtilString.esVocal(firstChar) || UtilString.esVocal(lastChar))
                     System.out.println("El lloro diu: " + input);
