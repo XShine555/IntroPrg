@@ -7,6 +7,8 @@
 
 public class Semafor {
 	public static void main(String[] args) {
+		UtilitatsConfirmacio.respostaABoolean("hola");
+
 		System.out.println("Color?");
 		String color = Entrada.readLine();
 		if (color.equals("vermell")) {
@@ -21,9 +23,5 @@ public class Semafor {
 		else {
 			System.out.println("ves a l'oculista");
 		}
-	}
-
-	public static boolean respostaABoolean(String text) {
-		return true;
 	}
 }
