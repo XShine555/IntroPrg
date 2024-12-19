@@ -7,7 +7,12 @@
 
 public class Semafor {
 	public static void main(String[] args) {
-		UtilitatsConfirmacio.respostaABoolean("hola");
+		System.out.println("Ets major d'edat?");
+		String ageResponse = Entrada.readLine();
+		if (!UtilitatsConfirmacio.respostaABoolean(ageResponse)) {
+			System.out.println("No pots fer servir aquest programa sense supervisió");
+			return;
+		}
 
 		System.out.println("Color?");
 		String color = Entrada.readLine();
