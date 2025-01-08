@@ -6,6 +6,9 @@
 
 public class UtilString {
     public static boolean esEnter(String text) {
+        if (text.isBlank())
+            return false;
+
         for (int i = 0; i < text.length(); i++) {
             char iChar = text.charAt(i);
             if (Character.isWhitespace(iChar)) {
