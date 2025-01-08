@@ -4,7 +4,7 @@ public class UtilString {
         if (text.isEmpty() || text.isBlank()) 
             return false;
         if (prefix.isEmpty() || prefix.isBlank()) 
-            return false;
+            return true;
 
         if (prefix.length() > text.length())
             return false;
@@ -34,7 +34,7 @@ public class UtilString {
         if (text.isEmpty() || text.isBlank()) 
             return false;
         if (sufix.isEmpty() || sufix.isBlank()) 
-            return false;
+            return true;
 
         if (sufix.length() > text.length())
             return false;
