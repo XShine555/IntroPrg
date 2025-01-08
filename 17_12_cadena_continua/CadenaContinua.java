@@ -9,7 +9,7 @@
         System.out.println("Text?");
         String text = Entrada.readLine();
 
-        if (!UtilString.esEnter(text)) {
+        if (text.isBlank()) {
             System.out.println("error");
         } else {
             System.out.println("Nombre?");
