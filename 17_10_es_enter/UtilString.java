@@ -6,7 +6,7 @@
 
 public class UtilString {
     public static boolean esEnter(String text) {
-        if (text.isBlank())
+        if (text.isBlank() || text.isEmpty())
             return false;
 
         for (int i = 0; i < text.length(); i++) {
