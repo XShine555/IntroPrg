@@ -42,6 +42,7 @@ public class UtilString {
 
         String sanitizeString = text;
         if (!estricte) {
+            sanitizeString = "";
             // Replace
             for (int i = 0; i < text.length(); i++) {
                 char iChar = text.charAt(i);
@@ -83,6 +84,7 @@ public class UtilString {
     public static int aEnter(String text, boolean estricte) {
         String sanitizeString = text;
         if (!estricte) {
+            sanitizeString = "";
             // Replace
             for (int i = 0; i < text.length(); i++) {
                 char iChar = text.charAt(i);
