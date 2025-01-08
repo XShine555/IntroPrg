@@ -33,10 +33,11 @@ public class UtilString {
                     count++;
             }
 
-            return count == subtext.length();
+            if (count == subtext.length())
+                return true;
         }
 
-        return true;
+        return false;
     }
     // equival a esSubstring(text, subtext, true)
     public static boolean esSubstring(String text, String subtext) {
