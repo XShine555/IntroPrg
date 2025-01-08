@@ -1,4 +1,8 @@
 public class UtilString {
+    public static boolean esEnter(String text) {
+        return false;
+    }
+
     public static boolean esEnter(String text, boolean estricte) {
         if (text.isBlank() || text.isEmpty())
             return false;
