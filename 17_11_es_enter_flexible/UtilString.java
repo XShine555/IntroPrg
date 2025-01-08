@@ -7,7 +7,7 @@ public class UtilString {
         for (int i = 0; i < textLen; i++) {
             char iChar = text.charAt(i);
             if (Character.isWhitespace(iChar)) {
-                continue;
+                return false;
             }
 
             boolean isSymbolOrInvalid = (iChar == '+' || iChar == '-' || iChar == '*' || iChar == '/'
