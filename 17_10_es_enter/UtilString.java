@@ -8,6 +8,10 @@ public class UtilString {
     public static boolean esEnter(String text) {
         for (int i = 0; i < text.length(); i++) {
             char iChar = text.charAt(i);
+            if (Character.isWhitespace(iChar)) {
+                continue;
+            }
+
             boolean isSymbol = iChar == '+' || iChar == '-' || iChar == '*' || iChar == '/' || iChar == '%';
 
             if (isSymbol && i == text.length() - 1) {
