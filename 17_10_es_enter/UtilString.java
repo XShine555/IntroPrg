@@ -11,9 +11,6 @@ public class UtilString {
 
         for (int i = 0; i < text.length(); i++) {
             char iChar = text.charAt(i);
-            if (Character.isWhitespace(iChar)) {
-                continue;
-            }
 
             boolean isSymbol = iChar == '+' || iChar == '-' || iChar == '*' || iChar == '/' || iChar == '%';
 
