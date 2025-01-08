@@ -4,7 +4,7 @@ public class EsEnter {
         String text = Entrada.readLine();
 
         while (!text.isBlank()) {
-            if (UtilString.esEnter(text, false)) {
+            if (UtilString.esEnter(text)) {
                 System.out.println("És enter");
             } else {
                 System.out.println("No és enter");
