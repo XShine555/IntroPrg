@@ -13,7 +13,12 @@
             System.out.println("error");
         } else {
             System.out.println("Nombre?");
-            int num = Integer.parseInt(Entrada.readLine());
+            String numText = Entrada.readLine();
+            if (!UtilString.esEnter(numText)) {
+                System.out.println("error");
+                return;
+            }
+            int num = Integer.parseInt(numText);
             System.out.println(UtilString.cadenaContinua(text, num));
         }
     }    
