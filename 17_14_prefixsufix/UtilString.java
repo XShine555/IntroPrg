@@ -41,7 +41,7 @@ public class UtilString {
 
         for (int i = text.length() - sufix.length(); i < sufix.length(); i++) {
             char iChar = text.charAt(i);
-            char prefixChar = sufix.charAt(i);
+            char prefixChar = sufix.charAt(i - 1);
 
             if (!extricte) {
                 iChar = charToNormal(iChar);
