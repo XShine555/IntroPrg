@@ -9,6 +9,8 @@ public class EsEnter {
             } else {
                 System.out.println("No és enter");
             }
+
+            text = Entrada.readLine();
         }
 
         System.out.println("Adéu");
