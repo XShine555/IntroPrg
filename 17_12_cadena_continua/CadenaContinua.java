@@ -12,6 +12,7 @@
         if (!UtilString.esEnter(text)) {
             System.out.println("error");
         } else {
+            System.out.println("Nombre?");
             int num = Integer.parseInt(Entrada.readLine());
             System.out.println(UtilString.cadenaContinua(text, num));
         }
