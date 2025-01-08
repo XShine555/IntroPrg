@@ -1,3 +1,9 @@
+/*
+ * Exercici 17_07. Només lletres (amb mòduls)
+ * Iker Rivera Garcia
+ * Clase que proporciona métodos para Strings.
+ */
+
 public class UtilString {
     public static boolean esVocal(char character) {
         character = Character.toLowerCase(character);

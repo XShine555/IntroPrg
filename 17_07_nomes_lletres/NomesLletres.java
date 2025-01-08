@@ -1,5 +1,7 @@
 /*
- * Programa que junta las palabras con ,
+ * Exercici 17_07. Només lletres (amb mòduls)
+ * Iker Rivera Garcia
+ * Programa que junta las palabras con ","
  */
 public class NomesLletres{
     public static void main(String[] args) {

@@ -1,3 +1,9 @@
+/*
+ * Exercici 17_06. És vocal
+ * Iker Rivera Garcia
+ * Clase que proporciona métodos para convertir un texto en boolean.
+ */
+
 public class UtilitatsConfirmacio {
     public static boolean respostaABoolean(String resposta) {
         if (resposta.isBlank()) {

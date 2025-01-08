@@ -1,3 +1,8 @@
+/*
+ * Exercici 17_06. És vocal
+ * Iker Rivera Garcia
+ * Clase que proporciona métodos para comprobar si un carácter es vocal.
+ */
 public class UtilString {
     public static boolean esVocal(char character) {
         character = Character.toLowerCase(character);

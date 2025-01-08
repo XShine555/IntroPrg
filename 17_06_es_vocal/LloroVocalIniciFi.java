@@ -1,4 +1,6 @@
 /*
+ * Exercici 17_06. És vocal
+ * Iker Rivera Garcia
  * Programa que repite lo que escribas si empieza o acaba por vocal, además necesita confirmación para salir.
  */
 

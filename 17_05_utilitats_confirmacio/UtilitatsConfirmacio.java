@@ -1,3 +1,9 @@
+/*
+ * Exercici 17_05. Utilitats de confirmació
+ * Iker Rivera Garcia
+ * Clase que proporciona métodos para convertir respuestas de texto en valores booleanos.
+*/
+
 public class UtilitatsConfirmacio {
     public static boolean respostaABoolean(String resposta) {
         if (resposta.isBlank()) {
