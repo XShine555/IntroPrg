@@ -20,10 +20,18 @@ public class Progressio {
                     if (UtilString.esCreixent(buffer, false)) {
                         anyValid = true;
                         System.out.format("\"%s\" és creixent\n", buffer);
-                    } else if (UtilString.esDecreixent(buffer, false)) {
+                    } else if (UtilString.esCreixiDecri(buffer, false)) {
+                        anyValid = true;
+                        System.out.format("\"%s\" és creixidecri\n", buffer);
+                    } 
+                    else if (UtilString.esDecreixent(buffer, false)) {
                         anyValid = true;
                         System.out.format("\"%s\" és decreixent\n", buffer);
-                    } else {
+                    } else if (UtilString.esDecriCreixi(buffer, false)) {
+                        anyValid = true;
+                        System.out.format("\"%s\" és decricreixi\n", buffer);
+                    } 
+                    else {
                         anyValid = true;
                         System.out.format("\"%s\" és normaleta\n", buffer);
                     }
@@ -37,9 +45,15 @@ public class Progressio {
                     if (UtilString.esCreixent(buffer, false)) {
                         anyValid = true;
                         System.out.format("\"%s\" és creixent\n", buffer);
+                    } else if (UtilString.esCreixiDecri(buffer, false)) {
+                        anyValid = true;
+                        System.out.format("\"%s\" és creixidecri\n", buffer);
                     } else if (UtilString.esDecreixent(buffer, false)) {
                         anyValid = true;
                         System.out.format("\"%s\" és decreixent\n", buffer);
+                    } else if (UtilString.esDecriCreixi(buffer, false)) {
+                        anyValid = true;
+                        System.out.format("\"%s\" és decricreixi\n", buffer);
                     } else {
                         anyValid = true;
                         System.out.format("\"%s\" és normaleta\n", buffer);
