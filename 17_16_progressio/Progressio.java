@@ -13,14 +13,14 @@ public class Progressio {
                 if (Character.isLetterOrDigit(iChar)) {
                     buffer += iChar;
                 } else if (Character.isWhitespace(iChar)) {
-                    if (!isValid(buffer)) {
+                    if (buffer.length() <= 1) {
                         buffer = "";
                         continue;
                     }
-                    if (esCreixent(buffer)) {
+                    if (UtilString.esCreixent(buffer)) {
                         anyValid = true;
                         System.out.format("\"%s\" és creixent\n", buffer);
-                    } else if (esDecreixent(buffer)) {
+                    } else if (UtilString.esDecreixent(buffer)) {
                         anyValid = true;
                         System.out.format("\"%s\" és decreixent\n", buffer);
                     } else {
@@ -31,13 +31,13 @@ public class Progressio {
                 }
             }
             if (!buffer.isEmpty()) {
-                if (!isValid(buffer)) {
+                if (buffer.length() <= 1) {
                     buffer = "";
                 }else{
-                    if (esCreixent(buffer)) {
+                    if (UtilString.esCreixent(buffer)) {
                         anyValid = true;
                         System.out.format("\"%s\" és creixent\n", buffer);
-                    } else if (esDecreixent(buffer)) {
+                    } else if (UtilString.esDecreixent(buffer)) {
                         anyValid = true;
                         System.out.format("\"%s\" és decreixent\n", buffer);
                     } else {
@@ -53,53 +53,5 @@ public class Progressio {
         }
 
         System.out.println("Adéu");
-    }
-
-    private static boolean isValid(String text) {
-        return text.length() > 1;
-    }
-
-    private static boolean esCreixent(String text) {
-        int lastIndex = (int) text.charAt(0);
-
-        for (int i = 1; i < text.length(); i++) {
-            char iChar = charToNormal(text.charAt(i));
-
-            if (!Character.isLetter(iChar)) {
-                continue;
-            }
-
-            if (lastIndex > (int) iChar) {
-                return false;
-            }
-
-            lastIndex = (int) iChar;
-        }
-
-        return true;
-    }
-
-    private static boolean esDecreixent(String text) {
-        int lastIndex = (int) text.charAt(0);
-
-        for (int i = 1; i < text.length(); i++) {
-            char iChar = charToNormal(text.charAt(i));
-
-            if (!Character.isLetter(iChar)) {
-                continue;
-            }
-
-            if (lastIndex < (int) iChar) {
-                return false;
-            }
-
-            lastIndex = (int) iChar;
-        }
-
-        return true;
-    }
-
-    public static Character charToNormal(char character) {
-        return UtilString.charToNormal(character);
     }
 }
