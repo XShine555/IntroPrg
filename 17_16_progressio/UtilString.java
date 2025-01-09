@@ -65,37 +65,43 @@ public class UtilString {
         return esDecreixent(sanitizedText);
     }
 
-    public static boolean esCreixiDecri(String test) {
-        int lastIndex = (int) test.charAt(0);
+    public static boolean esCreixiDecri(String argText, boolean estricta) {
+        String text = "";
 
-        for (int i = 1; i < test.length(); i++) {
-            char iChar = test.charAt(i);
-
-            if (!Character.isLetter(iChar)) {
-                continue;
-            }
-
-            if (lastIndex >= (int) iChar) {
-                return false;
-            }
-
-            lastIndex = (int) iChar;
+        for (int i = 0; i < argText.length(); i++) {
+            text += charToNormal(argText.charAt(i));
         }
 
-        return true;
+        if (text.length() < 3) return false;
+
+        boolean creixent = true;
+        boolean decreixent = false;
+
+        for (int i = 1; i < text.length(); i++) {
+            char anterior = text.charAt(i - 1);
+            char actual = text.charAt(i);
+
+            if (creixent) {
+                if (actual < anterior) {
+                    creixent = false;
+                    decreixent = true;
+                } else if (estricta && actual == anterior) {
+                    return false;
+                }
+            } else if (decreixent) {
+                if (actual > anterior) {
+                    return false;
+                } else if (estricta && actual == anterior) {
+                    return false;
+                }
+            }
+        }
+
+        return !creixent && decreixent;
     }
 
-    public static boolean esCreixiDecri(String test, boolean estricta) {
-        String sanitizedText = test;
-
-        if (!estricta) {
-            sanitizedText = "";
-            for (int i = 0; i < test.length(); i++) {
-                sanitizedText += charToNormal(test.charAt(i));
-            }
-        }
-
-        return esCreixiDecri(sanitizedText);
+    public static boolean esCreixiDecri(String text) {
+        return esCreixiDecri(text, true);
     }
 
     public static boolean esDecriCreixi(String test) {
