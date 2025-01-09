@@ -22,8 +22,6 @@
         System.out.println("Introdueix texts (enter sol per finalitzar)");
         String text = Entrada.readLine();
 
-        text = text.replace(" ", "");
-
         while (!text.isBlank()) {
             boolean isNumber = UtilString.esEnter(text);
 
