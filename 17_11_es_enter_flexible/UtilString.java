@@ -83,6 +83,6 @@ public class UtilString {
 
         text = text.replace(" ", "");
 
-        return Integer.parseInt(text.replace(".", ""));
+        return Integer.parseInt(text);
     }
 }
