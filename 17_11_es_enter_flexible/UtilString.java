@@ -76,19 +76,20 @@ public class UtilString {
         }
     }
 
-    public static int aEnter(String text, boolean estricte) throws NumberFormatException {
-        String sanitizeString = text;
-        if (!estricte) {
-            sanitizeString = "";
-            // Replace
-            for (int i = 0; i < text.length(); i++) {
-                char iChar = text.charAt(i);
-                if (!Character.isWhitespace(iChar)) {
-                    sanitizeString += iChar;
-                }
+    public static int aEnter(String text, boolean estricte) {
+        if (estricte) {
+            return Integer.parseInt(text);
+        }
+
+        text = "";
+        // Replace
+        for (int i = 0; i < text.length(); i++) {
+            char iChar = text.charAt(i);
+            if (!Character.isWhitespace(iChar)) {
+                text += iChar;
             }
         }
 
-        return Integer.parseInt(sanitizeString);
+        return Integer.parseInt(text.replace(".", ""));
     }
 }
