@@ -23,7 +23,7 @@
         String text = Entrada.readLine();
 
         while (!text.isBlank()) {
-            boolean isNumber = UtilString.esEnter(text);
+            boolean isNumber = UtilString.esEnter(text.replace(" ", ""));
 
             if (isNumber) {
                 System.out.println("És enter");
