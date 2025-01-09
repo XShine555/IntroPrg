@@ -13,7 +13,7 @@ public class Progressio {
                 if (!Character.isWhitespace(iChar)) {
                     buffer += iChar;
                 } else {
-                    if (buffer.length() <= 2) {
+                    if (UtilString.textToNormal(buffer).length() <= 2) {
                         buffer = "";
                         continue;
                     }
@@ -38,7 +38,7 @@ public class Progressio {
                 }
             }
             if (!buffer.isEmpty()) {
-                if (buffer.length() <= 2) {
+                if (UtilString.textToNormal(buffer).length() <= 2) {
                     buffer = "";
                 }else{
                     if (UtilString.esCreixent(buffer, false)) {
