@@ -6,19 +6,6 @@
 
  public class EsEnter {
     public static void main(String[] args) {
-        boolean isStrict = false;
-
-        if (args.length > 0) {
-            if (args[0].equals("estricte")) {
-                isStrict = true;
-            } else if (args[0].equals("flexible")) {
-                isStrict = false;
-            } else {
-                System.out.println("Modalitat no reconeguda");
-                return;
-            }
-        }
-
         System.out.println("Introdueix texts (enter sol per finalitzar)");
         String text = Entrada.readLine();
 
