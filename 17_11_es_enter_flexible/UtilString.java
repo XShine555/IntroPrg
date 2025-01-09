@@ -3,34 +3,25 @@ public class UtilString {
         if (text.isBlank() || text.isEmpty())
             return false;
 
-        int textLen = text.length();
-        for (int i = 0; i < textLen; i++) {
+        for (int i = 0; i < text.length(); i++) {
             char iChar = text.charAt(i);
-            if (Character.isWhitespace(iChar)) {
-                return false;
-            }
 
-            boolean isSymbolOrInvalid = (iChar == '+' || iChar == '-' || iChar == '*' || iChar == '/'
-                || iChar == '%') || Character.isLetter(iChar);
-            // Sí hay un símbolo al al final.
-            if (i == textLen - 1 && isSymbolOrInvalid) {
+            boolean isSymbol = iChar == '+' || iChar == '-' || iChar == '*' || iChar == '/' || iChar == '%';
+
+            if (isSymbol && i == text.length() - 1) {
                 return false;
-            }
-            // Si es un símbolo comprobar que no tenga duplicados y sea válido.
-            else if (i > 0) {
-                char priorChar = text.charAt(i - 1);
-                boolean isPriorSymbol = (priorChar == '+' || priorChar == '-' || priorChar == '*'
-                        || priorChar == '/' || priorChar == '%') || Character.isLetter(iChar);
-                if (isSymbolOrInvalid && isPriorSymbol) {
+            } else if (!Character.isDigit(iChar) && !isSymbol) {
+                return false;
+            } else if (i > 0) {
+                char lastChar = text.charAt(i - 1);
+                boolean isLastCharSymbol = lastChar == '+' || lastChar == '-' || lastChar == '*' || lastChar == '/'
+                        || lastChar == '%';
+
+                if (isLastCharSymbol && isSymbol) {
                     return false;
                 }
             }
-            // En caso de que empiece por "." O "-" es inválido.
-            else if (iChar == '.' || iChar == '_' || Character.isLetter(iChar)) {
-                return false;
-            }
         }
-        
         return true;
     }
 
