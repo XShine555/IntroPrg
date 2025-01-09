@@ -65,16 +65,12 @@ public class UtilString {
         return esDecreixent(sanitizedText);
     }
 
-    public static boolean esCreixiDecri(String argText, boolean estricta) {
-        String text = "";
+    public static boolean esCreixiDecri(String text) {
+        return esCreixiDecri(text, true);
+    }
 
-        for (int i = 0; i < argText.length(); i++) {
-            char iChar = argText.charAt(i);
-            if (!Character.isLetterOrDigit(iChar))
-                continue;
-
-            text += iChar;
-        }
+    public static boolean esCreixiDecri(String text, boolean estricta) {
+        text = textToNormal(text);
         if (text.length() < 3) return false;
 
         boolean creixent = true;
@@ -105,24 +101,12 @@ public class UtilString {
         return haDecreixut && decreixent;
     }
 
-    public static boolean esCreixiDecri(String text) {
-        return esCreixiDecri(text, true);
-    }
-
     public static boolean esDecriCreixi(String text) {
         return esDecriCreixi(text, true);
     }
 
-    public static boolean esDecriCreixi(String argText, boolean estricta) {
-        String text = "";
-
-        for (int i = 0; i < argText.length(); i++) {
-            char iChar = argText.charAt(i);
-            if (!Character.isLetterOrDigit(iChar))
-                continue;
-
-            text += charToNormal(argText.charAt(i));
-        }
+    public static boolean esDecriCreixi(String text, boolean estricta) {
+        text = textToNormal(text);
         if (text.length() < 3) return false;
 
         boolean decreixent = true;
@@ -151,6 +135,13 @@ public class UtilString {
         }
 
         return haCreixut && creixent;
+    }
+
+    public static String textToNormal(String text) {
+        String newText = "";
+        for (int i = 0; i < text.length(); i++)
+            newText += charToNormal(text.charAt(i));
+        return newText;
     }
 
     public static Character charToNormal(char character) {
