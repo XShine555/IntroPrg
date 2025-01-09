@@ -151,9 +151,11 @@ public class UtilString {
             switch (character) {
                 case 'à':
                 case 'á':
+                case 'ä':
                     return 'a';
                 case 'è':
                 case 'é':
+                case 'ë':
                     return 'e';
                 case 'ì':
                 case 'í':
