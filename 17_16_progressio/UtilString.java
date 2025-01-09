@@ -105,37 +105,44 @@ public class UtilString {
         return esCreixiDecri(text, true);
     }
 
-    public static boolean esDecriCreixi(String test) {
-        int lastIndex = (int) test.charAt(0);
-
-        for (int i = 1; i < test.length(); i++) {
-            char iChar = test.charAt(i);
-
-            if (!Character.isLetter(iChar)) {
-                continue;
-            }
-
-            if (lastIndex <= (int) iChar) {
-                return false;
-            }
-
-            lastIndex = (int) iChar;
-        }
-
-        return true;
+    public static boolean esDecriCreixi(String text) {
+        return esDecriCreixi(text, true);
     }
 
-    public static boolean esDecriCreixi(String test, boolean estricta) {
-        String sanitizedText = test;
+    public static boolean esDecriCreixi(String argText, boolean estricta) {
+        String text = "";
 
-        if (!estricta) {
-            sanitizedText = "";
-            for (int i = 0; i < test.length(); i++) {
-                sanitizedText += charToNormal(test.charAt(i));
+        for (int i = 0; i < argText.length(); i++) {
+            text += charToNormal(argText.charAt(i));
+        }
+        if (text.length() < 3) return false;
+
+        boolean decreixent = true;
+        boolean creixent = false;
+        boolean haCreixut = false;
+
+        for (int i = 1; i < text.length(); i++) {
+            char anterior = text.charAt(i - 1);
+            char actual = text.charAt(i);
+
+            if (decreixent) {
+                if (actual > anterior) {
+                    decreixent = false;
+                    creixent = true;
+                    haCreixut = true;
+                } else if (estricta && actual == anterior) {
+                    return false;
+                }
+            } else if (creixent) {
+                if (actual < anterior) {
+                    return false;
+                } else if (estricta && actual == anterior) {
+                    return false;
+                }
             }
         }
 
-        return esDecriCreixi(sanitizedText);
+        return haCreixut && creixent;
     }
 
     public static Character charToNormal(char character) {
