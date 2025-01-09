@@ -81,7 +81,7 @@ public class UtilString {
             return Integer.parseInt(text);
         }
 
-        text = text.replace(" ", "");
+        text = text.replace(" ", "").replace(".", "");
 
         return Integer.parseInt(text);
     }
