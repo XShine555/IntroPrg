@@ -13,7 +13,7 @@ public class Progressio {
                 if (Character.isLetterOrDigit(iChar)) {
                     buffer += iChar;
                 } else if (Character.isWhitespace(iChar)) {
-                    if (buffer.length() <= 1) {
+                    if (buffer.length() <= 2) {
                         buffer = "";
                         continue;
                     }
@@ -38,7 +38,7 @@ public class Progressio {
                 }
             }
             if (!buffer.isEmpty()) {
-                if (buffer.length() <= 1) {
+                if (buffer.length() <= 2) {
                     buffer = "";
                 }else{
                     if (UtilString.esCreixent(buffer, false)) {
