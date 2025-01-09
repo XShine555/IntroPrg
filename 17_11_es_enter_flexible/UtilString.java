@@ -68,12 +68,10 @@ public class UtilString {
     }
 
     public static int aEnter(String text, boolean estricte) {
-        if (!estricte)
-            text = text.replace(" ", "");
-
-        if (esEnter(text) && !estricte) {
+        if (esEnter(text, false) && !estricte) {
             return Integer.parseInt(text.replace(".", "").replace("_", ""));
         }
+
         return Integer.parseInt(text);
     }
 }
