@@ -2,8 +2,6 @@ public class UtilString {
     // retorna el nombre d'aparicions del subtext dins del text, considerant si
     // ha de ser o no extricte
     public static int quants(String text, String subtext, boolean extricte) {
-        int count = 0;
-
         if (text.isEmpty() || text.isBlank())
             return 0;
 
@@ -13,10 +11,11 @@ public class UtilString {
         if (subtext.length() > text.length())
             return 0;
 
+        int count = 0;
+            
         for (int index = 0; index < text.length(); index++) {
-            if (index + subtext.length() > text.length()) {
-                return 0;
-            }
+            if (index + subtext.length() > text.length())
+                return count;
 
             int chars = 0;
             for (int child = 0; child < subtext.length(); child++) {
@@ -31,12 +30,11 @@ public class UtilString {
                 if (indexChar != childChar)
                     break;
                 else
-                chars++;
+                    chars++;
             }
 
-            if (chars == subtext.length())
+            if (chars == subtext.length()) 
                 count++;
-
         }
 
         return count;
