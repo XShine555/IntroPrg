@@ -43,6 +43,8 @@ public class UtilString {
             }
         }
 
+        text = text.replace(" ", "");
+
         return esEnter(text);
     }
 
