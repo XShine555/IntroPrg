@@ -83,7 +83,7 @@ public class UtilString {
             // Replace
             for (int i = 0; i < text.length(); i++) {
                 char iChar = text.charAt(i);
-                if (!Character.isWhitespace(iChar)) {
+                if (!Character.isWhitespace(iChar) && Character.isDigit(iChar)) {
                     sanitizeString += iChar;
                 }
             }
