@@ -76,7 +76,7 @@ public class UtilString {
         }
     }
 
-    public static int aEnter(String text, boolean estricte) {
+    public static int aEnter(String text, boolean estricte) throws NumberFormatException {
         String sanitizeString = text;
         if (!estricte) {
             sanitizeString = "";
