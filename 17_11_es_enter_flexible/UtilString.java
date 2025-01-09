@@ -29,18 +29,8 @@ public class UtilString {
         if (text.isBlank() || text.isEmpty())
             return false;
 
-        String sanitizeString = text;
-        if (!estricte) {
-            sanitizeString = "";
-            // Replace
-            for (int i = 0; i < text.length(); i++) {
-                char iChar = text.charAt(i);
-                if (!Character.isWhitespace(iChar)) {
-                    sanitizeString += iChar;
-                }
-            }
-            return esEnter(sanitizeString);
-        }
+        if (!estricte) 
+            text = text.replace(" ", "").replace(".", "").replace("_", "");
         
         return esEnter(text);
     }
