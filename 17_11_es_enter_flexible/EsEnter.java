@@ -19,6 +19,13 @@ public class EsEnter {
         while (!text.isBlank()) {
             if (!isStrict)
                 text = text.replace(" ", "");
+            else {
+                if (text.contains(".") || text.contains("_")) {
+                    System.out.println("No és enter");
+                    text = Entrada.readLine();
+                    continue;
+                }
+            }
 
             if (UtilString.esEnter(text)) {
                 System.out.println("És enter");

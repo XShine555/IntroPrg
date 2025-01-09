@@ -6,12 +6,13 @@ public class UtilString {
         int textLen = text.length();
         for (int i = 0; i < textLen; i++) {
             char iChar = text.charAt(i);
-            if (Character.isWhitespace(iChar) || iChar == '.' || iChar == '_') {
+            if (Character.isWhitespace(iChar)) {
                 return false;
             }
 
             boolean isSymbolOrInvalid = (iChar == '+' || iChar == '-' || iChar == '*' || iChar == '/'
-                || iChar == '%') || Character.isLetter(iChar);
+                || iChar == '%'
+                || iChar == '.' || iChar == '_') || Character.isLetter(iChar);
             // Sí hay un símbolo al al final.
             if (i == textLen - 1 && isSymbolOrInvalid) {
                 return false;
@@ -20,7 +21,8 @@ public class UtilString {
             else if (i > 0) {
                 char priorChar = text.charAt(i - 1);
                 boolean isPriorSymbol = (priorChar == '+' || priorChar == '-' || priorChar == '*'
-                        || priorChar == '/' || priorChar == '%') || Character.isLetter(iChar);
+                        || priorChar == '/' || priorChar == '%'
+                        || priorChar == '.' || priorChar == '_') || Character.isLetter(iChar);
                 if (isSymbolOrInvalid && isPriorSymbol) {
                     return false;
                 }
