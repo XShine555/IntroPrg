@@ -69,7 +69,7 @@ public class UtilString {
 
     public static int aEnter(String text, boolean estricte) {
         if (esEnter(text, false) && !estricte) {
-            return Integer.parseInt(text.replace(".", "").replace("_", ""));
+            return Integer.parseInt(text.replace(".", "").replace("_", "").replace(" ", ""));
         }
 
         return Integer.parseInt(text);
