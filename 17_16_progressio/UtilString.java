@@ -71,11 +71,11 @@ public class UtilString {
         for (int i = 0; i < argText.length(); i++) {
             text += charToNormal(argText.charAt(i));
         }
-
         if (text.length() < 3) return false;
 
         boolean creixent = true;
         boolean decreixent = false;
+        boolean haDecreixut = false;
 
         for (int i = 1; i < text.length(); i++) {
             char anterior = text.charAt(i - 1);
@@ -85,6 +85,7 @@ public class UtilString {
                 if (actual < anterior) {
                     creixent = false;
                     decreixent = true;
+                    haDecreixut = true;
                 } else if (estricta && actual == anterior) {
                     return false;
                 }
@@ -97,7 +98,7 @@ public class UtilString {
             }
         }
 
-        return !creixent && decreixent;
+        return haDecreixut && decreixent;
     }
 
     public static boolean esCreixiDecri(String text) {
