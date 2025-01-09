@@ -1,4 +1,24 @@
 public class UtilString {
+    public static boolean esCreixent(String text) {
+        int lastIndex = (int) text.charAt(0);
+
+        for (int i = 1; i < text.length(); i++) {
+            char iChar = text.charAt(i);
+
+            if (!Character.isLetter(iChar)) {
+                continue;
+            }
+
+            if (lastIndex > (int) iChar) {
+                return false;
+            }
+
+            lastIndex = (int) iChar;
+        }
+
+        return true;
+    }
+    
     public static boolean esCreixent(String text, boolean estricta) {
         String sanitizedText = text;
 
@@ -9,16 +29,20 @@ public class UtilString {
             }
         }
 
-        int lastIndex = (int) sanitizedText.charAt(0);
+       return esCreixent(sanitizedText);
+    }
 
-        for (int i = 1; i < sanitizedText.length(); i++) {
-            char iChar = sanitizedText.charAt(i);
+    public static boolean esDecreixent(String text) {
+        int lastIndex = (int) text.charAt(0);
+
+        for (int i = 1; i < text.length(); i++) {
+            char iChar = text.charAt(i);
 
             if (!Character.isLetter(iChar)) {
                 continue;
             }
 
-            if (lastIndex > (int) iChar) {
+            if (lastIndex < (int) iChar) {
                 return false;
             }
 
@@ -38,23 +62,7 @@ public class UtilString {
             }
         }
 
-        int lastIndex = (int) sanitizedText.charAt(0);
-
-        for (int i = 1; i < sanitizedText.length(); i++) {
-            char iChar = sanitizedText.charAt(i);
-
-            if (!Character.isLetter(iChar)) {
-                continue;
-            }
-
-            if (lastIndex < (int) iChar) {
-                return false;
-            }
-
-            lastIndex = (int) iChar;
-        }
-
-        return true;
+        return esDecreixent(sanitizedText);
     }
 
     public static boolean esCreixiDecri(String test, boolean estricta) {
