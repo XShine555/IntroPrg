@@ -4,7 +4,7 @@
  * Programa que indica si un texto es entero o no.
  */
 
- public class Enters {
+ public class EsEnter {
     public static void main(String[] args) {
         System.out.println("Introdueix texts (enter sol per finalitzar)");
         String text = Entrada.readLine();

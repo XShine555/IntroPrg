@@ -4,13 +4,15 @@
  * Clase que proporciona métodos para Strings.
  */
 
-public class UtilString {
+ public class UtilString {
     public static boolean esEnter(String text) {
         if (text.isBlank() || text.isEmpty())
             return false;
 
         for (int i = 0; i < text.length(); i++) {
             char iChar = text.charAt(i);
+            if (iChar == '.')
+                return false;
 
             boolean isSymbol = iChar == '+' || iChar == '-' || iChar == '*' || iChar == '/' || iChar == '%';
 
