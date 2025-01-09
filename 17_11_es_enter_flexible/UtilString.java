@@ -29,6 +29,8 @@ public class UtilString {
         if (estricte)
             return esEnter(text);
 
+        text = text.replace(" ", "");
+
         if (text.isBlank() || text.isEmpty())
             return false;
 
