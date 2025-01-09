@@ -37,8 +37,11 @@ public class UtilString {
     }
 
     public static boolean esEnter(String text, boolean estricte) {
-        if (estricte)
-            return esEnter(text);
+        if (estricte) {
+            if (text.contains(".") || text.contains("_")) {
+                return false;
+            }
+        }
 
         return esEnter(text);
     }
