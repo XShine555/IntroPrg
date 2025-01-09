@@ -157,6 +157,7 @@ public class UtilString {
                     return 'a';
                 case 'è':
                 case 'é':
+                case 'ë':
                     return 'e';
                 case 'ì':
                 case 'í':
