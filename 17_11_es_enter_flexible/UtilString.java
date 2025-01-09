@@ -6,7 +6,7 @@ public class UtilString {
         int textLen = text.length();
         for (int i = 0; i < textLen; i++) {
             char iChar = text.charAt(i);
-            if (Character.isWhitespace(iChar) || iChar == '.') {
+            if (Character.isWhitespace(iChar) || iChar == '.' || iChar == '_') {
                 return false;
             }
 
