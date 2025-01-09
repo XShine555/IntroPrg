@@ -30,25 +30,26 @@ public class UtilString {
     }
 
     // retorna cert quan text finalitza amb sufix, considerant si ha de ser o no extricte
+    // retorna cert quan text finalitza amb sufix, considerant si ha de ser o no extricte
     public static boolean esSufix(String text, String sufix, boolean extricte) {
-        if (text.isEmpty() || text.isBlank()) 
+        if (text.isEmpty() || text.isBlank())
             return false;
-        if (sufix.isEmpty() || sufix.isBlank()) 
+        if (sufix.isEmpty() || sufix.isBlank())
             return true;
 
         if (sufix.length() > text.length())
             return false;
 
-        for (int i = text.length() - sufix.length(); i < sufix.length(); i++) {
-            char iChar = text.charAt(i);
-            char prefixChar = sufix.charAt(i - 1);
+        for (int i = 0; i < sufix.length(); i++) {
+            char iChar = text.charAt(text.length() - sufix.length() + i);
+            char sufixChar = sufix.charAt(i);
 
             if (!extricte) {
                 iChar = charToNormal(iChar);
-                prefixChar = charToNormal(prefixChar);
+                sufixChar = charToNormal(sufixChar);
             }
 
-            if (iChar != prefixChar)
+            if (iChar != sufixChar)
                 return false;
         }
 
