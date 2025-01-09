@@ -77,12 +77,10 @@ public class UtilString {
     }
 
     public static int aEnter(String text, boolean estricte) {
-        if (estricte) {
-            return Integer.parseInt(text);
+        if (esEnter(text) && !estricte) {
+            text = text.replace(" ", "");
+            return Integer.parseInt(text.replace(".", "").replace("_", ""));
         }
-
-        text = text.replace(" ", "").replace(".", "");
-
         return Integer.parseInt(text);
     }
 }
