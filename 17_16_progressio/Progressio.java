@@ -10,9 +10,9 @@ public class Progressio {
             for (int i = 0; i < text.length(); i++) {
                 char iChar = text.charAt(i);
 
-                if (Character.isLetterOrDigit(iChar)) {
+                if (!Character.isWhitespace(iChar)) {
                     buffer += iChar;
-                } else if (Character.isWhitespace(iChar)) {
+                } else {
                     if (buffer.length() <= 2) {
                         buffer = "";
                         continue;

@@ -69,7 +69,11 @@ public class UtilString {
         String text = "";
 
         for (int i = 0; i < argText.length(); i++) {
-            text += charToNormal(argText.charAt(i));
+            char iChar = argText.charAt(i);
+            if (!Character.isLetterOrDigit(iChar))
+                continue;
+
+            text += iChar;
         }
         if (text.length() < 3) return false;
 
@@ -113,6 +117,10 @@ public class UtilString {
         String text = "";
 
         for (int i = 0; i < argText.length(); i++) {
+            char iChar = argText.charAt(i);
+            if (!Character.isLetterOrDigit(iChar))
+                continue;
+
             text += charToNormal(argText.charAt(i));
         }
         if (text.length() < 3) return false;
