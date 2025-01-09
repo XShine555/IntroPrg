@@ -42,8 +42,8 @@ public class UtilString {
                 return false;
             }
         }
-
-        text = text.replace(" ", "");
+        else
+            text = text.replace(" ", "");
 
         return esEnter(text);
     }
