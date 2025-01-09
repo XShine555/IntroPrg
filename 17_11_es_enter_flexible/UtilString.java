@@ -30,7 +30,7 @@ public class UtilString {
             return esEnter(text);
 
         text = text.replace(" ", "");
-
+        
         if (text.isBlank() || text.isEmpty())
             return false;
 
@@ -53,7 +53,7 @@ public class UtilString {
                 char priorChar = text.charAt(i - 1);
                 boolean isPriorSymbol = (priorChar == '+' || priorChar == '-' || priorChar == '*'
                         || priorChar == '/' || priorChar == '%'
-                        || iChar == '.' || iChar == '_') || Character.isLetter(iChar);
+                        || priorChar == '.' || priorChar == '_') || Character.isLetter(iChar);
                 if (isSymbolOrInvalid && isPriorSymbol) {
                     return false;
                 }
