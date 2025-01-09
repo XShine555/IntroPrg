@@ -50,7 +50,9 @@ public class UtilString {
                     sanitizeString += iChar;
                 }
             }
-
+            return esEnter(sanitizeString);
+        }
+        else {
             for (int i = 0; i < text.length(); i++) {
                 char iChar = text.charAt(i);
     
@@ -72,8 +74,6 @@ public class UtilString {
             }
             return true;
         }
-        else
-            return esEnter(sanitizeString);
     }
 
     public static int aEnter(String text, boolean estricte) {
