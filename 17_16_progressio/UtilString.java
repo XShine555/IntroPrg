@@ -139,8 +139,11 @@ public class UtilString {
 
     public static String textToNormal(String text) {
         String newText = "";
-        for (int i = 0; i < text.length(); i++)
-            newText += charToNormal(text.charAt(i));
+        for (int i = 0; i < text.length(); i++) {
+            char normalChar = charToNormal(text.charAt(i));
+            if (((int)normalChar >= 97 && (int)normalChar <= 122) || Character.isDigit(normalChar))
+                newText += charToNormal(text.charAt(i));
+        }
         return newText;
     }
 
@@ -151,11 +154,9 @@ public class UtilString {
             switch (character) {
                 case 'à':
                 case 'á':
-                case 'ä':
                     return 'a';
                 case 'è':
                 case 'é':
-                case 'ë':
                     return 'e';
                 case 'ì':
                 case 'í':
