@@ -17,10 +17,10 @@ public class Progressio {
                         buffer = "";
                         continue;
                     }
-                    if (UtilString.esCreixent(buffer)) {
+                    if (UtilString.esCreixent(buffer, false)) {
                         anyValid = true;
                         System.out.format("\"%s\" és creixent\n", buffer);
-                    } else if (UtilString.esDecreixent(buffer)) {
+                    } else if (UtilString.esDecreixent(buffer, false)) {
                         anyValid = true;
                         System.out.format("\"%s\" és decreixent\n", buffer);
                     } else {
@@ -34,10 +34,10 @@ public class Progressio {
                 if (buffer.length() <= 1) {
                     buffer = "";
                 }else{
-                    if (UtilString.esCreixent(buffer)) {
+                    if (UtilString.esCreixent(buffer, false)) {
                         anyValid = true;
                         System.out.format("\"%s\" és creixent\n", buffer);
-                    } else if (UtilString.esDecreixent(buffer)) {
+                    } else if (UtilString.esDecreixent(buffer, false)) {
                         anyValid = true;
                         System.out.format("\"%s\" és decreixent\n", buffer);
                     } else {
