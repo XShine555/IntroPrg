@@ -141,7 +141,7 @@ public class UtilString {
         String newText = "";
         for (int i = 0; i < text.length(); i++) {
             char normalChar = charToNormal(text.charAt(i));
-            if (((int)normalChar >= 97 && (int)normalChar <= 122) || Character.isDigit(normalChar))
+            if ((int)normalChar >= 97 && (int)normalChar <= 122)
                 newText += charToNormal(text.charAt(i));
         }
         return newText;
