@@ -160,6 +160,8 @@ public class UtilString {
                 case 'ú':
                 case 'ü':
                     return Character.isLowerCase(character) ? 'u' : 'U';
+                case 'ç':
+                    return Character.isLowerCase(character) ? 'c' : 'C';
                 default:
                     return Character.isLowerCase(character) ? character : Character.toUpperCase(character);
             }
