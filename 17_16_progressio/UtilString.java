@@ -50,7 +50,7 @@ public class UtilString {
     }
 
     public static boolean esDecreixent(String text, boolean estricta) {
-        String sanitizedText = estricta ? textToLower(text) : textToLower(textToNormal(text));;
+        String sanitizedText = estricta ? textToNormal(text) : textToLower(textToNormal(text));;
 
         return esDecreixent(sanitizedText);
     }
