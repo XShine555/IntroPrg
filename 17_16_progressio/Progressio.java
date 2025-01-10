@@ -20,9 +20,9 @@ public class Progressio {
                         continue;
                     }
     
-                    if (UtilString.esCreixent(buffer)) {
+                    if (UtilString.esCreixent(buffer, false)) {
                         System.out.format("\"%s\" és creixent\n", buffer);
-                    } else if (UtilString.esDecreixent(buffer)) {
+                    } else if (UtilString.esDecreixent(buffer, false)) {
                         System.out.format("\"%s\" és decreixent\n", buffer);
                     }
                      else if (UtilString.esCreixiDecri(buffer)) {
@@ -47,8 +47,6 @@ public class Progressio {
         }
 
         System.out.println("Adéu");
-
-        //System.out.println(UtilString.esCreixent("eΠi!!!!!!j"));
         /*String text = Entrada.readLine();
 
         while (!text.isBlank()) {
