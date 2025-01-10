@@ -33,6 +33,7 @@ public class UtilString {
         String sanitizedText = estricta ? textToNormal(text) : textToLower(textToNormal(text));;
 
         if (sanitizedText.length() < 3) return false;
+        boolean decreixent = false;
 
         int lastIndex = (int) sanitizedText.charAt(0);
 
@@ -45,14 +46,14 @@ public class UtilString {
                 continue;
             }
 
-            if (lastIndex < (int) iChar) {
-                return false;
+            if (lastIndex > (int) iChar) {
+                decreixent = true;
             }
 
             lastIndex = (int) iChar;
         }
 
-        return true;
+        return decreixent;
     }
 
     public static boolean esCreixiDecri(String text) {
