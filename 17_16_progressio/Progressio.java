@@ -40,7 +40,7 @@ public class Progressio {
                 }
             }
     
-            if (!anyValid)
+            if (!anyValid && buffer.length() != 0)
                 System.out.println("Cap paraula vàlida");
     
             text = Entrada.readLine();
