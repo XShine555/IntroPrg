@@ -11,7 +11,7 @@ public class UtilString {
                 continue;
             }
 
-            if (lastIndex > (int) iChar) {
+            if (lastIndex >= (int) iChar) {
                 return false;
             }
 
