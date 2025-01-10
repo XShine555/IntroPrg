@@ -11,7 +11,7 @@ public class Progressio {
                 char currentChar = text.charAt(i);
     
                 if (Character.isWhitespace(currentChar) || i == text.length() - 1) {
-                    if (i == text.length() - 1)
+                    if (i == text.length() - 1 && !Character.isWhitespace(currentChar))
                         buffer += currentChar;
 
                     if (buffer.length() < 3) {
