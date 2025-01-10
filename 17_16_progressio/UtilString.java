@@ -73,32 +73,29 @@ public class UtilString {
         text = textToNormal(text);
         if (text.length() < 3) return false;
 
-        boolean creixent = true;
-        boolean decreixent = false;
-        boolean haDecreixut = false;
+        char lastChar = text.charAt(0);
+        boolean creixent = false, decreixent = false;
 
         for (int i = 1; i < text.length(); i++) {
-            char anterior = text.charAt(i - 1);
-            char actual = text.charAt(i);
+            char currentChar = text.charAt(i);
+            // Si la primera no es creixent no es valido.
+            if (i > 1 && !creixent)
+                break;
 
-            if (creixent) {
-                if (actual < anterior) {
-                    creixent = false;
-                    decreixent = true;
-                    haDecreixut = true;
-                } else if (estricta && actual == anterior) {
-                    return false;
-                }
-            } else if (decreixent) {
-                if (actual > anterior) {
-                    return false;
-                } else if (estricta && actual == anterior) {
-                    return false;
-                }
+            if ((int)lastChar < (int)currentChar) {
+                creixent = true;
+            } else {
+                // Si hay una creixent antes que una creixent no es valido.
+                if (!creixent)
+                    break;
+
+                decreixent = true;
             }
+
+            lastChar = currentChar;
         }
 
-        return haDecreixut && decreixent;
+        return creixent && decreixent;
     }
 
     public static boolean esDecriCreixi(String text) {
@@ -109,32 +106,29 @@ public class UtilString {
         text = textToNormal(text);
         if (text.length() < 3) return false;
 
-        boolean decreixent = true;
-        boolean creixent = false;
-        boolean haCreixut = false;
+        char lastChar = text.charAt(0);
+        boolean creixent = false, decreixent = false;
 
         for (int i = 1; i < text.length(); i++) {
-            char anterior = text.charAt(i - 1);
-            char actual = text.charAt(i);
+            char currentChar = text.charAt(i);
+            // Si la primera no es decreixent no es valido.
+            if (i > 1 && !decreixent)
+                break;
 
-            if (decreixent) {
-                if (actual > anterior) {
-                    decreixent = false;
-                    creixent = true;
-                    haCreixut = true;
-                } else if (estricta && actual == anterior) {
-                    return false;
-                }
-            } else if (creixent) {
-                if (actual < anterior) {
-                    return false;
-                } else if (estricta && actual == anterior) {
-                    return false;
-                }
+            if ((int)lastChar > (int)currentChar) {
+                decreixent = true;
+            } else {
+                // Si hay una creixent antes que una decreixent no es valido.
+                if (!decreixent)
+                    break;
+
+                creixent = true;
             }
+
+            lastChar = currentChar;
         }
 
-        return haCreixut && creixent;
+        return creixent && decreixent;
     }
 
     public static String textToNormal(String text) {
