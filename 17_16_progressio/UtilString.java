@@ -1,5 +1,7 @@
 public class UtilString {
     public static boolean esCreixent(String text) {
+        if (text.length() < 3) return false;
+
         int lastIndex = (int) text.charAt(0);
 
         for (int i = 1; i < text.length(); i++) {
@@ -26,6 +28,8 @@ public class UtilString {
     }
 
     public static boolean esDecreixent(String text) {
+        if (text.length() < 3) return false;
+
         int lastIndex = (int) text.charAt(0);
 
         for (int i = 1; i < text.length(); i++) {
