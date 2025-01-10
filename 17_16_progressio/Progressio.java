@@ -5,6 +5,7 @@ public class Progressio {
 
         while (!text.isBlank()) {
             String buffer = "";
+            boolean anyValid = false;
 
             for (int i = 0; i < text.length(); i++) {
                 char currentChar = text.charAt(i);
@@ -15,7 +16,6 @@ public class Progressio {
 
                     if (buffer.length() < 3) {
                         buffer = "";
-                        System.out.println("Cap paraula vàlida");
                         continue;
                     }
     
@@ -31,6 +31,7 @@ public class Progressio {
                     } else {
                         System.out.format("\"%s\" és normaleta\n", buffer);
                     }
+                    anyValid = true;
     
                     buffer = "";
                 }
@@ -38,6 +39,9 @@ public class Progressio {
                     buffer += currentChar;
                 }
             }
+
+            if (!anyValid)
+                System.out.println("Cap paraula vàlida");
     
             text = Entrada.readLine();
         }
