@@ -83,7 +83,7 @@ public class UtilString {
             if (i > 1 && !creixent)
                 return false;
 
-            if ((int)lastChar <= (int)currentChar) {
+            if ((int)lastChar < (int)currentChar) {
                 if (creixent && decreixent)
                     return false;
 
@@ -117,7 +117,7 @@ public class UtilString {
             if (i > 1 && !decreixent)
                 return false;
 
-            if ((int)lastChar >= (int)currentChar) {
+            if ((int)lastChar > (int)currentChar) {
                 if (decreixent && creixent)
                     return false;
 
