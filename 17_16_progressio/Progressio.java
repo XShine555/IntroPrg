@@ -16,7 +16,7 @@ public class Progressio {
 
                     String normalizeText = UtilString.textToNormal(buffer);
 
-                    if (normalizeText.length() <= 3) {
+                    if (normalizeText.length() < 3) {
                         buffer = "";
                         continue;
                     }
