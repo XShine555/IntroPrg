@@ -66,13 +66,16 @@ public class UtilString {
             char currentChar = text.charAt(i);
 
             // Si despues de 1 no es creixent es invalido.
-            if (i > 1 && !creixent)
+            if (i > 1 && !creixent) {
                 return false;
+            }
 
-            if (estricta && (int)lastChar == (int)currentChar)
-                return false;
-
-            if ((int)lastChar < (int)currentChar) {
+            if ((int)lastChar == (int)currentChar) {
+                if (estricta)
+                    return false;
+                creixent = true;
+            }
+            else if ((int)lastChar < (int)currentChar) {
                 if (creixent && decreixent)
                     return false;
 
@@ -84,7 +87,7 @@ public class UtilString {
 
             lastChar = currentChar;
         }
-
+        
         return creixent && decreixent;
     }
 
