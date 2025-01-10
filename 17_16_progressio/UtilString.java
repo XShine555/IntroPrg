@@ -1,45 +1,21 @@
 public class UtilString {
     public static boolean esCreixent(String text) {
-        if (text.length() < 3) return false;
-
-        int lastIndex = (int) text.charAt(0);
-
-        for (int i = 1; i < text.length(); i++) {
-            char iChar = text.charAt(i);
-
-            if (!Character.isLetter(iChar)) {
-                continue;
-            }
-
-            if (lastIndex >= (int) iChar) {
-                return false;
-            }
-
-            lastIndex = (int) iChar;
-        }
-
-        return true;
+        return esCreixent(text, false);
     }
     
     public static boolean esCreixent(String text, boolean estricta) {
         String sanitizedText = estricta ? textToNormal(text) : textToLower(textToNormal(text));
 
-        return esCreixent(sanitizedText);
-    }
+        if (sanitizedText.length() < 3) return false;
 
-    public static boolean esDecreixent(String text) {
-        if (text.length() < 3) return false;
+        int lastIndex = (int) sanitizedText.charAt(0);
 
-        int lastIndex = (int) text.charAt(0);
+        for (int i = 1; i < sanitizedText.length(); i++) {
+            char iChar = sanitizedText.charAt(i);
 
-        for (int i = 1; i < text.length(); i++) {
-            char iChar = text.charAt(i);
-
-            if (!Character.isLetter(iChar)) {
-                continue;
-            }
-
-            if (lastIndex <= (int) iChar) {
+            if (estricta && lastIndex == (int)iChar)
+                return false;
+            if (lastIndex > (int) iChar) {
                 return false;
             }
 
@@ -49,10 +25,30 @@ public class UtilString {
         return true;
     }
 
+    public static boolean esDecreixent(String text) {
+        return esDecreixent(text, false);
+    }
+
     public static boolean esDecreixent(String text, boolean estricta) {
         String sanitizedText = estricta ? textToNormal(text) : textToLower(textToNormal(text));;
 
-        return esDecreixent(sanitizedText);
+        if (sanitizedText.length() < 3) return false;
+
+        int lastIndex = (int) sanitizedText.charAt(0);
+
+        for (int i = 1; i < sanitizedText.length(); i++) {
+            char iChar = sanitizedText.charAt(i);
+
+            if (estricta && lastIndex == (int)iChar) 
+                return false;
+            if (lastIndex < (int) iChar) {
+                return false;
+            }
+
+            lastIndex = (int) iChar;
+        }
+
+        return true;
     }
 
     public static boolean esCreixiDecri(String text) {
