@@ -39,8 +39,7 @@ public class UtilString {
         for (int i = 1; i < sanitizedText.length(); i++) {
             char iChar = sanitizedText.charAt(i);
 
-            if (estricta && lastIndex == (int)iChar) 
-                return false;
+
             if (lastIndex < (int) iChar) {
                 return false;
             }
