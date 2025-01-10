@@ -55,7 +55,7 @@ public class UtilString {
             lastIndex = (int) iChar;
         }
 
-        return changedNums >= 3;
+        return changedNums >= 2;
     }
 
     public static boolean esCreixiDecri(String text) {
