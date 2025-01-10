@@ -128,11 +128,9 @@ public class UtilString {
     public static String textToNormal(String text) {
         String newText = "";
         for (int i = 0; i < text.length(); i++) {
-            char currentChar = text.charAt(i);
-            if (!Character.isLetter(currentChar))
-                continue;
-
-            newText += charToNormal(currentChar);
+            char currentChar = charToNormal(text.charAt(i));
+            if ((int)currentChar >= 97 && (int)currentChar <= 122)
+                newText += charToNormal(currentChar);
         }
         return newText;
     }
