@@ -78,17 +78,18 @@ public class UtilString {
 
         for (int i = 1; i < text.length(); i++) {
             char currentChar = text.charAt(i);
-            // Si la primera no es creixent no es valido.
+
+            // Si despues de 1 no es creixent es invalido.
             if (i > 1 && !creixent)
-                break;
+                return false;
 
             if ((int)lastChar < (int)currentChar) {
-                creixent = true;
-            } else {
-                // Si hay una creixent antes que una creixent no es valido.
-                if (!creixent)
-                    break;
+                if (creixent && decreixent)
+                    return false;
 
+                creixent = true;
+            }
+            else {
                 decreixent = true;
             }
 
@@ -111,17 +112,18 @@ public class UtilString {
 
         for (int i = 1; i < text.length(); i++) {
             char currentChar = text.charAt(i);
-            // Si la primera no es decreixent no es valido.
+
+            // Si despues de 1 no es decreixent es invalido.
             if (i > 1 && !decreixent)
-                break;
+                return false;
 
             if ((int)lastChar > (int)currentChar) {
-                decreixent = true;
-            } else {
-                // Si hay una creixent antes que una decreixent no es valido.
-                if (!decreixent)
-                    break;
+                if (decreixent && creixent)
+                    return false;
 
+                decreixent = true;
+            }
+            else {
                 creixent = true;
             }
 
