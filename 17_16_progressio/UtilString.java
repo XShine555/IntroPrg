@@ -129,7 +129,8 @@ public class UtilString {
         String newText = "";
         for (int i = 0; i < text.length(); i++) {
             char currentChar = charToNormal(text.charAt(i));
-            if ((int)currentChar >= 97 && (int)currentChar <= 122)
+            if ((int)currentChar >= 97 && (int)currentChar <= 122
+            || currentChar == 'ñ' || currentChar == 'ç')
                 newText += charToNormal(currentChar);
         }
         return newText;
@@ -159,10 +160,6 @@ public class UtilString {
                 case 'ú':
                 case 'ü':
                     return 'u';
-                case 'ñ':
-                    return 'n';
-                case 'ç':
-                    return 'c';
                 default:
                     return character;
             }
