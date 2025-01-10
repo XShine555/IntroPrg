@@ -35,7 +35,7 @@ public class Progressio {
     
                     buffer = "";
                 }
-                else if (Character.isLetter(currentChar)) {
+                else {
                     buffer += currentChar;
                 }
             }

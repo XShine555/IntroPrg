@@ -20,16 +20,9 @@ public class UtilString {
     }
     
     public static boolean esCreixent(String text, boolean estricta) {
-        String sanitizedText = text;
+        String sanitizedText = estricta ? text : textToNormal(text);
 
-        if (!estricta) {
-            sanitizedText = "";
-            for (int i = 0; i < text.length(); i++) {
-                sanitizedText += charToNormal(text.charAt(i));
-            }
-        }
-
-       return esCreixent(sanitizedText);
+        return esCreixent(sanitizedText);
     }
 
     public static boolean esDecreixent(String text) {
@@ -53,14 +46,7 @@ public class UtilString {
     }
 
     public static boolean esDecreixent(String text, boolean estricta) {
-        String sanitizedText = text;
-
-        if (!estricta) {
-            sanitizedText = "";
-            for (int i = 0; i < text.length(); i++) {
-                sanitizedText += charToNormal(text.charAt(i));
-            }
-        }
+        String sanitizedText = estricta ? text : textToNormal(text);
 
         return esDecreixent(sanitizedText);
     }
@@ -142,7 +128,11 @@ public class UtilString {
     public static String textToNormal(String text) {
         String newText = "";
         for (int i = 0; i < text.length(); i++) {
-            newText += charToNormal(text.charAt(i));
+            char currentChar = text.charAt(i);
+            if (!Character.isLetter(currentChar))
+                continue;
+
+            newText += charToNormal(currentChar);
         }
         return newText;
     }
