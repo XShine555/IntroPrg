@@ -83,6 +83,9 @@ public class UtilString {
             if (i > 1 && !creixent)
                 return false;
 
+            if (estricta && (int)lastChar == (int)currentChar)
+                return false;
+
             if ((int)lastChar < (int)currentChar) {
                 if (creixent && decreixent)
                     return false;
@@ -115,6 +118,9 @@ public class UtilString {
 
             // Si despues de 1 no es decreixent es invalido.
             if (i > 1 && !decreixent)
+                return false;
+
+            if (estricta && (int)lastChar == (int)currentChar)
                 return false;
 
             if ((int)lastChar > (int)currentChar) {
