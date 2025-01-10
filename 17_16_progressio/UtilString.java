@@ -130,7 +130,7 @@ public class UtilString {
         for (int i = 0; i < text.length(); i++) {
             char currentChar = charToNormal(text.charAt(i));
             if ((int)currentChar >= 97 && (int)currentChar <= 122
-            || currentChar == 'ñ' || currentChar == 'ç')
+            || currentChar == 'ç')
                 newText += charToNormal(currentChar);
         }
         return newText;
