@@ -24,10 +24,10 @@ public class Progressio {
                         anyValid = true;
                         System.out.format("\"%s\" és decreixent\n", buffer);
                     }
-                     else if (UtilString.esCreixiDecri(buffer, false)) {
+                     else if (UtilString.esCreixiDecri(buffer)) {
                         anyValid = true;
                         System.out.format("\"%s\" és creixidecri\n", buffer);
-                    } else if (UtilString.esDecriCreixi(buffer, false)) {
+                    } else if (UtilString.esDecriCreixi(buffer)) {
                         anyValid = true;
                         System.out.format("\"%s\" és decricreixi\n", buffer);
                     } else {
