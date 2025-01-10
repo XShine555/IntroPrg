@@ -20,7 +20,7 @@ public class UtilString {
     }
     
     public static boolean esCreixent(String text, boolean estricta) {
-        String sanitizedText = estricta ? text : textToNormal(text);
+        String sanitizedText = estricta ? text : textToLower(textToNormal(text));
 
         return esCreixent(sanitizedText);
     }
@@ -46,7 +46,7 @@ public class UtilString {
     }
 
     public static boolean esDecreixent(String text, boolean estricta) {
-        String sanitizedText = estricta ? text : textToNormal(text);
+        String sanitizedText = estricta ? text : textToLower(textToNormal(text));;
 
         return esDecreixent(sanitizedText);
     }
@@ -143,27 +143,35 @@ public class UtilString {
             switch (character) {
                 case 'à':
                 case 'á':
-                    return 'a';
+                    return Character.isLowerCase(character) ? 'a' : 'A';
                 case 'è':
                 case 'é':
                 case 'ë':
-                    return 'e';
+                    return Character.isLowerCase(character) ? 'e' : 'E';
                 case 'ì':
                 case 'í':
                 case 'ï':
-                    return 'i';
+                    return Character.isLowerCase(character) ? 'i' : 'I';
                 case 'ò':
                 case 'ó':
                 case 'ö':
-                    return 'o';
+                    return Character.isLowerCase(character) ? 'i' : 'I';
                 case 'ù':
                 case 'ú':
                 case 'ü':
-                    return 'u';
+                    return Character.isLowerCase(character) ? 'u' : 'U';
                 default:
-                    return character;
+                    return Character.isLowerCase(character) ? character : Character.toUpperCase(character);
             }
         }
         return character;
+    }
+
+    private static String textToLower(String text) {
+        String newText = "";
+
+        for (int i = 0; i < text.length(); i++)
+            newText += Character.toUpperCase(text.charAt(i));
+        return newText;
     }
 }
