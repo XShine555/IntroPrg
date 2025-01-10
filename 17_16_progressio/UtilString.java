@@ -155,7 +155,7 @@ public class UtilString {
                 case 'ò':
                 case 'ó':
                 case 'ö':
-                    return Character.isLowerCase(character) ? 'i' : 'I';
+                    return Character.isLowerCase(character) ? 'o' : 'O';
                 case 'ù':
                 case 'ú':
                 case 'ü':

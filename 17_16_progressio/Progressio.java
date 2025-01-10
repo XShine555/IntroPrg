@@ -1,7 +1,7 @@
 public class Progressio {
     public static void main(String[] args) {
         System.out.println("Intruduïu text. Enter per finalitzar.");
-        //System.out.println(UtilString.esCreixiDecri("bÀbÇdÈ"));
+        //System.out.println(UtilString.textToNormal("pòíhkl"));
         String text = Entrada.readLine();
 
         while (!text.isBlank()) {
