@@ -33,7 +33,7 @@ public class UtilString {
         String sanitizedText = estricta ? textToNormal(text) : textToLower(textToNormal(text));;
 
         if (sanitizedText.length() < 3) return false;
-        boolean hasChanged = false;
+        int changedNums = 0;
 
         int lastIndex = (int) sanitizedText.charAt(0);
 
@@ -50,12 +50,12 @@ public class UtilString {
                 return false;
             }
             else 
-                hasChanged = true;
+                changedNums++;
 
             lastIndex = (int) iChar;
         }
 
-        return hasChanged;
+        return changedNums >= 3;
     }
 
     public static boolean esCreixiDecri(String text) {
