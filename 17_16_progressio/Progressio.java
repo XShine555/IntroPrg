@@ -14,7 +14,9 @@ public class Progressio {
                     if (i == text.length() - 1 && !Character.isWhitespace(currentChar))
                         buffer += currentChar;
 
-                    if (buffer.length() < 3) {
+                    String normalizeText = UtilString.textToNormal(text);
+
+                    if (normalizeText.length() < 3) {
                         buffer = "";
                         continue;
                     }
