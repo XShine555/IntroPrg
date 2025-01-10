@@ -15,7 +15,7 @@ public class UtilString {
 
             if (estricta && lastIndex == (int)iChar)
                 return false;
-            else if (lastIndex > (int) iChar) {
+            else if (lastIndex < (int) iChar) {
                 return false;
             }
 
@@ -31,7 +31,7 @@ public class UtilString {
 
     public static boolean esDecreixent(String text, boolean estricta) {
         String sanitizedText = estricta ? textToNormal(text) : textToLower(textToNormal(text));;
-        int sameLetterCount = 0;
+        boolean hasChange = false;
 
         if (sanitizedText.length() < 3) return false;
 
@@ -43,16 +43,18 @@ public class UtilString {
             if (lastIndex == (int)iChar) {
                 if (estricta)
                     return false;
-                sameLetterCount++;
             }
-            else if (lastIndex < (int) iChar) {
+            else 
+                hasChange = true;
+
+            if (lastIndex > (int) iChar) {
                 return false;
             }
 
             lastIndex = (int) iChar;
         }
 
-        return sameLetterCount != sanitizedText.length() - 1;
+        return hasChange;
     }
 
     public static boolean esCreixiDecri(String text) {
