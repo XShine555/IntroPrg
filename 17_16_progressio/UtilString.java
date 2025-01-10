@@ -30,7 +30,7 @@ public class UtilString {
     }
 
     public static boolean esDecreixent(String text, boolean estricta) {
-        String sanitizedText = estricta ? deleteDuplicated(textToNormal(text)) : textToLower(textToNormal(text));;
+        String sanitizedText = estricta ? textToNormal(text) : textToLower(textToNormal(text));;
 
         if (sanitizedText.length() < 3) return false;
 
@@ -53,22 +53,6 @@ public class UtilString {
         }
 
         return true;
-    }
-
-    private static String deleteDuplicated(String text) {
-        String newText = "";
-        for (int i = 0; i < text.length(); i++) {
-            if (i == 0)
-                {
-                    newText += text.charAt(0);
-                    continue;
-                }
-            char currentChar = text.charAt(i);
-            char lastChar = text.charAt(i-1);
-            if (lastChar != currentChar)
-                newText += currentChar;
-        }
-        return newText;
     }
 
     public static boolean esCreixiDecri(String text) {
@@ -196,7 +180,7 @@ public class UtilString {
         String newText = "";
 
         for (int i = 0; i < text.length(); i++)
-            newText += Character.toLowerCase(text.charAt(i));
+            newText += Character.toUpperCase(text.charAt(i));
         return newText;
     }
 }
