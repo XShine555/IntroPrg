@@ -38,7 +38,7 @@ public class Progressio {
                 }
             }
             if (!buffer.isEmpty()) {
-                if (UtilString.textToNormal(buffer).length() <= 2) {
+                if (UtilString.textToNormal(buffer).length() < 3) {
                     buffer = "";
                 }else{
                     if (UtilString.esCreixent(buffer, false)) {
