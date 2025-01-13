@@ -6,23 +6,31 @@ public class UtilString {
     public static boolean esCreixent(String text, boolean estricta) {
         String sanitizedText = estricta ? textToNormal(text) : textToLower(textToNormal(text));
 
-        if (sanitizedText.length() < 3) return false;
+        if (sanitizedText.length() < 3) 
+            return false;
 
         int lastIndex = (int) sanitizedText.charAt(0);
+        boolean isValid = false;
 
         for (int i = 1; i < sanitizedText.length(); i++) {
             char iChar = sanitizedText.charAt(i);
 
-            if (estricta && lastIndex == (int)iChar)
-                return false;
-            else if (lastIndex > (int) iChar) {
-                return false;
+            if (lastIndex == (int)iChar) {
+                if (estricta)
+                    return false;
+                else
+                    continue;
             }
 
+            if (lastIndex > (int) iChar)
+                return false;
+
             lastIndex = (int) iChar;
+
+            isValid = true;
         }
 
-        return true;
+        return isValid;
     }
 
     public static boolean esDecreixent(String text) {
@@ -32,8 +40,10 @@ public class UtilString {
     public static boolean esDecreixent(String text, boolean estricta) {
         String sanitizedText = estricta ? textToNormal(text) : textToLower(textToNormal(text));;
 
-        if (sanitizedText.length() < 3) return false;
-        int changedNums = 0;
+        if (sanitizedText.length() < 3) 
+            return false;
+
+        boolean isValid = false;
 
         int lastIndex = (int) sanitizedText.charAt(0);
 
@@ -49,13 +59,13 @@ public class UtilString {
             if (lastIndex < (int) iChar) {
                 return false;
             }
-            else 
-                changedNums++;
 
             lastIndex = (int) iChar;
+
+            isValid = true;
         }
 
-        return changedNums >= 2;
+        return isValid;
     }
 
     public static boolean esCreixiDecri(String text) {
@@ -103,7 +113,8 @@ public class UtilString {
     }
 
     public static boolean esDecriCreixi(String text, boolean estricta) {
-        text = textToNormal(text);
+        text = estricta ? textToNormal(text) : textToLower(textToNormal(text));;
+        System.out.println(text);
         if (text.length() < 3) return false;
 
         char lastChar = text.charAt(0);
@@ -137,6 +148,9 @@ public class UtilString {
 
     public static String textToNormal(String text) {
         String newText = "";
+        if (text.isEmpty() || text.isBlank())
+            return newText;
+
         for (int i = 0; i < text.length(); i++) {
             char currentChar = charToNormal(text.charAt(i));
             if ((int)currentChar >= 97 && (int)currentChar <= 122
@@ -183,7 +197,7 @@ public class UtilString {
         String newText = "";
 
         for (int i = 0; i < text.length(); i++)
-            newText += Character.toUpperCase(text.charAt(i));
+            newText += Character.toLowerCase(text.charAt(i));
         return newText;
     }
 }
