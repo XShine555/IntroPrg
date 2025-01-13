@@ -43,7 +43,7 @@ public class UtilString {
         if (sanitizedText.length() < 3) 
             return false;
 
-        boolean isValid = false;
+        int count = 0;
 
         int lastIndex = (int) sanitizedText.charAt(0);
 
@@ -62,10 +62,10 @@ public class UtilString {
 
             lastIndex = (int) iChar;
 
-            isValid = true;
+            count++;
         }
 
-        return isValid;
+        return count > 3;
     }
 
     public static boolean esCreixiDecri(String text) {
