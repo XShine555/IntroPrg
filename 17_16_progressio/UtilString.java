@@ -10,7 +10,7 @@ public class UtilString {
             return false;
 
         int lastIndex = (int) sanitizedText.charAt(0);
-        boolean isValid = false;
+        int count = 0;
 
         for (int i = 1; i < sanitizedText.length(); i++) {
             char iChar = sanitizedText.charAt(i);
@@ -27,10 +27,10 @@ public class UtilString {
 
             lastIndex = (int) iChar;
 
-            isValid = true;
+            count++;
         }
 
-        return isValid;
+        return count >= 2;
     }
 
     public static boolean esDecreixent(String text) {
