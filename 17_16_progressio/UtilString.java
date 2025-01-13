@@ -109,7 +109,7 @@ public class UtilString {
     }
 
     public static boolean esDecriCreixi(String text) {
-        return esDecriCreixi(text, false);
+        return esDecriCreixi(text, true);
     }
 
     public static boolean esDecriCreixi(String text, boolean estricta) {
