@@ -115,10 +115,12 @@ public class UtilString {
     public static boolean esDecriCreixi(String text, boolean estricta) {
         text = estricta ? textToNormal(text) : textToLower(textToNormal(text));;
         
-        if (text.length() < 3) return false;
+        if (text.length() < 3) 
+            return false;
 
         char lastChar = text.charAt(0);
         boolean creixent = false, decreixent = false;
+        int count = 0;
 
         for (int i = 1; i < text.length(); i++) {
             char currentChar = text.charAt(i);
@@ -141,9 +143,10 @@ public class UtilString {
             }
 
             lastChar = currentChar;
+            count++;
         }
 
-        return creixent && decreixent;
+        return creixent && decreixent && count >= 2;
     }
 
     public static String textToNormal(String text) {
