@@ -1,3 +1,5 @@
+/* Programa que determina si una palabra es "Creixent", "Decreixent", "CreixiDecri", "DecriCreixi" o "Normaleta" */
+
 public class Progressio {
     public static void main(String[] args) {
         System.out.println("Intruduïu text. Enter per finalitzar.");

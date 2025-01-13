@@ -1,3 +1,9 @@
+/*
+ *  Exercici 17_16. Progressió de les paraules
+ * Iker Rivera Garcia
+ * Clase que proporciona métodos para Strings.
+*/
+
 public class UtilString {
     public static boolean esCreixent(String text) {
         return esCreixent(text, true);
