@@ -1,3 +1,9 @@
+/*
+ * Exercici 17_14. Prefixos i sufixos
+ * Iker Rivera Garcia
+ * Clase que proporciona métodos para Strings.
+*/
+
 public class UtilString {
     // retorna cert quan text comença amb prefix, considerant si ha de ser o no extricte
     public static boolean esPrefix(String text, String prefix, boolean extricte) {
