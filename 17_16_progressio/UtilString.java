@@ -65,7 +65,7 @@ public class UtilString {
             count++;
         }
 
-        return count > 3;
+        return count > 2;
     }
 
     public static boolean esCreixiDecri(String text) {
