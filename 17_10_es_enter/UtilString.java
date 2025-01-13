@@ -30,4 +30,19 @@
         }
         return true;
     }
+
+    public static String replaceChar(String text, char character, char toReplace) {
+        String newText = "";
+        if (text.isEmpty() || text.isBlank())
+            return newText;
+        for (int i = 0; i < text.length(); i++) {
+            char iChar = text.charAt(i);
+            if (iChar == character)
+                newText += toReplace;
+            else
+                newText += iChar;
+        }
+
+        return newText;
+    }
 }
