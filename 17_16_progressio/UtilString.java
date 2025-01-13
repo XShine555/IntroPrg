@@ -1,6 +1,6 @@
 public class UtilString {
     public static boolean esCreixent(String text) {
-        return esCreixent(text, false);
+        return esCreixent(text, true);
     }
     
     public static boolean esCreixent(String text, boolean estricta) {
