@@ -1,5 +1,5 @@
 /*
- * Exercici 17_14. Prefixos i sufixos
+ * Exercici 17_15. Quants cops
  * Iker Rivera Garcia
  * Clase que proporciona métodos para convertir respuestas de texto en valores booleanos.
 */

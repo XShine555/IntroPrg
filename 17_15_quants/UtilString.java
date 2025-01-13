@@ -1,3 +1,9 @@
+/*
+ * Exercici 17_15. Quants cops
+ * Iker Rivera Garcia
+ * Clase que proporciona métodos para Strings.
+*/
+
 public class UtilString {
     // retorna el nombre d'aparicions del subtext dins del text, considerant si
     // ha de ser o no extricte
