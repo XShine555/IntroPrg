@@ -1,3 +1,9 @@
+/*
+ * Exercici 17_11. És enter (flexible)
+ * Iker Rivera Garcia
+ * Clase que proporciona métodos para Strings.
+ */
+
 public class UtilString {
     public static boolean esEnter(String text) {
         if (text.isBlank() || text.isEmpty())
@@ -29,7 +35,7 @@ public class UtilString {
         if (estricte)
             return esEnter(text);
 
-        text = text.replace(" ", "");
+        text = replaceChar(text, ' ', "");
         
         if (text.isBlank() || text.isEmpty())
             return false;
@@ -73,5 +79,20 @@ public class UtilString {
         }
 
         return Integer.parseInt(text);
+    }
+
+    public static String replaceChar(String text, char character, String toReplace) {
+        String newText = "";
+        if (text.isEmpty() || text.isBlank())
+            return newText;
+        for (int i = 0; i < text.length(); i++) {
+            char iChar = text.charAt(i);
+            if (iChar == character)
+                newText += toReplace;
+            else
+                newText += iChar;
+        }
+
+        return newText;
     }
 }

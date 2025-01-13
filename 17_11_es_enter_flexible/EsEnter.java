@@ -1,3 +1,9 @@
+/*
+ * Exercici 17_11. És enter (flexible)
+ * Iker Rivera Garcia
+ * Programa que indica si un texto es entero o no.
+ */
+
 public class EsEnter {
     public static void main(String[] args) {
         boolean isStrict = false;
