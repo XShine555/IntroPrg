@@ -10,7 +10,7 @@
         String text = Entrada.readLine();
 
         while (!text.isBlank()) {
-            boolean isNumber = UtilString.esEnter(UtilString.replaceChar(text, ' ', '\0'));
+            boolean isNumber = UtilString.esEnter(UtilString.replaceChar(text, ' ', ""));
 
             if (isNumber) {
                 System.out.println("És enter");

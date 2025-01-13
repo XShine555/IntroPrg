@@ -31,7 +31,7 @@
         return true;
     }
 
-    public static String replaceChar(String text, char character, char toReplace) {
+    public static String replaceChar(String text, char character, String toReplace) {
         String newText = "";
         if (text.isEmpty() || text.isBlank())
             return newText;
