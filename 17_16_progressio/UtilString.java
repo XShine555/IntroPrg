@@ -114,7 +114,7 @@ public class UtilString {
 
     public static boolean esDecriCreixi(String text, boolean estricta) {
         text = estricta ? textToNormal(text) : textToLower(textToNormal(text));;
-        System.out.println(text);
+        
         if (text.length() < 3) return false;
 
         char lastChar = text.charAt(0);
