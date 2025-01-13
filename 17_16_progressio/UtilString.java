@@ -34,7 +34,7 @@ public class UtilString {
     }
 
     public static boolean esDecreixent(String text) {
-        return esDecreixent(text, false);
+        return esDecreixent(text, true);
     }
 
     public static boolean esDecreixent(String text, boolean estricta) {
