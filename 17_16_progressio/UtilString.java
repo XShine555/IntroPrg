@@ -128,9 +128,12 @@ public class UtilString {
             if (i > 1 && !decreixent)
                 return false;
 
-            if (estricta && (int)lastChar == (int)currentChar)
-                return false;
-
+            if ((int)lastChar == (int)currentChar)
+                if (estricta)
+                    return false;
+                else
+                    continue;
+                
             if ((int)lastChar > (int)currentChar) {
                 if (decreixent && creixent)
                     return false;
