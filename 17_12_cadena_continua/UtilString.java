@@ -1,3 +1,9 @@
+/*
+ * Exercici 17_12. Cadena continua (modular)
+ * Iker Rivera Garcia
+ * Clase que proporciona métodos para Strings.
+ */
+
 public class UtilString {
     public static boolean esEnter(String text) {
         if (text.isBlank() || text.isEmpty())
