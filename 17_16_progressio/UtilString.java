@@ -207,7 +207,9 @@ public class UtilString {
         String newText = "";
 
         for (int i = 0; i < text.length(); i++)
+        {
             newText += Character.toLowerCase(text.charAt(i));
+        }
         return newText;
     }
 }
