@@ -6,7 +6,7 @@ public class EntersEntreComes {
 
         if (count < 0)
         {
-            System.out.println("El nombre ha de ser positiu");
+            System.out.println("Res a fer");
             return;
         }
 
