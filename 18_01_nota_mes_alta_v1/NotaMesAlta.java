@@ -18,6 +18,6 @@ public class NotaMesAlta {
         }
 
 
-        System.out.println("La nota més alta és: " + higher);
+        System.out.println("La nota més alta és " + higher);
     }
 }
