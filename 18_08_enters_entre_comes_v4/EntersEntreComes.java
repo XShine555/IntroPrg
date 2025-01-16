@@ -32,7 +32,6 @@ public class EntersEntreComes {
             
             numeros[countWhile] = Integer.parseInt(iInput);
             countWhile++;
-            System.out.println(countWhile);
         }
 
         System.out.println(UtilString.entreComes(numeros, separator));
