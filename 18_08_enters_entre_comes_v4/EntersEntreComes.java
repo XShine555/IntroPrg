@@ -14,7 +14,7 @@ public class EntersEntreComes {
         String separatorInput = Entrada.readLine();
         char separator = ',';
 
-        if (!separatorInput.isBlank())
+        if (!separatorInput.isEmpty() || !separatorInput.isBlank())
             separator = separatorInput.charAt(0);
 
         int[] numeros;
