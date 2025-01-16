@@ -3,7 +3,7 @@ public class Arguments {
         for (int i = 0; i < args.length; i++) {
             String currentString = args[i];
 
-            System.out.format("[%s] \"%s\": %s", i, currentString, UtilString.esEnter(currentString) ? "és enter" : "no és enter");
+            System.out.format("[%s] \"%s\": %s%n", i, currentString, UtilString.esEnter(currentString) ? "és enter" : "no és enter");
         }
     }
 }
