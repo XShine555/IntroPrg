@@ -10,18 +10,18 @@ public class UtilString {
     }
 
     public static boolean esCreixent(String text, boolean estricta) {
-        String normalText = estricta ? textToNormal(text) : textToLower(textToNormal(text));
+        text = estricta ? textToNormal(text) : textToLower(textToNormal(text));
 
-        if (normalText.length() < 3)
+        if (text.length() < 3)
             return false;
 
-        char lastChar = normalText.charAt(0);
+        char lastChar = text.charAt(0);
         int validCharsCount = 0;
 
-        for (int i = 1; i < normalText.length(); i++) {
-            char currentChar = normalText.charAt(i);
+        for (int i = 1; i < text.length(); i++) {
+            char currentChar = text.charAt(i);
             
-            if (lastChar == (int) currentChar) {
+            if (lastChar == currentChar) {
                 if (estricta)
                     return false;
                 else
@@ -44,16 +44,16 @@ public class UtilString {
     }
 
     public static boolean esDecreixent(String text, boolean estricta) {
-        String normalText = estricta ? textToNormal(text) : textToLower(textToNormal(text));;
+        text = estricta ? textToNormal(text) : textToLower(textToNormal(text));;
 
-        if (normalText.length() < 3)
+        if (text.length() < 3)
             return false;
 
         int validCharsCount = 0;
-        char lastChar = normalText.charAt(0);
+        char lastChar = text.charAt(0);
 
-        for (int i = 1; i < normalText.length(); i++) {
-            char currentChar = normalText.charAt(i);
+        for (int i = 1; i < text.length(); i++) {
+            char currentChar = text.charAt(i);
 
             if (lastChar == currentChar) {
                 if (estricta)
@@ -79,6 +79,7 @@ public class UtilString {
 
     public static boolean esCreixiDecri(String text, boolean estricta) {
         text = textToNormal(text);
+        
         if (text.length() < 3)
             return false;
 
@@ -93,11 +94,11 @@ public class UtilString {
                 return false;
             }
 
-            if ((int) lastChar == (int) currentChar) {
+            if (lastChar == currentChar) {
                 if (estricta)
                     return false;
                 creixent = true;
-            } else if ((int) lastChar < (int) currentChar) {
+            } else if (lastChar < currentChar) {
                 if (creixent && decreixent)
                     return false;
 
@@ -117,8 +118,7 @@ public class UtilString {
     }
 
     public static boolean esDecriCreixi(String text, boolean estricta) {
-        text = estricta ? textToNormal(text) : textToLower(textToNormal(text));
-        ;
+        text = estricta ? textToNormal(text) : textToLower(textToNormal(text));;
 
         if (text.length() < 3)
             return false;
@@ -133,13 +133,13 @@ public class UtilString {
             if (i > 1 && !decreixent)
                 return false;
 
-            if ((int) lastChar == (int) currentChar)
+            if (lastChar == currentChar)
                 if (estricta)
                     return false;
                 else
                     continue;
 
-            if ((int) lastChar > (int) currentChar) {
+            if (lastChar > currentChar) {
                 if (decreixent && creixent)
                     return false;
 
@@ -161,9 +161,9 @@ public class UtilString {
 
         for (int i = 0; i < text.length(); i++) {
             char currentChar = charToNormal(text.charAt(i));
-            if ((int) currentChar >= 97 && (int) currentChar <= 122
+            if (currentChar >= 97 && currentChar <= 122
                     || currentChar == 'ç')
-                newText += charToNormal(currentChar);
+                newText += currentChar;
         }
         return newText;
     }
