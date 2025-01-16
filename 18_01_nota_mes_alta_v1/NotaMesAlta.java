@@ -4,6 +4,7 @@ public class NotaMesAlta {
         String input = Entrada.readLine();
 
         int higher = 0;
+        int count = 0;
 
         while (!input.isBlank()) {
             int number = Integer.parseInt(input);
@@ -14,10 +15,14 @@ public class NotaMesAlta {
             if (number > higher)
                 higher = number;
 
+            count++;
+
             input = Entrada.readLine();
         }
 
-
-        System.out.println("La nota més alta és " + higher);
+        if (higher > 1)
+            System.out.println("La nota més alta és " + higher);
+        else
+            System.out.println("Com a mínim calen dues notes");
     }
 }
