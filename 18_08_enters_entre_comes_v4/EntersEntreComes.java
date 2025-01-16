@@ -1,3 +1,5 @@
+import org.jcp.xml.dsig.internal.dom.Utils;
+
 public class EntersEntreComes {
     public static void main(String[] args) {
         System.out.println("Quants?");
@@ -41,16 +43,6 @@ public class EntersEntreComes {
             numeros[i] = Integer.parseInt(iInput);
         }
 
-        System.out.println(entreComes(numeros, separator));
-    }
-
-    public static String entreComes(int[] array, char separator) {
-        String result = "";
-        for (int i = 0; i < array.length; i++) {
-            if (i > 0)
-                result += separator + " ";
-            result += array[i];
-        }
-        return result;
+        System.out.println(UtilString.entreComes(numeros, separator));
     }
 }

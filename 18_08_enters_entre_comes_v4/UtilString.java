@@ -1,4 +1,14 @@
 public class UtilString {
+    public static String entreComes(int[] array, char separator) {
+        String result = "";
+        for (int i = 0; i < array.length; i++) {
+            if (i > 0)
+                result += separator + " ";
+            result += array[i];
+        }
+        return result;
+    }
+
     public static boolean esEnter(String text) {
         if (text.isBlank() || text.isEmpty())
             return false;
