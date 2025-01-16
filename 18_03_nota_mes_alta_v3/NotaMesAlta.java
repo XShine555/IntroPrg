@@ -31,7 +31,7 @@ public class NotaMesAlta {
                     joinNotes += ", ";
             }
 
-            System.out.format("La nota més alta és: %s. %s", higher, joinNotes.isBlank() ? "No queda cap altra nota." : "La resta de notes és: " + joinNotes);
+            System.out.format("La nota més alta és %s. %s", higher, joinNotes.isBlank() ? "No queda cap altra nota." : "La resta de notes és: " + joinNotes);
         }
         else
             System.out.println("Com a mínim calen dues notes");
