@@ -4,7 +4,7 @@ public class EntersEntreComes {
         String input = Entrada.readLine();
         int count = Integer.parseInt(input);
 
-        if (count < 0)
+        if (count < 1)
         {
             System.out.println("Res a fer");
             return;
