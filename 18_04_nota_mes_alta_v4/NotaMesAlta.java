@@ -16,9 +16,7 @@ public class NotaMesAlta {
                 higher = number;
 
             if (!notes.isBlank())
-                notes += ",";
-
-            if (notes.length() > 0) {
+            {
                 String[] currentNums = notes.split(",");
                 boolean finded = false;
 
@@ -31,8 +29,9 @@ public class NotaMesAlta {
                 }
 
                 if (!finded)
-                    notes += number;
-            } else {
+                    notes += "," + number;
+            }
+            else {
                 notes += number;
             }
 
