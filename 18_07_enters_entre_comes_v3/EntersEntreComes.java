@@ -4,6 +4,12 @@ public class EntersEntreComes {
         String input = Entrada.readLine();
         int count = Integer.parseInt(input);
 
+        if (count < 0)
+        {
+            System.out.println("El nombre ha de ser positiu");
+            return;
+        }
+
         int[] numeros;
         numeros = new int[count];
         for (int i = 0; i < count; i++) {
