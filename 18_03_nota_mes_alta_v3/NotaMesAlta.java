@@ -23,7 +23,7 @@ public class NotaMesAlta {
         if (notes.length() > 1) {
             String newNotes = "";
             String joinNotes = "";
-            for (int i = 0; i < notes.length(); i++) {
+            for (int i = 0; i < newNotes.length(); i++) {
                 char iChar = newNotes.charAt(i);
 
                 if (iChar == (char)(higher + '0')) 
