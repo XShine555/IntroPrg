@@ -7,7 +7,7 @@ public class EntersEntreComes {
             if (UtilString.esEnter(input)) {
                 numValid = true;
             } else {
-                System.out.println("No pots introduir un no enter");
+                System.out.println("Per favor, un valor enter");
                 input = Entrada.readLine();
             }
         }
