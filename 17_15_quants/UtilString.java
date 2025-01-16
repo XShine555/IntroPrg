@@ -48,7 +48,7 @@ public class UtilString {
 
     // equival a quants(text, subtext, true)
     public static int quants(String text, String subtext) {
-        return quants(text, subtext);
+        return quants(text, subtext, true);
     }
 
     public static Character charToNormal(char character) {
