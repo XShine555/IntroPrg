@@ -21,7 +21,6 @@ public class NotaMesAlta {
         }
 
         if (notes.length() > 1) {
-            String newNotes = "";
             String joinNotes = "";
             for (int i = 0; i < notes.length(); i++) {
                 char iChar = notes.charAt(i);
@@ -29,20 +28,11 @@ public class NotaMesAlta {
                 if (iChar == (char)(higher + '0')) 
                     continue;
 
-                newNotes += iChar;
-            }
-
-            for (int i = 0; i < newNotes.length(); i++) {
-                char iChar = newNotes.charAt(i);
-
-                if (iChar == (char)(higher + '0')) 
-                    continue;
-
                 joinNotes += iChar;
 
-                if (i == newNotes.length() - 2)
+                if (i == notes.length() - 2)
                     joinNotes += " i ";
-                else if (i < newNotes.length() - 1)
+                else if (i < notes.length() - 1)
                     joinNotes += ", ";
             }
 
