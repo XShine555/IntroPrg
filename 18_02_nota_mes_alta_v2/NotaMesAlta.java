@@ -21,8 +21,6 @@ public class NotaMesAlta {
         }
 
         if (notes.length() > 1) {
-            System.out.println("La nota més alta és " + higher);
-
             String joinNotes = "";
             for (int i = 0; i < notes.length(); i++) {
                 joinNotes += notes.charAt(i);
@@ -33,7 +31,7 @@ public class NotaMesAlta {
                     joinNotes += ", ";
             }
 
-            System.out.format("La nota més alta és %s de les introduïdes: %s", higher, joinNotes);
+            System.out.format("La nota més alta és %s de les introduïdes: %s.", higher, joinNotes);
         }
         else
             System.out.println("Com a mínim calen dues notes");
