@@ -5,6 +5,7 @@ public class NotaMesAlta {
         String notes = "";
 
         int higher = 0;
+        int countNotes = 0;
 
         while (!input.isBlank()) {
             int number = Integer.parseInt(input);
@@ -35,10 +36,11 @@ public class NotaMesAlta {
                 notes += number;
             }
 
+            countNotes++;
             input = Entrada.readLine();
         }
 
-        if (notes.length() > 1) {
+        if (countNotes >= 2) {
             String joinNotes = "";
             String[] notesSplit = notes.split(",");
 
