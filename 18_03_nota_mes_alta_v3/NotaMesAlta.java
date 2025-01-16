@@ -12,10 +12,10 @@ public class NotaMesAlta {
             if (number < 0 || number > 10)
                 break;
 
-            if (number >= higher)
+            if (number > higher)
                 higher = number;
-            else
-                notes += number;
+            
+            notes += number;
 
             input = Entrada.readLine();
         }
@@ -24,6 +24,9 @@ public class NotaMesAlta {
             String joinNotes = "";
             for (int i = 0; i < notes.length(); i++) {
                 joinNotes += notes.charAt(i);
+
+                if (joinNotes.equals(String.valueOf(higher))) 
+                    continue;
 
                 if (i == notes.length() - 2)
                     joinNotes += " i ";
