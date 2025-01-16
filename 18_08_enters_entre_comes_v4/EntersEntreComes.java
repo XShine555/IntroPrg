@@ -2,6 +2,15 @@ public class EntersEntreComes {
     public static void main(String[] args) {
         System.out.println("Quants?");
         String input = Entrada.readLine();
+        boolean numValid = false;
+        while (!numValid) {
+            if (UtilString.esEnter(input)) {
+                numValid = true;
+            } else {
+                System.out.println("No pots introduir un no enter");
+                input = Entrada.readLine();
+            }
+        }
         int count = Integer.parseInt(input);
 
         if (count < 1)
