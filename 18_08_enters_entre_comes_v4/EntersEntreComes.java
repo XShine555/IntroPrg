@@ -35,7 +35,7 @@ public class EntersEntreComes {
 
             String iInput = Entrada.readLine();
             if (!UtilString.esEnter(iInput)) {
-                System.out.println("No pots introduir un no enter");
+                System.out.println("Per favor, un valor enter");
                 continue;
             }
             
