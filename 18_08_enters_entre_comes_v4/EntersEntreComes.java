@@ -21,7 +21,7 @@ public class EntersEntreComes {
         numeros = new int[count];
 
         int countWhile = 0;
-        while (countWhile != count - 1) {
+        while (countWhile != count) {
             System.out.println("Valor " + (countWhile + 1) + "?");
 
             String iInput = Entrada.readLine();
@@ -32,13 +32,7 @@ public class EntersEntreComes {
             
             numeros[countWhile] = Integer.parseInt(iInput);
             countWhile++;
-        }
-
-        for (int i = 0; i < count; i++) {
-            System.out.println("Valor " + (i + 1) + "?");
-
-            String iInput = Entrada.readLine();
-            numeros[i] = Integer.parseInt(iInput);
+            System.out.println(countWhile);
         }
 
         System.out.println(UtilString.entreComes(numeros, separator));
