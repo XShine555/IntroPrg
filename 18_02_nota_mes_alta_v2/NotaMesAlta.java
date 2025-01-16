@@ -25,8 +25,8 @@ public class NotaMesAlta {
             for (int i = 0; i < notes.length(); i++) {
                 joinNotes += notes.charAt(i);
 
-                if (i == notes.length() - 1)
-                    joinNotes += ".";
+                if (i == notes.length() - 2)
+                    joinNotes += "i ";
                 else if (i < notes.length() - 1)
                     joinNotes += ", ";
             }
