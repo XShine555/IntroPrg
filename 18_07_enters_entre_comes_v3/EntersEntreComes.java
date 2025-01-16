@@ -1,6 +1,6 @@
 public class EntersEntreComes {
     public static void main(String[] args) {
-        System.out.println("Quants valors vols introduir?");
+        System.out.println("Quants?");
         String input = Entrada.readLine();
         int count = Integer.parseInt(input);
 
