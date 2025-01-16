@@ -24,10 +24,11 @@ public class NotaMesAlta {
             String joinNotes = "";
             for (int i = 0; i < notes.length(); i++) {
                 char iChar = notes.charAt(i);
-                joinNotes += iChar;
 
                 if (iChar == (char)(higher + '0')) 
                     continue;
+
+                joinNotes += iChar;
 
                 if (i == notes.length() - 2)
                     joinNotes += " i ";
