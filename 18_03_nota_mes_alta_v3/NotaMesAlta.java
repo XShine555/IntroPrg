@@ -15,6 +15,8 @@ public class NotaMesAlta {
             if (number > higher)
                 higher = number;
             
+            if (!notes.isBlank())
+                notes += ",";
             notes += number;
 
             input = Entrada.readLine();
@@ -22,18 +24,45 @@ public class NotaMesAlta {
 
         if (notes.length() > 1) {
             String joinNotes = "";
+            String buffer = "";
+            int lastCommaIndex = -1;
+            int count = 0;
+
             for (int i = 0; i < notes.length(); i++) {
-                char iChar = notes.charAt(i);
+                char c = notes.charAt(i);
 
-                if (iChar == (char)(higher + '0')) 
-                    continue;
+                if (c == ',') {
+                    int number = Integer.parseInt(buffer);
 
-                joinNotes += iChar;
+                    if (number != higher) {
+                        if (!joinNotes.isEmpty()) {
+                            joinNotes += ", ";
+                            lastCommaIndex = joinNotes.length() - 2;
+                        }
+                        joinNotes += number;
+                        count++;
+                    }
 
-                if (i == notes.length() - 2)
-                    joinNotes += " i ";
-                else if (i < notes.length() - 1)
-                    joinNotes += ", ";
+                    buffer = "";
+                } else {
+                    buffer += c;
+                }
+            }
+            
+            if (!buffer.isEmpty()) {
+                int number = Integer.parseInt(buffer);
+                if (number != higher) {
+                    if (!joinNotes.isEmpty()) {
+                        joinNotes += ", ";
+                        lastCommaIndex = joinNotes.length() - 2;
+                    }
+                    joinNotes += number;
+                    count++;
+                }
+            }
+
+            if (count > 1 && lastCommaIndex != -1) {
+                joinNotes = joinNotes.substring(0, lastCommaIndex) + " i " + joinNotes.substring(lastCommaIndex + 2);
             }
 
             System.out.format("La nota més alta és %s. %s", higher, joinNotes.isBlank() ? "No queda cap altra nota." : "La resta de notes és: " + joinNotes);
