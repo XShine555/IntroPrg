@@ -28,19 +28,21 @@ public class EntersEntreComes {
 
         int[] numeros;
         numeros = new int[count];
+        
+        for (int i = 0; i < count; i++) {
+            System.out.println("Valor " + (i + 1) + "?");
+            boolean isValid = false;
 
-        int countWhile = 0;
-        while (countWhile != count) {
-            System.out.println("Valor " + (countWhile + 1) + "?");
-
-            String iInput = Entrada.readLine();
-            if (!UtilString.esEnter(iInput)) {
-                System.out.println("Per favor, un valor enter");
-                continue;
+            while (!isValid) {
+                String iInput = Entrada.readLine();
+                if (!UtilString.esEnter(iInput)) {
+                    System.out.println("Per favor, un valor enter");
+                    continue;
+                }
+                
+                numeros[i] = Integer.parseInt(iInput);
+                isValid = true;
             }
-            
-            numeros[countWhile] = Integer.parseInt(iInput);
-            countWhile++;
         }
 
         System.out.println(UtilString.entreComes(numeros, separator));
