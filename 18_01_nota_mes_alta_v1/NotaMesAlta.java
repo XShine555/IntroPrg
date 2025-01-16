@@ -20,7 +20,7 @@ public class NotaMesAlta {
             input = Entrada.readLine();
         }
 
-        if (higher > 1)
+        if (count > 1)
             System.out.println("La nota més alta és " + higher);
         else
             System.out.println("Com a mínim calen dues notes");
