@@ -25,10 +25,12 @@ public class EntersEntreComes {
             System.out.println("Valor " + (countWhile + 1) + "?");
 
             String iInput = Entrada.readLine();
-            if (UtilString.esEnter()) {
-                
+            if (!UtilString.esEnter(iInput)) {
+                System.out.println("No pots introduir un no enter");
+                continue;
             }
-
+            
+            numeros[countWhile] = Integer.parseInt(iInput);
             countWhile++;
         }
 
