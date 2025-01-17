@@ -8,6 +8,11 @@ public class UtilString {
 
         result += cadenes[0];
 
+        if (cadenes.length <= 2) {
+            result += darrerSeparador + cadenes[1];
+            return result;
+        }
+
         for (int i = 1; i < cadenes.length - 1; i++) {
             if (i < cadenes.length - 1) {
                 result += separador;
