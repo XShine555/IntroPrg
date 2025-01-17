@@ -63,7 +63,7 @@ public class UtilString {
             previousChar = currentChar;
         }
 
-        System.out.println("Buffer: " + textBuffer + " Length: " + words.length + " Index: " + index + " WordsCount: " + wordsCount);
+        //System.out.println("Buffer: " + textBuffer + " Length: " + words.length + " Index: " + index + " WordsCount: " + wordsCount);
 
         if (!textBuffer.isBlank()) {
             words[index] = textBuffer;
