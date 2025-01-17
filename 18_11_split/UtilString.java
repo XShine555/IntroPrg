@@ -3,23 +3,35 @@ public class UtilString {
         if (text.isBlank() || text.isEmpty())
             return 0;
 
-        int wordsCount = inclouBlancs ? 1 : 0;
+        int wordsCount = 0;
 
         char previousChar = text.charAt(0);
+        String textBuffer = "";
 
         for (int i = 1; i < text.length(); i++) {
             char currentChar = text.charAt(i);
 
             if (Character.isWhitespace(currentChar) && Character.isLetterOrDigit(previousChar)) {
                 wordsCount++;
+                textBuffer = "";
             } else if (Character.isLetterOrDigit(currentChar) && Character.isWhitespace(previousChar)) {
                 if (inclouBlancs) {
                     wordsCount++;
                 }
+                textBuffer = "";
             }
+
+            if (inclouBlancs && Character.isWhitespace(currentChar)) {
+                textBuffer += currentChar;
+            }
+            else if (Character.isLetterOrDigit(currentChar))
+                textBuffer += currentChar;
 
             previousChar = currentChar;
         }
+
+        if (textBuffer.length() > 0)
+            wordsCount++;
 
         return wordsCount;
     }
