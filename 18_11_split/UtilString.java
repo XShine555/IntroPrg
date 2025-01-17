@@ -1,6 +1,6 @@
 public class UtilString {
     private static int comptaParaules(String text, boolean inclouBlancs) {
-        if (text.isBlank() || text.isEmpty())
+        if (text.isEmpty())
             return 0;
 
         int wordsCount = 0;
@@ -39,7 +39,7 @@ public class UtilString {
     // retorna la seqüència de subcadenes de text separades entre caràcters en
     // blanc, incloent els caracters en blanc quan inclouBlancs és cert
     public static String[] separa(String text, boolean inclouBlancs) {
-        if (text.isBlank() || text.isEmpty())
+        if (text.isEmpty())
             return new String[0];
 
         int wordsCount = comptaParaules(text, inclouBlancs);
