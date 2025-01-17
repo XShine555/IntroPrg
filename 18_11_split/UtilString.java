@@ -3,7 +3,7 @@ public class UtilString {
         if (text.isBlank() || text.isEmpty())
             return 0;
 
-        int wordsCount = 1;
+        int wordsCount = inclouBlancs ? 1 : 0;
 
         char previousChar = text.charAt(0);
 
@@ -56,7 +56,11 @@ public class UtilString {
                 textBuffer = "";
             }
 
-            textBuffer += currentChar;
+            if (inclouBlancs && Character.isWhitespace(currentChar)) {
+                textBuffer += currentChar;
+            }
+            else if (Character.isLetterOrDigit(currentChar))
+                textBuffer += currentChar;
 
             previousChar = currentChar;
         }
