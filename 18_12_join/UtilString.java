@@ -8,7 +8,7 @@ public class UtilString {
 
         result += cadenes[0];
 
-        if (cadenes.length <= 2) {
+        if (cadenes.length == 2) {
             result += darrerSeparador + cadenes[1];
             return result;
         }
