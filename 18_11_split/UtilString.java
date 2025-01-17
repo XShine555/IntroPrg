@@ -41,15 +41,13 @@ public class UtilString {
         for (int i = 0; i < text.length(); i++) {
             char currentChar = text.charAt(i);
 
-            // Si este caracter es un espacio en blanco y el anterior no lo era entonces ha habido un cambio de palabra.
-            if (Character.isWhitespace(currentChar) && !Character.isWhitespace(previousChar)) {
+            if (Character.isWhitespace(currentChar) && Character.isLetterOrDigit(previousChar)) {
                 //Limpiamos el Buffer.
                 words[index] = textBuffer;
                 index++;
                 textBuffer = "";
             }
-            // Si este caracter es un caracter o un digito y el anterior no lo era entonces ha habido un cambio de palabra.
-            else if (Character.isLetterOrDigit(currentChar) && !Character.isLetterOrDigit(previousChar)) {
+            else if (Character.isLetterOrDigit(currentChar) && Character.isWhitespace(previousChar)) {
                 //Limpiamos el Buffer.
                 if (inclouBlancs) {
                     words[index] = textBuffer;
@@ -65,7 +63,7 @@ public class UtilString {
 
         //System.out.println("Buffer: " + textBuffer + " Length: " + words.length + " Index: " + index + " WordsCount: " + wordsCount);
 
-        if (!textBuffer.isBlank()) {
+        if (textBuffer.length() > 0) {
             words[index] = textBuffer;
         }
 
