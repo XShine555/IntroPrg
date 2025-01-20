@@ -1,3 +1,7 @@
+/*
+ * Classe que proporciona mètodes per a Strings.
+ */
+
 public class UtilString {
     public static String entreComes(int[] array, char separator) {
         String result = "";

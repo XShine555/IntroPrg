@@ -1,3 +1,7 @@
+/*
+ * Programa que demana un nombre enter i després demana tants enters com s'hagin indicat.
+ */
+
 public class EntersEntreComes {
     public static void main(String[] args) {
         System.out.println("Quants?");
