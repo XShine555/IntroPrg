@@ -1,3 +1,7 @@
+/*
+ * Classe que proporciona mètodes per a Strings.
+ */
+
 public class UtilString {
     private static int comptaParaules(String text, boolean inclouBlancs) {
         if (text.isEmpty())
