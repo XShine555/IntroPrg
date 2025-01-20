@@ -1,3 +1,7 @@
+/*
+ * Llegir enters fins a un nombre negatiu i mostrar-los separats per comes.
+ */
+
 public class EntersEntreComes {
     public static void main(String[] args) {
         System.out.println("Quants?");
