@@ -1,3 +1,7 @@
+/*
+ * Classe que proporciona mètodes per a Strings.
+ */
+
 public class UtilString {
     // retorna un String format per les cadenes de text separades pel separador amb darrer separador
     public static String junta(String[] cadenes, String separador, String darrerSeparador) {
