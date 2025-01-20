@@ -1,3 +1,7 @@
+/**
+ * Programa que llegeix notes i mostra la nota més alta.
+ */
+
 public class NotaMesAlta {
     public static void main(String[] args) {
         System.out.println("Introdueix les notes (-1 per finalitzar)");
