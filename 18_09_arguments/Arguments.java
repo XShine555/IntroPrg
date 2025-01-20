@@ -1,3 +1,7 @@
+/*
+ * Programa que verifica si los argumentos de la línea de comandos son enteros.
+ */
+
 public class Arguments {
     public static void main(String[] args) {
         for (int i = 0; i < args.length; i++) {

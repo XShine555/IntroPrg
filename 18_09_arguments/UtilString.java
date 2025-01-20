@@ -1,3 +1,7 @@
+/*
+ * Classe que proporciona mètodes per a Strings.
+ */
+
 public class UtilString {
     public static boolean esEnter(String text) {
         if (text.isBlank() || text.isEmpty())
