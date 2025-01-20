@@ -1,3 +1,7 @@
+/*
+ * Programa que suma els enters que hi ha a la llista de valors que rep com a
+ */
+
 public class SumaEnters {
     public static void main(String[] args) {
         int[] enters = filtraEnters(args);
