@@ -1,3 +1,7 @@
+/*
+ * Programa que llegeix 5 enters i els mostra separats per comes.
+ */
+
 public class EntersEntreComes {
     public static void main(String[] args) {
         int[] numeros;
