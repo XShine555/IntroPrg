@@ -1,3 +1,7 @@
+/*
+ * Aquest programa inicialitza una matriu amb tres enters i els imprimeix separats per comes.
+ */ 
+
 public class EntersEntreComes {
     public static void main(String[] args) {
         int[] numeros;
