@@ -25,6 +25,8 @@ public class TresEnRatlla {
 
         // mostra el taulell
         mostraFila(fila0);
+        mostraFila(fila1);
+        mostraFila(fila2);
     }
 
     // mostra el contingut de la fila per sortida estàndard
