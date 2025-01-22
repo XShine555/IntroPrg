@@ -33,15 +33,15 @@ public class TresEnRatlla {
 
             int x = Integer.parseInt(moviment.substring(0, 1)), y = Integer.parseInt(moviment.substring(1));
 
-            if (x < 1 || x > 3 || y < 1 || y > 3) {
+            if (x < 0 || x > 2 || y < 0 || y > 2) {
                 System.out.println("Moviment fora del taulell");
                 continue;
             } else {
-                if (casellaOcupada(taulell, x - 1, y - 1)) {
+                if (casellaOcupada(taulell, x, y)) {
                     System.out.println("Casella ocupada");
                     continue;
                 } else {
-                    taulell[x - 1][y - 1] = jugador;
+                    taulell[x][y] = jugador;
                 }
             }
 
