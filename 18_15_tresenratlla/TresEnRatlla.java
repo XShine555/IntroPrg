@@ -13,7 +13,7 @@ public class TresEnRatlla {
 
             String moviment = Entrada.readLine();
             if (moviment.equalsIgnoreCase("a")) {
-                System.out.println("Un jugador ha abandonat");
+                System.out.println(jugador + " abandona");
                 haAcabat = true;
                 break;
             }
