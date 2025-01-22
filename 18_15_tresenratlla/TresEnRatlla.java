@@ -39,6 +39,7 @@ public class TresEnRatlla {
             } else {
                 if (casellaOcupada(taulell, x, y)) {
                     System.out.println("Casella ocupada");
+                    mostraTaulell(taulell);
                     continue;
                 } else {
                     taulell[x][y] = jugador;
