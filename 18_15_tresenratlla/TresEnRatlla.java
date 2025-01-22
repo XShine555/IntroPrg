@@ -36,7 +36,7 @@ public class TresEnRatlla {
             int x = Integer.parseInt(moviment.substring(0, 1)), y = Integer.parseInt(moviment.substring(1));
 
             if (x < 0 || x > 2 || y < 0 || y > 2) {
-                System.out.println("Moviment fora del taulell");
+                System.out.println("Coordenades no vàlides");
                 continue;
             } else {
                 if (casellaOcupada(taulell, x, y)) {
