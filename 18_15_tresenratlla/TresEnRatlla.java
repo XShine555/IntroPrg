@@ -49,7 +49,7 @@ public class TresEnRatlla {
             mostraTaulell(taulell);
 
             if (jugadorGuanya(taulell, jugador)) {
-                System.out.println(jugador + " Guanya");
+                System.out.println(jugador + " guanya");
                 haAcabat = true;
             }
 
