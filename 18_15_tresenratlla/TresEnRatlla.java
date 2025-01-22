@@ -9,9 +9,40 @@ public class TresEnRatlla {
         mostraTaulell(taulell);
 
         while (!haAcabat) {
-            boolean resultatMoviment = demanaMoviment(taulell, jugador);
-            while (!resultatMoviment) {
-                resultatMoviment = demanaMoviment(taulell, jugador);
+            System.out.println(jugador + "?");
+
+            String moviment = Entrada.readLine();
+            if (moviment.equalsIgnoreCase("a")) {
+                System.out.println("Un jugador ha abandonat");
+                haAcabat = true;
+                break;
+            }
+
+            if (moviment.length() < 2) {
+                System.out.println("Moviment no vàlid");
+                continue;
+            }
+
+            String stringX = moviment.substring(0, 1);
+            String stringY = moviment.substring(1);
+
+            if (!esNumero(stringX) && !esNumero(stringY)) {
+                System.out.println("Moviment no vàlid");
+                continue;
+            }
+
+            int x = Integer.parseInt(moviment.substring(0, 1)), y = Integer.parseInt(moviment.substring(1));
+
+            if (x < 1 || x > 3 || y < 1 || y > 3) {
+                System.out.println("Moviment fora del taulell");
+                continue;
+            } else {
+                if (casellaOcupada(taulell, x - 1, y - 1)) {
+                    System.out.println("Casella ocupada");
+                    continue;
+                } else {
+                    taulell[x - 1][y - 1] = jugador;
+                }
             }
 
             mostraTaulell(taulell);
@@ -70,46 +101,6 @@ public class TresEnRatlla {
             }
         }
         return true;
-    }
-
-    private static boolean demanaMoviment(char[][] taulell, char jugador) {
-        System.out.println(jugador + "?");
-
-        String moviment = "";
-        try {
-            moviment = Entrada.readLine();
-        }
-        catch (Exception e) {
-            return false;
-        }
-        if (moviment.length() < 2) {
-            System.out.println("Moviment no vàlid");
-            return false;
-        }
-
-        String stringX = moviment.substring(0, 1);
-        String stringY = moviment.substring(1);
-
-        if (!esNumero(stringX) && !esNumero(stringY)) {
-            System.out.println("Moviment no vàlid");
-            return false;
-        }
-
-        int x = Integer.parseInt(moviment.substring(0, 1)), y = Integer.parseInt(moviment.substring(1));
-
-        if (x < 1 || x > 3 || y < 1 || y > 3) {
-            System.out.println("Moviment fora del taulell");
-        } else {
-            if (casellaOcupada(taulell, x - 1, y - 1)) {
-                System.out.println("Casella ocupada");
-            } else {
-                taulell[x - 1][y - 1] = jugador;
-
-                return true;
-            }
-        }
-
-        return false;
     }
 
     private static void mostraFila(char[] fila) {
