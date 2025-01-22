@@ -9,10 +9,7 @@ public class TresEnRatlla {
         mostraTaulell(taulell);
 
         while (!haAcabat) {
-            boolean resultatMoviment = demanaMoviment(taulell, jugador);
-            while (!resultatMoviment) {
-                resultatMoviment = demanaMoviment(taulell, jugador);
-            }
+            demanaMoviment(taulell, jugador);
 
             mostraTaulell(taulell);
 
@@ -72,13 +69,13 @@ public class TresEnRatlla {
         return true;
     }
 
-    private static boolean demanaMoviment(char[][] taulell, char jugador) {
+    private static void demanaMoviment(char[][] taulell, char jugador) {
         System.out.println(jugador + "?");
 
         String moviment = Entrada.readLine();
         if (moviment.length() < 2) {
             System.out.println("Moviment no vàlid");
-            return false;
+            return;
         }
 
         String stringX = moviment.substring(0, 1);
@@ -86,7 +83,7 @@ public class TresEnRatlla {
 
         if (!esNumero(stringX) && !esNumero(stringY)) {
             System.out.println("Moviment no vàlid");
-            return false;
+            return;
         }
 
         int x = Integer.parseInt(moviment.substring(0, 1)), y = Integer.parseInt(moviment.substring(1));
@@ -98,12 +95,9 @@ public class TresEnRatlla {
                 System.out.println("Casella ocupada");
             } else {
                 taulell[x - 1][y - 1] = jugador;
-
-                return true;
+                return;
             }
         }
-
-        return false;
     }
 
     private static void mostraFila(char[] fila) {
