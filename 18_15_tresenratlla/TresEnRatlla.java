@@ -75,7 +75,13 @@ public class TresEnRatlla {
     private static boolean demanaMoviment(char[][] taulell, char jugador) {
         System.out.println(jugador + "?");
 
-        String moviment = Entrada.readLine();
+        String moviment = "";
+        try {
+            moviment = Entrada.readLine();
+        }
+        catch (Exception e) {
+            return false;
+        }
         if (moviment.length() < 2) {
             System.out.println("Moviment no vàlid");
             return false;
