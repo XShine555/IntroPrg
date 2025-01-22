@@ -77,6 +77,7 @@ public class TresEnRatlla {
 
         String moviment = Entrada.readLine();
         if (moviment.length() < 2) {
+            System.out.println("Moviment no vàlid");
             return false;
         }
 
