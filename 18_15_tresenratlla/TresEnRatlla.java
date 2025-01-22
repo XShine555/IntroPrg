@@ -57,7 +57,6 @@ public class TresEnRatlla {
     }
 
     public static void mostraTaulell(char[][] taulell) {
-        System.out.println("La posició actual del taulell:");
         mostraFila(taulell[0]);
         mostraFila(taulell[1]);
         mostraFila(taulell[2]);
