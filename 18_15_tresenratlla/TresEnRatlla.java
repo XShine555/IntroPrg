@@ -20,6 +20,7 @@ public class TresEnRatlla {
 
             if (moviment.length() < 2) {
                 System.out.println("Coordenades no vàlides");
+                mostraTaulell(taulell);
                 continue;
             }
 
@@ -28,6 +29,7 @@ public class TresEnRatlla {
 
             if (!esNumero(stringX) && !esNumero(stringY)) {
                 System.out.println("Coordenades no vàlides");
+                mostraTaulell(taulell);
                 continue;
             }
 
