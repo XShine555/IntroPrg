@@ -1,0 +1,110 @@
+public class TresEnRatlla {
+    public static void main(String[] args) {
+        System.out.println("Comença el joc");
+        char jugador = 'X';
+        boolean haAcabat = false;
+
+        char[][] taulell = new char[3][3];
+        inicialitzaTaulell(taulell);
+        mostraTaulell(taulell);
+
+        while (!haAcabat) {
+            boolean resultatMoviment = demanaMoviment(taulell, jugador);
+            while (!resultatMoviment) {
+                resultatMoviment = demanaMoviment(taulell, jugador);
+            }
+
+            mostraTaulell(taulell);
+
+            if (jugadorGuanya(taulell, jugador)) {
+                System.out.println(jugador + " Guanya");
+                haAcabat = true;
+            }
+
+            jugador = jugador == 'X' ? 'O' : 'X';
+        }
+    }
+
+    public static void mostraTaulell(char[][] taulell) {
+        System.out.println("La posició actual del taulell:");
+        mostraFila(taulell[0]);
+        mostraFila(taulell[1]);
+        mostraFila(taulell[2]);
+    }
+
+    public static boolean casellaOcupada(char[][] taulell, int fila, int columna) {
+        return taulell[fila][columna] != '·';
+    }
+
+    public static boolean jugadorGuanya(char[][] taulell, char jugador) {
+        for (int fila = 0; fila < 3; fila++) {
+            if (taulell[fila][0] == jugador &&
+                    taulell[fila][1] == jugador &&
+                    taulell[fila][2] == jugador) {
+                return true;
+            }
+        }
+
+        for (int col = 0; col < 3; col++) {
+            if (taulell[0][col] == jugador &&
+                    taulell[1][col] == jugador &&
+                    taulell[2][col] == jugador) {
+                return true;
+            }
+        }
+
+        return (taulell[0][0] == jugador &&
+                taulell[1][1] == jugador &&
+                taulell[2][2] == jugador)
+                || (taulell[0][2] == jugador &&
+                        taulell[1][1] == jugador &&
+                        taulell[2][0] == jugador);
+    }
+
+    public static boolean hiHaEmpat(char[][] taulell) {
+        for (int fila = 0; fila < taulell.length; fila++) {
+            for (int columna = 0; columna < taulell[fila].length; columna++) {
+                if (taulell[fila][columna] == '·') {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    private static boolean demanaMoviment(char[][] taulell, char jugador) {
+        System.out.println(jugador + "?");
+
+        String moviment = Entrada.readLine();
+        int x = Integer.parseInt(moviment.substring(0, 1)), y = Integer.parseInt(moviment.substring(1));
+
+        if (x < 1 || x > 3 || y < 1 || y > 3) {
+            System.out.println("Moviment fora del taulell");
+        } else {
+            if (casellaOcupada(taulell, x - 1, y - 1)) {
+                System.out.println("Casella ocupada");
+            } else {
+                taulell[x - 1][y - 1] = jugador;
+
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private static void mostraFila(char[] fila) {
+        for (int col = 0; col < fila.length; col++) {
+            System.out.print(fila[col]);
+        }
+        System.out.println();
+    }
+
+    private static void inicialitzaTaulell(char[][] taulell) {
+        for (int fila = 0; fila < taulell.length; fila++) {
+            for (int columna = 0; columna < taulell[fila].length; columna++) {
+                taulell[fila][columna] = '·';
+            }
+        }
+    }
+}
