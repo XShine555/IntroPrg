@@ -76,6 +76,14 @@ public class TresEnRatlla {
         System.out.println(jugador + "?");
 
         String moviment = Entrada.readLine();
+        String stringX = moviment.substring(0, 1);
+        String stringY = moviment.substring(1);
+
+        if (!esNumero(stringX) && !esNumero(stringY)) {
+            System.out.println("Moviment no vàlid");
+            return false;
+        }
+
         int x = Integer.parseInt(moviment.substring(0, 1)), y = Integer.parseInt(moviment.substring(1));
 
         if (x < 1 || x > 3 || y < 1 || y > 3) {
@@ -106,5 +114,15 @@ public class TresEnRatlla {
                 taulell[fila][columna] = '·';
             }
         }
+    }
+
+    private static boolean esNumero(String text) {
+        for (int i = 0; i < text.length(); i++) {
+            if (!Character.isDigit(text.charAt(i))) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
