@@ -37,6 +37,7 @@ public class TresEnRatlla {
 
             if (x < 0 || x > 2 || y < 0 || y > 2) {
                 System.out.println("Coordenades no vàlides");
+                mostraTaulell(taulell);
                 continue;
             } else {
                 if (casellaOcupada(taulell, x, y)) {
