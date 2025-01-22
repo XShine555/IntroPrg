@@ -18,7 +18,7 @@ public class TresEnRatlla {
                 break;
             }
 
-            if (moviment.length() < 2) {
+            if (moviment.length() != 2) {
                 System.out.println("Coordenades no vàlides");
                 mostraTaulell(taulell);
                 continue;
