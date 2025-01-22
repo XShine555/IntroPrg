@@ -5,7 +5,7 @@ public class TresEnRatlla {
         char[][] taulell = new char[3][3];
 
         // inicialització de la fila 0
-        taulell[0][0] = 'X';
+        taulell[0][0] = '·';
         taulell[0][1] = 'O';
         taulell[0][2] = 'O';
 
