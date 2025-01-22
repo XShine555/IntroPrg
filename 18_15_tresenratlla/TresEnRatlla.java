@@ -76,6 +76,11 @@ public class TresEnRatlla {
         System.out.println(jugador + "?");
 
         String moviment = Entrada.readLine();
+        if (moviment.length() < 2) {
+            System.out.println("Moviment no vàlid");
+            return false;
+        }
+
         String stringX = moviment.substring(0, 1);
         String stringY = moviment.substring(1);
 
