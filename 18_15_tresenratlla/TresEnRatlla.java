@@ -19,7 +19,7 @@ public class TresEnRatlla {
             }
 
             if (moviment.length() < 2) {
-                System.out.println("Moviment no vàlid");
+                System.out.println("Coordenades no vàlides");
                 continue;
             }
 
@@ -27,7 +27,7 @@ public class TresEnRatlla {
             String stringY = moviment.substring(1);
 
             if (!esNumero(stringX) && !esNumero(stringY)) {
-                System.out.println("Moviment no vàlid");
+                System.out.println("Coordenades no vàlides");
                 continue;
             }
 
