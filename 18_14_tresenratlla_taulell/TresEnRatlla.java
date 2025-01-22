@@ -39,6 +39,9 @@ public class TresEnRatlla {
                 System.out.println("Posició ocupada");
             }
         }
+        else {
+            System.out.println("Coordenades incorrectes");
+        }
 
         // tornem a mostrar el taulell
         System.out.println("La posició final del taulell:");
