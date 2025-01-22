@@ -35,6 +35,9 @@ public class TresEnRatlla {
             if (taulell[fila][columna] == '·') {
                 taulell[fila][columna] = 'X';
             }
+            else {
+                System.out.println("Posició ocupada");
+            }
         }
 
         // tornem a mostrar el taulell
