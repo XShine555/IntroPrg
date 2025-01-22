@@ -1,3 +1,7 @@
+/*
+ * Joc del tres en ratlla amb text per consola en Java.
+ */
+
 public class TresEnRatlla {
     public static void main(String[] args) {
         System.out.println("Comença el joc");
