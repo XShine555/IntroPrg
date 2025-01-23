@@ -1,5 +1,5 @@
 /*
- * Classe que proporciona mètodes per a Strings.
+ * Classe que proporciona mètodes per a Strings, com ara comprovar si un text és un enter.
  */
 
 public class UtilString {
