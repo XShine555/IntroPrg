@@ -1,5 +1,5 @@
 /*
- * Classe que proporciona mètodes per a Strings.
+ * Classe que proporciona mètodes per a Strings, com ara separar un text en paraules o comptar paraules.
  */
 
 public class UtilString {
