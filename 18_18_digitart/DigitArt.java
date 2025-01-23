@@ -40,7 +40,7 @@ public class DigitArt {
             for (int j = 0; j < origen[i].length; j++) {
                 System.out.print(origen[i][j]);
             }
-            System.out.print("  ");
+            System.out.print(" -> ");
             for (int j = 0; j < resultat[i].length; j++) {
                 System.out.print(resultat[i][j]);
             }
