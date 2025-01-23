@@ -34,8 +34,10 @@ public class NotaMesAlta {
                     joinNotes += buffer;
                     buffer = "";
 
-                    if (i < notes.length() - 2)
+                    if (i < notes.length() - 1)
+                    {
                         joinNotes += ", ";
+                    }
                 }
                 else {
                     buffer += currentChar;
@@ -43,9 +45,15 @@ public class NotaMesAlta {
             }
 
             if (buffer.length() > 0) {
-                if (joinNotes.length() > 0)
-                    joinNotes += " i ";
-                joinNotes += buffer;
+                String result = "";
+                for (int i = 0; i < joinNotes.length() - 2; i++) {
+                    result += joinNotes.charAt(i);
+                }
+                if (result.length() > 0)
+                    result += " i ";
+                result += buffer;
+
+                joinNotes = result;
             }
 
             System.out.format("La nota més alta és %s de les introduïdes: %s", higher, joinNotes);
