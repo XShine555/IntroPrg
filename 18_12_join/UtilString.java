@@ -1,5 +1,5 @@
 /*
- * Classe que proporciona mètodes per a Strings.
+ * Classe que proporciona mètodes per a Strings, com ara unir cadenes de text amb un separador.
  */
 
 public class UtilString {
