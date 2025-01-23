@@ -1,6 +1,3 @@
-/*
- * Simula el movimiento de una pelota.
-*/
 public class Pilota {
     public static final int N_FILES = 9;
     public static final int N_COLS = 14;
@@ -10,17 +7,17 @@ public class Pilota {
         System.out.flush();
     }
     public static void mostraCamp(char[][] camp) {
-        for (int i=0; i<N_FILES; i++) {
-            for (int j=0; j<N_COLS; j++) {
+        for (int i = 0; i < N_FILES; i++) {
+            for (int j = 0; j < N_COLS; j++) {
                 System.out.print(camp[i][j]);
             }
             System.out.println();
         }
     }
     public static void netejaCamp(char[][] camp) {
-        for (int i=0; i<N_FILES; i++) {
-            for (int j=0; j<N_COLS; j++) {
-                netejaPosicio(camp, new int[] {i, j} );
+        for (int i = 0; i < N_FILES; i++) {
+            for (int j = 0; j < N_COLS; j++) {
+                camp[i][j] = '·';
             }
         }
     }
@@ -39,13 +36,13 @@ public class Pilota {
         return posicio[0];
     }
     public static int obteCol(int[] posicio) {
-        /* XXX */
+        return posicio[1];
     }
     public static int obteIncrFila(int[] increment) {
-        /* XXX */;
+        return increment[0];
     }
     public static int obteIncrCol(int[] increment) {
-        /* XXX */;
+        return increment[1];
     }
 
     public static void canviaPosicio(int[] posicio, int novaFila, int novaCol) {
@@ -68,11 +65,19 @@ public class Pilota {
             fila = 1;                       // torna a la primera fila
             incFila = 1;                    // toca baixar
         } else if (fila > N_FILES -1) {     // es passa per sota
-        /* XXX */;
+            incFila = -1;
+            fila = N_FILES - 2;
         }
 
         // actualitza la columna
-        /* XXX */;
+        col += incCol;
+        if (col < 0) {
+            col = 1;
+            incCol = 1;
+        } else if (col > N_COLS - 1) {
+            incCol = -1;
+            col = N_COLS - 2;
+        }
 
         // actualitza la posició i l'increment
         canviaPosicio(posicio, fila, col);
