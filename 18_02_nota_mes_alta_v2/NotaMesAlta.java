@@ -18,6 +18,8 @@ public class NotaMesAlta {
             if (number > higher)
                 higher = number;
 
+            if (!notes.isBlank())
+                notes += ",";
             notes += number;
 
             input = Entrada.readLine();
@@ -25,13 +27,25 @@ public class NotaMesAlta {
 
         if (notes.length() > 1) {
             String joinNotes = "";
+            String buffer = "";
             for (int i = 0; i < notes.length(); i++) {
-                joinNotes += notes.charAt(i);
+                char currentChar = notes.charAt(i);
+                if (currentChar == ',') {
+                    joinNotes += buffer;
+                    buffer = "";
 
-                if (i == notes.length() - 2)
+                    if (i < notes.length() - 2)
+                        joinNotes += ", ";
+                }
+                else {
+                    buffer += currentChar;
+                }
+            }
+
+            if (buffer.length() > 0) {
+                if (joinNotes.length() > 0)
                     joinNotes += " i ";
-                else if (i < notes.length() - 1)
-                    joinNotes += ", ";
+                joinNotes += buffer;
             }
 
             System.out.format("La nota més alta és %s de les introduïdes: %s", higher, joinNotes);
