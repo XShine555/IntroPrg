@@ -21,7 +21,7 @@ public class UtilTaula {
 
     private static String getSpace(int number) {
         int length = getIntLength(number);
-        String space = "";
+        String space = " ";
         for (int i = 0; i < 7 - length; i++) {
             space += " ";
         }
