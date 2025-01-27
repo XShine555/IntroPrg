@@ -9,7 +9,7 @@ public class TaulaEnterAString {
                 System.out.println("Especificació no vàlida");
             } else {
                 int[][] taula  = new int[files][columnes];
-                UtilTaula.inicialitzaSequencial(taula, i);
+                UtilTaula.inicialitzaSequencial(taula, 1);
                 String resultat = UtilTaula.taulaToString(taula);
                 System.out.println(resultat);
                 System.out.println();
