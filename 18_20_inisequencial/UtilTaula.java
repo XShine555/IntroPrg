@@ -12,7 +12,7 @@ public class UtilTaula {
     }   
 
     public static void inicialitzaSequencial(int[][] taula, int valorInicial) {
-        int count = taula.length == 1 ? 1 : 0;
+        int count = 0;
         for (int i = 0; i < taula.length; i++) {
             for (int j = 0; j < taula[i].length; j++) {
                 taula[i][j] = valorInicial + count;

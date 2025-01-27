@@ -1,6 +1,7 @@
 /*…*/
 public class TaulaEnterAString {
     public static void main(String[] args){
+        int startFrom = 1;
         for (int i=0; i<args.length; i++) {
             System.out.println(args[i]);
             int files = obteFiles(args[i]);
@@ -9,7 +10,8 @@ public class TaulaEnterAString {
                 System.out.println("Especificació no vàlida");
             } else {
                 int[][] taula  = new int[files][columnes];
-                UtilTaula.inicialitzaSequencial(taula, 1);
+                UtilTaula.inicialitzaSequencial(taula, startFrom);
+                startFrom++;
                 String resultat = UtilTaula.taulaToString(taula);
                 System.out.println(resultat);
                 System.out.println();
