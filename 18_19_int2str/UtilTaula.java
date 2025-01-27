@@ -3,7 +3,7 @@ public class UtilTaula {
         String resultat = "";
         for (int i=0; i<taula.length; i++) {
             for (int j=0; j<taula[i].length; j++) {
-                resultat += "          " + taula[i][j];
+                resultat += "       " + taula[i][j];
             }
             resultat += "\n";
         }
