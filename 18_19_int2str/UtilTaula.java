@@ -3,7 +3,8 @@ public class UtilTaula {
         String resultat = "";
         for (int i=0; i<taula.length; i++) {
             for (int j=0; j<taula[i].length; j++) {
-                resultat += "       " + taula[i][j];
+                int value = taula[i][j];
+                resultat += getSpace(value) + value;
             }
             resultat += "\n";
         }
@@ -16,5 +17,19 @@ public class UtilTaula {
                 taula[i][j] = value;
             }
         }
+    }
+
+    private static String getSpace(int number) {
+        int length = getIntLength(number);
+        String space = "";
+        for (int i = 0; i < 7 - length; i++) {
+            space += " ";
+        }
+        return space;
+    }
+
+    private static int getIntLength(int number) {
+        String value = String.valueOf(number);
+        return value.length(); 
     }
 }
