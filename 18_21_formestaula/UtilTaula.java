@@ -71,7 +71,7 @@ public class UtilTaula {
 
         int multHorizonal = 0;
         if (taula.length > 0 && taula[0].length > 0 && taula[0].length % 2 == 0)
-        multHorizonal = 1;
+            multHorizonal = 1;
 
         int midCol = taula[0].length / 2 - multHorizonal;
 
