@@ -30,7 +30,7 @@ public class UtilTaula {
 
     public static void inicialitzaHoritzontalMig(boolean[][] taula) {
         int mult = taula.length % 2 == 0 ? 1 : 0;
-        int mid = taula.length / 2 - mult;
+        int mid = taula.length / 2;
 
         for (int i = 0; i < taula[mid].length; i++) {
             taula[mid][i] = true;
