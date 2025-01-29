@@ -40,7 +40,7 @@ public class UtilTaula {
     public static void inicialitzaSegonaDiagonal(boolean[][] taula) {
         for (int i = 0; i < taula.length; i++) {
             for (int j = 0; j < taula[i].length; j++) {
-                taula[i][j] = i + j == taula.length - 1;
+                taula[i][j] = taula[i][j] || i + j == taula.length - 1;
             }
         }
     }
