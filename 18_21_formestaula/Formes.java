@@ -1,7 +1,6 @@
 public class Formes {
     public static void main(String[] args) {
         for (int i = 0; i < args.length; i++) {
-            System.out.println("Argument: " + args[i]);
             String item = args[i];
 
             String[] split = item.split("x");
