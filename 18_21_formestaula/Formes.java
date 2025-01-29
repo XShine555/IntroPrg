@@ -31,6 +31,7 @@ public class Formes {
             }
 
             boolean[][] taula = new boolean[x][y];
+            System.out.format("%sx%s", x, y);
             if (mode.equals("\\")) {
                 UtilTaula.inicialitzaPrimeraDiagonal(taula);
             }
