@@ -12,6 +12,8 @@ public class UtilTaula {
     }
     
     public static void inicialitzaPrimeraDiagonal(boolean[][] taula) {
+        clearTable(taula);
+
         for (int i = 0; i < taula.length; i++) {
             for (int j = 0; j < taula[i].length; j++) {
                 taula[i][j] = i == j;
@@ -20,6 +22,8 @@ public class UtilTaula {
     }
 
     public static void inicialitzaSegonaDiagonal(boolean[][] taula) {
+        clearTable(taula);
+
         for (int i = 0; i < taula.length; i++) {
             int j = taula[i].length - 1 - i;
             if (j >= 0 && j < taula[i].length) {
@@ -91,11 +95,25 @@ public class UtilTaula {
     }
 
     public static void inicialitzaCreu(boolean[][] taula) {
-        inicialitzaPrimeraDiagonal(taula);
-        inicialitzaSegonaDiagonal(taula);
+        clearTable(taula);
+
+        for (int i = 0; i < taula.length; i++) {
+            for (int j = 0; j < taula[i].length; j++) {
+                taula[i][j] = i == j;
+            }
+        }
+
+        for (int i = 0; i < taula.length; i++) {
+            int j = taula[i].length - 1 - i;
+            if (j >= 0 && j < taula[i].length) {
+                taula[i][j] = true;
+            }
+        }
     }
 
     public static void inicialitzaPasVianants(boolean[][] taula) {
+        clearTable(taula);
+
         for (int col = 0; col < taula.length; col++){
             for (int row = 0; row < taula[col].length; row++) {
                 taula[col][row] = col % 2 == 1;
@@ -104,6 +122,8 @@ public class UtilTaula {
     }
 
     public static void inicialitzaZebra(boolean[][] taula) {
+        clearTable(taula);
+
         for (int col = 0; col < taula.length; col++){
             for (int row = 0; row < taula[col].length; row++) {
                 taula[col][row] = row % 2 == 1;
@@ -112,6 +132,8 @@ public class UtilTaula {
     }
 
     public static void inicialitzaEscacs(boolean[][] taula) {
+        clearTable(taula);
+
         for (int col = 0; col < taula.length; col++){
             int mult = col % 2 == 0 ? 1 : 0;
             for (int row = 0; row < taula[col].length; row++) {
