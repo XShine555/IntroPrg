@@ -59,40 +59,9 @@ public class UtilTaula {
     }
 
     public static void inicialitzaQuarts(boolean[][] taula) {
-        //inicialitzaHoritzontalMig(taula);
-        //inicialitzaVerticalMig(taula);
-
-        for (int i = 0; i < taula.length; i++) {
-            for (int j = 0; j < taula[i].length; j++) {
-                taula[i][j] = false;
-            }
-        }
-
-        if (taula.length < 1 || taula[0].length < 1)
-            return;
-
-        int mult = 0;
-        if (taula.length > 0 && taula[0].length > 0 && taula.length % 2 == 0)
-            mult = 1;
-
-        int midRow = taula.length / 2 - mult;
-
-        for (int j = 0; j < taula[0].length; j++) {
-            taula[midRow][j] = true;
-        }
-
-        if (taula.length < 1 || taula[0].length < 1)
-            return;
-
-        int mult1 = 0;
-        if (taula.length > 0 && taula[0].length > 0 && taula[0].length % 2 == 0)
-            mult1 = 1;
-
-        int midCol = taula[0].length / 2 - mult1;
-
-        for (int i = 0; i < taula.length; i++) {
-            taula[i][midCol] = true;
-        }
+        clearTable(taula);
+        inicialitzaHoritzontalMig(taula);
+        inicialitzaVerticalMig(taula);
     }
 
     public static void inicialitzaCreu(boolean[][] taula) {
@@ -121,6 +90,14 @@ public class UtilTaula {
             int mult = col % 2 == 0 ? 1 : 0;
             for (int row = 0; row < taula[col].length; row++) {
                 taula[col][row] = row % 2 == mult;
+            }
+        }
+    }
+
+    private static void clearTable(boolean[][] taula) {
+        for (int i = 0; i < taula.length; i++) {
+            for (int j = 0; j < taula[i].length; j++) {
+                taula[i][j] = false;
             }
         }
     }
