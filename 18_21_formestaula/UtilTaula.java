@@ -29,7 +29,7 @@ public class UtilTaula {
     }
 
     public static void inicialitzaHoritzontalMig(boolean[][] taula) {
-        if (taula.length < 1 || taula[0].length < 1)
+        if (taula.length <= 1 || taula[0].length <= 1)
             return;
 
         int mult = 0;
@@ -44,7 +44,7 @@ public class UtilTaula {
     }
 
     public static void inicialitzaVerticalMig(boolean[][] taula) {
-        if (taula.length < 1 || taula[0].length < 1)
+        if (taula.length <= 1 || taula[0].length <= 1)
             return;
 
         int mult = 0;
@@ -61,8 +61,6 @@ public class UtilTaula {
     public static void inicialitzaQuarts(boolean[][] taula) {
         inicialitzaHoritzontalMig(taula);
         inicialitzaVerticalMig(taula);
-        
-        taula[1][1] = false;
     }
 
     public static void inicialitzaCreu(boolean[][] taula) {
