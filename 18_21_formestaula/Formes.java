@@ -48,7 +48,6 @@ public class Formes {
             }
             else if (mode.equals("+")) {
                 UtilTaula.inicialitzaQuarts(taula);
-                System.out.println(taula[1][1]);
             }
             else if (mode.equals("/")) {
                 UtilTaula.inicialitzaSegonaDiagonal(taula);
