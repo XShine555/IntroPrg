@@ -3,7 +3,7 @@ public class Formes {
         for (int i = 0; i < args.length; i++) {
             String item = args[i];
 
-            String[] split = item.split("x");
+            String[] split = item.split("x", 2);
             if (split.length < 2 || split[0].isBlank() || split[1].isBlank()) {
                 System.out.println(item);
                 System.out.println("Especificació no vàlida");
@@ -27,7 +27,6 @@ public class Formes {
 
             int y = Integer.parseInt(split[1].substring(0, find + 1));
             String mode = split[1].substring(find + 1);
-
             if (y < 0) {
                 System.out.println(item);
                 System.out.println("Especificació no vàlida");
@@ -66,7 +65,6 @@ public class Formes {
                 UtilTaula.inicialitzaEscacs(taula);
             }
             else if (!mode.isBlank()) {
-                System.out.println(item);
                 System.out.println("Especificació no vàlida");
                 continue;
             }
