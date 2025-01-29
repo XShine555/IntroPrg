@@ -11,11 +11,6 @@ public class Formes {
             }
 
             int x = Integer.parseInt(split[0]);
-            if (x < 0 || x > 99) {
-                System.out.println(item);
-                System.out.println("Especificació no vàlida");
-                continue;
-            }
 
             int find = findIndexOfLastNumber(split[1]);
 
