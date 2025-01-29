@@ -20,8 +20,8 @@ public class UtilTaula {
     }
 
     public static void inicialitzaVerticalMig(boolean[][] taula) {
-        int mult = taula[1].length % 2 == 0 ? 1 : 0;
-        int mid = taula[1].length / 2 - mult;
+        int mult = taula[0].length % 2 == 0 ? 1 : 0;
+        int mid = taula[0].length / 2 - mult;
 
         for (int i = 0; i < taula.length; i++) {
             taula[i][mid] = true;
