@@ -29,11 +29,11 @@ public class UtilTaula {
     }
 
     public static void inicialitzaHoritzontalMig(boolean[][] taula) {
-        if (taula.length <= 1 || taula[0].length <= 1)
+        if (taula.length < 1 || taula[0].length < 1)
             return;
 
         int mult = 0;
-        if (taula.length % 2 == 0)
+        if (taula.length > 1 && taula[0].length > 1 && taula[0].length % 2 == 0)
             mult = 1;
 
         int midRow = taula.length / 2 - mult;
@@ -44,11 +44,11 @@ public class UtilTaula {
     }
 
     public static void inicialitzaVerticalMig(boolean[][] taula) {
-        if (taula.length <= 1 || taula[0].length <= 1)
+        if (taula.length < 1 || taula[0].length < 1)
             return;
 
         int mult = 0;
-        if (taula[0].length % 2 == 0)
+        if (taula.length > 1 && taula[0].length > 1 && taula[0].length % 2 == 0)
             mult = 1;
 
         int midCol = taula[0].length / 2 - mult;
