@@ -32,31 +32,31 @@ public class Formes {
 
             boolean[][] taula = new boolean[x][y];
             if (mode.equals("\\")) {
-                taula = UtilTaula.inicialitzaPrimeraDiagonal(taula);
+                UtilTaula.inicialitzaPrimeraDiagonal(taula);
             }
             else if (mode.equals("|")) {
-                taula = UtilTaula.inicialitzaVerticalMig(taula);
+                UtilTaula.inicialitzaVerticalMig(taula);
             }
             else if (mode.equals("-")) {
-                taula = UtilTaula.inicialitzaHoritzontalMig(taula);
+                UtilTaula.inicialitzaHoritzontalMig(taula);
             }
             else if (mode.equals("+")) {
-                taula = UtilTaula.inicialitzaQuarts(taula);
+                UtilTaula.inicialitzaQuarts(taula);
             }
             else if (mode.equals("/")) {
-                taula = UtilTaula.inicialitzaSegonaDiagonal(taula);
+                UtilTaula.inicialitzaSegonaDiagonal(taula);
             }
             else if (mode.equals("x")) {
-                taula = UtilTaula.inicialitzaCreu(taula);
+                UtilTaula.inicialitzaCreu(taula);
             }
             else if (mode.equals("=")) {
-                taula = UtilTaula.inicialitzaPasVianants(taula);
+                UtilTaula.inicialitzaPasVianants(taula);
             }
             else if (mode.equals("||")) {
-                taula = UtilTaula.inicialitzaZebra(taula);
+                UtilTaula.inicialitzaZebra(taula);
             }
             else if (mode.equals("++")) {
-                taula = UtilTaula.inicialitzaEscacs(taula);
+                UtilTaula.inicialitzaEscacs(taula);
             }
             else if (!mode.isBlank()) {
                 System.out.println("Especificació errònia");
