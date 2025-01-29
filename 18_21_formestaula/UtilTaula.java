@@ -52,7 +52,12 @@ public class UtilTaula {
 
     public static void inicialitzaCreu(boolean[][] taula) {
         inicialitzaPrimeraDiagonal(taula);
-        inicialitzaSegonaDiagonal(taula);
+        for (int i = 0; i < taula.length; i++) {
+            int j = taula[i].length - 1 - i;
+            if (j >= 0 && j < taula[i].length) {
+                taula[i][j] = true;
+            }
+        }
     }
 
     public static void inicialitzaPasVianants(boolean[][] taula) {
