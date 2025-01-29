@@ -33,7 +33,7 @@ public class UtilTaula {
             return;
 
         int mult = 0;
-        if (taula.length > 0 && taula[0].length > 0 && taula[0].length % 2 == 0)
+        if (taula.length > 0 && taula[0].length > 0 && taula.length % 2 == 0)
             mult = 1;
 
         int midRow = taula.length / 2 - mult;
