@@ -5,12 +5,14 @@ public class Formes {
 
             String[] split = item.split("x");
             if (split.length < 2 || split[0].isBlank() || split[1].isBlank()) {
+                System.out.println(item);
                 System.out.println("Especificació errònia\n");
                 continue;
             }
 
             int x = Integer.parseInt(split[0]);
             if (x < 0 || x > 99) {
+                System.out.println(item);
                 System.out.println("Especificació errònia\n");
                 continue;
             }
@@ -18,6 +20,7 @@ public class Formes {
             int find = findIndexOfLastNumber(split[1]);
 
             if (find == -1) {
+                System.out.println(item);
                 System.out.println("Especificació errònia\n");
                 continue;
             }
@@ -26,12 +29,13 @@ public class Formes {
             String mode = split[1].substring(find + 1);
 
             if (y < 0 || y > 99) {
+                System.out.println(item);
                 System.out.println("Especificació errònia\n");
                 continue;
             }
 
             boolean[][] taula = new boolean[x][y];
-            System.out.format("%sx%s%n", x, y);
+            System.out.println(item);
             if (mode.equals("\\")) {
                 UtilTaula.inicialitzaPrimeraDiagonal(taula);
             }
@@ -60,6 +64,7 @@ public class Formes {
                 UtilTaula.inicialitzaEscacs(taula);
             }
             else if (!mode.isBlank()) {
+                System.out.println(item);
                 System.out.println("Especificació errònia\n");
                 continue;
             }
