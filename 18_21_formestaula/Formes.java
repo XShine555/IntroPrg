@@ -28,11 +28,13 @@ public class Formes {
             int y = Integer.parseInt(split[1].substring(0, find + 1));
             String mode = split[1].substring(find + 1);
 
-            if (y < 0 ) {
+            if (y < 0) {
                 System.out.println(item);
                 System.out.println("Especificació no vàlida");
                 continue;
             }
+            if (y > 32)
+                y = 32;
 
             boolean[][] taula = new boolean[x][y];
             System.out.println(item);
