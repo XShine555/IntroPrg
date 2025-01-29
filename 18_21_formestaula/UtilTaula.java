@@ -19,30 +19,42 @@ public class UtilTaula {
         }
     }
 
-    public static void inicialitzaVerticalMig(boolean[][] taula) {
-        int mult = taula[0].length % 2 == 0 ? 1 : 0;
-        int mid = taula[0].length / 2 - mult;
-
-        for (int i = 0; i < taula.length; i++) {
-            taula[i][mid] = true;
-        }
-    }
-
-    public static void inicialitzaHoritzontalMig(boolean[][] taula) {
-        int mult = taula.length % 2 == 0 ? 1 : 0;
-        int mid = taula.length / 2;
-
-        for (int i = 0; i < taula[mid].length; i++) {
-            taula[mid][i] = true;
-        }
-    }
-
     public static void inicialitzaSegonaDiagonal(boolean[][] taula) {
         for (int i = 0; i < taula.length; i++) {
             int j = taula[i].length - 1 - i;
             if (j >= 0 && j < taula[i].length) {
                 taula[i][j] = true;
             }
+        }
+    }
+
+    public static void inicialitzaHoritzontalMig(boolean[][] taula) {
+        if (taula.length < 1 || taula[0].length < 1)
+            return;
+
+        int mult = 0;
+        if (taula.length % 2 == 0)
+            mult = 1;
+
+        int midRow = taula.length / 2 - mult;
+
+        for (int j = 0; j < taula[0].length; j++) {
+            taula[midRow][j] = true;
+        }
+    }
+
+    public static void inicialitzaVerticalMig(boolean[][] taula) {
+        if (taula.length < 1 || taula[0].length < 1)
+            return;
+
+        int mult = 0;
+        if (taula[0].length % 2 == 0)
+            mult = 1;
+
+        int midCol = taula[0].length / 2 - mult;
+
+        for (int i = 0; i < taula.length; i++) {
+            taula[i][midCol] = true;
         }
     }
 
