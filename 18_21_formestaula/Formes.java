@@ -1,24 +1,25 @@
 public class Formes {
     public static void main(String[] args) {
         for (int i = 0; i < args.length; i++) {
+            System.out.println("Argument: " + args[i]);
             String item = args[i];
 
             String[] split = item.split("x");
-            if (split.length < 2) {
-                System.out.println("Especificació errònia");
+            if (split.length < 2 || split[0].isBlank() || split[1].isBlank()) {
+                System.out.println("Especificació errònia\n");
                 continue;
             }
 
             int x = Integer.parseInt(split[0]);
             if (x < 0 || x > 99) {
-                System.out.println("Especificació errònia");
+                System.out.println("Especificació errònia\n");
                 continue;
             }
 
             int find = findIndexOfLastNumber(split[1]);
 
             if (find == -1) {
-                System.out.println("Especificació errònia");
+                System.out.println("Especificació errònia\n");
                 continue;
             }
 
@@ -26,7 +27,7 @@ public class Formes {
             String mode = split[1].substring(find + 1);
 
             if (y < 0 || y > 99) {
-                System.out.println("Especificació errònia");
+                System.out.println("Especificació errònia\n");
                 continue;
             }
 
@@ -60,7 +61,7 @@ public class Formes {
                 UtilTaula.inicialitzaEscacs(taula);
             }
             else if (!mode.isBlank()) {
-                System.out.println("Especificació errònia");
+                System.out.println("Especificació errònia\n");
                 continue;
             }
 
