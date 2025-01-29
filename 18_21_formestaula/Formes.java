@@ -6,14 +6,14 @@ public class Formes {
             String[] split = item.split("x");
             if (split.length < 2 || split[0].isBlank() || split[1].isBlank()) {
                 System.out.println(item);
-                System.out.println("Especificació errònia\n");
+                System.out.println("Especificació no vàlida\n");
                 continue;
             }
 
             int x = Integer.parseInt(split[0]);
             if (x < 0 || x > 99) {
                 System.out.println(item);
-                System.out.println("Especificació errònia\n");
+                System.out.println("Especificació no vàlida\n");
                 continue;
             }
 
@@ -21,7 +21,7 @@ public class Formes {
 
             if (find == -1) {
                 System.out.println(item);
-                System.out.println("Especificació errònia\n");
+                System.out.println("Especificació no vàlida\n");
                 continue;
             }
 
@@ -30,7 +30,7 @@ public class Formes {
 
             if (y < 0 || y > 99) {
                 System.out.println(item);
-                System.out.println("Especificació errònia\n");
+                System.out.println("Especificació no vàlida\n");
                 continue;
             }
 
@@ -65,7 +65,7 @@ public class Formes {
             }
             else if (!mode.isBlank()) {
                 System.out.println(item);
-                System.out.println("Especificació errònia\n");
+                System.out.println("Especificació no vàlida\n");
                 continue;
             }
 
