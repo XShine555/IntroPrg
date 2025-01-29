@@ -39,6 +39,8 @@ public class UtilTaula {
         int midRow = taula.length / 2 - mult;
 
         for (int j = 0; j < taula[0].length; j++) {
+            if (taula[midRow][j])
+                continue;
             taula[midRow][j] = true;
         }
     }
@@ -54,6 +56,8 @@ public class UtilTaula {
         int midCol = taula[0].length / 2 - mult;
 
         for (int i = 0; i < taula.length; i++) {
+            if (taula[i][midCol])
+                continue;
             taula[i][midCol] = true;
         }
     }
