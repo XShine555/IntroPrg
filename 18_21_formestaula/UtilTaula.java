@@ -61,6 +61,8 @@ public class UtilTaula {
     public static void inicialitzaQuarts(boolean[][] taula) {
         inicialitzaHoritzontalMig(taula);
         inicialitzaVerticalMig(taula);
+        
+        taula[1][1] = false;
     }
 
     public static void inicialitzaCreu(boolean[][] taula) {
