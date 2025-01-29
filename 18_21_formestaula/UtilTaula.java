@@ -29,6 +29,8 @@ public class UtilTaula {
     }
 
     public static void inicialitzaHoritzontalMig(boolean[][] taula) {
+        clearTable(taula);
+
         if (taula.length < 1 || taula[0].length < 1)
             return;
 
@@ -44,6 +46,8 @@ public class UtilTaula {
     }
 
     public static void inicialitzaVerticalMig(boolean[][] taula) {
+        clearTable(taula);
+
         if (taula.length < 1 || taula[0].length < 1)
             return;
 
@@ -60,8 +64,24 @@ public class UtilTaula {
 
     public static void inicialitzaQuarts(boolean[][] taula) {
         clearTable(taula);
-        inicialitzaHoritzontalMig(taula);
-        inicialitzaVerticalMig(taula);
+        
+        // Copya+Paste
+        if (taula.length < 1 || taula[0].length < 1)
+            return;
+
+        int multHorizonal = 0;
+        if (taula.length > 0 && taula[0].length > 0 && taula[0].length % 2 == 0)
+        multHorizonal = 1;
+
+        int midCol = taula[0].length / 2 - multHorizonal;
+
+        for (int i = 0; i < taula.length; i++) {
+            taula[i][midCol] = true;
+        }
+
+        for (int i = 0; i < taula.length; i++) {
+            taula[i][midCol] = true;
+        }
     }
 
     public static void inicialitzaCreu(boolean[][] taula) {
