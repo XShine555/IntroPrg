@@ -59,12 +59,6 @@ public class UtilTaula {
     }
 
     public static void inicialitzaQuarts(boolean[][] taula) {
-        for (int i = 0; i < taula.length; i++) {
-            for (int j = 0; j < taula[i].length; j++) {
-                taula[i][j] = false;
-            }
-        }
-
         inicialitzaHoritzontalMig(taula);
         inicialitzaVerticalMig(taula);
     }
