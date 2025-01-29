@@ -39,8 +39,9 @@ public class UtilTaula {
 
     public static void inicialitzaSegonaDiagonal(boolean[][] taula) {
         for (int i = 0; i < taula.length; i++) {
-            for (int j = 0; j < taula[i].length; j++) {
-                taula[i][j] = taula[i][j] || i + j == taula.length - 1;
+            int j = taula[i].length - 1 - i;
+            if (j >= 0 && j < taula[i].length) {
+                taula[i][j] = true;
             }
         }
     }
@@ -52,12 +53,7 @@ public class UtilTaula {
 
     public static void inicialitzaCreu(boolean[][] taula) {
         inicialitzaPrimeraDiagonal(taula);
-        for (int i = 0; i < taula.length; i++) {
-            int j = taula[i].length - 1 - i;
-            if (j >= 0 && j < taula[i].length) {
-                taula[i][j] = true;
-            }
-        }
+        inicialitzaSegonaDiagonal(taula);
     }
 
     public static void inicialitzaPasVianants(boolean[][] taula) {
