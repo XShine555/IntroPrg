@@ -59,30 +59,8 @@ public class UtilTaula {
     }
 
     public static void inicialitzaQuarts(boolean[][] taula) {
-        if (taula.length < 1 || taula[0].length < 1)
-            return;
-
-        int multRow = 0;
-        if (taula.length % 2 == 0)
-            multRow = 1;
-
-        int midRow = taula.length / 2 - multRow;
-
-        for (int j = 0; j < taula[0].length; j++) {
-            taula[midRow][j] = true;
-        }
-
-        int multCol = 0;
-        if (taula[0].length % 2 == 0)
-            multCol = 1;
-
-        int midCol = taula[0].length / 2 - multCol;
-
-        for (int i = 0; i < taula.length; i++) {
-            if (i != midRow) {
-                taula[i][midCol] = true;
-            }
-        }
+        inicialitzaHoritzontalMig(taula);
+        inicialitzaVerticalMig(taula);
     }
 
     public static void inicialitzaCreu(boolean[][] taula) {
