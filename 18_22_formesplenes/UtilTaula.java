@@ -321,9 +321,15 @@ public class UtilTaula {
 
         int mid = taula.length / 2;
 
-        for (int i = 0; i < taula.length; i++) {
-            int dif = i <= mid ? i + 1 : taula.length - i;
-            for (int j = 0; j < dif; j++) {
+        for (int i = 0; i <= mid; i++) {
+            for (int j = 0; j <= i; j++) {
+                taula[i][j] = true;
+                taula[i][taula[i].length - j - 1] = true;
+            }
+        }
+
+        for (int i = mid + 1; i < taula.length; i++) {
+            for (int j = 0; j < taula.length - i; j++) {
                 taula[i][j] = true;
                 taula[i][taula[i].length - j - 1] = true;
             }
