@@ -319,12 +319,8 @@ public class UtilTaula {
     public static void inicialitzaCreuOEPlens(boolean[][] taula) {
         clearTable(taula);
 
-        int mid = taula.length / 2;
-
         for (int i = 0; i < taula.length; i++) {
-            int dif = i > mid ? taula[i].length - i : i + 1;
-
-            for (int j = 0; j < dif; j++) {
+            for (int j = 0; j < i + 1 % (taula[i].length / 2); j++) {
                 taula[i][j] = true;
                 taula[i][taula[i].length - j - 1] = true;
             }
