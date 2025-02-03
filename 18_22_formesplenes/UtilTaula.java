@@ -305,10 +305,11 @@ public class UtilTaula {
     public static void inicialitzaCreuNSPlens(boolean[][] taula) {
         clearTable(taula);
 
-        int mid = taula.length / 2;
+
 
         for (int i = 0; i < taula.length; i++) {
-            int dif = i > mid ? taula[i].length - i - 1 : i;
+            boolean isMid = i * 2 >= taula[i].length - 2;
+            int dif = isMid ? taula[i].length - i - 1 : i;
 
             for (int j = dif; j < taula[i].length - dif; j++) {
                 taula[i][j] = true;
@@ -321,7 +322,7 @@ public class UtilTaula {
 
         for (int i = 0; i < taula.length; i++) {
             boolean isMid = i * 2 >= taula[i].length - 2;
-            int dif = isMid ? taula[i].length - i : i + 1;
+            int dif = isMid ? taula[i].length - i: i + 1;
             
             for (int j = 0; j < dif; j++) {
                 taula[i][j] = true;
