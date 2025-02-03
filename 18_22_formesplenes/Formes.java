@@ -96,7 +96,6 @@ public class Formes {
             }
             else if (mode.equals("**x**")) {
                 UtilTaula.inicialitzaCreuOEPlens(taula);
-                System.out.println(taula[2][1]);
             }
             else if (mode.equals("*")) {
                 UtilTaula.clearTable(taula);
