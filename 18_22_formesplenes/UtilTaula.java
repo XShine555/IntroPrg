@@ -319,17 +319,11 @@ public class UtilTaula {
     public static void inicialitzaCreuOEPlens(boolean[][] taula) {
         clearTable(taula);
 
-        int mid = taula.length / 2;
-
-        for (int i = 0; i <= mid; i++) {
-            for (int j = 0; j <= i; j++) {
-                taula[i][j] = true;
-                taula[i][taula[i].length - j - 1] = true;
-            }
-        }
-
-        for (int i = mid + 1; i < taula.length; i++) {
-            for (int j = 0; j < taula.length - i; j++) {
+        for (int i = 0; i < taula.length; i++) {
+            boolean isMid = i * 2 >= taula[i].length - 2;
+            int dif = isMid ? taula[i].length - i : i + 1;
+            
+            for (int j = 0; j < dif; j++) {
                 taula[i][j] = true;
                 taula[i][taula[i].length - j - 1] = true;
             }
