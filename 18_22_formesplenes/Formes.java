@@ -97,6 +97,9 @@ public class Formes {
             else if (mode.equals("**x**")) {
                 UtilTaula.inicialitzaCreuOEPlens(taula);
             }
+            else if (mode.equals("*")) {
+                UtilTaula.clearTable(taula);
+            }
             else if (!mode.isBlank()) {
                 System.out.println("Especificació no vàlida");
                 continue;

@@ -331,7 +331,7 @@ public class UtilTaula {
         }
     }
 
-    private static void clearTable(boolean[][] taula) {
+    public static void clearTable(boolean[][] taula) {
         for (int i = 0; i < taula.length; i++) {
             for (int j = 0; j < taula[i].length; j++) {
                 taula[i][j] = false;
