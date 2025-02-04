@@ -1,4 +1,6 @@
-/*…*/
+/*
+ * Programa que pide numeros y los convierte en una tabla de enteros.
+*/
 public class TaulaEnterAString {
     public static void main(String[] args){
         for (int i=0; i<args.length; i++) {

@@ -1,3 +1,7 @@
+/*
+ * Clase UtilString, contiene metodos para comprobar si un numero es entero.
+ */
+
 public class UtilString {
     public static boolean esEnter(String text) {
         if (text.isBlank() || text.isEmpty())
