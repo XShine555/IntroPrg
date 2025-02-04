@@ -1,4 +1,6 @@
-/* XXX */
+/* 
+ * Aquest programa mostra una representació artística de dígits a partir de la seva representació en forma de matriu.
+ */
 public class DigitArt {
     public static char[][] construeix1() {
         return new char[][] {
