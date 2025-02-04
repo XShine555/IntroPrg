@@ -1,3 +1,7 @@
+/*
+ * Clase UtilTaula, contiene metodos para manipular matrices.
+ */
+
 public class UtilTaula {
     public static String taulaToString(boolean[][] taula, char caracterTrue, char caracterFalse) {
         String resultat = "";
