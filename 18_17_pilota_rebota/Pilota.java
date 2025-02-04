@@ -1,3 +1,7 @@
+/*
+ * Simula el movimiento de una pelota en una matriz de 9x13 y lo dibuja en pantalla, ademas rebota en los bordes de la matriz.
+*/
+
 public class Pilota {
     public static final int N_FILES = 9;
     public static final int N_COLS = 14;
