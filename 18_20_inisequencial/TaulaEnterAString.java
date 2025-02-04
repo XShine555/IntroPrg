@@ -1,4 +1,6 @@
-/*…*/
+/*
+ * Hace tablas de enteros con los numeros que le pasas por argumento.
+*/
 public class TaulaEnterAString {
     public static void main(String[] args){
         int startFrom = 1;
@@ -24,11 +26,14 @@ public class TaulaEnterAString {
          * són dos strings d'un o dos dígits.  Exemple: "12x5" seria
          * correcta, mentre que "x3454" no.  */
         String[] coordenades = especificacio.split("x");
-        if (coordenades.length != 2) return false;
+        if (coordenades.length != 2) 
+            return false;
         for (int i=0; i<coordenades.length; i++) {
-            if (! UtilString.esEnter(coordenades[i])) return false;
+            if (! UtilString.esEnter(coordenades[i])) 
+                return false;
             int valor = Integer.parseInt(coordenades[i]);
-            if (valor < 0 || valor > 99) return false;
+            if (valor < 0 || valor > 99) 
+                return false;
         }
         return true;
     }
@@ -39,7 +44,8 @@ public class TaulaEnterAString {
          * corresponent als primers dígits. Per exemple, si especificacio
          * és "12x5", retornarà 12.
          * Altrament, retornarà el valor -1.  */
-        if (!especificacioCorrecta(especificacio)) return -1;
+        if (!especificacioCorrecta(especificacio)) 
+            return -1;
         String[] coordenades = especificacio.split("x");
         return Integer.parseInt(coordenades[0]);
     }
@@ -50,7 +56,8 @@ public class TaulaEnterAString {
          * corresponent als segons dígits. Per exemple, si especificacio
          * és "12x5", retornarà 5.
          * Altrament, retornarà el valor -1.  */
-        if (!especificacioCorrecta(especificacio)) return -1;
+        if (!especificacioCorrecta(especificacio)) 
+            return -1;
         String[] coordenades = especificacio.split("x");
         return Integer.parseInt(coordenades[1]);
     }
