@@ -1,5 +1,5 @@
 /*
- *  XXX
+ *  Juego del tres en raya hecho en Java.
  */
 public class TresEnRatlla {
     public static void main(String[] args){
