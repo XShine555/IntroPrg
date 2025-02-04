@@ -1,5 +1,5 @@
 /*
- * Simula el movimiento de una pelota.
+ * Simula el movimiento de una pelota en una matriz de 9x13 y lo dibuja en pantalla.
 */
 public class Pilota {
     public static final int N_FILES = 9;
