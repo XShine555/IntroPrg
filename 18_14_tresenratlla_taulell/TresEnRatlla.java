@@ -1,4 +1,4 @@
-/* XXX comentari adequat */
+/* Juego del tres en raya hecho en Java */
 public class TresEnRatlla {
     public static void main(String[] args){
         // declaració del taulell
