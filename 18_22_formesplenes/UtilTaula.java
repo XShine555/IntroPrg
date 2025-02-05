@@ -291,16 +291,32 @@ public class UtilTaula {
     public static void inicialitzaCreuEPle(boolean[][] taula) {
         clearTable(taula);
 
-        for (int i = 0; i < taula.length; i++) {
-            int range = i > taula.length / 2 ? taula[i].length - i : i;
+        boolean isDescending = false;
 
-            for (int j = taula[i].length - range; j < taula[i].length; j++) {
-                taula[i][j] = true;
-            }
+        int toCheck = taula.length > taula[0].length ? taula[0].length : taula.length;
+
+        for (int i = 0; i < toCheck; i++) {
+            int oppositeIndex = taula[i].length - i - 1;
+
             taula[i][i] = true;
-            taula[i][taula[i].length - i - 1] = true;
-        } 
+            taula[i][oppositeIndex] = true;
+
+            if (i == oppositeIndex || i + 1 == oppositeIndex || oppositeIndex == 0) {
+                isDescending = true;
+            }
+
+            if (!isDescending) {
+                for (int j = oppositeIndex; j < toCheck; j++) {
+                    taula[i][j] = true;
+                }
+            } else {
+                for (int j = i; j < toCheck; j++) {
+                    taula[i][j] = true;
+                }
+            }
+        }
     }
+
     public static void inicialitzaCreuNSPlens(boolean[][] taula) {
         clearTable(taula);
 
@@ -316,7 +332,6 @@ public class UtilTaula {
             if (i == oppositeIndex || i + 1 == oppositeIndex || oppositeIndex == 0) {
                 isDescending = true;
             }
-            //System.out.println("i " + i + " op: " + (taula[i].length - i - 1) + " isDescending: " + isDescending);
 
             if (isDescending) {
                 for (int j = taula[i].length - i - 1; j < i; j++) {
@@ -328,28 +343,6 @@ public class UtilTaula {
                 }
             }
         }
-
-        /*if (taula.length == 2 && taula[0].length == 2)
-        {
-            taula[0][0] = true;
-            taula[0][1] = true;
-            taula[1][0] = true;
-            taula[1][1] = true;
-            return;
-        }
-
-        boolean isMid = false;
-
-        for (int i = 0; i < taula.length; i++) {
-            if (taula.length > 2) {
-                isMid = i * 2 > taula[i].length;
-            }
-            
-            int dif = isMid ? taula[i].length - i - 1 : i;
-            for (int j = dif; j < taula[i].length - dif; j++) {
-                taula[i][j] = true;
-            }
-        }*/
     }
 
     public static void inicialitzaCreuOEPlens(boolean[][] taula) {
