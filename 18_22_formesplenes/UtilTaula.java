@@ -299,15 +299,27 @@ public class UtilTaula {
             }
             taula[i][i] = true;
             taula[i][taula[i].length - i - 1] = true;
-        }
+        } 
     }
 
     public static void inicialitzaCreuNSPlens(boolean[][] taula) {
         clearTable(taula);
         int n = taula.length;
+        int m = taula[0].length;
         for (int i = 0; i < n; i++) {
-            int diff = Math.min(i, n - 1 - i);
-            for (int j = diff; j < taula[i].length - diff; j++) {
+            int left, right;
+            if (i < n / 2) {
+                left = i;
+                right = m - i - 1;
+            } else {
+                int mirror = n - i - 1;
+                left = mirror;
+                right = m - mirror - 1;
+            }
+            taula[i][left] = true;
+            taula[i][right] = true;
+
+            for (int j = left; j <= right; j++) {
                 taula[i][j] = true;
             }
         }
