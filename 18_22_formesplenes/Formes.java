@@ -93,7 +93,8 @@ public class Formes {
             }
             else if (mode.equals("*x*")) {
                 UtilTaula.inicialitzaCreuNSPlens(taula);
-                //System.out.println(taula[0][3]);
+                System.out.println(taula[2][0]);
+                //taula[2][0] = false;
                 
             }
             else if (mode.equals("**x**")) {

@@ -301,26 +301,27 @@ public class UtilTaula {
             taula[i][taula[i].length - i - 1] = true;
         } 
     }
-
     public static void inicialitzaCreuNSPlens(boolean[][] taula) {
         clearTable(taula);
         int n = taula.length;
         int m = taula[0].length;
-        for (int i = 0; i < n; i++) {
-            int left, right;
-            if (i < n / 2) {
-                left = i;
-                right = m - i - 1;
-            } else {
-                int mirror = n - i - 1;
-                left = mirror;
-                right = m - mirror - 1;
-            }
-            taula[i][left] = true;
-            taula[i][right] = true;
+        int half = m - 1;
 
-            for (int j = left; j <= right; j++) {
+        for (int i = 0; i < half; i++) {
+            int left = i;
+            int right = taula[i].length - i;
+
+            for (int j = left; j < right; j++) {
                 taula[i][j] = true;
+            }
+        }
+
+        for (int i = half; i > 0; i--) {
+            int left = i - 1;
+            int right = taula[i].length - i + 1;
+
+            for (int j = left; j < right; j++) {
+                taula[n - i][j] = true;
             }
         }
 
