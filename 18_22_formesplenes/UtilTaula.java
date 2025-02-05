@@ -312,8 +312,10 @@ public class UtilTaula {
             taula[i][i] = true;
             taula[i][taula[i].length - i - 1] = true;
 
-            if (i == taula[i].length - i - 1 || i + 1 == taula[i].length - i - 1 || taula[i].length - i - 1 == 0)
+            int oppositeIndex = taula[i].length - i - 1;
+            if (i == oppositeIndex || i + 1 == oppositeIndex || oppositeIndex == 0) {
                 isDescending = true;
+            }
             //System.out.println("i " + i + " op: " + (taula[i].length - i - 1) + " isDescending: " + isDescending);
 
             if (isDescending) {
