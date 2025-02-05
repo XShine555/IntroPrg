@@ -241,14 +241,22 @@ public class UtilTaula {
     public static void inicialitzaCreuNPle(boolean[][] taula) {
         clearTable(taula);
 
-        int mid = taula.length / 2;
+        boolean isDescending = false;
 
-        for (int i = 0; i < taula.length; i++) {
+        int toCheck = taula.length > taula[0].length ? taula[0].length : taula.length;
+
+        for (int i = 0; i < toCheck; i++) {
+            int oppositeIndex = taula[i].length - i - 1;
+
             taula[i][i] = true;
-            taula[i][taula[i].length - i - 1] = true;
-            
-            if (i < mid) {
-                for (int j = i; j < taula[i].length - i; j++) {
+            taula[i][oppositeIndex] = true;
+
+            if (i == oppositeIndex || i + 1 == oppositeIndex || oppositeIndex == 0) {
+                isDescending = true;
+            }
+
+            if (!isDescending) {
+                for (int j = i; j < oppositeIndex; j++) {
                     taula[i][j] = true;
                 }
             }
