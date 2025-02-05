@@ -306,11 +306,11 @@ public class UtilTaula {
             }
 
             if (!isDescending) {
-                for (int j = oppositeIndex; j < toCheck; j++) {
+                for (int j = oppositeIndex; j < taula[i].length; j++) {
                     taula[i][j] = true;
                 }
             } else {
-                for (int j = i; j < toCheck; j++) {
+                for (int j = i; j < taula[i].length; j++) {
                     taula[i][j] = true;
                 }
             }
