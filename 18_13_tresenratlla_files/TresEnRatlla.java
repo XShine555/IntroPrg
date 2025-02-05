@@ -1,5 +1,5 @@
 /*
- *  Juego del tres en raya hecho en Java.
+ * Juego del tres en raya hecho en Java, con la representación del tablero mediante filas mostrandolo en la consola.
  */
 public class TresEnRatlla {
     public static void main(String[] args){
