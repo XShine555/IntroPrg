@@ -304,7 +304,7 @@ public class UtilTaula {
     public static void inicialitzaCreuNSPlens(boolean[][] taula) {
         clearTable(taula);
 
-        if (taula.length <= 2 && taula[0].length <= 2)
+        if (taula.length == 2 && taula[0].length == 2)
         {
             taula[0][0] = true;
             taula[0][1] = true;
