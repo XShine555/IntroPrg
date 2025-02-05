@@ -303,12 +303,12 @@ public class UtilTaula {
     }
 
     public static void inicialitzaCreuNSPlens(boolean[][] taula) {
-        //clearTable(taula);
+        clearTable(taula);
         int n = taula.length;
         for (int i = 0; i < n; i++) {
             int diff = Math.min(i, n - 1 - i);
-            for (int j = diff; j < n - diff; j++) {
-            taula[i][j] = true;
+            for (int j = diff; j < taula[i].length - diff; j++) {
+                taula[i][j] = true;
             }
         }
 
