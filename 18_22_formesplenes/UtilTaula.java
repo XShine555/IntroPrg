@@ -304,7 +304,27 @@ public class UtilTaula {
     public static void inicialitzaCreuNSPlens(boolean[][] taula) {
         clearTable(taula);
 
-        if (taula.length == 2 && taula[0].length == 2)
+        boolean isDescending = false;
+
+        for (int i = 0; i < taula.length; i++) {
+            taula[i][i] = true;
+            taula[i][taula[i].length - i - 1] = true;
+
+            if (i == taula[i].length - i - 1)
+                isDescending = true;
+
+            if (isDescending) {
+                for (int j = taula[i].length - i - 1; j < i; j++) {
+                    taula[i][j] = true;
+                }
+            } else {
+                for (int j = i; j < taula[i].length - i - 1; j++) {
+                    taula[i][j] = true;
+                }
+            }
+        }
+
+        /*if (taula.length == 2 && taula[0].length == 2)
         {
             taula[0][0] = true;
             taula[0][1] = true;
@@ -324,7 +344,7 @@ public class UtilTaula {
             for (int j = dif; j < taula[i].length - dif; j++) {
                 taula[i][j] = true;
             }
-        }
+        }*/
     }
 
     public static void inicialitzaCreuOEPlens(boolean[][] taula) {
