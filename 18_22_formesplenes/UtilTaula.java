@@ -303,29 +303,16 @@ public class UtilTaula {
     }
     public static void inicialitzaCreuNSPlens(boolean[][] taula) {
         clearTable(taula);
-        int n = taula.length;
-        int m = taula[0].length;
-        int half = m - 1;
 
-        for (int i = 0; i < half; i++) {
-            int left = i;
-            int right = taula[i].length - i;
-
-            for (int j = left; j < right; j++) {
-                taula[i][j] = true;
-            }
+        if (taula.length <= 2 && taula[0].length <= 2)
+        {
+            taula[0][0] = true;
+            taula[0][1] = true;
+            taula[1][1] = true;
+            return;
         }
 
-        for (int i = half; i > 0; i--) {
-            int left = i - 1;
-            int right = taula[i].length - i + 1;
-
-            for (int j = left; j < right; j++) {
-                taula[n - i][j] = true;
-            }
-        }
-
-        /*boolean isMid = false;
+        boolean isMid = false;
 
         for (int i = 0; i < taula.length; i++) {
             if (taula.length > 2) {
@@ -336,7 +323,7 @@ public class UtilTaula {
             for (int j = dif; j < taula[i].length - dif; j++) {
                 taula[i][j] = true;
             }
-        }*/
+        }
     }
 
     public static void inicialitzaCreuOEPlens(boolean[][] taula) {
