@@ -1,4 +1,6 @@
-/* Juego del tres en raya hecho en Java */
+/*
+ * Juego del tres en raya hecho en Java, con la representación del tablero mediante filas mostrandolo en la consola, y permitiendo al jugador X hacer un movimiento.
+ */
 public class TresEnRatlla {
     public static void main(String[] args){
         // declaració del taulell
