@@ -272,19 +272,26 @@ public class UtilTaula {
     public static void inicialitzaCreuSPle(boolean[][] taula) {
         clearTable(taula);
 
-        int mid = taula.length / 2;
+        clearTable(taula);
 
-        for (int i = 0; i < taula.length; i++) {
-            if (i > mid) {
-                int dif = taula[i].length - i;
+        boolean isDescending = false;
 
-                for (int j = dif; j < taula[i].length - dif; j++) {
+        int toCheck = taula.length > taula[0].length ? taula[0].length : taula.length;
+
+        for (int i = 0; i < toCheck; i++) {
+            taula[i][i] = true;
+            taula[i][taula[i].length - i - 1] = true;
+
+            int oppositeIndex = taula[i].length - i - 1;
+            if (i == oppositeIndex || i + 1 == oppositeIndex || oppositeIndex == 0) {
+                isDescending = true;
+            }
+
+            if (isDescending) {
+                for (int j = taula[i].length - i - 1; j < i; j++) {
                     taula[i][j] = true;
                 }
             }
-
-            taula[i][i] = true;
-            taula[i][taula[i].length - i - 1] = true;
         }
     }
 
