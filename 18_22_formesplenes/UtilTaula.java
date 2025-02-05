@@ -306,7 +306,7 @@ public class UtilTaula {
 
         boolean isDescending = false;
 
-        for (int i = 0; i < taula.length; i++) {
+        for (int i = 0; i < taula[0].length; i++) {
             taula[i][i] = true;
             taula[i][taula[i].length - i - 1] = true;
 
