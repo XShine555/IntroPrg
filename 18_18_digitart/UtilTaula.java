@@ -1,5 +1,5 @@
 /*
- * Clase UtilTaula, contiene metodos para manipular tablas de caracteres.
+ * Clase UtilTaula, contiene un metodo estatico que sustituye un caracter por otro en una matriz de caracteres.
  */
 public class UtilTaula {
     public static char[][] substitueix(char[][] taula, char inici, char fi) {
