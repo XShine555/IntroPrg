@@ -1,5 +1,5 @@
 /*
- * Clase UtilString, contiene metodos para comprobar si un numero es entero.
+ * Clase UtilString, contiene un metodo estatico que recibe un String y retorna un booleano y comprueba si el String es un numero entero valido.
  */
 
 public class UtilString {
