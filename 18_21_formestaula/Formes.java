@@ -1,5 +1,7 @@
 /*
- * Programa que dibuixa formes en una taula depenent del input.
+ * Iker Rivera Garcia
+ * 08/02/2025
+ * Clase Formes, Clase que contiene el metod main y se encarga de leer los argumentos y llamar a los metodos de UtilTaula y mostrar el resultado por la consola.
  */
 
 public class Formes {

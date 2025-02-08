@@ -1,4 +1,6 @@
 /*
+ * Iker Rivera Garcia
+ * 08/02/2025
  * Clase UtilTaula, contiene metodos estaticos para formar formas (más información en la pagina del ejercicio) en una tabla booleana y convertirla a String.
  */
 
