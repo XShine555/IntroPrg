@@ -215,6 +215,15 @@ public class UtilTaula {
     public static void inicialitzaQuartsSONEPlens(boolean[][] taula) {
         clearTable(taula);
 
+        if (taula.length == 2 && taula[0].length == 2)
+        {
+            taula[0][0] = true;
+            taula[0][1] = true;
+            taula[1][0] = true;
+            taula[1][1] = true;
+            return;
+        }
+
         int mid = taula.length / 2;
 
         for (int i = 0; i < taula.length; i++) {
