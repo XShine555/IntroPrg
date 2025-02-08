@@ -2,9 +2,21 @@ public class Subcadenes {
     public static void main(String[] args) {
         System.out.println("Text?");
         String text = Entrada.readLine();
-        text = text.replace(" ", "").replace("\'", "");
+        text = cleanString(text);
         preOrdre(text);
     }    
+
+    public static String cleanString(String text) {
+        String result = "";
+
+        for (int i = 0; i < text.length(); i++) {
+            char iChar = text.charAt(i);
+            if (Character.isLetter(iChar))
+                result += iChar;
+        }
+
+        return result;
+    }
 
     public static void preOrdre(String text) {
         System.out.printf("%4d: %s%n", text.length(), text);
