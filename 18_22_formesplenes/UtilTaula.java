@@ -121,15 +121,15 @@ public class UtilTaula {
     public static void inicialitzaQuartsSOPle(boolean[][] taula) {
         clearTable(taula);
 
-        int mid = taula.length / 2;
+        int mid = taula.length % 2 != 0 ? taula.length / 2 : taula.length / 2 - 1;
 
         for (int i = 0; i < taula.length; i++) {
             if (i < mid) {
-                taula[i][taula[i].length / 2] = true;
+                int plus = taula[i].length % 2 != 0 ? 0 : 1;
+                taula[i][taula[i].length / 2 - plus] = true;
             }
             else if (i > mid) {
                 int plus = taula[i].length % 2 == 0 ? 0 : 1;
-
                 for (int j = 0; j < taula[i].length / 2 + plus; j++) {
                     taula[i][j] = true;
                 }
@@ -226,7 +226,7 @@ public class UtilTaula {
                 for (int j = 0; j < taula[i].length / 2 + plus; j++) {
                     taula[i][j] = true;
                 }
-                }
+            }
             else if (i < mid) {
                 int plus = taula[i].length % 2 != 0 ? 0 : 1;
                 for (int j = taula[i].length / 2 - plus; j < taula[i].length; j++) {
