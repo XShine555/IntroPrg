@@ -189,7 +189,29 @@ public class UtilTaula {
     public static void inicialitzaQuartsNOSEPlens(boolean[][] taula) {
         clearTable(taula);
 
-        int mid = taula.length / 2;
+        int mid = taula.length % 2 != 0 ? taula.length / 2 : taula.length / 2 - 1;
+        
+        for (int i = 0; i < taula.length; i++) {
+            if (i < mid) {
+                int plus = taula[i].length % 2 == 0 ? 0 : 1;
+                for (int j = 0; j < taula[i].length / 2 + plus; j++) {
+                    taula[i][j] = true;
+                }
+                }
+            else if (i > mid) {
+                int plus = taula[i].length % 2 != 0 ? 0 : 1;
+                for (int j = taula[i].length / 2 - plus; j < taula[i].length; j++) {
+                    taula[i][j] = true;
+                }
+            }
+            else {
+                for (int j = 0; j < taula[i].length; j++) {
+                    taula[i][j] = true;
+                }
+            }
+        }
+
+        /*int mid = taula.length / 2;
 
         for (int i = 0; i < taula.length; i++) {
             if (i < mid) {
@@ -209,14 +231,12 @@ public class UtilTaula {
                     taula[i][j] = true;
                 }
             }
-        }
+        }*/
     }
 
     public static void inicialitzaQuartsSONEPlens(boolean[][] taula) {
         clearTable(taula);
         int mid = taula.length % 2 != 0 ? taula.length / 2 : taula.length / 2 - 1;
-        //int mid = taula.length / 2 % 2 != 0 ? taula.length / 2 - 1 : taula.length / 2;
-        //System.out.println(taula.length / 2 % 2 != 0);
         
         for (int i = 0; i < taula.length; i++) {
             if (i > mid) {
@@ -232,34 +252,11 @@ public class UtilTaula {
                 }
             }
             else {
-                //System.out.println("mid");
                 for (int j = 0; j < taula[i].length; j++) {
                     taula[i][j] = true;
                 }
             }
         }
-
-        /*int mid_i = taula.length / 2;
-
-        for (int i = 0; i < taula.length; i++) {
-            if (i < mid_i) {
-                for (int j = taula[i].length / 2; j < taula[i].length; j++) {
-                    taula[i][j] = true;
-                }
-            }
-            else if (i > mid_i) {
-                int plus = taula[i].length % 2 == 0 ? 0 : 1;
-                
-                for (int j = 0; j < taula[i].length / 2 + plus; j++) {
-                    taula[i][j] = true;
-                }
-            }
-            else {
-                for (int j = 0; j < taula[i].length; j++) {
-                    taula[i][j] = true;
-                }
-            }
-        }*/
     }
 
     public static void inicialitzaCreuNPle(boolean[][] taula) {
