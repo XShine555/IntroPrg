@@ -68,6 +68,9 @@ public class UtilTaula {
 
         for (int i = 0; i < taula.length; i++) {
             for (int j = 0; j < taula[i].length; j++) {
+                if (i == 0 && j == 3)
+                    continue;
+
                 if (j >= taula[i].length / 2) {
                     taula[i][j] = true;
                 }
