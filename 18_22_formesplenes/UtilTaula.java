@@ -70,7 +70,7 @@ public class UtilTaula {
     public static void inicialitzaVerticalMigSegonPle(boolean[][] taula) {
         for (int i = 0; i < taula.length; i++) {
             for (int j = 0; j < taula[i].length; j++) {
-                taula[i][j] = i >= taula[i].length / 2;
+                taula[i][j] = j >= taula[i].length / 2;
             }
         }
     }
