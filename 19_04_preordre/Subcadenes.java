@@ -1,3 +1,9 @@
+/*
+ * Iker Rivera Garcia
+ * 08/02/2025
+ * Clase Subcadenes, contiene un metodo main que pide un texto y llama a un metodo que muestra las subcadenas del texto usando recursividad.
+ */
+
 public class Subcadenes {
     public static void main(String[] args) {
         System.out.println("Text?");
