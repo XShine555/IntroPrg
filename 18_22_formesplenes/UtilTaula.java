@@ -226,7 +226,8 @@ public class UtilTaula {
                 }
                 }
             else if (i < mid) {
-                for (int j = taula[i].length / 2 - 1; j < taula[i].length; j++) {
+                int plus = taula[i].length % 2 != 0 ? 0 : 1;
+                for (int j = taula[i].length / 2 - plus; j < taula[i].length; j++) {
                     taula[i][j] = true;
                 }
             }
