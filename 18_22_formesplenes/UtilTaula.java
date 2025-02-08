@@ -75,7 +75,7 @@ public class UtilTaula {
                     taula[i][j] = true;
                 }
                 else {
-                    taula[i][j] = false;
+                    //taula[i][j] = false;
                 }
             }
         }
