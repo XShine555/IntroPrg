@@ -28,8 +28,10 @@ public class UtilTaula {
     public static void inicialitzaPrimeraDiagonalSegonPle(boolean[][] taula) {
         clearTable(taula);
 
-        for (int i = 0; i < taula.length; i++) {
-            for (int j = i; j < taula.length; j++) {
+        int toCheck = taula.length > taula[0].length ? taula[0].length : taula.length;
+
+        for (int i = 0; i < toCheck; i++) {
+            for (int j = i; j < toCheck; j++) {
                 taula[i][j] = true;
             }
         }
