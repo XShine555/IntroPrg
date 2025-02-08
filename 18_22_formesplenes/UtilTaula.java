@@ -220,7 +220,7 @@ public class UtilTaula {
             taula[0][0] = true;
             taula[0][1] = true;
             taula[1][0] = true;
-            taula[1][1] = true;
+            taula[1][1] = false;
             return;
         }
 
