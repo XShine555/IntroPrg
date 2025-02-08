@@ -68,26 +68,21 @@ public class UtilTaula {
     }
 
     public static void inicialitzaVerticalMigSegonPle(boolean[][] taula) {
-        //clearTable(taula);
+        clearTable(taula);
 
         for (int i = 0; i < taula.length; i++) {
-            for (int j = 0; j < taula[i].length; j++) {
-                if (i == 0 && j == 3)
-                    taula[0][3] = true;
-
-                if (j >= taula[i].length / 2) {
-                    taula[i][j] = true;
-                }
-                else {
-                    //taula[i][j] = false;
-                }
+            for (int j = taula[i].length / 2; j < taula[i].length; j++) {
+                taula[i][j] = true;
             }
         }
-        try (PrintWriter pw = new PrintWriter(new FileWriter("table.txt"))) {
-            String content = taulaToString(taula, 'X', ' ');
-            pw.write(content);
-        } catch (IOException e) {
-            e.printStackTrace();
+
+        if (taula.length == 4 && taula[0].length == 4) {
+            try (PrintWriter pw = new PrintWriter(new FileWriter("table.txt"))) {
+                String content = taulaToString(taula, 'X', ' ');
+                pw.write(content);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
