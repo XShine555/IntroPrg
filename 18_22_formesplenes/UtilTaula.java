@@ -171,7 +171,7 @@ public class UtilTaula {
 
         for (int i = 0; i < taula.length; i++) {
             if (i < mid) {
-                int plus = taula[i].length % 2 == 0 ? 0 : 1;
+                int plus = taula[i].length % 2 != 0 ? 0 : 1;
                 taula[i][taula[i].length / 2 + plus] = true;
             }
             else if (i > mid) {
