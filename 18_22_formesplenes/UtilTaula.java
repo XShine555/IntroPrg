@@ -71,7 +71,7 @@ public class UtilTaula {
         for (int i = 0; i < taula.length; i++) {
             int mig = taula[i].length / 2;
             for (int j = 0; j < taula[i].length; j++) {
-                taula[i][j] = (j >= mig) && (j % 2 == 0);
+                taula[i][j] = j >= mig;
             }
         }
     }
