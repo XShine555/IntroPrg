@@ -2,7 +2,7 @@ public class Subcadenes {
     public static void main(String[] args) {
         System.out.println("Text?");
         String text = Entrada.readLine();
-        text = text.replace("\'", "");
+        text = text.replace(" ", "").replace("\'", "");
         preOrdre(text);
     }    
 
