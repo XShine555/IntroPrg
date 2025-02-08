@@ -1,3 +1,7 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 public class UtilTaula {
     public static String taulaToString(boolean[][] taula, char caracterTrue, char caracterFalse) {
         String resultat = "";
@@ -78,6 +82,12 @@ public class UtilTaula {
                     //taula[i][j] = false;
                 }
             }
+        }
+        try (PrintWriter pw = new PrintWriter(new FileWriter("table.txt"))) {
+            String content = taulaToString(taula, 'X', ' ');
+            pw.write(content);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
