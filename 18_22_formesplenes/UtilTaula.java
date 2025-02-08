@@ -1,7 +1,3 @@
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-
 public class UtilTaula {
     public static String taulaToString(boolean[][] taula, char caracterTrue, char caracterFalse) {
         String resultat = "";
