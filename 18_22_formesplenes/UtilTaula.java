@@ -214,7 +214,7 @@ public class UtilTaula {
 
     public static void inicialitzaQuartsSONEPlens(boolean[][] taula) {
         clearTable(taula);
-        int mid = taula.length / 2 - 1;
+        int mid = taula.length / 2 % 2 == 0 ? taula.length / 2 - 1 : taula.length / 2;
         
         for (int i = 0; i < taula.length; i++) {
             if (i > mid) {
