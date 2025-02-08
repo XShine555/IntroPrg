@@ -1,3 +1,9 @@
+/*
+ * Iker Rivera Garcia
+ * 08/02/2025
+ * UtilTaula.java, contiene métodos para inicializar tablas de booleanos con diferentes formas, como por ejemplo: diagonales, verticales, horizontales, cruces, etc.
+ */
+
 public class UtilTaula {
     public static String taulaToString(boolean[][] taula, char caracterTrue, char caracterFalse) {
         String resultat = "";

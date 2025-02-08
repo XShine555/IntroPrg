@@ -1,3 +1,9 @@
+/*
+ * Iker Rivera Garcia
+ * 08/02/2025
+ * Clase Formes, clase que contiene el metodo main que se encarga de leer los argumentos pasados por consola y crear las formas especificadas en los argumentos.
+ */
+
 public class Formes {
     public static void main(String[] args) {
         for (int i = 0; i < args.length; i++) {
