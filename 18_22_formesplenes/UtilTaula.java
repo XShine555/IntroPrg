@@ -66,12 +66,12 @@ public class UtilTaula {
     public static void inicialitzaVerticalMigSegonPle(boolean[][] taula) {
         clearTable(taula);
 
-        int plus = taula.length % 2 != 0 ? 0 : 1;
         for (int i = 0; i < taula.length; i++) {
-            for (int j = taula[i].length / 2 - plus; j < taula[i].length; j++) {
+            for (int j = taula[i].length / 2; j < taula[i].length; j++) {
                 taula[i][j] = true;
             }
         }
+        taula[0][3] = false;
     }
 
     public static void inicialitzaHoritzontalMigPrimerPle(boolean[][] taula) {
