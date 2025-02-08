@@ -75,15 +75,6 @@ public class UtilTaula {
                 taula[i][j] = true;
             }
         }
-
-        if (taula.length == 4 && taula[0].length == 4) {
-            try (PrintWriter pw = new PrintWriter(new FileWriter("table.txt"))) {
-                String content = taulaToString(taula, 'X', ' ');
-                pw.write(content);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
     }
 
     public static void inicialitzaHoritzontalMigPrimerPle(boolean[][] taula) {
