@@ -71,7 +71,6 @@ public class UtilTaula {
                 taula[i][j] = true;
             }
         }
-        taula[0][3] = false;
     }
 
     public static void inicialitzaHoritzontalMigPrimerPle(boolean[][] taula) {
