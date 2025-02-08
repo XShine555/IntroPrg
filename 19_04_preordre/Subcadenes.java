@@ -5,12 +5,12 @@ public class Subcadenes {
         preOrdre(text);
     }    
 
-    public static void preOrdre(String s) {
-        System.out.println(s.length() + ": " + s);
-        if (s.length() <= 1)
+    public static void preOrdre(String text) {
+        System.out.printf("%4d: %s%n", text.length(), text);
+        if (text.length() <= 1)
             return;
-        int mid = s.length() / 2;
-        preOrdre(s.substring(0, mid));
-        preOrdre(s.substring(mid));
+        int mid = text.length() / 2;
+        preOrdre(text.substring(0, mid));
+        preOrdre(text.substring(mid));
     }
 }
