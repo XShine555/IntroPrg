@@ -214,48 +214,22 @@ public class UtilTaula {
 
     public static void inicialitzaQuartsSONEPlens(boolean[][] taula) {
         clearTable(taula);
-
-        if (taula.length == 7) {
-            int mid_i = taula.length / 2;
-
+        int mid = taula.length / 2 - 1;
+        
         for (int i = 0; i < taula.length; i++) {
-            if (i < mid_i) {
-                for (int j = taula[i].length / 2; j < taula[i].length; j++) {
-                    taula[i][j] = true;
-                }
-            }
-            else if (i > mid_i) {
+            if (i > mid) {
                 int plus = taula[i].length % 2 == 0 ? 0 : 1;
-                
                 for (int j = 0; j < taula[i].length / 2 + plus; j++) {
                     taula[i][j] = true;
                 }
-            }
-            else {
-                for (int j = 0; j < taula[i].length; j++) {
-                    taula[i][j] = true;
                 }
-            }
-        }
-        return;
-        }
-
-        int mid = taula.length / 2;
-
-        for (int i = 0; i < taula.length; i++) {
-            if (i < mid) {
-                int plus = taula[i].length % 2 == 0 ? 0 : 1;
-
-                for (int j = 0; j < taula[i].length / 2 + plus; j++) {
-                    taula[i][j] = true;
-                }
-            }
-            else if (i > mid) {
+            else if (i < mid) {
                 for (int j = taula[i].length / 2; j < taula[i].length; j++) {
                     taula[i][j] = true;
                 }
             }
             else {
+                //System.out.println("mid");
                 for (int j = 0; j < taula[i].length; j++) {
                     taula[i][j] = true;
                 }
