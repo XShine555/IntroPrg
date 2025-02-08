@@ -67,6 +67,8 @@ public class UtilTaula {
         //clearTable(taula);
         for (int i = 0; i < taula.length; i++) {
             for (int j = 0; j < taula[i].length; j++) {
+                if (i == 0 && j == 3)
+                    continue;
                 taula[i][j] = false;
             }
         }
