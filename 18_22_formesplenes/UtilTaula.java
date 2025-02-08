@@ -65,6 +65,11 @@ public class UtilTaula {
 
     public static void inicialitzaVerticalMigSegonPle(boolean[][] taula) {
         //clearTable(taula);
+        for (int i = 0; i < taula.length; i++) {
+            for (int j = 0; j < taula[i].length; j++) {
+                taula[i][j] = false;
+            }
+        }
 
         for (int i = 0; i < taula.length; i++) {
             for (int j = taula[i].length / 2; j < taula[i].length; j++) {
