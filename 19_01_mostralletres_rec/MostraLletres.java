@@ -22,7 +22,7 @@ public class MostraLletres {
         // considerem el primer caràcter
         char primer = text.charAt(0);
         if (Character.isLetter(primer)) {
-            System.out.println(primer);
+            System.out.print(primer);
         }
 
         // considerem les lletres que conté la resta del text
