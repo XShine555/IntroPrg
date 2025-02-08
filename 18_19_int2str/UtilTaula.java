@@ -1,3 +1,7 @@
+/*
+ * Clase UtilTaula, contiene metodos para manipular tablas, como convertir una tabla a un string, inicializar una tabla con un valor, etc.
+ */
+
 public class UtilTaula {
     public static String taulaToString(int[][] taula) {
         String resultat = "";
