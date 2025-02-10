@@ -28,6 +28,8 @@ public class SimpleHtml {
         
         String[] items = listContent.split(",");
         for (String item : items) {
+            if (item.trim().isEmpty())
+                continue;
             System.out.print("<li>" + item.trim() + "</li>");
         }
         System.out.print(closeList);
