@@ -1,5 +1,5 @@
 public class SimpleHtml {
-    public static void mostraTextAHtml(String text) {
+    /*public static void mostraTextAHtml(String text) {
         if (text.isEmpty())
             return;
 
@@ -51,6 +51,15 @@ public class SimpleHtml {
             System.out.format("<li>%s</li>", text.substring(0, comma).trim());
             mostraLlista(text.substring(comma + 1));
         }
+    }*/
+
+    public static void mostraTextAHtml(String text) {
+        if (text.isEmpty())
+            return;
+            
+        var currentCharacter = text.charAt(0);
+
+        
     }
 
     private static int indexOfAny(String text, char[] chars) {
