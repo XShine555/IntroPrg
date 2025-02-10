@@ -2,6 +2,7 @@ public class SimpleHtml {
     public static void mostraTextAHtml(String text) {
         if (text.isEmpty())
             return;
+        text.replace(" ", "");
 
         int index = indexOfAny(text, new char[]{'(', '['});
         if (index == -1) {
