@@ -25,11 +25,10 @@ public class SimpleHtml {
             System.out.print("<ul>");
         }
 
-        String insideTag = text.substring(indexOfStart + 1, indexOfEnd);
-        String[] items = insideTag.split(",");
+        String insideTag = text.substring(indexOfStart + 1, indexOfEnd).trim();
 
-        for (int i = 0; i < items.length; i++) {
-            System.out.format("<li>%s</li>", items[i].trim());
+        if (!insideTag.isEmpty()) {
+            mostraLlista(insideTag);
         }
 
         if (endTag == ')') {
@@ -40,6 +39,18 @@ public class SimpleHtml {
 
         String leftOver = text.substring(indexOfEnd + 1);
         mostraTextAHtml(leftOver);
+    }
+
+    private static void mostraLlista(String text) {
+        int comma = text.indexOf(',');
+
+        if (comma == -1) {
+            System.out.format("<li>%s</li>", text.trim());
+        }
+        else {
+            System.out.format("<li>%s</li>", text.substring(0, comma).trim());
+            mostraLlista(text.substring(comma + 1));
+        }
     }
 
     private static int indexOfAny(String text, char[] chars) {
