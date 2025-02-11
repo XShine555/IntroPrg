@@ -1,3 +1,10 @@
+/*
+ * Iker Rivera Garcia
+ * 11/02/2025
+ * 19_07_simplehtml
+ * Clase SimpleHtml, se encarga de convertir un texto a HTML valido atraves de la función muestraTextAHtml, que recibe un texto y lo convierte a HTML valido usando recursión y funciones auxiliares.
+ */
+
 public class SimpleHtml {
     public static void mostraTextAHtml(String text) {
         mostraTextAHtml(text, false);
