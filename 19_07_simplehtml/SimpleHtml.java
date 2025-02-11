@@ -1,75 +1,104 @@
 public class SimpleHtml {
-    /*public static void mostraTextAHtml(String text) {
-        if (text.isEmpty())
-            return;
-
-        int indexOfStart = indexOfAny(text, new char[]{'(', '['});
-
-        if (indexOfStart == -1) {
-            System.out.format("<p>%s</p>", text);
-            return;
-        }
-        else if (indexOfStart > 0) {
-            System.out.format("<p>%s</p>", text.substring(0, indexOfStart).trim());
-        }
-
-        int indexOfEnd = indexOfAny(text, new char[]{')', ']'});
-        if (indexOfEnd == -1) return;
-
-        char startTag = text.charAt(indexOfStart);
-        char endTag = text.charAt(indexOfEnd);
-
-        if (startTag == '(') {
-            System.out.print("<ol>");
-        } else if (startTag == '[') {
-            System.out.print("<ul>");
-        }
-
-        String insideTag = text.substring(indexOfStart + 1, indexOfEnd).trim();
-
-        if (!insideTag.isEmpty()) {
-            mostraLlista(insideTag);
-        }
-
-        if (endTag == ')') {
-            System.out.print("</ol>");
-        } else if (endTag == ']') {
-            System.out.print("</ul>");
-        }
-
-        String leftOver = text.substring(indexOfEnd + 1);
-        mostraTextAHtml(leftOver);
-    }
-
-    private static void mostraLlista(String text) {
-        int comma = text.indexOf(',');
-
-        if (comma == -1) {
-            System.out.format("<li>%s</li>", text.trim());
-        }
-        else {
-            System.out.format("<li>%s</li>", text.substring(0, comma).trim());
-            mostraLlista(text.substring(comma + 1));
-        }
-    }*/
-
     public static void mostraTextAHtml(String text) {
-        if (text.isEmpty())
-            return;
-            
-        var currentCharacter = text.charAt(0);
-
-        
+        mostraTextAHtml(text, false);
     }
 
-    private static int indexOfAny(String text, char[] chars) {
-        for (int i = 0; i < text.length(); i++) {
-            for (int j = 0; j < chars.length; j++) {
-                if (text.charAt(i) == chars[j]) {
-                    return i;
-                }
+    public static void mostraTextAHtml(String text, boolean inList) {
+        if (text.isEmpty())
+            return;
+
+        char firstCharacter = text.charAt(0);
+        if (firstCharacter == '(' || firstCharacter == '[') {
+            char closing = (firstCharacter == '(') ? ')' : ']';
+            int closeTag = findMatching(text, 1, 1, firstCharacter, closing);
+            
+            if (closeTag == -1) {
+                char last = text.charAt(text.length() - 1);
+                closeTag = (last == ')' || last == ']') ? text.length() - 1 : text.length();
             }
+
+            String listContent = text.substring(1, closeTag);
+            if (firstCharacter == '(') {
+                System.out.print("<ol>");
+                processList(listContent);
+                System.out.print("</ol>");
+            } else {
+                System.out.print("<ul>");
+                processList(listContent);
+                System.out.print("</ul>");
+            }
+            
+            int nextPosition = closeTag + 1;
+            if (nextPosition < text.length())
+                mostraTextAHtml(text.substring(nextPosition), inList);
+        } else {
+            int nextIndex = findNextDelim(text, 0);
+            String left = text.substring(0, nextIndex).trim();
+            
+            if (!left.isEmpty()) {
+                if (inList)
+                    System.out.print(left);
+                else
+                    System.out.format("<p>%s</p>", left);
+            }
+            
+            if (nextIndex < text.length())
+                mostraTextAHtml(text.substring(nextIndex), inList);
         }
-        return -1;
+    }
+
+    private static void processList(String text) {
+        if (text.isEmpty())
+            return;
+        int commaIndex = findComma(text, 0);
+        if (commaIndex == -1) {
+            System.out.print("<li>");
+            mostraTextAHtml(text, true);
+            System.out.print("</li>");
+        } else {
+            String item = text.substring(0, commaIndex);
+            String rest = text.substring(commaIndex + 1);
+            System.out.print("<li>");
+            mostraTextAHtml(item, true);
+            System.out.print("</li>");
+            processList(rest);
+        }
+    }
+
+    private static int findNextDelim(String text, int pos) {
+        if (pos >= text.length())
+            return text.length();
+        char currentCharacter = text.charAt(pos);
+        if (currentCharacter == '(' || currentCharacter == '[')
+            return pos;
+        return findNextDelim(text, pos + 1);
+    }
+
+    private static int findComma(String text, int pos) {
+        if (pos >= text.length())
+            return -1;
+        char currentCharacter = text.charAt(pos);
+        if (currentCharacter == '(' || currentCharacter == '[') {
+            char closing = (currentCharacter == '(') ? ')' : ']';
+            int match = findMatching(text, pos + 1, 1, currentCharacter, closing);
+            pos = (match == -1) ? text.length() - 1 : match;
+            return findComma(text, pos + 1);
+        } else if (currentCharacter == ',') {
+            return pos;
+        }
+        return findComma(text, pos + 1);
+    }
+
+    private static int findMatching(String text, int index, int count, char open, char close) {
+        if (index >= text.length())
+            return -1;
+        char currentCharacter = text.charAt(index);
+        if (currentCharacter == open)
+            count++;
+        else if (currentCharacter == close)
+            count--;
+        if (count == 0)
+            return index;
+        return findMatching(text, index + 1, count, open, close);
     }
 }
