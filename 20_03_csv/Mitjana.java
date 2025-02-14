@@ -28,7 +28,7 @@ public class Mitjana {
                     continue;
                 total += Integer.parseInt(value);
             }
-            float media = total/(splitByComma.length - 1);
+            double media = total/(splitByComma.length - 1);
 
             System.out.format("%s (%.2f)\n", splitByComma[0], media);
         }
