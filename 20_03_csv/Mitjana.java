@@ -11,7 +11,7 @@ import java.io.IOException;
 public class Mitjana {
     public static void main(String[] args) throws IOException {
         int exams = 6;
-        if (args.length != 0 && !args[0].isBlank())
+        if (args.length != 0 && !args[0].isBlank() && UtilString.esEnter(args[0]))
             exams = Integer.parseInt(args[0]);
 
         String cami = "notes.csv";
