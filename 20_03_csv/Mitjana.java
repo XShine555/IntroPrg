@@ -10,6 +10,10 @@ import java.io.IOException;
 
 public class Mitjana {
     public static void main(String[] args) throws IOException {
+        int exams = 6;
+        if (args.length != 0 && !args[0].isBlank())
+            exams = Integer.parseInt(args[0]);
+
         String cami = "notes.csv";
         FileReader fileReader = new FileReader(cami);
         BufferedReader input = new BufferedReader(fileReader);
@@ -32,7 +36,7 @@ public class Mitjana {
                 total += Integer.parseInt(value);
             }
 
-            System.out.format("%s (%.2f)%n", splitByComma[0], (float)total/6);
+            System.out.format("%s (%.2f)%n", splitByComma[0], (float)total/exams);
             //System.out.println(splitByComma.length -1);
         }
         
