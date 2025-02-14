@@ -30,7 +30,7 @@ public class Mitjana {
             }
             int media = total/splitByComma.length - 1;
 
-            System.out.println(splitByComma[0] + "(" + media + "," + total + ")");
+            System.out.println(splitByComma[0] + " (" + media + "," + total + ")");
         }
         input.close();  
     } 
