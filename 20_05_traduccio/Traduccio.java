@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Traduccio {
     public static void main(String[] args) throws IOException {
-        tradueix("origen.txt", "traduccio.csv", "destinacio.txt");
+        tradueix(args[0], "traduccio.csv", "destinacio.txt");
     }
     
     public static void tradueix(String fitxerOrigen, String fitxerTraduccio, String fitxerDestinacio) throws IOException  {
