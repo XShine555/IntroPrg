@@ -32,7 +32,8 @@ public class Mitjana {
                 total += Integer.parseInt(value);
             }
 
-            System.out.format("%s (%.2f)%n", splitByComma[0], (float)total/(splitByComma.length - 1));
+            System.out.format("%s (%.2f)%n", splitByComma[0], (float)total/6);
+            //System.out.println(splitByComma.length -1);
         }
         
         input.close();  
