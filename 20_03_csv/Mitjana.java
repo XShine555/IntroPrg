@@ -16,10 +16,13 @@ public class Mitjana {
         input.readLine();
         System.out.println("Càlcul de la mitjana de notes per 6 exàmens");
         
+        boolean anyLine = false;
+
         while (true) {
             String linia = input.readLine();
             if (linia == null) 
                 break;
+            anyLine = true;
             String[] splitByComma = linia.split(",");
             int total = 0;
             for (int i = 1; i < splitByComma.length; i++) {
@@ -31,6 +34,10 @@ public class Mitjana {
 
             System.out.format("%s (%.2f)%n", splitByComma[0], (float)total/(splitByComma.length - 1));
         }
+        
         input.close();  
+
+        if (!anyLine)
+            System.out.println("El fitxer notes.csv no conté cap nota.");
     } 
 }
