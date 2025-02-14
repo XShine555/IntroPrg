@@ -1,5 +1,5 @@
 /*
- * Clase UtilString
+ * Clase UtilString, contiene un método que comprueba si un String es un número entero.
  * Iker Rivera Garcia
  * 14/02/2025
  */
