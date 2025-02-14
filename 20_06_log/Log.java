@@ -10,8 +10,14 @@ public class Log {
     private static int warningCount = 1;
     private static int infoCount = 1;
     private static int debugCount = 1;
-    
-    public static void printError(String message) throws IOException {
+
+    public void printError(String message) throws IOException {
+        System.out.println(String.format("[%s] ERROR: %s", errorCount, message));
+
+        errorCount++;
+    }
+
+    public static void print1Error(String message) throws IOException {
         write(String.format("[%s] ERROR: %s", errorCount, message));
 
         errorCount++;
