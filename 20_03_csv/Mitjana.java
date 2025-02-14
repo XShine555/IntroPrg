@@ -30,6 +30,10 @@ public class Mitjana {
                 continue;
             anyLine = true;
             String[] splitByComma = linia.split(",");
+            String name = splitByComma[0].trim();
+            if (name.isBlank())
+                continue;
+
             int total = 0;
             for (int i = 1; i < Math.min(splitByComma.length, exams + 1); i++) {
                 String value = splitByComma[i];
@@ -38,7 +42,7 @@ public class Mitjana {
                 total += Integer.parseInt(value);
             }
 
-            System.out.format("%s (%.2f)%n", splitByComma[0].trim(), (float)total/exams);
+            System.out.format("%s (%.2f)%n", name, (float)total/exams);
             //System.out.println(total);
             //System.out.println(splitByComma.length -1);
         }
