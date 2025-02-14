@@ -14,7 +14,8 @@ public class Mitjana {
         FileReader fileReader = new FileReader(cami);
         BufferedReader input = new BufferedReader(fileReader);
         input.readLine();
-
+        System.out.println("Càlcul de la mitjana de notes per 6 exàmens");
+        
         while (true) {
             String linia = input.readLine();
             if (linia == null) 
