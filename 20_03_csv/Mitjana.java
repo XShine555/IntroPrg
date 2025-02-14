@@ -22,15 +22,16 @@ public class Mitjana {
                 break;
             String[] splitByComma = linia.split(",");
             int total = 0;
+            int count = 0;
             for (int i = 1; i < splitByComma.length; i++) {
                 String value = splitByComma[i];
                 if (value.equalsIgnoreCase("NP"))
                     continue;
                 total += Integer.parseInt(value);
+                count++;
             }
-            double media = total/(splitByComma.length - 1);
 
-            System.out.format("%s (%.2f)\n", splitByComma[0], media);
+            System.out.format("%s (%.2f)%n", splitByComma[0], (float)total/count);
         }
         input.close();  
     } 
