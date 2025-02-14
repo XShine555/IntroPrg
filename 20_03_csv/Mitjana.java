@@ -24,7 +24,7 @@ public class Mitjana {
 
         while (true) {
             String linia = input.readLine();
-            if (linia == null) 
+            if (linia == null || linia.isBlank()) 
                 break;
             anyLine = true;
             String[] splitByComma = linia.split(",");
