@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -10,6 +11,10 @@ public class Traduccio {
     }
     
     public static void tradueix(String fitxerOrigen, String fitxerTraduccio, String fitxerDestinacio) throws IOException  {
+        File origenFile = new File(fitxerOrigen);
+        if (!origenFile.exists()) {
+            return;
+        }
         FileWriter fitxerResultWriter = new FileWriter(fitxerDestinacio);
         BufferedWriter writer = new BufferedWriter(fitxerResultWriter);
 
