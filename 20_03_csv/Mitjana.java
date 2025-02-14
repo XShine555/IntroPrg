@@ -30,7 +30,7 @@ public class Mitjana {
             }
             float media = total/splitByComma.length - 1;
 
-            System.out.println(splitByComma[0] + " (" + media + "," + total + ")");
+            System.out.format("%s (%.2f)\n", splitByComma[0], media);
         }
         input.close();  
     } 
