@@ -1,6 +1,11 @@
+/*
+ * Programa que tradueix un fitxer de text segons un fitxer de traduccions donat i escriu el resultat en un altre fitxer.
+ * Iker Rivera Garcia
+ * 14/05/2025
+ */
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
