@@ -1,3 +1,9 @@
+/*
+ * Clase UtilString
+ * Iker Rivera Garcia
+ * 14/02/2025
+ */
+
 public class UtilString {
     public static boolean esEnter(String text) {
         if (text.isBlank() || text.isEmpty())
