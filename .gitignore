@@ -77,3 +77,4 @@ replay_pid*
 # Ignore all local history of files
 .history
 .ionide
+20_04_lloro_memoria/records.txt
