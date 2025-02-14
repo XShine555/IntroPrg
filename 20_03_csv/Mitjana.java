@@ -36,7 +36,7 @@ public class Mitjana {
 
             int total = 0;
             for (int i = 1; i < Math.min(splitByComma.length, exams + 1); i++) {
-                String value = splitByComma[i];
+                String value = splitByComma[i].trim();
                 if (value.equalsIgnoreCase("NP"))
                     continue;
                 total += Integer.parseInt(value);
