@@ -18,7 +18,7 @@ public class Mitjana {
         FileReader fileReader = new FileReader(cami);
         BufferedReader input = new BufferedReader(fileReader);
         input.readLine();
-        System.out.println("Càlcul de la mitjana de notes per 6 exàmens");
+        System.out.format("Càlcul de la mitjana de notes per %s exàmens%n", exams);
         
         boolean anyLine = false;
 
@@ -29,7 +29,7 @@ public class Mitjana {
             anyLine = true;
             String[] splitByComma = linia.split(",");
             int total = 0;
-            for (int i = 1; i < splitByComma.length; i++) {
+            for (int i = 1; i < Math.min(splitByComma.length, exams + 1); i++) {
                 String value = splitByComma[i];
                 if (value.equalsIgnoreCase("NP"))
                     continue;
@@ -37,6 +37,7 @@ public class Mitjana {
             }
 
             System.out.format("%s (%.2f)%n", splitByComma[0], (float)total/exams);
+            //System.out.println(total);
             //System.out.println(splitByComma.length -1);
         }
         
