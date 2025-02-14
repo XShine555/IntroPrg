@@ -7,14 +7,16 @@ import java.io.IOException;
 
 public class Traduccio {
     public static void main(String[] args) throws IOException {
-        tradueix(args[0], "traduccio.csv", "destinacio.txt");
+        if (args.length < 3)
+        {
+            System.out.println("Cal especificar els fitxers origen, traduccio i destinació");
+            return;
+        }
+
+        tradueix(args[0], args[1], args[2]);
     }
     
     public static void tradueix(String fitxerOrigen, String fitxerTraduccio, String fitxerDestinacio) throws IOException  {
-        File origenFile = new File(fitxerOrigen);
-        if (!origenFile.exists()) {
-            return;
-        }
         FileWriter fitxerResultWriter = new FileWriter(fitxerDestinacio);
         BufferedWriter writer = new BufferedWriter(fitxerResultWriter);
 
