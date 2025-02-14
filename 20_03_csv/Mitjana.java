@@ -10,19 +10,22 @@ import java.io.IOException;
 
 public class Mitjana {
     public static void main(String[] args) throws IOException {
-        String cami = "frases.txt";
+        String cami = "notes.csv";
         FileReader fileReader = new FileReader(cami);
         BufferedReader input = new BufferedReader(fileReader);
         input.readLine();
 
         while (true) {
             String linia = input.readLine();
-            if (null == linia) 
+            if (linia == null) 
                 break;
             String[] splitByComma = linia.split(",");
             int total = 0;
-            for (int i = 0; i < splitByComma.length; i++) {
-                total += Integer.parseInt(splitByComma[i]);
+            for (int i = 1; i < splitByComma.length; i++) {
+                String value = splitByComma[i];
+                if (value.equalsIgnoreCase("NP"))
+                    continue;
+                total += Integer.parseInt(value);
             }
             int media = total/splitByComma.length - 1;
 
