@@ -11,13 +11,8 @@ public class Log {
     private static int infoCount = 1;
     private static int debugCount = 1;
     
-    public static void printError(String message) {
-        try{
-            write(String.format("[%s] ERROR: %s", errorCount, message));
-        }
-        catch (IOException e) {
-            System.out.println("Error writing to log file");
-        }
+    public static void printError(String message) throws IOException {
+        write(String.format("[%s] ERROR: %s", errorCount, message));
 
         errorCount++;
     }
@@ -35,7 +30,7 @@ public class Log {
     }
 
     public static void printDebug(String message) throws IOException {
-        write(String.format("DEBUG: %s", message));
+        write(String.format("[%s] DEBUG: %s", debugCount, message));
 
         debugCount++;
     }
