@@ -198,6 +198,9 @@ public class ConsultaNota {
             case 'ü':
                 result = 'u';
                 break;
+            case 'ç':
+                result = 'c';
+                break;
         }
 
         return Character.isUpperCase(character) ? Character.toUpperCase(result) : Character.toLowerCase(result);
