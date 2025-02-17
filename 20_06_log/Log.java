@@ -11,28 +11,40 @@ public class Log {
     private static int infoCount = 1;
     private static int debugCount = 1;
 
-    public static void printError(String message) throws IOException {
-        write(String.format("[%s] ERROR: %s", errorCount, message));
+    public static String printError(String message) throws IOException {
+        message = String.format("[%s] ERROR: %s", errorCount, message);
+        write(message);
 
         errorCount++;
+
+        return message;
     }
 
-    public static void printWarning(String message) throws IOException {
-        write(String.format("[%s] WARNING: %s", warningCount, message));
+    public static String printWarning(String message) throws IOException {
+        message = String.format("[%s] WARNING: %s", warningCount, message);
+        write(message);
         
         warningCount++;
+
+        return message;
     }
 
-    public static void printInfo(String message) throws IOException {
-        write(String.format("[%s] INFO: %s", infoCount, message));
+    public static String printInfo(String message) throws IOException {
+        message = String.format("[%s] INFO: %s", infoCount, message);
+        write(message);
 
         infoCount++;
+
+        return message;
     }
 
-    public static void printDebug(String message) throws IOException {
-        write(String.format("[%s] DEBUG: %s", debugCount, message));
+    public static String printDebug(String message) throws IOException {
+        message = String.format("[%s] DEBUG: %s", debugCount, message);
+        write(message);
 
         debugCount++;
+
+        return message;
     }
 
     public static void reset() {
