@@ -95,7 +95,8 @@ public class CercaAlumnes {
 
             // comprova si el criteri de cerca es troba dins del nom o
             // el email. Si és així, mostra'l
-            if (alumne.nom.startsWith(args[0]) || alumne.email.contains(args[0])) {
+            String lowerName = alumne.nom.toLowerCase();
+            if (lowerName.startsWith(args[0]) || alumne.email.contains(args[0])) {
                 mostraAlumne(alumne);
             }
         }
