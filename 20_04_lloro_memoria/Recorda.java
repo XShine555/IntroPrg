@@ -39,16 +39,17 @@ public class Recorda {
         File file = new File(cami);
         if (!file.exists()) {
             System.out.println("El lloro no recorda res");
-            return;
         }
-        FileReader fr = new FileReader(cami);
-        BufferedReader br = new BufferedReader(fr);
-        String linia = br.readLine();
-        while (linia != null) {
-            System.out.format("El lloro recorda: %s%n", linia);
-            linia = br.readLine();
+        else {
+            FileReader fr = new FileReader(cami);
+            BufferedReader br = new BufferedReader(fr);
+            String linia = br.readLine();
+            while (linia != null) {
+                System.out.format("El lloro recorda: %s%n", linia);
+                linia = br.readLine();
+            }
+            br.close();
         }
-        br.close();
         System.out.println("Adéu");
     }
 }
