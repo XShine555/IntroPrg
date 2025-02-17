@@ -33,7 +33,7 @@ public class ConsultaNota {
                 } else if(nota == -2) {
                     System.out.println("Nota incorrecta");
                 } else if(nota == -1) {
-                    System.out.println("NP");
+                    System.out.println("No Presentat");
                 } else {
                     System.out.format("Nota: %s%n", nota);
                 }
