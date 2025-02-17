@@ -18,8 +18,9 @@ public class Recorda {
         System.out.println("El lloro pregunta paraula:");
         String input = Entrada.readLine();
         while (!input.isBlank()) {
-            System.out.println("El lloro registra: " + trimStartAndEnd(replaceExcessiveWhitespaces(input), ' '));
-            guardaRecord(cami, input);
+            String content = trimStartAndEnd(replaceExcessiveWhitespaces(input), ' ');
+            System.out.println("El lloro registra: " + content);
+            guardaRecord(cami, content);
 
             System.out.println("El lloro pregunta paraula:");
             input = Entrada.readLine();
@@ -46,7 +47,7 @@ public class Recorda {
             BufferedReader br = new BufferedReader(fr);
             String linia = br.readLine();
             while (linia != null) {
-                System.out.format("El lloro recorda: %s%n", trimStartAndEnd(replaceExcessiveWhitespaces(linia), ' '));
+                System.out.format("El lloro recorda: %s%n", linia);
                 linia = br.readLine();
             }
             br.close();
