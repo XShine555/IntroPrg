@@ -7,6 +7,7 @@ public class ConsultaNota {
 
     public static void main(String[] args) throws IOException {
         if (!estaElFitxerBuitONoComençaPerAlumne(FITXER_NOTES)) {
+            System.out.println("El fitxer notes.csv no es vàlid");
             return;
         }
 
