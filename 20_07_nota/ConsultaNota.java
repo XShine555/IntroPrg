@@ -218,11 +218,13 @@ public class ConsultaNota {
         input.close();
         if (linia == null || !linia.trim().startsWith("alumne"))
             return false;
-        var splitNotas = linia.split(",", 2);
+        var splitNotas = linia.split(",");
         if (splitNotas.length < 2)
             return false;
-        if (splitNotas[1].isBlank())
-            return false;
+        for (int i = 0; i < splitNotas.length; i++) {
+            if (splitNotas[i].isBlank())
+                return false;
+        }
         return true;
     }
 }
