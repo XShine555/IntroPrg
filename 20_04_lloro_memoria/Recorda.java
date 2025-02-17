@@ -46,11 +46,32 @@ public class Recorda {
             BufferedReader br = new BufferedReader(fr);
             String linia = br.readLine();
             while (linia != null) {
-                System.out.format("El lloro recorda: %s%n", linia.replace(" ", ""));
+                System.out.format("El lloro recorda: %s%n", replaceExcessiveWhitespaces(linia));
                 linia = br.readLine();
             }
             br.close();
         }
         System.out.println("Adéu");
+    }
+
+    private static String replaceExcessiveWhitespaces(String message) {
+        if (message.isEmpty() || message.isBlank())
+            return "";
+
+        String result = "";
+        boolean lastCharWasSpace = message.charAt(0) == ' ';
+        for (int i = 0; i < message.length(); i++) {
+            char c = message.charAt(i);
+            if (c == ' ') {
+                if (!lastCharWasSpace) {
+                    result += c;
+                }
+                lastCharWasSpace = true;
+            } else {
+                result += c;
+                lastCharWasSpace = false;
+            }
+        }
+        return result;
     }
 }
