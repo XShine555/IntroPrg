@@ -37,9 +37,10 @@ public class Recorda {
     public static void mostraRecords(String cami) throws IOException {
         FileReader fr = new FileReader(cami);
         BufferedReader br = new BufferedReader(fr);
-        String linia;
-        while ((linia = br.readLine()) != null) {
+        String linia = br.readLine();
+        while (linia != null) {
             System.out.format("El lloro recorda: %s%n", linia);
+            linia = br.readLine();
         }
         br.close();
         System.out.println("Adéu");
