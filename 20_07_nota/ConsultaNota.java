@@ -14,6 +14,9 @@ public class ConsultaNota {
 
         while (!input.isBlank()) {
             int fila = filaAlumne(input, alumnes);
+            if (fila == -1) {
+                System.out.format("Alumne \"%s\" no disponible%n", input);
+            }
             
             System.out.println("Prova:");
             String ejer = Entrada.readLine();
@@ -22,9 +25,7 @@ public class ConsultaNota {
                 break;
 
             int columna = columnaProva(ejer, proves);
-            if(fila == -1) {
-                System.out.println("L'alumne no existeix");
-            } else if(columna == -1) {
+            if(columna == -1) {
                 System.out.println("La prova no existeix");
             } else {
                 int nota = notes[fila][columna];
