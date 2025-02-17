@@ -5,56 +5,33 @@ import java.io.IOException;
 public class ConsultaNota {
     public static final String FITXER_NOTES = "notes.csv";
 
-    public static void main(String[] args) {
-        try {
-            BufferedReader headerReader = new BufferedReader(new FileReader(FITXER_NOTES));
-            String header = headerReader.readLine();
-            if (header == null || !normalize(header.split(",")[0]).equals("alumne")) {
-                System.out.println("Error: Fitxer buit o capçalera incorrecta.");
-                headerReader.close();
-                return;
-            }
-            headerReader.close();
-
-            String[] proves = carregaProves(FITXER_NOTES);
-            int numProves = proves.length;
-
-            String[] alumnes = carregaAlumnes(FITXER_NOTES);
-            int numAlumnes = alumnes.length;
-            int[][] notes = carregaNotes(FITXER_NOTES, numAlumnes, numProves);
-
-            while(true) {
-                System.out.println("Alumne:");
-                String nomAlumne = Entrada.readLine();
-                if(nomAlumne.trim().isEmpty()){
-                    break;
-                }
-                System.out.println(nomAlumne);
-                int fila = filaAlumne(nomAlumne, alumnes);
-                if(fila == -1) {
-                    System.out.println("Alumne desconegut.");
-                    continue;
-                }
-                System.out.println("Prova:");
-                String nomProva = Entrada.readLine();
-                if(nomProva.trim().isEmpty()){
-                    break;
-                }
-                int col = columnaProva(nomProva, proves);
-                if(col == -1) {
-                    System.out.println("Prova desconeguda.");
-                    continue;
-                }
-                int n = notes[fila][col];
-                if(n >= 0 && n <= 100) {
-                    System.out.println("Nota: " + n);
-                } else {
-                    System.out.println("Nota no disponible.");
-                }
-            };
-        } catch (IOException e) {
-            System.out.println("Error llegint el fitxer: " + e.getMessage());
+    public static void main(String[] args) throws IOException {
+        if(args.length != 2) {
+            System.out.println("S'ha d'indicar el nom de l'alumne i la prova");
+            return;
         }
+
+        String[] alumnes = carregaAlumnes(FITXER_NOTES);
+            String[] proves = carregaProves(FITXER_NOTES);
+            int[][] notes = carregaNotes(FITXER_NOTES, alumnes.length, proves.length);
+            int fila = filaAlumne(args[0], alumnes);
+            int columna = columnaProva(args[1], proves);
+            if(fila == -1) {
+                System.out.println("L'alumne no existeix");
+            } else if(columna == -1) {
+                System.out.println("La prova no existeix");
+            } else {
+                int nota = notes[fila][columna];
+                if(nota == -3) {
+                    System.out.println("NP");
+                } else if(nota == -2) {
+                    System.out.println("Nota incorrecta");
+                } else if(nota == -1) {
+                    System.out.println("NP");
+                } else {
+                    System.out.println(nota);
+                }
+            }
     }
     
     public static String[] carregaAlumnes(String nomFitxer) throws IOException {
