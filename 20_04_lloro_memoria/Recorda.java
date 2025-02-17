@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -35,6 +36,10 @@ public class Recorda {
     }
 
     public static void mostraRecords(String cami) throws IOException {
+        File file = new File(cami);
+        if (!file.exists()) {
+            return;
+        }
         FileReader fr = new FileReader(cami);
         BufferedReader br = new BufferedReader(fr);
         String linia = br.readLine();
