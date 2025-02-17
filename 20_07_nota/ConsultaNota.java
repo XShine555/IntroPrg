@@ -67,7 +67,8 @@ public class ConsultaNota {
         input.readLine();
         for (int i = 0; i < totalLines - 1; i++) {
             String linia = input.readLine();
-            array[i] = linia;
+            String name = linia.split(",")[0];
+            array[i] = name;
         }
         input.close();
         return array;
