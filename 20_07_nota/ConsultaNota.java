@@ -35,7 +35,7 @@ public class ConsultaNota {
                 } else if(nota == -1) {
                     System.out.println("NP");
                 } else {
-                    System.out.format("Nota %s%n", nota);
+                    System.out.format("Nota: %s%n", nota);
                 }
             }
 
