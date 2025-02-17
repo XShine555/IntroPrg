@@ -35,7 +35,7 @@ public class ConsultaNota {
                 if(nota == -3) {
                     System.out.println("Nota no disponible");
                 } else if(nota == -2) {
-                    System.out.println("Nota incorrecta");
+                    System.out.println("Nota amb valor no numèric o fora de rang");
                 } else if(nota == -1) {
                     System.out.println("No Presentat");
                 } else {
