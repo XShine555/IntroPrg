@@ -29,6 +29,7 @@ public class ConsultaNota {
                 if(nomAlumne.trim().isEmpty()){
                     break;
                 }
+                System.out.println(nomAlumne);
                 int fila = filaAlumne(nomAlumne, alumnes);
                 if(fila == -1) {
                     System.out.println("Alumne desconegut.");
