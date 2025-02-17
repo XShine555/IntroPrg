@@ -1,3 +1,9 @@
+/*
+ * Iker Rivera Garcia
+ * 17/02/2025
+ * Clase Recorda, que se encarga de guardar y mostrar palabras en un archivo de texto con un formato determinado, ademas de procesar la entrada del usuario.
+ */
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
