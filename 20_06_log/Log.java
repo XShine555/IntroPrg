@@ -7,7 +7,6 @@ public class Log {
     private static final String LOG_FILE = "log.txt";
 
     private static int errorCount = 1;
-    private static int warningCount = 1;
     private static int infoCount = 1;
     private static int debugCount = 1;
 
@@ -21,10 +20,10 @@ public class Log {
     }
 
     public static String printWarning(String message) throws IOException {
-        message = String.format("[%s] WARNING: %s", warningCount, message);
+        message = String.format("[%s] WARNING: %s", errorCount, message);
         write(message);
         
-        warningCount++;
+        errorCount++;
 
         return message;
     }
@@ -49,8 +48,8 @@ public class Log {
 
     public static void reset() {
         errorCount = 1;
-        warningCount = 1;
         infoCount = 1;
+        debugCount = 1;
     }
 
     private static void write(String text) throws IOException {
