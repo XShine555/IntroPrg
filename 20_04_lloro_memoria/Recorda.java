@@ -18,7 +18,7 @@ public class Recorda {
         System.out.println("El lloro pregunta paraula:");
         String input = Entrada.readLine();
         while (!input.isBlank()) {
-            System.out.println("El lloro registra: " + replaceExcessiveWhitespaces(input));
+            System.out.println("El lloro registra: " + trimStartAndEnd(replaceExcessiveWhitespaces(input), ' '));
             guardaRecord(cami, input);
 
             System.out.println("El lloro pregunta paraula:");
@@ -73,5 +73,17 @@ public class Recorda {
             }
         }
         return result;
+    }
+
+    private static String trimStartAndEnd(String message, char character) {
+        int start = 0;
+        int end = message.length() - 1;
+        while (start < message.length() && message.charAt(start) == character) {
+            start++;
+        }
+        while (end >= 0 && message.charAt(end) == character) {
+            end--;
+        }
+        return message.substring(start, end + 1);
     }
 }
