@@ -66,7 +66,7 @@ public class CercaAlumnes {
         String nom = parts[0];
         String email = parts[1];
         int edat = Integer.parseInt(parts[2]);
-        boolean esOient = parts[3].equalsIgnoreCase("si");
+        boolean esOient = parts[3].equalsIgnoreCase("Si");
         int[] notes = stringToIntArray(parts[4]);
         return construeixAlumne(nom, email, edat, esOient, notes);
     }
@@ -95,7 +95,7 @@ public class CercaAlumnes {
 
             // comprova si el criteri de cerca es troba dins del nom o
             // el email. Si és així, mostra'l
-            if (alumne.nom.contains(args[0]) || alumne.email.contains(args[0])) {
+            if (alumne.nom.startsWith(args[0]) || alumne.email.contains(args[0])) {
                 mostraAlumne(alumne);
             }
         }
