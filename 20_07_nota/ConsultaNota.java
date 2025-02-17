@@ -215,9 +215,13 @@ public class ConsultaNota {
         BufferedReader input = new BufferedReader(fileReader);
         String linia = input.readLine();
         input.close();
-        if (linia == null || !linia.startsWith("Alumne"))
+        if (linia == null || !linia.startsWith("alumne"))
             return false;
         var splitNotas = linia.split(",", 2);
-        return splitNotas.length > 1;
+        if (splitNotas.length < 2)
+            return false;
+        if (splitNotas[1].isBlank())
+            return false;
+        return true;
     }
 }
