@@ -80,7 +80,7 @@ public class CercaAlumnes {
 
     public static void main(String[] args) throws IOException {
         // assegura que hi ha el criteri de cerca
-        if (args.length != 1) {
+        if (args.length < 1) {
             System.err.println("Ús: CercaAlumnes «criteri de cerca»");
             return;
         }
