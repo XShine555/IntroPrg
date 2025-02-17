@@ -16,6 +16,7 @@ public class ConsultaNota {
             int fila = filaAlumne(input, alumnes);
             if (fila == -1) {
                 System.out.format("Alumne \"%s\" no disponible%n", input);
+                continue;
             }
             
             System.out.println("Prova:");
