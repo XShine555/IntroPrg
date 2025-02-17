@@ -1,3 +1,9 @@
+/*
+ * Iker Rivera Garcia
+ * 17/02/2025
+ * Clase ConsultaNota, que consulta les notes d'un alumne en un fitxer csv segons un criteri de cerca donat per l'usuari.
+ */
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
