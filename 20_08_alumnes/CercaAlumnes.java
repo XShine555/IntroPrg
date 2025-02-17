@@ -18,6 +18,7 @@ public class CercaAlumnes {
                                           int[] notes) {
         Alumne alumne = new Alumne();
         alumne.nom = nom;
+        alumne.email = email;
         alumne.edat = edat;
         alumne.esOient = esOient;
         alumne.notes = notes;
@@ -80,6 +81,7 @@ public class CercaAlumnes {
         // declaracions, inicialitzacions, apertura de fitxer, ignora línia de capçaleres, etc.
         FileReader fileReader = new FileReader(NOM_FITXER);
         BufferedReader input = new BufferedReader(fileReader);
+        input.readLine(); // ignora capçaleres
 
         while (true) {
             // llegeix entrada i finalitza bucle si no en queden més
@@ -105,7 +107,11 @@ public class CercaAlumnes {
         String[] array = input.split(",");
         int[] result = new int[array.length];
         for (int i = 0; i < array.length; i++) {
-            result[i] = Integer.parseInt(array[i]);
+            if (array[i].equals("NP")) {
+                result[i] = -1;
+            } else {
+                result[i] = Integer.parseInt(array[i]);
+            }
         }
         return result;
     }
