@@ -34,7 +34,7 @@ public class CercaAlumnes {
                 - és oïent: %s
                 - notes: %s
                 """
-            , alumne.nom, alumne.email, alumne.edat, alumne.esOient ? "Si" : "No", notesACsv(alumne.notes));
+            , alumne.nom, alumne.email, alumne.edat, alumne.esOient ? "Sí" : "No", notesACsv(alumne.notes));
     }
 
     public static String alumneAString(Alumne alumne) {
@@ -73,7 +73,7 @@ public class CercaAlumnes {
         String nom = parts[0];
         String email = parts[1];
         int edat = Integer.parseInt(parts[2]);
-        boolean esOient = parts[3].equalsIgnoreCase("Si");
+        boolean esOient = Boolean.parseBoolean(parts[3]);
         int[] notes = stringToIntArray(parts[4]);
         return construeixAlumne(nom, email, edat, esOient, notes);
     }
