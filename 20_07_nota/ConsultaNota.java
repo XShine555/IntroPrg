@@ -43,7 +43,7 @@ public class ConsultaNota {
             input = Entrada.readLine();
         }
 
-        System.out.println("Adeu");
+        System.out.println("Arreveure");
     }
     
     public static String[] carregaAlumnes(String nomFitxer) throws IOException {
