@@ -29,8 +29,8 @@ public class CercaAlumnes {
         // cal mostrar les dades de l'alumne
         System.out.format("""
                 Alumne: %s
-                - Email: %s
-                - Edat: %s
+                - email: %s
+                - edat: %s
                 - és oient: %s
                 - notes: %s
                 """
