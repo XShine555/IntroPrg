@@ -18,7 +18,6 @@ public class CercaAlumnes {
                                           int[] notes) {
         Alumne alumne = new Alumne();
         alumne.nom = nom;
-        // XXX a completar
         alumne.edat = edat;
         alumne.esOient = esOient;
         alumne.notes = notes;
@@ -66,7 +65,7 @@ public class CercaAlumnes {
         String nom = parts[0];
         String email = parts[1];
         int edat = Integer.parseInt(parts[2]);
-        boolean esOient = Boolean.parseBoolean(parts[3]);
+        boolean esOient = parts[3].equalsIgnoreCase("si");
         int[] notes = stringToIntArray(parts[4]);
         return construeixAlumne(nom, email, edat, esOient, notes);
     }
