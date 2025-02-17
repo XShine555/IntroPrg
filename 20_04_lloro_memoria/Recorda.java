@@ -38,6 +38,7 @@ public class Recorda {
     public static void mostraRecords(String cami) throws IOException {
         File file = new File(cami);
         if (!file.exists()) {
+            System.out.println("El lloro no recorda res");
             return;
         }
         FileReader fr = new FileReader(cami);
