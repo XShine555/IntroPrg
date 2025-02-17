@@ -123,7 +123,7 @@ public class ConsultaNota {
         for (int i = 0; i < alumnes.length; i++) {
             String[] camps = alumnes[i].split(",");
             String alumne = camps[0];
-            if(normalize(alumne).equals(normNom)) {
+            if(normalize(alumne).equalsIgnoreCase(normNom)) {
                 return i;
             }
         }
