@@ -6,50 +6,38 @@ import java.io.Writer;
 public class Log {
     private static final String LOG_FILE = "log.txt";
 
-    private static int errorCount = 1;
-    private static int infoCount = 1;
-    private static int debugCount = 1;
+    private static int messageCount = 1;
 
     public static String printError(String message) throws IOException {
-        message = String.format("[%s] ERROR: %s", errorCount, message);
+        message = formatMessage(message);
         write(message);
-
-        errorCount++;
 
         return message;
     }
 
     public static String printWarning(String message) throws IOException {
-        message = String.format("[%s] WARNING: %s", errorCount, message);
+        message = formatMessage(message);
         write(message);
-        
-        errorCount++;
 
         return message;
     }
 
     public static String printInfo(String message) throws IOException {
-        message = String.format("[%s] INFO: %s", infoCount, message);
+        message = formatMessage(message);
         write(message);
-
-        infoCount++;
 
         return message;
     }
 
     public static String printDebug(String message) throws IOException {
-        message = String.format("[%s] DEBUG: %s", debugCount, message);
+        message = formatMessage(message);
         write(message);
-
-        debugCount++;
 
         return message;
     }
 
     public static void reset() {
-        errorCount = 1;
-        infoCount = 1;
-        debugCount = 1;
+        messageCount = 1;
     }
 
     private static void write(String text) throws IOException {
@@ -59,5 +47,13 @@ public class Log {
         writer.append(text);
         writer.newLine();
         writer.close();
+    }
+
+    private static String formatMessage(String content) {
+        String message = String.format("[%s] %s", messageCount, content);
+
+        messageCount++;
+
+        return message;
     }
 }
