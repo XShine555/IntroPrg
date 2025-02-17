@@ -66,7 +66,7 @@ public class ConsultaNota {
         input.readLine();
         for (int i = 0; i < totalLines - 1; i++) {
             String linia = input.readLine();
-            array[i] = linia.trim();
+            array[i] = linia;
         }
         input.close();
         return array;
@@ -215,7 +215,7 @@ public class ConsultaNota {
         BufferedReader input = new BufferedReader(fileReader);
         String linia = input.readLine();
         input.close();
-        if (linia == null || !linia.startsWith("alumne"))
+        if (linia == null || !linia.trim().startsWith("alumne"))
             return false;
         var splitNotas = linia.split(",", 2);
         if (splitNotas.length < 2)
