@@ -90,6 +90,7 @@ public class CercaAlumnes {
         BufferedReader input = new BufferedReader(fileReader);
         input.readLine(); // ignora capçaleres
 
+        boolean anyFound = false;
         while (true) {
             // llegeix entrada i finalitza bucle si no en queden més
             String line = input.readLine();
@@ -105,10 +106,15 @@ public class CercaAlumnes {
             String lowerName = alumne.nom.toLowerCase();
             if (lowerName.contains(args[0]) || alumne.email.contains(args[0])) {
                 mostraAlumne(alumne);
+                anyFound = true;
             }
         }
         // consideracions finals com ara el tancament del fitxer
         input.close();
+
+        if (!anyFound) {
+            System.out.println("No s'ha trobat cap alumne");
+        }
     }
 
     private static int[] stringToIntArray(String input) {
