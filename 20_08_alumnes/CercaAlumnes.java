@@ -35,7 +35,6 @@ public class CercaAlumnes {
                 - notes: %s
                 """
             , alumne.nom, alumne.email, alumne.edat, alumne.esOient ? "Si" : "No", notesACsv(alumne.notes));
-        System.out.println(alumneAString(alumne));
     }
 
     public static String alumneAString(Alumne alumne) {
