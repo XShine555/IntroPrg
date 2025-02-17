@@ -7,7 +7,6 @@ public class ConsultaNota {
 
     public static void main(String[] args) throws IOException {
         if (!estaElFitxerBuitONoComençaPerAlumne(FITXER_NOTES)) {
-            System.out.println("Fitxer de notes no disponible");
             return;
         }
 
@@ -216,6 +215,9 @@ public class ConsultaNota {
         BufferedReader input = new BufferedReader(fileReader);
         String linia = input.readLine();
         input.close();
-        return linia == null || !linia.startsWith("Alumne");
+        if (linia == null || !linia.startsWith("Alumne"))
+            return false;
+        var splitNotas = linia.split(",", 2);
+        return splitNotas.length > 1;
     }
 }
