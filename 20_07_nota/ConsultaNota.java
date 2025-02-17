@@ -6,6 +6,11 @@ public class ConsultaNota {
     public static final String FITXER_NOTES = "notes.csv";
 
     public static void main(String[] args) throws IOException {
+        if (!estaElFitxerBuitONoComençaPerAlumne(FITXER_NOTES)) {
+            System.out.println("Fitxer de notes no disponible");
+            return;
+        }
+
         System.out.println("Alumne:");
         String input = Entrada.readLine();
         String[] alumnes = carregaAlumnes(FITXER_NOTES);
@@ -204,5 +209,13 @@ public class ConsultaNota {
         }
 
         return Character.isUpperCase(character) ? Character.toUpperCase(result) : Character.toLowerCase(result);
+    }
+
+    private static boolean estaElFitxerBuitONoComençaPerAlumne(String cami) throws IOException {
+        FileReader fileReader = new FileReader(cami);
+        BufferedReader input = new BufferedReader(fileReader);
+        String linia = input.readLine();
+        input.close();
+        return linia == null || !linia.startsWith("Alumne");
     }
 }
