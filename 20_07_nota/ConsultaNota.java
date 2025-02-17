@@ -6,11 +6,6 @@ public class ConsultaNota {
     public static final String FITXER_NOTES = "notes.csv";
 
     public static void main(String[] args) throws IOException {
-        if(args.length != 2) {
-            System.out.println("S'ha d'indicar el nom de l'alumne i la prova");
-            return;
-        }
-
         String[] alumnes = carregaAlumnes(FITXER_NOTES);
             String[] proves = carregaProves(FITXER_NOTES);
             int[][] notes = carregaNotes(FITXER_NOTES, alumnes.length, proves.length);
