@@ -27,6 +27,14 @@ public class CercaAlumnes {
 
     public static void mostraAlumne(Alumne alumne) {
         // cal mostrar les dades de l'alumne
+        System.out.format("""
+                Alumne: %s
+                - Email: %s
+                - Edat: %s
+                - és oient: %s
+                - notes: %s
+                """
+            , alumne.nom, alumne.email, alumne.edat, alumne.esOient ? "Si" : "No", notesACsv(alumne.notes));
         System.out.println(alumneAString(alumne));
     }
 
