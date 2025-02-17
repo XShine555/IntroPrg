@@ -1,3 +1,9 @@
+/*
+ * Iker Rivera Garcia
+ * 17/02/2025
+ * Clase CercaAlumnes, que busca alumnes en un fitxer csv segons un criteri de cerca donat per l'usuari.
+ */
+
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
