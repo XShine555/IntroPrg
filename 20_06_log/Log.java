@@ -5,32 +5,36 @@ import java.io.Writer;
 
 public class Log {
     private static final String LOG_FILE = "log.txt";
+    private static final String ERROR = "ERROR";
+    private static final String WARNING = "WARNING";
+    private static final String INFO = "INFO";
+    private static final String DEBUG = "DEBUG";
 
     private static int messageCount = 1;
 
     public static String printError(String message) throws IOException {
-        message = formatMessage(message);
+        message = formatMessage(message, ERROR);
         write(message);
 
         return message;
     }
 
     public static String printWarning(String message) throws IOException {
-        message = formatMessage(message);
+        message = formatMessage(message, WARNING);
         write(message);
 
         return message;
     }
 
     public static String printInfo(String message) throws IOException {
-        message = formatMessage(message);
+        message = formatMessage(message, INFO);
         write(message);
 
         return message;
     }
 
     public static String printDebug(String message) throws IOException {
-        message = formatMessage(message);
+        message = formatMessage(message, DEBUG);
         write(message);
 
         return message;
@@ -49,8 +53,8 @@ public class Log {
         writer.close();
     }
 
-    private static String formatMessage(String content) {
-        String message = String.format("[%s] %s", messageCount, content);
+    private static String formatMessage(String content, String messageType) {
+        String message = String.format("[%s] %s: %s", messageCount, messageType, content);
 
         messageCount++;
 
