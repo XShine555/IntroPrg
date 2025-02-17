@@ -66,7 +66,7 @@ public class ConsultaNota {
         input.readLine();
         for (int i = 0; i < totalLines - 1; i++) {
             String linia = input.readLine();
-            array[i] = linia;
+            array[i] = linia.trim();
         }
         input.close();
         return array;
