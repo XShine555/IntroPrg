@@ -31,7 +31,7 @@ public class CercaAlumnes {
                 Alumne: %s
                 - email: %s
                 - edat: %s
-                - és oient: %s
+                - és oïent: %s
                 - notes: %s
                 """
             , alumne.nom, alumne.email, alumne.edat, alumne.esOient ? "Si" : "No", notesACsv(alumne.notes));
