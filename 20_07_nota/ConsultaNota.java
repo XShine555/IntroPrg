@@ -33,7 +33,7 @@ public class ConsultaNota {
             } else {
                 int nota = notes[fila][columna];
                 if(nota == -3) {
-                    System.out.println("NP");
+                    System.out.println("Nota no disponible");
                 } else if(nota == -2) {
                     System.out.println("Nota incorrecta");
                 } else if(nota == -1) {
