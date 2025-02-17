@@ -18,7 +18,7 @@ public class Recorda {
         System.out.println("El lloro pregunta paraula:");
         String input = Entrada.readLine();
         while (!input.isBlank()) {
-            System.out.println("El lloro registra: " + input);
+            System.out.println("El lloro registra: " + replaceExcessiveWhitespaces(input));
             guardaRecord(cami, input);
 
             System.out.println("El lloro pregunta paraula:");
