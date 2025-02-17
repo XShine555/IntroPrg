@@ -6,11 +6,22 @@ public class ConsultaNota {
     public static final String FITXER_NOTES = "notes.csv";
 
     public static void main(String[] args) throws IOException {
+        System.out.println("Alumne:");
+        String input = Entrada.readLine();
         String[] alumnes = carregaAlumnes(FITXER_NOTES);
-            String[] proves = carregaProves(FITXER_NOTES);
-            int[][] notes = carregaNotes(FITXER_NOTES, alumnes.length, proves.length);
-            int fila = filaAlumne(args[0], alumnes);
-            int columna = columnaProva(args[1], proves);
+        String[] proves = carregaProves(FITXER_NOTES);
+        int[][] notes = carregaNotes(FITXER_NOTES, alumnes.length, proves.length);
+
+        while (!input.isBlank()) {
+            int fila = filaAlumne(input, alumnes);
+            
+            System.out.println("Prova:");
+            String ejer = Entrada.readLine();
+
+            if (ejer.isBlank())
+                break;
+
+            int columna = columnaProva(ejer, proves);
             if(fila == -1) {
                 System.out.println("L'alumne no existeix");
             } else if(columna == -1) {
@@ -24,9 +35,15 @@ public class ConsultaNota {
                 } else if(nota == -1) {
                     System.out.println("NP");
                 } else {
-                    System.out.println(nota);
+                    System.out.format("Nota %s%n", nota);
                 }
             }
+
+            System.out.println("Alumne:");
+            input = Entrada.readLine();
+        }
+
+        System.out.println("Adeu");
     }
     
     public static String[] carregaAlumnes(String nomFitxer) throws IOException {
