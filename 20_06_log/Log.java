@@ -1,3 +1,9 @@
+/*
+ * Iker Rivera Garcia
+ * 17/02/2025
+ * Clase Log, que se encarga de escribir mensajes en un archivo de texto con un formato determinado y con un contador de mensajes global.
+ */
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
