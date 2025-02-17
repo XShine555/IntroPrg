@@ -29,7 +29,7 @@ public class ConsultaNota {
 
             int columna = columnaProva(ejer, proves);
             if(columna == -1) {
-                System.out.println("La prova no existeix");
+                System.out.format("Prova \"%s\" no disponible%n", ejer);
             } else {
                 int nota = notes[fila][columna];
                 if(nota == -3) {
