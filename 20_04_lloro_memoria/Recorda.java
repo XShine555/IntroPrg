@@ -39,7 +39,7 @@ public class Recorda {
         BufferedReader br = new BufferedReader(fr);
         String linia;
         while ((linia = br.readLine()) != null) {
-            System.out.println(linia);
+            System.out.format("El lloro recorda: %s%n", linia);
         }
         br.close();
         System.out.println("Adéu");
