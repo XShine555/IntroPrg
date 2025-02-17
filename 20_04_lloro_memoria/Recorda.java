@@ -77,14 +77,18 @@ public class Recorda {
     }
 
     private static String trimStartAndEnd(String message, char character) {
-        int start = 0;
-        int end = message.length() - 1;
-        while (start < message.length() && message.charAt(start) == character) {
-            start++;
-        }
-        while (end >= 0 && message.charAt(end) == character) {
-            end--;
-        }
-        return message.substring(start, end + 1);
+        if (message.isEmpty() || message.isBlank())
+            return "";
+
+        char firstChar = message.charAt(0);
+        char lastChar = message.charAt(message.length() - 1);
+
+        if (firstChar != character && lastChar != character)
+            return message;
+
+        int start = firstChar == character ? 1 : 0;
+        int end = lastChar == character ? message.length() - 1 : message.length();
+
+        return message.substring(start, end);
     }
 }
