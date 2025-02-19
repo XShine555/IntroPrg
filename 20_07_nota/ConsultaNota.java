@@ -74,7 +74,7 @@ public class ConsultaNota {
         for (int i = 0; i < totalLines - 1; i++) {
             String linia = input.readLine();
             String name = linia.split(",")[0];
-            array[i] = name.trim();
+            array[i] = name.strip();
         }
         input.close();
         return array;
@@ -107,7 +107,7 @@ public class ConsultaNota {
                     if(pos >= camps.length) {
                         notes[i][j] = -3;
                     } else {
-                        String valor = camps[pos].trim();
+                        String valor = camps[pos].strip();
                         if(valor.equalsIgnoreCase("NP")) {
                             notes[i][j] = -1;
                         } else {
@@ -167,7 +167,7 @@ public class ConsultaNota {
         String[] split = content.split(splitBy);
         String[] result = new String[split.length - skip];
         for (int i = 0; i < result.length; i++) {
-            result[i] = split[i + skip].trim();
+            result[i] = split[i + skip].strip();
         }
         return result;
     }
@@ -179,7 +179,7 @@ public class ConsultaNota {
             result += normalize(c);
         }
 
-        return result.trim().toLowerCase();
+        return result.strip().toLowerCase();
     }
 
     private static char normalize(char character) {
@@ -223,7 +223,7 @@ public class ConsultaNota {
         BufferedReader input = new BufferedReader(fileReader);
         String linia = input.readLine();
         input.close();
-        if (linia == null || !linia.trim().startsWith("alumne"))
+        if (linia == null || !linia.strip().startsWith("alumne"))
             return false;
         var splitNotas = linia.split(",");
         if (splitNotas.length < 2)
