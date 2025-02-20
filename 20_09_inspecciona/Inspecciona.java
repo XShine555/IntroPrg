@@ -2,6 +2,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.Arrays;
 
 public class Inspecciona {
     public static void main(String[] args) throws IOException {
@@ -31,6 +33,8 @@ public class Inspecciona {
             String[] files = file.list();
 
             if (files.length > 1) {
+                Arrays.sort(files);
+
                 System.out.format("""
                                 
                 %s directori que conté: %s
