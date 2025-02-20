@@ -15,10 +15,10 @@ public class Inspecciona {
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
             System.out.format("""
-            
-            Processant argument: %s
-            %s
-            """, arg, getBar("Processant argument: " + arg));
+
+                    Processant argument: %s
+                    %s
+                    """, arg, getBar("Processant argument: " + arg));
             inspecciona(arg);
         }
     }
@@ -27,10 +27,10 @@ public class Inspecciona {
         File file = new File(path);
 
         if (!file.exists()) {
-            System.out.format("""       
+            System.out.format("""
 
-            No trobat
-            """);
+                    No trobat
+                    """);
             return;
         }
 
@@ -41,46 +41,43 @@ public class Inspecciona {
                 Arrays.sort(files);
 
                 System.out.format("""
-                                
-                %s directori que conté: %s
-                """, getPermissions(file), String.join(", ", files));
-            }
-            else {
+
+                        %s directori que conté: %s
+                        """, getPermissions(file), String.join(", ", files));
+            } else {
                 System.out.format("""
-                                
-                %s directori buit
-                """, getPermissions(file));
+
+                        %s directori buit
+                        """, getPermissions(file));
             }
-        }
-        else {
+        } else {
             long length = file.length();
 
             if (length > 0) {
                 System.out.format("""
-                                
-                %s fitxer de mida en bytes: %d
-                """, getPermissions(file), length);
+
+                        %s fitxer de mida en bytes: %d
+                        """, getPermissions(file), length);
 
                 String extension = path.substring(path.lastIndexOf(".") + 1);
                 if (extension.equalsIgnoreCase("txt") || extension.equalsIgnoreCase("java")) {
                     System.out.println("Amb els continguts:");
                     FileReader fileReader = new FileReader(path);
                     BufferedReader input = new BufferedReader(fileReader);
-    
+
                     String line = input.readLine();
                     while (line != null) {
                         System.out.format("|%s|%n", line);
                         line = input.readLine();
                     }
-    
-                    input.close();   
+
+                    input.close();
                 }
-            }
-            else {
+            } else {
                 System.out.format("""
-                                
-                %s fitxer buit
-                """, getPermissions(file));
+
+                        %s fitxer buit
+                        """, getPermissions(file));
             }
         }
     }
