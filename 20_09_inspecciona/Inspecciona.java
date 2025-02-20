@@ -1,8 +1,13 @@
+/*
+ * Iker Rivera Garcia
+ * 20/02/2025
+ * Classe Inspecciona, que inspecciona un fitxer o directori segons el camí donat per l'usuari i mostra la informació rellevant d'un fitxer o directori.
+ */
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Inspecciona {
