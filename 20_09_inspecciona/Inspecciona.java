@@ -62,7 +62,7 @@ public class Inspecciona {
 
                 String line = input.readLine();
                 while (line != null) {
-                    System.out.println(line);
+                    System.out.format("|%s|", line);
                     line = input.readLine();
                 }
 
