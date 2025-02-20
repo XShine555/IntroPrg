@@ -7,8 +7,8 @@ public class Inspecciona {
             System.out.format("""
             
             Processant argument: %s
-            ===============================
-            """, arg);
+            %s
+            """, arg, getBar("Processant argument: " + arg));
             inspecciona(arg);
         }
     }
@@ -62,5 +62,9 @@ public class Inspecciona {
         String canExecute = file.canExecute() ? "x" : "-";
 
         return canRead + canWrite + canExecute;
+    }
+
+    private static String getBar(String text) {
+        return "=".repeat(text.length());
     }
 }
