@@ -1,7 +1,10 @@
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Inspecciona {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
             System.out.format("""
@@ -13,7 +16,7 @@ public class Inspecciona {
         }
     }
 
-    private static void inspecciona(String path) {
+    private static void inspecciona(String path) throws IOException {
         File file = new File(path);
 
         if (!file.exists()) {
@@ -41,17 +44,31 @@ public class Inspecciona {
             }
         }
         else {
-            System.out.format("""
+            long length = file.length();
+
+            if (length > 0) {
+                System.out.format("""
                                 
                 %s fitxer de mida en bytes: %d
-                """, getPermissions(file), file.length());
+                Amb els continguts:
+                """, getPermissions(file), length);
 
-            String[] getFiles = file.list();
-            if (getFiles != null) {
-                System.out.println("Amb els continguts:");
-                for (int i = 0; i < getFiles.length; i++) {
-                    System.out.println(getFiles[i]);
+                FileReader fileReader = new FileReader(path);
+                BufferedReader input = new BufferedReader(fileReader);
+
+                String line = input.readLine();
+                while (line != null) {
+                    System.out.println(line);
+                    line = input.readLine();
                 }
+
+                input.close();
+            }
+            else {
+                System.out.format("""
+                                
+                %s fitxer buit
+                """, getPermissions(file));
             }
         }
     }
