@@ -165,7 +165,8 @@ public class ConsultaNota {
 
     private static String[] splitWithSkip(String content, String splitBy, int skip) {
         String[] split = content.split(splitBy);
-        String[] result = new String[split.length - skip];
+        int index = split.length - skip;
+        String[] result = new String[index];
         for (int i = 0; i < result.length; i++) {
             result[i] = split[i + skip].strip();
         }
