@@ -54,19 +54,22 @@ public class Inspecciona {
                 System.out.format("""
                                 
                 %s fitxer de mida en bytes: %d
-                Amb els continguts:
                 """, getPermissions(file), length);
 
-                FileReader fileReader = new FileReader(path);
-                BufferedReader input = new BufferedReader(fileReader);
-
-                String line = input.readLine();
-                while (line != null) {
-                    System.out.format("|%s|%n", line);
-                    line = input.readLine();
+                String extension = path.substring(path.lastIndexOf(".") + 1);
+                if (extension.equalsIgnoreCase("txt") || extension.equalsIgnoreCase("java")) {
+                    System.out.println("Amb els continguts:");
+                    FileReader fileReader = new FileReader(path);
+                    BufferedReader input = new BufferedReader(fileReader);
+    
+                    String line = input.readLine();
+                    while (line != null) {
+                        System.out.format("|%s|%n", line);
+                        line = input.readLine();
+                    }
+    
+                    input.close();   
                 }
-
-                input.close();
             }
             else {
                 System.out.format("""
