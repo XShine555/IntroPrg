@@ -85,7 +85,7 @@ public class ConsultaNota {
         BufferedReader input = new BufferedReader(fileReader);
         String linia = input.readLine();
         input.close();
-        return splitWithSkip(linia, ",", 1);
+        return splitByCommaWithSkip(linia, 1);
     }
 
     public static int[][] carregaNotes(String nomFitxer, int numAlumnes, int numProves) throws IOException {
@@ -163,8 +163,8 @@ public class ConsultaNota {
         return count;
     }
 
-    private static String[] splitWithSkip(String content, String splitBy, int skip) {
-        String[] split = content.split(splitBy);
+    private static String[] splitByCommaWithSkip(String content, int skip) {
+        String[] split = content.split(",");
         int index = split.length - skip;
         String[] result = new String[index];
         for (int i = 0; i < result.length; i++) {
