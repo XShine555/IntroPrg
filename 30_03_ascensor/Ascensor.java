@@ -1,3 +1,9 @@
+/*
+ * Iker Rivera Garcia
+ * 05/03/2025
+ * Clase Ascensor, que representa un ascensor que es troba a la planta -1.
+ */
+
 public class Ascensor {
     int pis = -1;
 
