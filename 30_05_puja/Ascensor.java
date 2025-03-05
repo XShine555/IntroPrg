@@ -1,3 +1,10 @@
+/*
+ * Iker Rivera Garcia
+ * 05/03/2025
+ * Clase Ascensor, que tiene un atributo pis que indica la planta en la que se encuentra el ascensor
+ * y un método puja que incrementa en una unidad el valor de pis.
+ */
+
 public class Ascensor {
     int pis = -1;
 
