@@ -1,5 +1,5 @@
 public class Ascensor {
-    public int pis = -1;
+    private int pis = -1;
 
     public static void main(String[] args) {
         Ascensor instance;
