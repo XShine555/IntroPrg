@@ -16,7 +16,7 @@ public class Ascensor {
     }
 
     public static void main(String[] args){
-        if (args.length != 1){
+        if (args.length != 1 || containsAnyLetter(args[0])){
             return;
         }
         int quants = Integer.parseInt(args[0]);
@@ -28,5 +28,14 @@ public class Ascensor {
         for (int i = 0; i < ascensors.length; i++) {
             System.out.printf("Ascensor %d al pis %d%n", i, ascensors[i].pis);
         }
+    }
+
+    private static boolean containsAnyLetter(String text) {
+        for (int i = 0; i < text.length(); i++) {
+            if (Character.isLetter(text.charAt(i))) {
+                return true;
+            }
+        }
+        return false;
     }
 }
