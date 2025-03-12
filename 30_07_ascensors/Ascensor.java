@@ -1,7 +1,7 @@
 /*
  * Iker Rivera Garcia
  * 12/03/2025
- * Ascensor.java
+ * Ascensor.java, un ascensor sin utilidad ninguna que solo imprime el piso en el que se encuentra
  */
 public class Ascensor {
     int pis = 0;
