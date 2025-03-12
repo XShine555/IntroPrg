@@ -1,3 +1,3 @@
 public class Ascensor {
-    public int pis = -1;    
+    int pis = -1;    
 }
