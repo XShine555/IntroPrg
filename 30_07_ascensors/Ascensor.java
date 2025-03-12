@@ -16,7 +16,7 @@ public class Ascensor {
     }
 
     public static void main(String[] args){
-        int quants = Integer.parseInt(Entrada.readLine());
+        int quants = Integer.parseInt(args[0]);
         Ascensor[] ascensors = creaAscensorsEnEscala(quants);
         for (int i = 0; i < ascensors.length; i++) {
             System.out.printf("Ascensor %d al pis %d%n", i, ascensors[i].pis);
