@@ -6,7 +6,7 @@ public class Garfield extends Gat {
     @Override
     public String estirat() {
         if (this.getPosicio().equals("estirat")) {
-            return "passo de fer res";
+            return "Ja estic estirat";
         }
         
         this.setPosicio("estirat");
