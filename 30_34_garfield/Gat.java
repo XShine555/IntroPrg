@@ -82,6 +82,6 @@ public class Gat {
             return "passo de fer res";
 
         posicio = "estirat";
-        return "ja m'estir";
+        return "ja m'estiro";
     }
 }
