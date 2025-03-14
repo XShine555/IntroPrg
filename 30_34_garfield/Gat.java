@@ -62,17 +62,26 @@ public class Gat {
     }
 
     public String aixecat() {
+        if (posicio.equals("dret"))
+            return "passo de fer res";
+
         posicio = "dret";
-        return posicio;
+        return "ja m'aixeco";
     }
 
     public String seu() {
+        if (posicio.equals("assegut"))
+            return "passo de fer res";
+
         posicio = "assegut";
-        return posicio;
+        return "ja m'assec";
     }
 
     public String estirat() {
+        if (posicio.equals("estirat"))
+            return "passo de fer res";
+
         posicio = "estirat";
-        return posicio;
+        return "ja m'estir";
     }
 }
