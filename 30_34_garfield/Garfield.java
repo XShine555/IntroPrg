@@ -6,10 +6,10 @@ public class Garfield extends Gat {
     @Override
     public String estirat() {
         if (this.getPosicio().equals("estirat")) {
-            return "Bai Maitea, bai";
+            return "passo de fer res";
         }
         
         this.setPosicio("estirat");
-        return "ja m'estiro";
+        return "Bai Maitea, bai";
     }
 }
