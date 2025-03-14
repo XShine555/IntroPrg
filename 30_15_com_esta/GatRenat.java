@@ -29,7 +29,7 @@ public class GatRenat {
     }
 
     public boolean esViu() {
-        return vides > 0;
+        return vides >= 0;
     }
 
     public boolean esDret() {
