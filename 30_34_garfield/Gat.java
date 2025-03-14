@@ -1,6 +1,6 @@
 public class Gat {
     private String nom;
-    private int vides = 9;
+    private int vides = 7;
     private String posicio = "estirat";
 
     public Gat(String nom) {
