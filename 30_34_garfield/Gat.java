@@ -1,7 +1,11 @@
 public class Gat {
-    private String nom = "anònim";
+    private String nom;
     private int vides = 7;
     private String posicio = "estirat";
+
+    public Gat() {
+        this.nom = "anònim";
+    }
 
     public Gat(String nom) {
         this.nom = nom;   
