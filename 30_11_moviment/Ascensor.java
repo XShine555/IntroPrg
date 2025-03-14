@@ -5,6 +5,6 @@
  */
 
 public class Ascensor {
-    int pis = -1;
-    String moviment = "aturat";
+    public int pis = -1;
+    public String moviment = "aturat";
 }
