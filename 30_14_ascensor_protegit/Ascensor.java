@@ -9,7 +9,7 @@ public class Ascensor {
     private String moviment = "aturat";
     
     public void setPis(int value) {
-        if (pis >= -1 && pis <= 10)
+        if (value >= -1 && value <= 10)
             pis = value;
     }
 
@@ -18,7 +18,7 @@ public class Ascensor {
     }
 
     public void setMoviment(String value) {
-        if (moviment.equals("aturat") || moviment.equals("pujant") || moviment.equals("baixant"))
+        if (value.equals("aturat") || value.equals("pujant") || value.equals("baixant"))
             moviment = value;
     }
 
