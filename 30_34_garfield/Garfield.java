@@ -10,6 +10,6 @@ public class Garfield extends Gat {
         }
         
         this.setPosicio("estirat");
-        return "Bai Maitea, bai";
+        return "ja m'estiro";
     }
 }
