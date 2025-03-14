@@ -11,6 +11,10 @@ public class UsaAscensor {
             System.out.println("Falten arguments");
             return;
         }
+        if (!UtilString.esEnter(args[0])) {
+            System.out.println("El primer argument ha de ser un enter");
+            return;
+        }
         System.out.println("Pis inicial: " + ascensor.getPis());
         System.out.println("Moviment inicial: " + ascensor.getMoviment());
         ascensor.setPis(Integer.parseInt(args[0]));
