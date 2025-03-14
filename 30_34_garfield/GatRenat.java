@@ -16,4 +16,9 @@ public class GatRenat extends Gat {
     GatRenat(int vides, String posicio) {
         super(NOM, vides, posicio);
     }
+
+    @Override
+    public String aixecat() {
+        return "Bai Maitea, bai";
+    }
 }
