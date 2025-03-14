@@ -1,3 +1,9 @@
+/*
+ * Iker Rivera Garcia
+ * 15/03/2025
+ * Clase Garfield, que representa un gato con nombre, vidas y posición
+ */
+
 public class Garfield extends Gat {
     public Garfield() {
         super("Garfield", 9, "estirat");

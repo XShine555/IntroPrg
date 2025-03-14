@@ -1,3 +1,9 @@
+/*
+ * Iker Rivera Garcia
+ * 15/03/2025
+ * CLase UsaGats, crea un array de gatos y los entrena :)
+ */
+
 public class UsaGats {
     public static void main(String[] args) {
         Gat[] gats = new Gat[] {

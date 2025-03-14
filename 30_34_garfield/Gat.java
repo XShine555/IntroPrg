@@ -1,3 +1,9 @@
+/*
+ * Iker Rivera Garcia
+ * 15/03/2025
+ * Clase Gat, que representa un gato con nombre, vidas y posición
+ */
+
 public class Gat {
     private static final String DEFAULT_NOM = "anònim";
     private static final int DEFAULT_VIDES = 7;
@@ -21,7 +27,7 @@ public class Gat {
 
     public Gat(String nom, int vides, String posicio) {
         if (nom == null || nom.isBlank())
-            nom = "anònim";
+            nom = DEFAULT_NOM;
         this.nom = nom;
         this.vides = vides;
         this.posicio = posicio;
