@@ -1,5 +1,5 @@
 public class Gat {
-    private String nom;
+    private String nom = "anònim";
     private int vides = 7;
     private String posicio = "estirat";
 
@@ -8,9 +8,6 @@ public class Gat {
         {
             this.nom = nom; 
         } 
-        else {
-            this.nom = "anònim";
-        }
     }
 
     public Gat(String nom, int vides) {
