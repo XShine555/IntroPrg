@@ -9,7 +9,7 @@ public class GatRenat {
     private String posicio = "estirat";
     
     public void setVides(int value) {
-        if (value >= 1 && value <= 10) {
+        if (value >= 0 && value <= 10) {
             vides = value;
         }
     }
