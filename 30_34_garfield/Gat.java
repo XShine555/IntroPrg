@@ -1,26 +1,27 @@
 public class Gat {
+    private static final String DEFAULT_NOM = "anònim";
+    private static final int DEFAULT_VIDES = 7;
+    private static final String DEFAULT_POSICIO = "estirat";
+
     private String nom;
-    private int vides = 7;
-    private String posicio = "estirat";
+    private int vides;
+    private String posicio;
 
     public Gat(String nom) {
-        if (nom == null || nom.isBlank())
-            nom = "anònim";
-        this.nom = nom;
-        //System.out.println(this.nom);
+        this(nom, DEFAULT_VIDES, DEFAULT_POSICIO);
     }
 
     public Gat(String nom, int vides) {
-        this.nom = nom;
-        this.vides = vides;
+        this(nom, vides, DEFAULT_POSICIO);
     }
 
     public Gat(String nom, String posicio) {
-        this.nom = nom;
-        this.posicio = posicio;
+        this(nom, DEFAULT_VIDES, posicio);
     }
 
     public Gat(String nom, int vides, String posicio) {
+        if (nom == null || nom.isBlank())
+            nom = "anònim";
         this.nom = nom;
         this.vides = vides;
         this.posicio = posicio;
