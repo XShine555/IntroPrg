@@ -4,10 +4,9 @@ public class Gat {
     private String posicio = "estirat";
 
     public Gat(String nom) {
-        if (nom == null || nom.isBlank())
+        if (nom == null || nom.isEmpty())
             nom = "anònim";
         this.nom = nom;
-        System.out.println(nom == null);
     }
 
     public Gat(String nom, int vides) {
