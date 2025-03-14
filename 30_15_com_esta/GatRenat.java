@@ -20,6 +20,14 @@ public class GatRenat {
         }
     }
 
+    public int getVides() {
+        return vides;
+    }
+
+    public String getPosicio() {
+        return posicio;
+    }
+
     public boolean esViu() {
         return vides > 0;
     }
