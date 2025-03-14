@@ -4,8 +4,7 @@ public class Gat {
     private String posicio = "estirat";
 
     public Gat() {
-        super();
-        this.nom = "anònim";
+        //sthis.nom = "anònim";
     }
 
     public Gat(String nom) {
