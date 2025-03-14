@@ -1,5 +1,5 @@
 public class Gat {
-    private String nom = "anònim";
+    private String nom;
     private int vides = 7;
     private String posicio = "estirat";
 
@@ -7,6 +7,7 @@ public class Gat {
         if (nom == null || nom.isBlank())
             nom = "anònim";
         this.nom = nom;
+        System.out.println(nom == null);
     }
 
     public Gat(String nom, int vides) {

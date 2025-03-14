@@ -1,6 +1,6 @@
 public class UsaGats {
     public static void main(String[] args) {
-        Gat[] gats = new Gat[] {
+        /*Gat[] gats = new Gat[] {
             new Gat("Misifú"),
             new GatRenat(),
             new Garfield()
@@ -12,6 +12,7 @@ public class UsaGats {
             System.out.println(gat.getNom() + " diu: "+ gat.aixecat());
             System.out.println(gat.getNom() + " diu: "+ gat.estirat());
             System.out.println();
-        }
+        }*/
+        new Gat(null);
     }
 }
