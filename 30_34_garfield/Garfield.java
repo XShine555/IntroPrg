@@ -32,6 +32,6 @@ public class Garfield extends Gat {
         }
         
         this.setPosicio("dret");
-        return "ja m'estiro";
+        return "ja m'aixeco";
     }
 }
