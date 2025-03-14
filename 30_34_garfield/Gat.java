@@ -4,6 +4,9 @@ public class Gat {
     private String posicio = "estirat";
 
     public Gat(String nom) {
+        if (nom.isEmpty() || nom.isBlank())
+            return;
+
         this.nom = nom;   
     }
 
