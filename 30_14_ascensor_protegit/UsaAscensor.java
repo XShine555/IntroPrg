@@ -8,10 +8,10 @@ public class UsaAscensor {
     private static Ascensor ascensor = new Ascensor();
     public static void main(String[] args) {
         System.out.println("Pis inicial: " + ascensor.getPis());
-        System.out.println("Moviment inicial: " + ascensor.getPosicio());
+        System.out.println("Moviment inicial: " + ascensor.getMoviment());
         ascensor.setPis(5);
-        ascensor.setPosicio("pujant");
+        ascensor.setMoviment("pujant");
         System.out.println("Pis final: " + ascensor.getPis());
-        System.out.println("Moviment final: " + ascensor.getPosicio());
+        System.out.println("Moviment final: " + ascensor.getMoviment());
     }
 }

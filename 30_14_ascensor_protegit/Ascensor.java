@@ -1,12 +1,12 @@
 /*
  * Iker Rivera Garcia
  * 15/03/2025
- * Clase Ascensor, que tiene dos atributos, pis y posicio, y sus metodos get y set
+ * Clase Ascensor, que tiene dos atributos, pis y moviment, y sus metodos get y set
  */
 
 public class Ascensor {
     private int pis = -1;
-    private String posicio = "aturat";
+    private String moviment = "aturat";
     
     public void setPis(int value) {
         if (pis >= -1 && pis <= 10)
@@ -17,12 +17,12 @@ public class Ascensor {
         return pis;
     }
 
-    public void setPosicio(String value) {
-        if (posicio.equals("aturat") || posicio.equals("pujant") || posicio.equals("baixant"))
-            posicio = value;
+    public void setMoviment(String value) {
+        if (moviment.equals("aturat") || moviment.equals("pujant") || moviment.equals("baixant"))
+            moviment = value;
     }
 
-    public String getPosicio() {
-        return posicio;
+    public String getMoviment() {
+        return moviment;
     }
 }
