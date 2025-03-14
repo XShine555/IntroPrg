@@ -1,13 +1,16 @@
 public class Gat {
-    private String nom = "anònim";
+    private String nom;
     private int vides = 7;
     private String posicio = "estirat";
 
     public Gat(String nom) {
-        if (nom != null && !nom.isEmpty() && !nom.isBlank())
+        if (nom != null && !nom.isBlank())
         {
             this.nom = nom; 
         } 
+        else {
+            this.nom = "anònim";
+        }
     }
 
     public Gat(String nom, int vides) {
