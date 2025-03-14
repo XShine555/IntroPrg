@@ -29,6 +29,7 @@ public class GatRenat {
     }
 
     public boolean esViu() {
+        System.out.println(vides);
         return vides >= 0;
     }
 
