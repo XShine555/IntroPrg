@@ -11,7 +11,7 @@ public class Garfield extends Gat {
             return "passo de fer res";
         }
         
-        if (posicio.equals("assegut")) {
+        if (!posicio.equals("assegut")) {
             return "Bai Maitea, bai";
         }
         
@@ -27,7 +27,7 @@ public class Garfield extends Gat {
             return "passo de fer res";
         }
         
-        if (posicio.equals("assegut")) {
+        if (!posicio.equals("assegut")) {
             return "Bai Maitea, bai";
         }
         
