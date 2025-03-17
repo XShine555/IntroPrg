@@ -15,7 +15,7 @@ public class GatRenat {
     }
 
     public void setPosicio(String value) {
-        if (value.equals("dret") || value.equals("assegut") || value.equals("estirat")) {
+        if (value.equals("seu") || value.equals("dret") || value.equals("assegut") || value.equals("estirat")) {
             posicio = value;
         }
     }
