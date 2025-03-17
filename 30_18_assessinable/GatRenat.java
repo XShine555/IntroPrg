@@ -30,9 +30,9 @@ public class GatRenat {
         vides = i;
 
         if (!esViu())
-            return "guai!";
-        else
             return "...";
+        else
+            return "guai!";
     }
 
     public void setVides(int value) {
