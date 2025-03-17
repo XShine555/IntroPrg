@@ -7,38 +7,41 @@
 public class GatRenat {
     private int vides = 7;
     private String posicio = "estirat";
-
+    
     public void setVides(int value) {
-        vides = value;
+        if (value >= 0 && value <= 10) {
+            vides = value;
+        }
+    }
+
+    public void setPosicio(String value) {
+        if (value.equals("dret") || value.equals("assegut") || value.equals("estirat")) {
+            posicio = value;
+        }
     }
 
     public int getVides() {
         return vides;
     }
 
-    public void setPosicio(String value) {
-        if (value.equals("dret") || value.equals("assegut") || value.equals("estirat"))
-            posicio = value;
-    }
-
     public String getPosicio() {
         return posicio;
     }
 
-    public boolean esEstirat() {
-        return posicio.equals("estirat");
-    }
-
-    public boolean esAssegut() {
-        return posicio.equals("assegut");
+    public boolean esViu() {
+        return vides >= 1;
     }
 
     public boolean esDret() {
         return posicio.equals("dret");
     }
 
-    public boolean esViu() {
-        return vides > 0;
+    public boolean esAssegut() {
+        return posicio.equals("assegut");
+    }
+
+    public boolean esEstirat() {
+        return posicio.equals("estirat");
     }
 
     public String aixecat() {
