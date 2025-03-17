@@ -25,6 +25,18 @@ public class GatRenat {
         return posicio;
     }
 
+    public boolean esEstirat() {
+        return posicio.equals("estirat");
+    }
+
+    public boolean esAssegut() {
+        return posicio.equals("assegut");
+    }
+
+    public boolean esDret() {
+        return posicio.equals("dret");
+    }
+
     public String aixecat() {
         if (posicio.equals("aixecat"))
             return "passo de fer res";
