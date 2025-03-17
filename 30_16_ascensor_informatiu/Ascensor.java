@@ -31,7 +31,7 @@ public class Ascensor {
     }
 
     public boolean esAdalt() {
-        return pis < 9;
+        return pis >= 1;
     }
 
     public boolean esAturat() {
