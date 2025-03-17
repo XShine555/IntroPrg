@@ -26,12 +26,13 @@ public class Ascensor {
         return moviment;
     }
 
+    //esAbaix() i esAdalt() retornen cert quan l'ascensor es troba al primer i al darrer pis respectivament.
     public boolean esAbaix() {
-        return pis < 1;
+        return pis == 0;
     }
 
     public boolean esAdalt() {
-        return pis > 0;
+        return pis == 10;
     }
 
     public boolean esAturat() {
