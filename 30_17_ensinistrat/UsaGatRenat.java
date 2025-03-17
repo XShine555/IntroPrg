@@ -1,6 +1,7 @@
 /*
  * Iker Rivera Garcia
  * 17/03/2025
+ * Clase UsaGatRenat, clase que usa la clase GatRenat.
  */
 
 public class UsaGatRenat {
