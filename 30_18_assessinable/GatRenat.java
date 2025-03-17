@@ -30,7 +30,7 @@ public class GatRenat {
     public String reviu(int i) {
         if (vides == 0) {
             vides = i;
-            return "guai!";
+            return "...";
         }
         else {
             return "...";
