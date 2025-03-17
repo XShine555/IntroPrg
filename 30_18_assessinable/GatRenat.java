@@ -27,12 +27,12 @@ public class GatRenat {
     }
 
     public String reviu(int i) {
-        vides += i;
+        vides = i;
 
         if (!esViu())
-            return "...";
-        else
             return "guai!";
+        else
+            return "...";
     }
 
     public void setVides(int value) {
