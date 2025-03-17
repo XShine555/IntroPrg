@@ -29,7 +29,7 @@ public class GatRenat {
     //String reviu(): quan en Renat està mort, li afegeix una vida i retorna un crit d'alegria "guai!". Si no estava mort, però, retorna el típic silenci de punts suspensius "...".
     public String reviu(int i) {
         if (vides == 0) {
-            vides = i;
+            setVides(i);
             return "guai!";
         }
         else {
