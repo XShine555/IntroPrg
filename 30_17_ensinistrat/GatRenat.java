@@ -52,9 +52,9 @@ public class GatRenat {
     }
     
     public String seu() {
-        if (posicio.equals("seu"))
+        if (posicio.equals("assegut"))
             return "passo de fer res";
-        posicio = "seu";
+        posicio = "assegut";
         return "ja m'assec";
     }
 
