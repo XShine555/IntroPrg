@@ -27,11 +27,11 @@ public class Ascensor {
     }
 
     public boolean esAbaix() {
-        return pis > 0;
+        return pis < 1;
     }
 
     public boolean esAdalt() {
-        return pis >= 1;
+        return pis < 9;
     }
 
     public boolean esAturat() {
