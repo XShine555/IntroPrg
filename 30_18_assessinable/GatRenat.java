@@ -14,7 +14,7 @@ public class GatRenat {
         }
         if (vides > 0) {
             vides--;
-            return "miau";
+            return "auch";
         }
         else {
             return "ximpún";
