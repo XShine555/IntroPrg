@@ -37,6 +37,10 @@ public class GatRenat {
         return posicio.equals("dret");
     }
 
+    public boolean esViu() {
+        return vides > 0;
+    }
+
     public String aixecat() {
         if (posicio.equals("aixecat"))
             return "passo de fer res";
