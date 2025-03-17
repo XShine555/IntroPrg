@@ -6,7 +6,7 @@
 
 public class GatRenat {
     private int vides = 7;
-    private String posicio = "";
+    private String posicio = "estirat";
     
     public void setVides(int value) {
         if (value >= 0 && value <= 10) {

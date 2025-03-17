@@ -1,7 +1,6 @@
 /*
  * Iker Rivera Garcia
  * 17/03/2025
- * 
  */
 
 public class UsaGatRenat {
