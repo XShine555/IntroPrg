@@ -5,26 +5,27 @@
  */
 
 public class GatRenat {
-    private String lastState = "";
+    private int vides = 7;
+    private String posicio = "estirat";
 
     public String aixecat() {
-        if (lastState.equals("aixecat"))
+        if (posicio.equals("aixecat"))
             return "passo de fer res";
-        lastState = "aixecat";
+        posicio = "aixecat";
         return "ja m'aixeco";
     }
     
     public String seu() {
-        if (lastState.equals("seu"))
+        if (posicio.equals("seu"))
             return "passo de fer res";
-        lastState = "seu";
+        posicio = "seu";
         return "ja m'assec";
     }
 
     public String estirat() {
-        if (lastState.equals("estirat"))
+        if (posicio.equals("estirat"))
             return "passo de fer res";
-        lastState = "estirat";
+        posicio = "estirat";
         return "ja m'estiro";   
     }
 }
