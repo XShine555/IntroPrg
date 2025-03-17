@@ -12,8 +12,9 @@ public class GatRenat {
         if (!esViu()) {
             return "...";
         }
+
+        vides--;
         if (vides > 0) {
-            vides--;
             return "auch";
         }
         else {
