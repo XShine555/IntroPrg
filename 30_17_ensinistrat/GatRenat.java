@@ -45,9 +45,9 @@ public class GatRenat {
     }
 
     public String aixecat() {
-        if (posicio.equals("aixecat"))
+        if (posicio.equals("dret"))
             return "passo de fer res";
-        posicio = "aixecat";
+        posicio = "dret";
         return "ja m'aixeco";
     }
     
