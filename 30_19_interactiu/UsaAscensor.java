@@ -39,7 +39,7 @@
         ascensor.arrencaAbaix();
         while (! ascensor.esAbaix()) {
             ascensor.seguentPis();       // passa al següent pis
-            System.out.println("\t ara està pujant al pis "+ ascensor.getPis());
+            System.out.println("\t ara està baixant al pis "+ ascensor.getPis());
         }
 
         ascensor.aturat();
