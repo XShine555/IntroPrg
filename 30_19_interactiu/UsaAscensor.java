@@ -20,7 +20,7 @@ public class UsaAscensor {
         System.out.printf("Inicialment l'ascensor està %s al pis %s%n", ascensor.getMoviment(), ascensor.getPis());
 
         // aturat a pujant
-        boolean resposta = ascensor.arrencaAmunt();
+        boolean resposta = ascensor.aturat();
         System.out.printf("En arrencar amunt l'ascensor respon %b i està %s al pis %s%n",
                 resposta, ascensor.getMoviment(), ascensor.getPis());
 
