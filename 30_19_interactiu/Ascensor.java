@@ -77,19 +77,20 @@ public class Ascensor {
 
     public int seguentPis() {
         if (esPujant())
-            if (!esAbaix())
-                pis++;
-            else {
+            if (esAdalt()) {
                 moviment = "baixant";
                 pis--;
             }
+            else
+                pis++;
+        else
         if (esBaixant())
-            if (!esAbaix())
-                pis--;
-            else {
+            if (esAbaix()) {
                 moviment = "pujant";
                 pis++;
             }
+            else
+                pis--;
 
         return pis;
     }
