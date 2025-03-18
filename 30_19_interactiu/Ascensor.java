@@ -55,21 +55,21 @@ public class Ascensor {
     }
 
     public boolean aturat() {
-        if (moviment.equals("aturt"))
+        if (moviment.equals("aturat"))
             return false;
         moviment = "aturat";
         return true;
     }
 
     public boolean arrencaAmunt() {
-        if (moviment.equals("pujant"))
+        if (moviment.equals("pujant") || moviment.equals("aturat"))
             return false;
         moviment = "pujant";
         return true;
     }
 
     public boolean arrencaAbaix() {
-        if (moviment.equals("baixant"))
+        if (moviment.equals("baixant") || moviment.equals("aturat"))
             return false;
         moviment = "baixant";
         return true;
