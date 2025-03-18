@@ -65,6 +65,7 @@ public class Ascensor {
         if (moviment.equals("pujant"))
             return false;
         moviment = "pujant";
+        pis++;
         return true;
     }
 
@@ -72,6 +73,7 @@ public class Ascensor {
         if (moviment.equals("baixant"))
             return false;
         moviment = "baixant";
+        pis--;
         return true;
     }
 
