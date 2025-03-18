@@ -35,6 +35,12 @@ public class UsaAscensor {
             ascensor.seguentPis();       // passa al següent pis
             System.out.println("\t ara està "+ ascensor.getPis());
         }
+
+        ascensor.arrencaAbaix();
+        while (! ascensor.esAbaix()) {
+            ascensor.seguentPis();       // passa al següent pis
+            System.out.println("\t ara està "+ ascensor.getPis());
+        }
         ascensor.aturat();
         System.out.printf("Està %s. Final de trajecte!%n", ascensor.comEsta());
     }
