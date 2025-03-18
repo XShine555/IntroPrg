@@ -21,16 +21,16 @@
 
         // aturat a pujant
         boolean resposta = ascensor.arrencaAmunt();
-        System.out.printf("En arrencar amunt l'ascensor respon %b i està %s%n",
+        System.out.printf("En arrencar amunt l'ascensor respon %b i està pujant al pis %s%n",
                 resposta, ascensor.getPis());
 
         // demanem que baixi sense aturar
         resposta = ascensor.arrencaAmunt();
-        System.out.printf("En arrencar a baix l'ascensor respon %b i està %s%n",
+        System.out.printf("En arrencar a baix l'ascensor respon %b i està pujant al pis %s%n",
                 resposta, ascensor.getPis());
 
         // passem del pis indicat al la planta baixa
-        System.out.println("Anant a la planta baixa quan està " + ascensor.comEsta());
+        System.out.println("Anant a la planta baixa quan està pujant al pis " + ascensor.comEsta());
         while (! ascensor.esAdalt()) {
             ascensor.seguentPis();       // passa al següent pis
             System.out.println("\t ara està pujant al pis "+ ascensor.getPis());
