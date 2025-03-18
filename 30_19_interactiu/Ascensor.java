@@ -62,14 +62,14 @@ public class Ascensor {
     }
 
     public boolean arrencaAmunt() {
-        if (moviment.equals("pujant") || moviment.equals("aturat"))
+        if (moviment.equals("pujant") || !moviment.equals("aturat"))
             return false;
         moviment = "pujant";
         return true;
     }
 
     public boolean arrencaAbaix() {
-        if (moviment.equals("baixant") || moviment.equals("aturat"))
+        if (moviment.equals("baixant") || !moviment.equals("aturat"))
             return false;
         moviment = "baixant";
         return true;
