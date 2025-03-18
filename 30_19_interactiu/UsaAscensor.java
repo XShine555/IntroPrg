@@ -33,13 +33,13 @@ public class UsaAscensor {
         System.out.println("Anant a la planta baixa quan està " + ascensor.comEsta());
         while (! ascensor.esAdalt()) {
             ascensor.seguentPis();       // passa al següent pis
-            System.out.println("\t ara està "+ ascensor.getPis());
+            System.out.println("\t ara està baixant al pis "+ ascensor.getPis());
         }
 
         ascensor.arrencaAbaix();
         while (! ascensor.esAbaix()) {
             ascensor.seguentPis();       // passa al següent pis
-            System.out.println("\t ara està "+ ascensor.getPis());
+            System.out.println("\t ara està baixant al pis "+ ascensor.getPis());
         }
         ascensor.aturat();
         System.out.printf("Està %s. Final de trajecte!%n", ascensor.comEsta());
