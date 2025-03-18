@@ -1,3 +1,9 @@
+/*
+ * Iker Rivera Garcia
+ * 17/03/2025
+ * Classe UsaAscensor, classe que interactua amb l'usuari per a provar la classe Ascensor.
+ */
+
 public class UsaAscensor {
     public static int llegeixEnter() {
         String resposta = Entrada.readLine();
