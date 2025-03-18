@@ -31,7 +31,7 @@
 
         // passem del pis indicat al la planta baixa
         System.out.println("Anant a la planta baixa quan està " + ascensor.comEsta());
-        while (! ascensor.esAdalt()) {
+        while (! ascensor.esAbaix()) {
             ascensor.seguentPis();       // passa al següent pis
             System.out.println("\t ara està pujant al pis "+ ascensor.getPis());
         }
