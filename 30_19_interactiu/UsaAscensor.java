@@ -21,12 +21,11 @@ public class UsaAscensor {
 
         // aturat a pujant
         boolean resposta = ascensor.arrencaAmunt();
-        ascensor.aturat();
         System.out.printf("En arrencar amunt l'ascensor respon %b i està %s al pis %s%n",
                 resposta, ascensor.getMoviment(), ascensor.getPis());
 
         // demanem que baixi sense aturar
-        resposta = ascensor.arrencaAbaix();
+        resposta = ascensor.arrencaAmunt();
         System.out.printf("En arrencar a baix l'ascensor respon %b i està %s al pis %s%n",
                 resposta, ascensor.getMoviment(), ascensor.getPis());
 
