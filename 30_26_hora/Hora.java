@@ -103,6 +103,8 @@ public class Hora {
     public void decrementa(int value) {
         if (value > 0)
             value = -value;
+        else if (value < 0)
+            value = -value;
 
         segons += value;
 
