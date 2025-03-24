@@ -50,7 +50,7 @@ public class Hora {
     }
 
     public void incrementa() {
-        segons++;
+        /*segons++;
         if (segons == 60) {
             segons = 0;
             minuts++;
@@ -61,7 +61,7 @@ public class Hora {
                     hores = 0;
                 }
             }
-        }
+        }*/
     }
 
     public void incrementa(int value) {
@@ -71,7 +71,7 @@ public class Hora {
     }
 
     public void decrementa() {
-        segons--;
+        /*segons--;
         if (segons == -1) {
             segons = 59;
             minuts--;
@@ -82,7 +82,7 @@ public class Hora {
                     hores = 23;
                 }
             }
-        }
+        }*/
     }
 
     public void decrementa(int value) {
