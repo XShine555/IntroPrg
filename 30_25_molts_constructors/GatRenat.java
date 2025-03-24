@@ -32,6 +32,8 @@ public class GatRenat {
         if (vides >= 0)  {
             this.vides = vides;
         }
+        else
+            this.vides = 7;
     }
     public void setPosicio(String posicio) {
         this.posicio = posicio;
