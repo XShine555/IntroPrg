@@ -22,6 +22,18 @@ public class GatRenat {
     @Override
     public String toString() { return String.format("Vides: %d. Posició: %s", vides, posicio); }
 
+    public int getVides() { return vides; }
+    public String getPosicio() { return posicio; }
+
+    public void setVides(int vides) {
+        if (vides >= 0)  {
+            this.vides = vides;
+        }
+    }
+    public void setPosicio(String posicio) {
+        this.posicio = posicio;
+    }
+
     public static void main(String[] args) {
         GatRenat[] renats = {
             new GatRenat(),         // tot per defecte
