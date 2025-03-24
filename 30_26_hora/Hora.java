@@ -108,22 +108,11 @@ public class Hora {
 
         while (segons < 0)
         {            
-            if (minuts == 0)
-            {
-                segons = 0;
-                break;
-            }
-
             segons += 60;
             minuts--;
 
             if (minuts < 0)
             {
-                if (hores == 0) {
-                    minuts = 0;
-                    break;
-                }
-
                 minuts += 60;
                 hores--;
 
@@ -195,5 +184,8 @@ public class Hora {
                 hora1,
                 composaOperadorComparacio(hora1, hora2),
                 hora2);
+
+        //hora1.decrementa(1);
+        //System.out.println(hora1.toString());
     }
 }
