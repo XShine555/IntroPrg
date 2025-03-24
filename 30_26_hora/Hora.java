@@ -86,9 +86,6 @@ public class Hora {
     }
 
     public void decrementa(int value) {
-        if (value < 0)
-            return;
-
         for (int i = 0; i < value; i++) {
             segons--;
             if (segons == -1) {
@@ -166,6 +163,5 @@ public class Hora {
                 hora1,
                 composaOperadorComparacio(hora1, hora2),
                 hora2);
-
     }
 }
