@@ -1,3 +1,9 @@
+/*
+ * Iker Rivera Garcia
+ * 24/03/2025
+ * Clase Hora, que representa una hora del dia amb hores, minuts i segons i permet incrementar i decrementar la hora.
+ */
+
 public class Hora {
     private int hores = 0;
     private int minuts = 0;
