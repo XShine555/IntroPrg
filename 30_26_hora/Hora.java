@@ -86,20 +86,7 @@ public class Hora {
     }
 
     public void decrementa(int value) {
-        for (int i = 0; i < value; i++) {
-            segons--;
-            if (segons == -1) {
-                segons = 59;
-                minuts--;
-                if (minuts == -1) {
-                    minuts = 59;
-                    hores--;
-                    if (hores == -1) {
-                        hores = 23;
-                    }
-                }
-            }
-        }
+        return;
     }
 
     //compara amb l'hora indicada i retorna <0 si és menor que la indicada, 0 si són iguals i >0 si és més gran que la indicada.
