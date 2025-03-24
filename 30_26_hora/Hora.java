@@ -151,6 +151,6 @@ public class Hora {
                 hora1,
                 composaOperadorComparacio(hora1, hora2),
                 hora2);
-
+        hora1.decrementa(-1);
     }
 }
