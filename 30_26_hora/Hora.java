@@ -26,38 +26,32 @@ public class Hora {
     }
 
     public void setHores(int hora) {
-        if (hora >= 0 && hora < 24) {
-            hores = hora;
-        } else {
-            hores = 0;
-        }
+        this.hores = hora;
     }
 
     public void setMinuts(int minuts) {
-        if (minuts >= 0 && minuts < 60) {
-            this.minuts = minuts;
-        } else {
-            this.minuts = 0;
-        }
+        this.minuts = minuts;
     }
 
     public void setSegons(int segons) {
-        if (segons >= 0 && segons < 60) {
-            this.segons = segons;
-        } else {
-            this.segons = 0;
-        }
+        this.segons = segons;
     }
 
     public void incrementa() {
         segons++;
-        if (segons == 60) {
+
+        if (segons >= 60)
+        {
             segons = 0;
             minuts++;
-            if (minuts == 60) {
+
+            if (minuts >= 60)
+            {
                 minuts = 0;
                 hores++;
-                if (hores == 24) {
+
+                if (hores >= 24)
+                {
                     hores = 0;
                 }
             }
@@ -72,13 +66,19 @@ public class Hora {
 
     public void decrementa() {
         segons--;
-        if (segons == -1) {
+
+        if (segons < 0)
+        {
             segons = 59;
             minuts--;
-            if (minuts == -1) {
+
+            if (minuts < 0)
+            {
                 minuts = 59;
                 hores--;
-                if (hores == -1) {
+
+                if (hores < 0)
+                {
                     hores = 23;
                 }
             }
