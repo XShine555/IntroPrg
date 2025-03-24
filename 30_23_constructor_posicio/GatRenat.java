@@ -10,7 +10,10 @@ public class GatRenat {
 
     public GatRenat(int vides, String posicio) {
         setVides(vides);
-        setPosicio(posicio);
+        if (posicio.equals("estirat") || posicio.equals("dret") || posicio.equals("assegut"))
+            setPosicio(posicio);
+        else
+            setPosicio("estirat");
     }
     public int getVides() { return vides; }
     public String getPosicio() { return posicio; }
