@@ -65,9 +65,9 @@ public class Hora {
     }
 
     public void incrementa(int value) {
-        /*for (int i = 0; i < value; i++) {
+        for (int i = 0; i < value; i++) {
             incrementa();
-        }*/
+        }
     }
 
     public void decrementa() {
@@ -151,6 +151,5 @@ public class Hora {
                 hora1,
                 composaOperadorComparacio(hora1, hora2),
                 hora2);
-        hora1.decrementa(-1);
     }
 }
