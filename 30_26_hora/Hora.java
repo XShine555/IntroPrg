@@ -26,7 +26,14 @@ public class Hora {
     }
 
     public void setHores(int hora) {
-        this.hores = hora;
+        if (hora >= 24 || hora < 0)
+        {
+            this.hores = 0;
+        }
+        else
+        {
+            this.hores = hora;
+        }
     }
 
     public void setMinuts(int minuts) {
