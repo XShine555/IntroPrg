@@ -11,6 +11,9 @@ public class Hora {
         if (hores < 0 || minuts < 0 || segons < 0) {
             return;
         }
+        if (hores >= 24 || minuts >= 60 || segons >= 60) {
+            return;
+        }
 
         setSegons(segons);
         setMinuts(this.minuts + minuts);
