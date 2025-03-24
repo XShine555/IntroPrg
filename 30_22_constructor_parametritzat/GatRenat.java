@@ -18,6 +18,10 @@ public class GatRenat {
         return vides; 
     }
 
+    public String getPosition() {
+        return posicio;
+    }
+
     @Override
     public String toString() {
         return String.format("Vides: %d. Posició: %s", vides, posicio);
