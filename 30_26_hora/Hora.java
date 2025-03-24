@@ -50,7 +50,7 @@ public class Hora {
     }
 
     public void incrementa() {
-        /*segons++;
+        segons++;
         if (segons == 60) {
             segons = 0;
             minuts++;
@@ -61,17 +61,17 @@ public class Hora {
                     hores = 0;
                 }
             }
-        }*/
-    }
-
-    public void incrementa(int value) {
-        for (int i = 0; i < value; i++) {
-            incrementa();
         }
     }
 
+    public void incrementa(int value) {
+        /*for (int i = 0; i < value; i++) {
+            incrementa();
+        }*/
+    }
+
     public void decrementa() {
-        /*segons--;
+        segons--;
         if (segons == -1) {
             segons = 59;
             minuts--;
@@ -82,13 +82,13 @@ public class Hora {
                     hores = 23;
                 }
             }
-        }*/
+        }
     }
 
     public void decrementa(int value) {
-        for (int i = 0; i < value; i++) {
+        /*for (int i = 0; i < value; i++) {
             decrementa();
-        }
+        }*/
     }
 
     public int compareTo(Hora hora) {
