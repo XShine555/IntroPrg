@@ -59,6 +59,12 @@ public class Hora {
     }
 
     public void incrementa(int value) {
+        if (value < 0)
+        {
+            decrementa(Math.abs(value));
+            return;
+        }
+
         segons += value;
 
         while (segons >= 60)
