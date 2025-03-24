@@ -91,26 +91,26 @@ public class Hora {
         }
     }
 
+    //compara amb l'hora indicada i retorna <0 si és menor que la indicada, 0 si són iguals i >0 si és més gran que la indicada.
     public int compareTo(Hora hora) {
-        if (hores < hora.getHores()) {
-            return -1;
-        } else if (hores > hora.getHores()) {
-            return 1;
-        } else {
-            if (minuts < hora.getMinuts()) {
-                return -1;
-            } else if (minuts > hora.getMinuts()) {
-                return 1;
-            } else {
-                if (segons < hora.getSegons()) {
-                    return -1;
-                } else if (segons > hora.getSegons()) {
-                    return 1;
-                } else {
-                    return 0;
-                }
+        int comparacio = comparaValors(hores, hora.hores);
+        if (comparacio == 0) {
+            comparacio = comparaValors(minuts, hora.minuts);
+            if (comparacio == 0) {
+                comparacio = comparaValors(segons, hora.segons);
             }
         }
+        return comparacio;
+    }
+
+    private static int comparaValors(int p1, int p2)
+    {
+        if (p1 > p2)
+            return 1;
+        else if (p1 == p2)
+            return 0;
+        else
+            return -1;
     }
 
     @Override
