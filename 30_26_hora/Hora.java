@@ -101,7 +101,7 @@ public class Hora {
     }
 
     public void decrementa(int value) {
-        segons += value;
+        segons -= value;
 
         while (segons < 0)
         {            
