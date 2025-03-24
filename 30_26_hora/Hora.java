@@ -101,7 +101,11 @@ public class Hora {
     }
 
     public void decrementa(int value) {
-        value = Math.abs(value);
+        if (value < 0)
+        {
+            incrementa(Math.abs(value));
+            return;
+        }
 
         segons -= value;
 
