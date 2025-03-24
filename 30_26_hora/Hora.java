@@ -9,8 +9,8 @@ public class Hora {
 
     public Hora(int hores, int minuts, int segons) {
         setSegons(segons);
-        setMinuts(minuts);
-        setHores(hores);
+        setMinuts(this.minuts + minuts);
+        setHores(this.hores + hores);
     }
 
     public int getHores() {
