@@ -36,30 +36,60 @@ public class Hora {
     public void setSegons(int segons) {
         this.segons = segons;
     }
+
     public void incrementa() {
-        int total = (hores * 3600 + minuts * 60 + segons + 1) % (24 * 3600);
-        hores = total / 3600;
-        minuts = (total % 3600) / 60;
-        segons = total % 60;
+        segons++;
+
+        if (segons >= 60)
+        {
+            segons = 0;
+            minuts++;
+
+            if (minuts >= 60)
+            {
+                minuts = 0;
+                hores++;
+
+                if (hores >= 24)
+                {
+                    hores = 0;
+                }
+            }
+        }
     }
 
     public void incrementa(int value) {
-        int total = hores * 3600 + minuts * 60 + segons + value;
-        total %= (24 * 3600);
-        if (total < 0) {
-            total += 24 * 3600;
+        for (int i = 0; i < value; i++) {
+            incrementa();
+            System.out.println("incrementa");
         }
-        hores = total / 3600;
-        minuts = (total % 3600) / 60;
-        segons = total % 60;
     }
 
     public void decrementa() {
-        incrementa(-1);
+        segons--;
+
+        if (segons < 0)
+        {
+            segons = 59;
+            minuts--;
+
+            if (minuts < 0)
+            {
+                minuts = 59;
+                hores--;
+
+                if (hores < 0)
+                {
+                    hores = 23;
+                }
+            }
+        }
     }
 
     public void decrementa(int value) {
-        incrementa(-value);
+        for (int i = 0; i < value; i++) {
+            decrementa();
+        }
     }
 
     public int compareTo(Hora hora) {
