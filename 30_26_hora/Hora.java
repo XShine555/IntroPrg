@@ -38,10 +38,10 @@ public class Hora {
 
     public void setMinuts(int minuts) {
         if (minuts < 0)
-            minuts = 0;
+            this.minuts = 0;
         else if (minuts >= 60)
         {
-            minuts = 0;
+            this.minuts = 0;
             setHores(this.hores + 1);
         }
         else
