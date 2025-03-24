@@ -86,9 +86,9 @@ public class Hora {
     }
 
     public void decrementa(int value) {
-        /*for (int i = 0; i < value; i++) {
+        for (int i = 0; i < value; i++) {
             decrementa();
-        }*/
+        }
     }
 
     public int compareTo(Hora hora) {
