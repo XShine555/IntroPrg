@@ -101,6 +101,8 @@ public class Hora {
     }
 
     public void decrementa(int value) {
+        value = Math.abs(value);
+
         segons -= value;
 
         while (segons < 0)
