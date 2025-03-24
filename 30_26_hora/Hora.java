@@ -59,9 +59,23 @@ public class Hora {
     }
 
     public void incrementa(int value) {
-        for (int i = 0; i < value; i++) {
-            incrementa();
-            System.out.println("incrementa");
+        segons += value;
+
+        while (segons >= 60)
+        {
+            segons -= 60;
+            minuts++;
+
+            if (minuts >= 60)
+            {
+                minuts -= 60;
+                hores++;
+
+                if (hores >= 24)
+                {
+                    hores -= 24;
+                }
+            }
         }
     }
 
@@ -87,8 +101,23 @@ public class Hora {
     }
 
     public void decrementa(int value) {
-        for (int i = 0; i < value; i++) {
-            decrementa();
+        segons -= value;
+
+        while (segons < 0)
+        {
+            segons += 60;
+            minuts--;
+
+            if (minuts < 0)
+            {
+                minuts += 60;
+                hores--;
+
+                if (hores < 0)
+                {
+                    hores += 24;
+                }
+            }
         }
     }
 
