@@ -86,10 +86,11 @@ public class Hora {
     }
 
     public void decrementa(int value) {
-        return;
+        for (int i = 0; i < value; i++) {
+            decrementa();
+        }
     }
 
-    //compara amb l'hora indicada i retorna <0 si és menor que la indicada, 0 si són iguals i >0 si és més gran que la indicada.
     public int compareTo(Hora hora) {
         int comparacio = comparaValors(hores, hora.hores);
         if (comparacio == 0) {
@@ -150,5 +151,6 @@ public class Hora {
                 hora1,
                 composaOperadorComparacio(hora1, hora2),
                 hora2);
+
     }
 }
