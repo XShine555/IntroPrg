@@ -1,13 +1,17 @@
 public class Hora {
-    private int hores;
-    private int minuts;
-    private int segons;
+    private int hores = 0;
+    private int minuts = 0;
+    private int segons = 0;
 
     public Hora() {
         this(0, 0, 0);
     }
 
     public Hora(int hores, int minuts, int segons) {
+        if (hores < 0 || minuts < 0 || segons < 0) {
+            return;
+        }
+
         setSegons(segons);
         setMinuts(this.minuts + minuts);
         setHores(this.hores + hores);
