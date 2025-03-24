@@ -86,13 +86,20 @@ public class Hora {
     }
 
     public void decrementa(int value) {
-        int totalSeconds = hores * 3600 + minuts * 60 + segons - value;
-        if (totalSeconds < 0) {
-            totalSeconds = 86400 + totalSeconds % 86400;
+        for (int i = 0; i < value; i++) {
+            segons--;
+            if (segons == -1) {
+                segons = 59;
+                minuts--;
+                if (minuts == -1) {
+                    minuts = 59;
+                    hores--;
+                    if (hores == -1) {
+                        hores = 23;
+                    }
+                }
+            }
         }
-        hores = (totalSeconds / 3600) % 24;
-        minuts = (totalSeconds / 60) % 60;
-        segons = totalSeconds % 60;
     }
 
     //compara amb l'hora indicada i retorna <0 si és menor que la indicada, 0 si són iguals i >0 si és més gran que la indicada.
