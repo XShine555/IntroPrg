@@ -18,7 +18,7 @@ public class GatRenat {
         return vides; 
     }
 
-    public String getPosition() {
+    public String getPosicio() {
         return posicio;
     }
 
