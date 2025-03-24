@@ -1,0 +1,1 @@
+Los ejercicios realizados previamente fueron fáciles, ya que tenía conocimientos previos sobre cómo funciona los constructores.
