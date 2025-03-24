@@ -16,7 +16,10 @@ public class GatRenat {
 
     public GatRenat(int vides, String posicio) {
         this.vides = vides;
-        this.posicio = posicio;
+        if (posicio.equals("estirat") || posicio.equals("dret") || posicio.equals("assegut"))
+            setPosicio(posicio);
+        else
+            setPosicio("estirat");
     }
 
     @Override
