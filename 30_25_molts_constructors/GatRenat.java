@@ -1,3 +1,9 @@
+/*
+ * Iker Rivera Garcia
+ * 26/03/2025
+ * Clase GatRenat, que tiene dos atributos, vides y posicio, y un constructor que inicializa los atributos.
+ */
+
 public class GatRenat {
     private int vides;
     private String posicio;
