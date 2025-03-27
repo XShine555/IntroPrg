@@ -1,6 +1,7 @@
 /*
  * Iker Rivera Garcia
  * 27/03/2025
+ * UsaGatRenat, que usa la clase GatRenat para cambiar la posición de Renat.
  */
 
 public class UsaGatRenat {

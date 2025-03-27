@@ -12,8 +12,14 @@ public class UllDeGat {
     public void obrir() {
         obert = true;
     }
+    public void obret() {
+        obert = true;
+    }
 
     public void tancar() {
+        obert = false;
+    }
+    public void tancat() {
         obert = false;
     }
 
