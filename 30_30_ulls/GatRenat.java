@@ -5,11 +5,16 @@
  */
 
 public class GatRenat {
-    private static UllDeGat ullDret = new UllDeGat();
-    private static UllDeGat ullEsquerre = new UllDeGat();
+    private UllDeGat ullDret = new UllDeGat();
+    private UllDeGat ullEsquerre = new UllDeGat();
 
-    public UllDeGat getUllDret() { return ullDret; }
-    public UllDeGat getUllEsquerre() { return ullEsquerre; }
+    public UllDeGat getUllDret() { 
+        return new UllDeGat(ullDret.esObert());
+    }
+    
+    public UllDeGat getUllEsquerre() { 
+        return new UllDeGat(ullEsquerre.esObert());
+    }
 
     public void aixecat() {
         setPosicio("dret");
