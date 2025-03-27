@@ -48,7 +48,7 @@
         return result;
     }
 
-    public GatRenat(int vides, String posicio) {
+    private GatRenat(int vides, String posicio) {
         setVides(vides);
         setPosicio(posicio);
     }
