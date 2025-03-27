@@ -1,3 +1,8 @@
+/*
+ * Iker Rivera Garcia
+ * 27/03/2025
+ */
+
 public class UsaGatRenat {
     public static void main(String[] args) {
         GatRenat renat = GatRenat.getInstancia();
