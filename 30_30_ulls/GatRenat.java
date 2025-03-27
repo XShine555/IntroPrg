@@ -63,9 +63,22 @@ public class GatRenat {
             this.vides = 7;
     }
     public void setPosicio(String posicio) {
-        if (posicio.equals("estirat") || posicio.equals("dret") || posicio.equals("assegut"))
+        if (posicio.equals("estirat") || posicio.equals("dret") || posicio.equals("assegut")) {
             this.posicio = posicio;
+    
+            if (posicio.equals("dret")) {
+                ullDret.obrir();
+                ullEsquerre.obrir();
+            } else if (posicio.equals("assegut")) {
+                ullDret.obrir();
+                ullEsquerre.tancar();
+            } else {
+                ullDret.tancar();
+                ullEsquerre.tancar();
+            }
+        }
     }
+    
 
     public static void main(String[] args) {
         GatRenat renat = new GatRenat();

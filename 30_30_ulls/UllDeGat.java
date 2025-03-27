@@ -1,5 +1,5 @@
 public class UllDeGat {
-    private boolean obert = false;
+    private boolean obert;
 
     public UllDeGat() {
         this(false);
