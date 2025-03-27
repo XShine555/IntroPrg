@@ -25,8 +25,8 @@ public class GatRenat {
 
     public void seu() {
         setPosicio("assegut");
-        ullDret.tancar();
-        ullEsquerre.obrir();
+        ullDret.obrir();
+        ullEsquerre.tancar();
     }
 
     private int vides;
