@@ -5,8 +5,8 @@
  */
 
 public class GatRenat {
-    private UllDeGat ullDret = new UllDeGat();
-    private UllDeGat ullEsquerre = new UllDeGat();
+    private static UllDeGat ullDret = new UllDeGat();
+    private static UllDeGat ullEsquerre = new UllDeGat();
 
     public UllDeGat getUllDret() { return ullDret; }
     public UllDeGat getUllEsquerre() { return ullEsquerre; }
