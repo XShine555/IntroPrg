@@ -14,6 +14,9 @@ public class UsaGatRenat {
             case "1" -> "estirat";
             case "2" -> "assegut";
             case "3" -> "dret";
+            case "assegut" -> "assegut";
+            case "dret" -> "dret";
+            case "estirat" -> "estirat";
             default -> "invalid";
         };
         GatRenat.getInstancia(novaPosicio);
