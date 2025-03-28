@@ -67,6 +67,9 @@ public class GatRenat {
             return "passo de fer res";
 
         posicio = "dret";
+        if (picarol != null) {
+            picarol.sona();
+        }
         return "ja m'aixeco";
     }
 
@@ -75,6 +78,9 @@ public class GatRenat {
             return "passo de fer res";
 
         posicio = "assegut";
+        if (picarol != null) {
+            picarol.sona();
+        }
         return "ja m'assec";
     }
 
@@ -83,6 +89,9 @@ public class GatRenat {
             return "passo de fer res";
 
         posicio = "estirat";
+        if (picarol != null) {
+            picarol.sona();
+        }
         return "ja m'estiro";
     }
 }
