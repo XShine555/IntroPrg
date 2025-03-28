@@ -1,23 +1,20 @@
 public class DemoCrides {
     public static void main(String[] args) {
-        var feli1 = new Feli();
-        var feli2 = new Feli();
-        var gat1 = new Gat();
-        var feli3 = new Feli();
-        var gat2 = new Gat();
+        var feli = new Feli();
+        var gat = new Gat();
         var renat = new GatRenat();
 
-        feli1.netejaUrpes();
-        gat1.netejaUrpes();
+        feli.netejaUrpes();
+        gat.netejaUrpes();
         renat.netejaUrpes();
 
-        gat1.miola();
+        gat.miola();
         renat.miola();
 
         var bacalla = new Menjar("bacallà");
         renat.menja(bacalla);
         renat.netejaUrpes();
-        gat1.netejaUrpes();
+        gat.netejaUrpes();
         renat.netejaUrpes();
     }    
 }
