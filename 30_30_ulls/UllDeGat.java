@@ -1,3 +1,9 @@
+/*
+ * Iker Rivera Garcia
+ * 28/03/2025
+ * UllDeGat.java, clase que representa un ull de gat.
+ */
+
 public class UllDeGat {
     private boolean obert;
 
