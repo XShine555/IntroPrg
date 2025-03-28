@@ -1,3 +1,11 @@
+/*
+ * Iker Rivera Garcia
+ * 28/03/2025
+ * Clase Menjar, que representa un menjar
+ * i conté el mètode toString
+ * que imprimeix el nom del menjar.
+ */
+
 public class Menjar {
     private static final String MENJAR_PER_DEFECTE = "sardines";
     private final String nom;
