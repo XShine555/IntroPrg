@@ -1,3 +1,10 @@
+/*
+ * Iker Rivera Garcia
+ * 28/03/2025
+ * Classe GatRenat, que representa un gat amb un nombre de vides i una posició.
+ * Aquesta classe hereta de la classe Gat i afegeix funcionalitat per a gestionar.
+ */
+
 public class GatRenat extends Gat {
     public boolean esViu() {
         return getVides() > 0;

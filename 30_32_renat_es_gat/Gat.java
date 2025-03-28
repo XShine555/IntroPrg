@@ -1,3 +1,9 @@
+/*
+ * Iker Rivera Garcia
+ * 28/03/2025
+ * Classe Gat, que representa un gat amb un nombre de vides i una posició.
+ */
+
 public class Gat {
     private int vides = 7;
     private String posicio = "estirat";
