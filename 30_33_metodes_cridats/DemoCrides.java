@@ -4,7 +4,6 @@
  * Clase DemoCrides, on la funció main
  * crea objectes de les classes Feli, Gat i GatRenat
  * i crida els mètodes netejaUrpes, menja i miola
- * per veure com es comporten.
  */
 
 public class DemoCrides {
