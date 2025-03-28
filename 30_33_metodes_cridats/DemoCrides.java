@@ -15,6 +15,5 @@ public class DemoCrides {
         renat.menja(bacalla);
 
         renat.netejaUrpes();
-        renat.menja(bacalla);
     }    
 }
