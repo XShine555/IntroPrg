@@ -13,7 +13,5 @@ public class DemoCrides {
 
         var bacalla = new Menjar("bacallà");
         renat.menja(bacalla);
-
-        renat.netejaUrpes();
     }    
 }
