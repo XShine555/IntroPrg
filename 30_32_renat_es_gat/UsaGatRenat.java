@@ -1,3 +1,10 @@
+/*
+ * Iker Rivera Garcia
+ * 29/03/2025
+ * UsaGatRenat.java,
+ * La clase principal que crea un objeto GatRenat y llama a sus métodos.
+ */
+
 public class UsaGatRenat {
     public static void main(String[] args) {
         GatRenat renat = new GatRenat();
