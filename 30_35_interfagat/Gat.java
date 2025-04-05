@@ -30,7 +30,7 @@ public class Gat implements EsserViu {
 
     @Override
     public boolean esViu() {
-        return this.vides > 0;
+        return this.vides != 0;
     }
 
     @Override
