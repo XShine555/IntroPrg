@@ -40,6 +40,7 @@ public class Gat implements EsserViu {
             this.vides = nextVides;
             return "adéu món cruel";
         } else {
+            this.vides = 0;
             return "ja l'he espifiada";
         }
     }
