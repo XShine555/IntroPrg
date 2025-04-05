@@ -35,8 +35,9 @@ public class Gat implements EsserViu {
 
     @Override
     public String mor() {
-        if (this.vides > 0) {
-            this.vides--;
+        int nextVides = this.vides - 1;
+        if (nextVides> 0) {
+            this.vides = nextVides;
             return "adéu món cruel";
         } else {
             return "ja l'he espifiada";
