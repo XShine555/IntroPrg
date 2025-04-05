@@ -16,7 +16,7 @@ public class GatRenat extends Gat implements AnimalDeCompanyia, Ensinistrable {
 
     @Override
     public String deixatEstimar() {
-        return "El gat " + this.getNom() + " es deixa estimar i està " + this.posicio;
+        return "em deixo estimar";
     }
 
     @Override
