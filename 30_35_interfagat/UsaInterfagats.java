@@ -15,15 +15,15 @@ public class UsaInterfagats {
         // serveis següents en l'ordre indicat i mostra el seu resultat:
         for (Ensinistrable ensinistrable: ensinistrables) {
             // 1. demana que s'aixequi
-            ensinistrable.aixecat();
+            System.out.println(ensinistrable.aixecat());
             // 2. demana si està dret
             System.out.println(ensinistrable.esDret());
             // 3. demana que segui
-            ensinistrable.seu();
+            System.out.println(ensinistrable.seu());
             // 4. demana si està assegut
             System.out.println(ensinistrable.esAssegut());
             // 5. demana que s'estiri
-            ensinistrable.estirat();
+            System.out.println(ensinistrable.estirat());
             // 6. demana si està estirat
             System.out.println(ensinistrable.esEstirat());
         }
@@ -36,7 +36,7 @@ public class UsaInterfagats {
         // serveis següents en l'ordre indicat i mostra el seu resultat:
         // 1. demana que es deuxi estimar
         for (AnimalDeCompanyia animal : animalsDeCompanyia) {
-            animal.deixatEstimar();
+            System.out.println(animal.deixatEstimar());
         }
 
         System.out.println();
@@ -49,8 +49,8 @@ public class UsaInterfagats {
         // 3. demana que revisqui
         for (EsserViu esser : essersVius) {
             System.out.println(esser.esViu());
-            esser.mor();
-            esser.reviu();
+            System.out.println(esser.mor());
+            System.out.println(esser.reviu());
         }
 
         System.out.println();
