@@ -21,20 +21,29 @@ public class GatRenat extends Gat implements AnimalDeCompanyia, Ensinistrable {
 
     @Override
     public String aixecat() {
-        this.posicio = "dret";
-        return this.getNom() + " s'ha aixecat i ara està " + this.posicio;
+        if (posicio.equals("dret"))
+            return "passo de fer res";
+
+        posicio = "dret";
+        return "ja m'aixeco";
     }
 
     @Override
     public String seu() {
-        this.posicio = "assegut";
-        return this.getNom() + " s'ha assegut i ara està " + this.posicio;
+        if (posicio.equals("assegut"))
+            return "passo de fer res";
+
+        posicio = "assegut";
+        return "ja m'assec";
     }
 
     @Override
     public String estirat() {
-        this.posicio = "estirat";
-        return this.getNom() + " s'ha estirat i ara està " + this.posicio;
+        if (posicio.equals("estirat"))
+            return "passo de fer res";
+
+        posicio = "estirat";
+        return "ja m'estiro";
     }
 
     @Override
