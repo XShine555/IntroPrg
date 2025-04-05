@@ -5,6 +5,6 @@ public class Garfield extends Gat implements AnimalDeCompanyia {
 
     @Override
     public String deixatEstimar() {
-        return "em deixo estimar";
+        return "em deixo estimar, però només una mica";
     }
 }
