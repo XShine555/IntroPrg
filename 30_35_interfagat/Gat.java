@@ -37,7 +37,7 @@ public class Gat implements EsserViu {
     public String mor() {
         if (this.vides > 0) {
             this.vides--;
-            return "adéu món cruel";
+            return "ja l'he espifiada";
         } else {
             return "adéu món cruel";
         }
@@ -46,10 +46,10 @@ public class Gat implements EsserViu {
     @Override
     public String reviu() {
         if (this.vides < VIDES_INICIALS) {
-            this.vides++;
+            this.vides = VIDES_INICIALS;
             return "encara miolo";
         } else {
-            return "encara miolo";
+            return "guai!";
         }
     }
 }
