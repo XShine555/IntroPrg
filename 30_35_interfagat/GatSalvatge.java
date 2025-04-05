@@ -1,5 +1,5 @@
 public class GatSalvatge extends Gat {
     public GatSalvatge() {
-        super(null);
+        super("Gat Salvatge");
     }
 }
