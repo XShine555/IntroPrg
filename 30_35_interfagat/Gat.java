@@ -28,12 +28,10 @@ public class Gat implements EsserViu {
         this.vides = vides;
     }
 
-    @Override
     public boolean esViu() {
         return this.vides != 0;
     }
 
-    @Override
     public String mor() {
         int nextVides = this.vides - 1;
         if (nextVides >= 0) {
@@ -45,7 +43,6 @@ public class Gat implements EsserViu {
         }
     }
 
-    @Override
     public String reviu() {
         if (this.vides <= 0) {
             this.vides++;
