@@ -68,8 +68,10 @@ public class UsaInterfagats {
             System.out.println(gat.reviu());
             // 4. demana que mori
             System.out.println(gat.mor());
+            System.out.println(gat.getVides());
             // 5. demana que mori un altre cop
             System.out.println(gat.mor());
+            System.out.println(gat.getVides());
             // 6. demana si està viu
             System.out.println(gat.esViu());
             // 7. demana que revisqui
