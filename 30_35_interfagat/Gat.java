@@ -46,7 +46,7 @@ public class Gat implements EsserViu {
     @Override
     public String reviu() {
         if (this.vides < VIDES_INICIALS) {
-            this.vides = VIDES_INICIALS;
+            this.vides++;
             return "encara miolo";
         } else {
             return "guai!";
