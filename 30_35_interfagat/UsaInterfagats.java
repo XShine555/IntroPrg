@@ -58,22 +58,23 @@ public class UsaInterfagats {
         System.out.println("============================");
         // XXX per cada element de l'array gats crida els
         // serveis següents en l'ordre indicat i mostra el seu resultat:
-        // 1. demana el nom
-        // 2. assigna-li una única vida
-        // 3. demana que revisqui
-        // 4. demana que mori
-        // 5. demana que mori un altre cop
-        // 6. demana si està viu
-        // 7. demana que revisqui
-        // 8. demana quantes vides li queden
+
         for (Gat gat : gats) {
+            // 1. demana el nom
             System.out.println(gat.getNom());
+            // 2. assigna-li una única vida
             gat.setVides(1);
-            gat.reviu();
-            gat.mor();
-            gat.mor();
+            // 3. demana que revisqui
+            System.out.println(gat.reviu());
+            // 4. demana que mori
+            System.out.println(gat.mor());
+            // 5. demana que mori un altre cop
+            System.out.println(gat.mor());
+            // 6. demana si està viu
             System.out.println(gat.esViu());
-            gat.reviu();
+            // 7. demana que revisqui
+            System.out.println(gat.reviu());
+            // 8. demana quantes vides li queden
             System.out.println(gat.getVides());
         }
     }
