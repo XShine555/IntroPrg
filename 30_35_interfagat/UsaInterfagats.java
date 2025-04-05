@@ -15,11 +15,17 @@ public class UsaInterfagats {
         // serveis següents en l'ordre indicat i mostra el seu resultat:
         for (Ensinistrable ensinistrable: ensinistrables) {
             // 1. demana que s'aixequi
+            ensinistrable.aixecat();
             // 2. demana si està dret
+            System.out.println(ensinistrable.esDret());
             // 3. demana que segui
+            ensinistrable.seu();
             // 4. demana si està assegut
+            System.out.println(ensinistrable.esAssegut());
             // 5. demana que s'estiri
+            ensinistrable.estirat();
             // 6. demana si està estirat
+            System.out.println(ensinistrable.esEstirat());
         }
 
 
@@ -29,6 +35,9 @@ public class UsaInterfagats {
         // XXX per cada element de l'array animalsDeCompanyia crida els
         // serveis següents en l'ordre indicat i mostra el seu resultat:
         // 1. demana que es deuxi estimar
+        for (AnimalDeCompanyia animal : animalsDeCompanyia) {
+            animal.deixatEstimar();
+        }
 
         System.out.println();
         System.out.println("Comprovem els mètodes d'Esser viu");
@@ -38,6 +47,11 @@ public class UsaInterfagats {
         // 1. demana si està viu
         // 2. demana que mori
         // 3. demana que revisqui
+        for (EsserViu esser : essersVius) {
+            System.out.println(esser.esViu());
+            esser.mor();
+            esser.reviu();
+        }
 
         System.out.println();
         System.out.println("Comprovem els mètodes de Gat");
@@ -52,6 +66,15 @@ public class UsaInterfagats {
         // 6. demana si està viu
         // 7. demana que revisqui
         // 8. demana quantes vides li queden
-
+        for (Gat gat : gats) {
+            System.out.println(gat.getNom());
+            gat.setVides(1);
+            gat.reviu();
+            gat.mor();
+            gat.mor();
+            System.out.println(gat.esViu());
+            gat.reviu();
+            System.out.println(gat.getVides());
+        }
     }
 }
