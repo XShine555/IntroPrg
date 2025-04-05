@@ -1,3 +1,11 @@
+/*
+ * Iker Rivera Garcia
+ * 05/04/2025
+ * UsaInterfagats.java, consisteix en la classe UsaInterfagats que conté el mètode main per comprovar el funcionament de les classes Gat, GatRenat i
+ * GatSalvatge, així com les interfícies AnimalDeCompanyia, Ensinistrable i EsserViu. 
+ * Aquesta classe crea instàncies de les classes i crida els mètodes per mostrar el seu comportament.
+ */
+
 public class UsaInterfagats {
     public static void main(String[] args) {
         GatRenat renat = new GatRenat();

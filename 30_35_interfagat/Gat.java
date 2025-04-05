@@ -1,3 +1,11 @@
+/*
+ * Iker Rivera Garcia
+ * 05/04/2025
+ * Gat.java, consisteix en la classe Gat que implementa l'interfície EsserViu.
+ * Aquesta classe conté els atributs nom i vides, així com els mètodes
+ * corresponents per gestionar les vides del gat i la seva condició de viu.
+ */
+
 public class Gat implements EsserViu {
     private int vides = 7;
     private String nom = "anònim";

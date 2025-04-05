@@ -1,3 +1,14 @@
+/*
+ * Iker Rivera Garcia
+ * 05/04/2025
+ * GatRenat.java, consisteix en la classe GatRenat que hereta de Gat i implementa
+ * les interfícies AnimalDeCompanyia i Ensinistrable. Aquesta classe
+ * conté un atribut
+ * posicio que indica la posició del gat (dret, assegut o estirat) i
+ * proporciona mètodes per gestionar aquesta posició, així com els mètodes
+ * requerits per les interfícies.
+ */
+
 public class GatRenat extends Gat implements AnimalDeCompanyia, Ensinistrable {
     private String posicio = "estirat";
 
