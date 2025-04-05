@@ -1,12 +1,9 @@
 public class Gat implements EsserViu {
-    private static final int VIDES_INICIALS = 7;
-    private static final String NOM_INICIAL = "anònim";
-
-    private int vides = VIDES_INICIALS;
-    private String nom = NOM_INICIAL;
+    private int vides = 7;
+    private String nom = "anònim";
 
     public Gat(String nom) {
-        this(nom, VIDES_INICIALS);
+        this(nom, 7);
     }
 
     public Gat(String nom, int vides) {
