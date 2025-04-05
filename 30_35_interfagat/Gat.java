@@ -1,5 +1,5 @@
 public class Gat implements EsserViu {
-    private static final int VIDES_INICIALS = 7;
+    private static final int VIDES_INICIALS = 1;
     private static final String NOM_INICIAL = "anònim";
 
     private int vides = VIDES_INICIALS;
