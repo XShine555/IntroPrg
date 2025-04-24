@@ -12,8 +12,8 @@ public class Vi {
 
     public Vi(String nom, int preu, int estoc) {
         this.nom = normalitzaNom(nom);
-        this.preu = preu;
-        this.estoc = estoc;
+        setPreu(preu);
+        setEstoc(estoc);
     }
 
     public String getNom() {
@@ -25,6 +25,9 @@ public class Vi {
     }
 
     public void setPreu(int preu) {
+        if (preu < 0)
+            preu = -1;
+
         this.preu = preu;
     }
 
@@ -33,11 +36,14 @@ public class Vi {
     }
 
     public void setEstoc(int estoc) {
+        if (estoc < 0)
+            estoc = -1;
+
         this.estoc = estoc;
     }
 
     public boolean esValid() {
-        return !nom.equals(notValidNom);
+        return !nom.equals(notValidNom) || estoc < 0 || preu < 0;
     }
 
     public static String normalitzaNom(String nom) {
