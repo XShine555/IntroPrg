@@ -41,6 +41,10 @@ public class Vi {
     }
 
     public static String normalitzaNom(String nom) {
+        if (nom == null || nom.isBlank()) {
+            return notValidNom;
+        }
+
         String result = "";
 
         for (int i = 1; i < nom.length(); i++) {
