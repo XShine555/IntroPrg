@@ -1,3 +1,10 @@
+/*
+ * Iker Rivera Garcia
+ * Exercici 31_02. La classe
+ * Botiga.java
+ * Classe Botiga, representa una botiga de vins
+ */
+
 public class Botiga {
     private static final int DEFAULT_MAX_VINS = 10;
     private Vi[] vins;
