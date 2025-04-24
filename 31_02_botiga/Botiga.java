@@ -21,12 +21,13 @@ public class Botiga {
         return null;
     }
 
-    public Vi elimina(Vi vi) {
+    public Vi elimina(String nom) {
         for (int i = 0; i < vins.length; i++) {
-            if (vins[i] == vi) {
-                Vi eliminat = vins[i];
+            Vi vi = vins[i];
+
+            if (vi != null && vi.getName().equals(nom)) {
                 vins[i] = null;
-                return eliminat;
+                return vi;
             }
         }
 
