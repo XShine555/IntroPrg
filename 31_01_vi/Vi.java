@@ -12,8 +12,15 @@ public class Vi {
 
     public Vi(String nom, int preu, int estoc) {
         this.nom = normalitzaNom(nom);
-        setPreu(preu);
-        setEstoc(estoc);
+
+        if (estoc < 0)
+            estoc = -1;
+
+        if (preu < 0)
+            preu = -1;
+
+        this.preu = preu;
+        this.estoc = estoc;
     }
 
     public String getNom() {
@@ -26,7 +33,7 @@ public class Vi {
 
     public void setPreu(int preu) {
         if (preu < 0)
-            preu = -1;
+            return;
 
         this.preu = preu;
     }
@@ -37,7 +44,7 @@ public class Vi {
 
     public void setEstoc(int estoc) {
         if (estoc < 0)
-            estoc = -1;
+            return;
 
         this.estoc = estoc;
     }
