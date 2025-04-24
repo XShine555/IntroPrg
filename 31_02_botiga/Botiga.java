@@ -14,6 +14,9 @@ public class Botiga {
         if (!vi.esValid())
             return null;
 
+        if (cerca(vi.getNom()) != null)
+            return null;
+
         for (int i = 0; i < vins.length; i++) {
             if (vins[i] == null) {
                 vins[i] = vi;
