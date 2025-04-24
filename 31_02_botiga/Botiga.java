@@ -11,6 +11,9 @@ public class Botiga {
     }
 
     public Vi afegeix(Vi vi) {
+        if (!vi.esValid())
+            return null;
+
         for (int i = 0; i < vins.length; i++) {
             if (vins[i] == null) {
                 vins[i] = vi;
