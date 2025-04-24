@@ -5,6 +5,7 @@ public class Vi {
     private String nom;
     private int preu;
     private int estoc;
+    private boolean isModified;
 
     public Vi(String nom, int preu) {
         this(nom, preu, defaultEstoc);
@@ -34,6 +35,7 @@ public class Vi {
 
     public void setEstoc(int estoc) {
         this.estoc = estoc;
+        isModified = true;
     }
 
     public boolean esValid() {
@@ -58,5 +60,33 @@ public class Vi {
         }
 
         return result;
+    }
+
+    @Override
+    public String toString() {
+        if (isModified) {
+            return """
+                    Vi modificat
+                        Vi: """ + nom + """
+                        Preu: """ + preu + """
+                        Estoc: """ + estoc + """
+                    """;
+        }
+        else if (estoc < 1) {
+            return """
+                    Vi sense estoc
+                        Vi: """ + nom + """
+                        Preu: """ + preu + """
+                        Estoc: """ + estoc + """
+                    """;
+        }
+        else {
+            return """
+                    Vi amb estoc
+                        Vi: """ + nom + """
+                        Preu: """ + preu + """
+                        Estoc: """ + estoc + """
+                    """;
+        }
     }
 }
