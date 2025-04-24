@@ -6,26 +6,27 @@
  */
 
 public class Vi {
-    private static final int defaultEstoc = 0;
-    private static final int invalidValue = -1;
-    private static final String notValidNom = "NOM NO VÀLID!";
+    private static final int DEFAULT_ESTOC = 0;
+    private static final int INVALID_VALUE = -1;
+    private static final String INVALID_NAME = "NOM NO VÀLID!";
+    private static final char[] SPECIAL_CHARS = { '\'' };
 
     private String nom;
     private int preu;
     private int estoc;
 
     public Vi(String nom, int preu) {
-        this(nom, preu, defaultEstoc);
+        this(nom, preu, DEFAULT_ESTOC);
     }
 
     public Vi(String nom, int preu, int estoc) {
         this.nom = normalitzaNom(nom);
 
         if (estoc < 0)
-            estoc = invalidValue;
+            estoc = INVALID_VALUE;
 
         if (preu < 0)
-            preu = invalidValue;
+            preu = INVALID_VALUE;
 
         this.preu = preu;
         this.estoc = estoc;
@@ -58,12 +59,12 @@ public class Vi {
     }
 
     public boolean esValid() {
-        return !nom.equals(notValidNom) && estoc != invalidValue && preu != invalidValue;
+        return !nom.equals(INVALID_NAME) && estoc != INVALID_VALUE && preu != INVALID_VALUE;
     }
 
     public static String normalitzaNom(String nom) {
         if (nom == null || nom.isBlank()) {
-            return notValidNom;
+            return INVALID_NAME;
         }
 
         String result = "";
@@ -75,7 +76,8 @@ public class Vi {
                 char lastChar = nom.charAt(i - 1);
 
                 if (Character.isLetterOrDigit(thisChar)
-                        || (Character.isWhitespace(thisChar) && !Character.isWhitespace(lastChar))) {
+                        || (Character.isWhitespace(thisChar) && !Character.isWhitespace(lastChar))
+                        || isSpecialChar(thisChar)) {
                     result += thisChar;
                 }
             }
@@ -87,6 +89,16 @@ public class Vi {
         }
 
         return result.trim();
+    }
+
+    private static boolean isSpecialChar(char character) {
+        for (char specialChar : SPECIAL_CHARS) {
+            if (character == specialChar) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     @Override
