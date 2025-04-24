@@ -14,7 +14,7 @@ public class UsaBotiga {
         System.out.println("Afegim els vins creats a la botiga");
         for (int i=0; i<vins.length; i++) {
             Vi resposta = botiga.afegeix(vins[i]);
-            System.out.println("En afegir\n" + vins[i] + "la botiga ens respon " + resposta);
+            System.out.println("En afegir\n" + vins[i] + "la botiga ens respon \n" + resposta);
         }
 
         System.out.printf("%nCerquem uns vins%n");
