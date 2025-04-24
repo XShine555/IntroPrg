@@ -7,14 +7,14 @@ public class UsaBotiga {
             new Vi("Llum d'Alba Blanc", 1750, 12)
         };
         for (int i=0; i<vins.length; i++) {
-            System.out.println("Creat\n" + vins[i]);
+            System.out.println("Creat" + vins[i]);
         }
 
         Botiga botiga = new Botiga(vins.length - 1);    // no hi cabran tots els vins
         System.out.println("Afegim els vins creats a la botiga");
         for (int i=0; i<vins.length; i++) {
             Vi resposta = botiga.afegeix(vins[i]);
-            System.out.println("En afegir\n" + vins[i] + "la botiga ens respon \n" + resposta);
+            System.out.println("En afegir" + vins[i] + "la botiga ens respon " + resposta);
         }
 
         System.out.printf("%nCerquem uns vins%n");

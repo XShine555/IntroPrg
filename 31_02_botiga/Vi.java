@@ -104,6 +104,7 @@ public class Vi {
     @Override
     public String toString() {
         return String.format("""
+            
                     Vi: %s
                     Preu: %d
                     Estoc: %d
