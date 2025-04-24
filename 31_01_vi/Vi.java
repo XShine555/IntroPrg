@@ -48,12 +48,20 @@ public class Vi {
         String result = "";
 
         for (int i = 1; i < nom.length(); i++) {
-            char lastChar = nom.charAt(i - 1);
             char thisChar = nom.charAt(i);
 
-            if (Character.isLetterOrDigit(thisChar)
-                    || (Character.isWhitespace(thisChar) && !Character.isWhitespace(lastChar))) {
-                result += thisChar;
+            if (i > 0) {
+                char lastChar = nom.charAt(i - 1);
+
+                if (Character.isLetterOrDigit(thisChar)
+                        || (Character.isWhitespace(thisChar) && !Character.isWhitespace(lastChar))) {
+                    result += thisChar;
+                }
+            }
+            else {
+                if (Character.isLetterOrDigit(thisChar)) {
+                    result += thisChar;
+                }
             }
         }
 
@@ -63,9 +71,9 @@ public class Vi {
     @Override
     public String toString() {
         return String.format("""
-            Vi: %s
-            Preu: %d
-            Estoc: %d
-        """, nom, preu, estoc);
+                    Vi: %s
+                    Preu: %d
+                    Estoc: %d
+                """, nom, preu, estoc);
     }
 }
