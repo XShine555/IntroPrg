@@ -20,10 +20,10 @@ public class UsaBotiga {
         System.out.printf("%nCerquem uns vins%n");
         String nomVi = vins[1].getNom();
         Vi resposta = botiga.cerca(nomVi);
-        System.out.println("En cercar " + nomVi + " botiga ens respon \n" + resposta);
+        System.out.println("En cercar " + nomVi + " botiga ens respon " + resposta);
 
         nomVi = vins[vins.length - 1].getNom();
         resposta = botiga.cerca(nomVi);
-        System.out.println("En cercar " + nomVi + " botiga ens respon \n" + resposta);
+        System.out.println("En cercar " + nomVi + " botiga ens respon " + resposta);
     }
 }
