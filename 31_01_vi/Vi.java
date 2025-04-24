@@ -1,9 +1,8 @@
 /*
+ * Iker Rivera Garcia
+ * Exercici 31_01. La classe
  * Vi.java
- * Classe Vi
- * Representa un vi amb nom, preu i estoc
- * El nom del vi no pot ser null ni buit
- * El preu i l'estoc no poden ser negatius
+ * Classe Vi, Representa un vi amb nom, preu i estoc
  */
 
 public class Vi {
