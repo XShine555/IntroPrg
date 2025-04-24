@@ -22,6 +22,8 @@ public class Botiga {
     }
 
     public Vi elimina(String nom) {
+        nom = Vi.normalitzaNom(nom);
+
         for (int i = 0; i < vins.length; i++) {
             Vi vi = vins[i];
 
@@ -35,6 +37,8 @@ public class Botiga {
     }
 
     public Vi cerca(String nom) {
+        nom = Vi.normalitzaNom(nom);
+
         for (int i = 0; i < vins.length; i++) {
             Vi vi = vins[i];
 
