@@ -7,7 +7,7 @@ public class UsaBotiga {
             new Vi("Llum d'Alba Blanc", 1750, 12)
         };
         for (int i=0; i<vins.length; i++) {
-            System.out.println("Creat" + vins[i]);
+            System.out.println("Creat\n" + vins[i]);
         }
 
         Botiga botiga = new Botiga(vins.length - 1);    // no hi cabran tots els vins
