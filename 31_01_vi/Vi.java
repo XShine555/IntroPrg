@@ -55,7 +55,7 @@ public class Vi {
                     result += thisChar;
                 }
             }
-            if (i > 0) {
+            else if (i > 0) {
                 char lastChar = nom.charAt(i - 1);
 
                 if (Character.isLetterOrDigit(thisChar)
