@@ -34,6 +34,10 @@ public class Botiga {
             Vi vi = vins[i];
 
             if (vi != null && vi.getNom().equals(nom)) {
+                if (vi.getEstoc() > 0) {
+                    return null;
+                }
+
                 vins[i] = null;
                 return vi;
             }
