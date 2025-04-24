@@ -1,5 +1,14 @@
+/*
+ * Vi.java
+ * Classe Vi
+ * Representa un vi amb nom, preu i estoc
+ * El nom del vi no pot ser null ni buit
+ * El preu i l'estoc no poden ser negatius
+ */
+
 public class Vi {
     private static final int defaultEstoc = 0;
+    private static final int invalidValue = -1;
     private static final String notValidNom = "NOM NO VÀLID!";
 
     private String nom;
@@ -14,10 +23,10 @@ public class Vi {
         this.nom = normalitzaNom(nom);
 
         if (estoc < 0)
-            estoc = -1;
+            estoc = invalidValue;
 
         if (preu < 0)
-            preu = -1;
+            preu = invalidValue;
 
         this.preu = preu;
         this.estoc = estoc;
@@ -50,7 +59,7 @@ public class Vi {
     }
 
     public boolean esValid() {
-        return !nom.equals(notValidNom) && estoc != -1 && preu != -1;
+        return !nom.equals(notValidNom) && estoc != invalidValue && preu != invalidValue;
     }
 
     public static String normalitzaNom(String nom) {
