@@ -47,7 +47,7 @@ public class Vi {
 
         String result = "";
 
-        for (int i = 1; i < nom.length(); i++) {
+        for (int i = 0; i < nom.length(); i++) {
             char thisChar = nom.charAt(i);
 
             if (i > 0) {
