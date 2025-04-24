@@ -37,7 +37,7 @@ public class Vi {
     }
 
     public boolean esValid() {
-        return nom == notValidNom;
+        return !nom.equals(notValidNom);
     }
 
     public static String normalitzaNom(String nom) {
