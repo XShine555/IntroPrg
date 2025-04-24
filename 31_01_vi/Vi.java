@@ -50,6 +50,11 @@ public class Vi {
         for (int i = 0; i < nom.length(); i++) {
             char thisChar = nom.charAt(i);
 
+            if (i == nom.length() - 1) {
+                if (Character.isLetterOrDigit(thisChar)) {
+                    result += thisChar;
+                }
+            }
             if (i > 0) {
                 char lastChar = nom.charAt(i - 1);
 
