@@ -63,7 +63,6 @@ public class Vi {
     @Override
     public String toString() {
         return String.format("""
-            %s%n
             Vi: %s%n
             Preu: %d%n
             Estoc: %d%n
