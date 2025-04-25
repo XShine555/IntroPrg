@@ -162,7 +162,7 @@ public class Entorn {
             System.out.println("ERROR: no s'ha pogut afegir");
         }
         else {
-            String.format("Introduït:%s", result.toString());
+            System.out.println(String.format("Introduït:%s", result.toString()));
             loadedRefs++;
         }
     }
