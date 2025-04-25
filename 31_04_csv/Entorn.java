@@ -80,7 +80,6 @@ public class Entorn {
             if (vi == null) 
                 break;
             text += String.join(";", vi.aArrayString()) + "\n";
-            System.out.println(text);
         }
 
         BufferedWriter sortida = new BufferedWriter(new FileWriter(CSV_FILE));
