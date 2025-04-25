@@ -118,7 +118,7 @@ public class Entorn {
             return;
         }
 
-        System.out.print("estoc (enter sense estoc)> ");
+        System.out.format("estoc (enter %s)> ", result.getEstoc());
         Result estoc = converteixValor(Entrada.readLine());
         if (!estoc.isSuccess()) {
             System.out.println("ERROR: cal un enter positiu");
