@@ -19,6 +19,7 @@ import javax.annotation.processing.FilerException;
 public class Entorn {
     private static final String CSV_FILE = "botiga.csv";
     private static Botiga botiga = new Botiga();
+    private static int loadedRefs = 0;
 
     public static void main(String[] args) throws IOException {
         System.out.println("Celler La Bona Estrella. Escriviu ajuda per veure opcions.");
@@ -54,7 +55,6 @@ public class Entorn {
 
         FileReader fileReader = new FileReader(CSV_FILE);
         BufferedReader input = new BufferedReader(fileReader);
-        int count = 0;
 
         while (true) {
             String linia = input.readLine();
@@ -65,15 +65,14 @@ public class Entorn {
             Vi result = botiga.afegeix(Vi.deArrayString(parts));
 
             if (result != null)
-                count++;
+            loadedRefs++;
         }
 
-        System.out.println(String.format("Referències llegides: %s", count));
+        System.out.println(String.format("Referències llegides: %s", loadedRefs));
     }
 
     private static void guardaCsv() throws IOException {
         botiga.iniciaRecorregut();
-        int refs = 0;
         String text = "";
 
         while (true) {
@@ -81,14 +80,13 @@ public class Entorn {
             if (vi == null) 
                 break;
             text += String.join(";", vi.aArrayString()) + "\n";
-            refs++;
         }
 
         BufferedWriter sortida = new BufferedWriter(new FileWriter(CSV_FILE));
         sortida.write(text);
         sortida.close();
 
-        System.out.println(String.format("Referències guardades: %s", refs));
+        System.out.println(String.format("Referències guardades: %s", loadedRefs));
     }
 
     private static void elimina() {
