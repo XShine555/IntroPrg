@@ -64,18 +64,29 @@ public class Entorn {
             return;
 
         System.out.print("preu (en cèntims)> ");
-        int preu = Integer.parseInt(Entrada.readLine());
-        if (preu < 0) {
-            System.out.println("ERROR: cal un enter positiu");
-            return;
-        }
+        String preuString = Entrada.readLine();
+        int preu = 0;
+
+        try{
+            preu = Integer.parseInt(preuString);
+
+            if (preu < 0) {
+                System.out.println("ERROR: cal un enter positiu");
+                return;
+            }
+        } catch (NumberFormatException e) { }
 
         System.out.print("estoc (enter sense estoc)> ");
-        int estoc = Integer.parseInt(Entrada.readLine());
-        if (estoc < 0) {
-            System.out.println("ERROR: cal un enter positiu");
-            return;
-        }
+        String estocString = Entrada.readLine();
+        int estoc = 0;
+        try{
+            estoc = Integer.parseInt(estocString);
+
+            if (estoc < 0) {
+                System.out.println("ERROR: cal un enter positiu");
+                return;
+            }
+        } catch (NumberFormatException e) { }
 
         Vi vi = new Vi(nom, preu, estoc);
         Vi result = botiga.afegeix(vi);
