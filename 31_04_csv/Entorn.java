@@ -7,9 +7,11 @@
  */
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 import javax.annotation.processing.FilerException;
@@ -34,7 +36,10 @@ public class Entorn {
                 case "afegeix" -> afegeix();
                 case "modifica" -> modifica();
                 case "elimina" -> elimina();
-                case "surt" -> System.out.println("adéu");
+                case "surt" -> { 
+                    System.out.println("adéu");
+                    guardaCsv();
+                }
                 default -> System.out.println("ERROR: comanda no reconeguda. Escriviu help per ajuda");
             }
         }
@@ -64,6 +69,21 @@ public class Entorn {
         }
 
         System.out.println(String.format("Referències llegides: %s", count));
+    }
+
+    private static void guardaCsv() throws IOException {
+        botiga.iniciaRecorregut();
+        String text = "";
+
+        while (true) {
+            Vi vi = botiga.getSeguent();
+            if (vi == null) break;
+            text += String.join(";", vi.aArrayString()) + "\n";
+        }
+
+        BufferedWriter sortida = new BufferedWriter(new FileWriter(CSV_FILE));
+        sortida.write(text);
+        sortida.close();
     }
 
     private static void elimina() {
