@@ -30,8 +30,8 @@ public class Botiga {
 
         Vi vi = vins[currentIndex++];
         while (vi == null && currentIndex < vins.length - 1) {
-            currentIndex++;
             vi = vins[currentIndex];
+            currentIndex++;
         }
 
         return vi;
