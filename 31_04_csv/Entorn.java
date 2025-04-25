@@ -110,7 +110,14 @@ public class Entorn {
 
         if (resposta.equalsIgnoreCase("Si") || resposta.equalsIgnoreCase("Sí")) {
             Vi eliminat = botiga.elimina(nom);
-            System.out.println(eliminat != null ? "Eliminat" : "ERROR: no s'ha pogut eliminar");
+
+            if (eliminat != null) {
+                loadedRefs--;
+                System.out.println("Eliminat");
+            }
+            else {
+                System.out.println("ERROR: no s'ha pogut eliminar");
+            }
         } else {
             System.out.println("No eliminat");
         }
@@ -151,8 +158,13 @@ public class Entorn {
         Vi vi = new Vi(nom, preu, estoc);
         Vi result = botiga.afegeix(vi);
 
-        System.out.println(
-                result != null ? String.format("Introduït:%s", result.toString()) : "ERROR: no s'ha pogut afegir");
+        if (result == null) {
+            System.out.println("ERROR: no s'ha pogut afegir");
+        }
+        else {
+            String.format("Introduït:%s", result.toString());
+            loadedRefs++;
+        }
     }
 
     private static void modifica() {
