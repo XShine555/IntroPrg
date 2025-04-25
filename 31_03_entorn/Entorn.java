@@ -101,8 +101,12 @@ public class Entorn {
     private static void modifica() {
         System.out.print("nom (enter cancel·la)> ");
         String nom = Entrada.readLine();
-        if (nom.isBlank())
+        Vi result = botiga.cerca(nom);
+
+        if (result == null) {
+            System.out.println("No trobat");
             return;
+        }
 
         System.out.print("preu (en cèntims)> ");
         Result preu = converteixValor(Entrada.readLine());
@@ -115,13 +119,6 @@ public class Entorn {
         Result estoc = converteixValor(Entrada.readLine());
         if (!estoc.isSuccess()) {
             System.out.println("ERROR: cal un enter positiu");
-            return;
-        }
-
-        Vi result = botiga.cerca(nom);
-
-        if (result == null) {
-            System.out.println("ERROR: no s'ha trobat el vi");
             return;
         }
 
