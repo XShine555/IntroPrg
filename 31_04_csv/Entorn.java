@@ -78,7 +78,8 @@ public class Entorn {
 
         while (true) {
             Vi vi = botiga.getSeguent();
-            if (vi == null) break;
+            if (vi == null) 
+                break;
             text += String.join(";", vi.aArrayString()) + "\n";
             refs++;
         }
