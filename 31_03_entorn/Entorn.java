@@ -54,7 +54,7 @@ public class Entorn {
         Vi result = botiga.cerca(nom);
 
         if (result == null) {
-            System.out.println("ERROR: no s'ha pogut eliminar");
+            System.out.println("No trobat");
             return;
         }
 
