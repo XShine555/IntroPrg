@@ -156,7 +156,7 @@ public class Entorn {
         }
 
         Vi result = botiga.cerca(nom);
-        System.out.print(result != null ? String.format("Trobat:%s", result.toString()) : "No trobat");
+        System.out.println(result != null ? String.format("Trobat:%s", result.toString()) : "No trobat");
     }
 
     private static void ajuda() {
