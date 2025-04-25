@@ -1,28 +1,12 @@
+/*
+ * Iker Rivera Garcia
+ * Entorn.java
+ * Clase Entorn que simula un entorn de botiga
+ * per a gestionar vins.
+ * Aquesta classe permet afegir, modificar, eliminar i cercar vins.
+ */
+
 public class Entorn {
-    static class Result {
-        private int value;
-        private boolean wasBlank;
-        private boolean success;
-
-        public Result(int value, boolean wasBlank, boolean success) {
-            this.value = value;
-            this.wasBlank = wasBlank;
-            this.success = success;
-        }
-
-        public int getValue() {
-            return value;
-        }
-
-        public boolean wasBlank() {
-            return wasBlank;
-        }
-
-        public boolean isSuccess() {
-            return success;
-        }
-    }
-
     private static Botiga botiga = new Botiga();
 
     public static void main(String[] args) {
@@ -80,20 +64,20 @@ public class Entorn {
             return;
 
         System.out.print("preu (en cèntims)> ");
-        Result preu = converteixValor(Entrada.readLine());
-        if (preu.getValue() < 0) {
+        int preu = Integer.parseInt(Entrada.readLine());
+        if (preu < 0) {
             System.out.println("ERROR: cal un enter positiu");
             return;
         }
 
         System.out.print("estoc (enter sense estoc)> ");
-        Result estoc = converteixValor(Entrada.readLine());
-        if (estoc.getValue() < 0) {
+        int estoc = Integer.parseInt(Entrada.readLine());
+        if (estoc < 0) {
             System.out.println("ERROR: cal un enter positiu");
             return;
         }
 
-        Vi vi = new Vi(nom, preu.getValue(), estoc.getValue());
+        Vi vi = new Vi(nom, preu, estoc);
         Vi result = botiga.afegeix(vi);
 
         System.out.println(
@@ -114,39 +98,39 @@ public class Entorn {
         }
 
         System.out.format("preu (enter %s)> ", result.getPreu());
-        Result preu = converteixValor(Entrada.readLine());
-        if (preu.getValue() < 0) {
-            System.out.println("ERROR: cal un enter positiu");
-            return;
-        }
+        String preuString = Entrada.readLine();
+        int preu = 0;
+
+        try{
+            preu = Integer.parseInt(preuString);
+
+            if (preu < 0) {
+                System.out.println("ERROR: cal un enter positiu");
+                return;
+            }
+        } catch (NumberFormatException e) { }
 
         System.out.format("estoc (enter %s)> ", result.getEstoc());
-        Result estoc = converteixValor(Entrada.readLine());
-        if (estoc.getValue() < 0) {
-            System.out.println("ERROR: cal un enter positiu");
-            return;
-        }
+        String estocString = Entrada.readLine();
+        int estoc = 0;
 
-        if (!preu.wasBlank())
-            result.setPreu(preu.getValue());
+        try{
+            estoc = Integer.parseInt(estocString);
 
-        if (!estoc.wasBlank())
-            result.setEstoc(estoc.getValue());
+            if (estoc < 0) {
+                System.out.println("ERROR: cal un enter positiu");
+                return;
+            }
+        } catch (NumberFormatException e) { }
+
+        if (!preuString.isBlank())
+            result.setPreu(preu);
+
+        if (!estocString.isBlank())
+            result.setEstoc(estoc);
 
         System.out.print("Modificat:");
         System.out.print(result.toString());
-    }
-
-    private static Result converteixValor(String valor) {
-        if (valor.isBlank())
-            return new Result(0, true, true);
-
-        try {
-            int value = Integer.parseInt(valor);
-            return new Result(value, false, true);
-        } catch (NumberFormatException e) {
-            return new Result(0, false, false);
-        }
     }
 
     private static void cerca() {
