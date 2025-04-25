@@ -68,7 +68,7 @@ public class Entorn {
             Vi eliminat = botiga.elimina(nom);
             System.out.println(eliminat != null ? "Eliminat" : "ERROR: no s'ha pogut eliminar");
         } else {
-            System.out.println("No s'ha eliminat");
+            System.out.println("No eliminat");
         }
     }
 
