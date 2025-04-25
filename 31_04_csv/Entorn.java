@@ -37,8 +37,8 @@ public class Entorn {
                 case "modifica" -> modifica();
                 case "elimina" -> elimina();
                 case "surt" -> { 
-                    System.out.println("adéu");
                     guardaCsv();
+                    System.out.println("adéu");
                 }
                 default -> System.out.println("ERROR: comanda no reconeguda. Escriviu help per ajuda");
             }
@@ -73,17 +73,21 @@ public class Entorn {
 
     private static void guardaCsv() throws IOException {
         botiga.iniciaRecorregut();
+        int refs = 0;
         String text = "";
 
         while (true) {
             Vi vi = botiga.getSeguent();
             if (vi == null) break;
             text += String.join(";", vi.aArrayString()) + "\n";
+            refs++;
         }
 
         BufferedWriter sortida = new BufferedWriter(new FileWriter(CSV_FILE));
         sortida.write(text);
         sortida.close();
+
+        System.out.println(String.format("Referències guardades: %s", refs));
     }
 
     private static void elimina() {
