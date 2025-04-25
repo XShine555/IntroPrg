@@ -101,6 +101,9 @@ public class Entorn {
     private static void modifica() {
         System.out.print("nom (enter cancel·la)> ");
         String nom = Entrada.readLine();
+        if (nom.isBlank())
+            return;
+
         Vi result = botiga.cerca(nom);
 
         if (result == null) {
