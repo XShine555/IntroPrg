@@ -62,10 +62,14 @@ public class Entorn {
                 break;
 
             String[] parts = linia.split(";");
-            Vi result = botiga.afegeix(Vi.deArrayString(parts));
+            Vi vi = Vi.deArrayString(parts);
+            if (vi == null)
+                continue;
+
+            Vi result = botiga.afegeix(vi);
 
             if (result != null)
-            loadedRefs++;
+                loadedRefs++;
         }
 
         System.out.println(String.format("Referències llegides: %s", loadedRefs));
