@@ -111,7 +111,7 @@ public class Entorn {
             return;
         }
 
-        System.out.print("preu (en cèntims)> ");
+        System.out.format("preu (enter %s)> ", result.getPreu());
         Result preu = converteixValor(Entrada.readLine());
         if (!preu.isSuccess()) {
             System.out.println("ERROR: cal un enter positiu");
