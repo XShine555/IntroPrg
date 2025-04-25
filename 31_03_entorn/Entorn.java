@@ -48,6 +48,8 @@ public class Entorn {
     private static void elimina() {
         System.out.print("nom (enter cancel·la)> ");
         String nom = Entrada.readLine();
+        if (nom.isBlank())
+            return;
 
         Vi result = botiga.cerca(nom);
 
