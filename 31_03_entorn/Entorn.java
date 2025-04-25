@@ -113,14 +113,14 @@ public class Entorn {
 
         System.out.format("preu (enter %s)> ", result.getPreu());
         Result preu = converteixValor(Entrada.readLine());
-        if (!preu.isSuccess()) {
+        if (preu.getValue() < 0) {
             System.out.println("ERROR: cal un enter positiu");
             return;
         }
 
         System.out.format("estoc (enter %s)> ", result.getEstoc());
         Result estoc = converteixValor(Entrada.readLine());
-        if (!estoc.isSuccess()) {
+        if (estoc.getValue() < 0) {
             System.out.println("ERROR: cal un enter positiu");
             return;
         }
