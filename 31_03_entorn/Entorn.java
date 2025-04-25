@@ -52,7 +52,7 @@ public class Entorn {
         Vi result = botiga.cerca(nom);
 
         if (result == null) {
-            System.out.print("ERROR: no s'ha pogut eliminar");
+            System.out.println("ERROR: no s'ha pogut eliminar");
             return;
         }
 
@@ -80,21 +80,21 @@ public class Entorn {
         System.out.print("preu (en cèntims)> ");
         Result preu = converteixValor(Entrada.readLine());
         if (preu.getValue() < 0) {
-            System.out.print("ERROR: cal un enter positiu");
+            System.out.println("ERROR: cal un enter positiu");
             return;
         }
 
         System.out.print("estoc (enter sense estoc)> ");
         Result estoc = converteixValor(Entrada.readLine());
         if (estoc.getValue() < 0) {
-            System.out.print("ERROR: cal un enter positiu");
+            System.out.println("ERROR: cal un enter positiu");
             return;
         }
 
         Vi vi = new Vi(nom, preu.getValue(), estoc.getValue());
         Vi result = botiga.afegeix(vi);
 
-        System.out.print(
+        System.out.println(
                 result != null ? String.format("Introduït:%s", result.toString()) : "ERROR: no s'ha pogut afegir");
     }
 
@@ -107,21 +107,21 @@ public class Entorn {
         System.out.print("preu (en cèntims)> ");
         Result preu = converteixValor(Entrada.readLine());
         if (!preu.isSuccess()) {
-            System.out.print("ERROR: cal un enter positiu");
+            System.out.println("ERROR: cal un enter positiu");
             return;
         }
 
         System.out.print("estoc (enter sense estoc)> ");
         Result estoc = converteixValor(Entrada.readLine());
         if (!estoc.isSuccess()) {
-            System.out.print("ERROR: cal un enter positiu");
+            System.out.println("ERROR: cal un enter positiu");
             return;
         }
 
         Vi result = botiga.cerca(nom);
 
         if (result == null) {
-            System.out.print("ERROR: no s'ha trobat el vi");
+            System.out.println("ERROR: no s'ha trobat el vi");
             return;
         }
 
