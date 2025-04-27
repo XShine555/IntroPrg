@@ -1,3 +1,10 @@
+/*
+ * Iker Rivera Garcia
+ * Exercici 31_01. La classe
+ * Vi.java
+ * Classe UsaVi, Classe principal per a la classe Vi
+ */
+
 public class UsaVi {
     public static void main(String[] args) {
         System.out.println("Vi sense estoc\n" + new Vi("Roura blanc", 1234));
