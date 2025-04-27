@@ -1,3 +1,10 @@
+/*
+ * Iker Rivera Garcia
+ * Exercici 31_02. La classe
+ * Botiga.java
+ * Classe UsaBotiga, Classe principal per a la classe Botiga
+ */
+
 public class UsaBotiga {
     public static void main(String[] args) {
         System.out.println("Creem uns quants vins");
