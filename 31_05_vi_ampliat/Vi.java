@@ -211,7 +211,7 @@ public class Vi {
         return String.format("""
             
                     Ref: %s
-                    Vi: %s
+                    Nom: %s
                     Preu: %d
                     Estoc: %d
                     Lloc: %s
