@@ -9,11 +9,17 @@ public class Hora {
     private int minuts = 0;
     private int segons = 0;
 
-    public Hora() throws Exception {
-        this(0, 0, 0);
+    public Hora() {
+        try{
+            setHores(0);
+            setMinuts(0);
+            setSegons(0);
+        } catch (Exception e) {
+            // No s'ha de fer res
+        }
     }
 
-    public Hora(int hores, int minuts, int segons) {
+    public Hora(int hores, int minuts, int segons) throws Exception {
         if (hores < 0 || minuts < 0 || segons < 0) {
             return;
         }
@@ -21,6 +27,9 @@ public class Hora {
             return;
         }
 
+        setSegons(segons);
+        setMinuts(this.minuts + minuts);
+        setHores(this.hores + hores);
     }
 
     public int getHores() {
