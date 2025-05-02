@@ -60,14 +60,14 @@ public class Hora {
 
     public void setMinuts(int minuts) throws Exception {
         if (minuts < 0 || minuts >= 60)
-            throw new java.lang.Exception("hores fora de rang: " + minuts);
+            throw new java.lang.Exception("minuts fora de rang: " + minuts);
 
         this.minuts = minuts;
     }
 
     public void setSegons(int segons) throws Exception {
         if (segons < 0 || segons >= 60)
-            throw new java.lang.Exception("hores fora de rang: " + segons);
+            throw new java.lang.Exception("segons fora de rang: " + segons);
         
         this.segons = segons;
     }
