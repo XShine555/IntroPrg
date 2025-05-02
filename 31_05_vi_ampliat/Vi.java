@@ -69,8 +69,8 @@ public class Vi {
         return collita;
     }
 
-    public void setRef(String ref) {
-        this.ref = ref;
+    public void setLloc(String lloc) {
+        this.lloc = lloc;
     }
 
     public String getNom() {
