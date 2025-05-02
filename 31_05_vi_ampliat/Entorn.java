@@ -222,7 +222,7 @@ public class Entorn {
     }*/
 
     private static void cerca() {
-        System.out.print("ref (enter cancel·la)> ");
+        System.out.print("ref> ");
         String nom = Entrada.readLine();
 
         if (nom.isBlank()) {
