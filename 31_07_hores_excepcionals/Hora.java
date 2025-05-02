@@ -9,11 +9,11 @@ public class Hora {
     private int minuts = 0;
     private int segons = 0;
 
-    public Hora() throws Exception {
+    public Hora() {
         this(0, 0, 0);
     }
 
-    public Hora(int hores, int minuts, int segons) throws Exception {
+    public Hora(int hores, int minuts, int segons) {
         if (hores < 0 || minuts < 0 || segons < 0) {
             return;
         }
@@ -21,9 +21,21 @@ public class Hora {
             return;
         }
 
-        setSegons(segons);
-        setMinuts(this.minuts + minuts);
-        setHores(this.hores + hores);
+        try{
+            setSegons(segons);
+        } catch (Exception e) {
+            System.out.println("java.lang.Exception:" + e.getMessage());
+        }
+        try{
+            setMinuts(this.minuts + minuts);
+        } catch (Exception e) {
+            System.out.println("java.lang.Exception:" + e.getMessage());
+        }
+        try{
+            setHores(this.hores + hores);
+        } catch (Exception e) {
+            System.out.println("java.lang.Exception:" + e.getMessage());
+        }
     }
 
     public int getHores() {
@@ -200,24 +212,5 @@ public class Hora {
         } else {
             return "==";
         }
-    }
-
-    public static void main(String[] args) throws Exception {
-        Hora hora1 = new Hora();
-        Hora hora2 = new Hora(0, 0, 2);
-        System.out.printf("Inicialment hora1: %s %s hora2: %s%n",
-                hora1,
-                composaOperadorComparacio(hora1, hora2),
-                hora2);
-        System.out.println("Incrementem 1 segon a la primera i decrementem 1 segon a la segona");
-        hora1.incrementa();
-        hora2.decrementa();
-        System.out.printf("Finalment hora1: %s %s hora2: %s%n",
-                hora1,
-                composaOperadorComparacio(hora1, hora2),
-                hora2);
-
-        //hora1.decrementa(1);
-        //System.out.println(hora1.toString());
     }
 }
