@@ -38,7 +38,7 @@ public class Entorn {
                 case "modifica" -> System.out.println("Comanda temporalment no disponible");
                 case "elimina" -> System.out.println("Comanda temporalment no disponible");
                 case "surt" -> { 
-                    guardaCsv();
+                    //guardaCsv();
                     System.out.println("adéu");
                 }
                 default -> System.out.println("ERROR: comanda no reconeguda. Escriviu help per ajuda");
