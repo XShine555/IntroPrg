@@ -3,17 +3,17 @@ public class UsaHora {
         try {
             hora.setHores(hores);
         } catch (Exception e) {
-            System.out.println("java.lang.Exception:" + e.getMessage());
+            System.out.println("java.lang.Exception: " + e.getMessage());
         }
         try {
             hora.setMinuts(minuts);
         } catch (Exception e) {
-            System.out.println("java.lang.Exception:" + e.getMessage());
+            System.out.println("java.lang.Exception: " + e.getMessage());
         }
         try {
             hora.setSegons(segons);
         } catch (Exception e) {
-            System.out.println("java.lang.Exception:" + e.getMessage());
+            System.out.println("java.lang.Exception: " + e.getMessage());
         }
     }
     public static void main(String[] args) throws Exception {
