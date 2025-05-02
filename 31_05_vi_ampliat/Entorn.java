@@ -280,9 +280,13 @@ public class Entorn {
         if (!preuStr.isBlank() && !preuStr.equals("!")) {
             try {
                 preu = Integer.parseInt(preuStr);
-                if (preu < 0) preu = -1;
+                if (preu < 0) {
+                    System.out.println("ERROR: el valor ha de ser un enter positiu");
+                    return;
+                }
             } catch (NumberFormatException e) {
-                preu = -1;
+                System.out.println("ERROR: el valor ha de ser un enter positiu");
+                return;
             }
         } else if (preuStr.equals("!")) {
             Vi plantilla = new Vi(null, nom.isBlank() ? null : nom, -1, -1, null, null, null, null);
@@ -301,9 +305,13 @@ public class Entorn {
         if (!estocStr.isBlank() && !estocStr.equals("!")) {
             try {
                 estoc = Integer.parseInt(estocStr);
-                if (estoc < 0) estoc = -1;
+                if (estoc < 0) {
+                    System.out.println("ERROR: el valor ha de ser un enter positiu");
+                    return;
+                }
             } catch (NumberFormatException e) {
-                estoc = -1;
+                System.out.println("ERROR: el valor ha de ser un enter positiu");
+                return;
             }
         } else if (estocStr.equals("!")) {
             Vi plantilla = new Vi(null, nom.isBlank() ? null : nom, preu, -1, null, null, null, null);
