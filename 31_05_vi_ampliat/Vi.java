@@ -22,10 +22,10 @@ public class Vi {
     private String collita;
 
     public Vi(
+            String ref,
             String nom, 
             int preu, 
             int estoc,
-            String ref,
             String lloc,
             String origen,
             String tipus,
@@ -199,7 +199,7 @@ public class Vi {
             return null;
         }
 
-        return new Vi(nom, preu, estoc, ref, lloc, origen, tipus, collita);
+        return new Vi(ref, nom, preu, estoc, lloc, origen, tipus, collita);
     }
 
     @Override
