@@ -13,7 +13,7 @@ public class Hora {
         this(0, 0, 0);
     }
 
-    public Hora(int hores, int minuts, int segons) throws Exception {
+    public Hora(int hores, int minuts, int segons) {
         if (hores < 0 || minuts < 0 || segons < 0) {
             return;
         }
@@ -21,9 +21,6 @@ public class Hora {
             return;
         }
 
-        setSegons(segons);
-        setMinuts(this.minuts + minuts);
-        setHores(this.hores + hores);
     }
 
     public int getHores() {
