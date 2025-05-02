@@ -223,16 +223,167 @@ public class Entorn {
 
     private static void cerca() {
         System.out.print("ref> ");
-        String nom = Entrada.readLine();
-
-        if (nom.isBlank()) {
+        String ref = Entrada.readLine();
+    
+        boolean botigaBuida = true;
+        botiga.iniciaRecorregut();
+        if (botiga.getSeguent() != null) {
+            botigaBuida = false;
+        }
+        botiga.iniciaRecorregut();
+    
+        if (!ref.isBlank() && !ref.equals("!")) {
+            if (!botigaBuida) {
+                Vi result = botiga.cerca(ref);
+                if (result != null) {
+                    System.out.println(String.format("Trobat:%s", result.toString()));
+                } else {
+                    System.out.println("No trobat");
+                }
+            }
             return;
         }
-
-        Vi result = botiga.cerca(nom);
-        if (result != null) {
-            String.format("Trobat:%s", result.toString());
+    
+        if (ref.equals("!")) {
+            if (!botigaBuida) {
+                Vi plantilla = new Vi(null, null, -1, -1, null, null, null, null);
+                Vi result = botiga.cerca(plantilla);
+                if (result != null) {
+                    System.out.println(String.format("Trobat:%s", result.toString()));
+                } else {
+                    System.out.println("No trobat");
+                }
+            }
             return;
+        }
+    
+        if (botigaBuida) {
+            return;
+        }
+    
+        System.out.print("nom> ");
+        String nom = Entrada.readLine();
+        if (nom.equals("!")) {
+            Vi plantilla = new Vi(null, null, -1, -1, null, null, null, null);
+            Vi result = botiga.cerca(plantilla);
+            if (result != null) {
+                System.out.println(String.format("Trobat:%s", result.toString()));
+            } else {
+                System.out.println("No trobat");
+            }
+            return;
+        }
+    
+        System.out.print("preu max.> ");
+        String preuStr = Entrada.readLine();
+        int preu = -1;
+        if (!preuStr.isBlank() && !preuStr.equals("!")) {
+            try {
+                preu = Integer.parseInt(preuStr);
+                if (preu < 0) preu = -1;
+            } catch (NumberFormatException e) {
+                preu = -1;
+            }
+        } else if (preuStr.equals("!")) {
+            Vi plantilla = new Vi(null, nom.isBlank() ? null : nom, -1, -1, null, null, null, null);
+            Vi result = botiga.cerca(plantilla);
+            if (result != null) {
+                System.out.println(String.format("Trobat:%s", result.toString()));
+            } else {
+                System.out.println("No trobat");
+            }
+            return;
+        }
+    
+        System.out.print("estoc min.> ");
+        String estocStr = Entrada.readLine();
+        int estoc = -1;
+        if (!estocStr.isBlank() && !estocStr.equals("!")) {
+            try {
+                estoc = Integer.parseInt(estocStr);
+                if (estoc < 0) estoc = -1;
+            } catch (NumberFormatException e) {
+                estoc = -1;
+            }
+        } else if (estocStr.equals("!")) {
+            Vi plantilla = new Vi(null, nom.isBlank() ? null : nom, preu, -1, null, null, null, null);
+            Vi result = botiga.cerca(plantilla);
+            if (result != null) {
+                System.out.println(String.format("Trobat:%s", result.toString()));
+            } else {
+                System.out.println("No trobat");
+            }
+            return;
+        }
+    
+        System.out.print("lloc> ");
+        String lloc = Entrada.readLine();
+        if (lloc.equals("!")) {
+            Vi plantilla = new Vi(null, nom.isBlank() ? null : nom, preu, estoc, null, null, null, null);
+            Vi result = botiga.cerca(plantilla);
+            if (result != null) {
+                System.out.println(String.format("Trobat:%s", result.toString()));
+            } else {
+                System.out.println("No trobat");
+            }
+            return;
+        }
+    
+        System.out.print("D.O.> ");
+        String origen = Entrada.readLine();
+        if (origen.equals("!")) {
+            Vi plantilla = new Vi(null, nom.isBlank() ? null : nom, preu, estoc, lloc.isBlank() ? null : lloc, null, null, null);
+            Vi result = botiga.cerca(plantilla);
+            if (result != null) {
+                System.out.println(String.format("Trobat:%s", result.toString()));
+            } else {
+                System.out.println("No trobat");
+            }
+            return;
+        }
+    
+        System.out.print("tipus> ");
+        String tipus = Entrada.readLine();
+        if (tipus.equals("!")) {
+            Vi plantilla = new Vi(null, nom.isBlank() ? null : nom, preu, estoc, lloc.isBlank() ? null : lloc, origen.isBlank() ? null : origen, null, null);
+            Vi result = botiga.cerca(plantilla);
+            if (result != null) {
+                System.out.println(String.format("Trobat:%s", result.toString()));
+            } else {
+                System.out.println("No trobat");
+            }
+            return;
+        }
+    
+        System.out.print("collita> ");
+        String collita = Entrada.readLine();
+        if (collita.equals("!")) {
+            Vi plantilla = new Vi(null, nom.isBlank() ? null : nom, preu, estoc, lloc.isBlank() ? null : lloc, origen.isBlank() ? null : origen, tipus.isBlank() ? null : tipus, null);
+            Vi result = botiga.cerca(plantilla);
+            if (result != null) {
+                System.out.println(String.format("Trobat:%s", result.toString()));
+            } else {
+                System.out.println("No trobat");
+            }
+            return;
+        }
+    
+        Vi plantilla = new Vi(
+            null,
+            nom.isBlank() ? null : nom,
+            preu,
+            estoc,
+            lloc.isBlank() ? null : lloc,
+            origen.isBlank() ? null : origen,
+            tipus.isBlank() ? null : tipus,
+            collita.isBlank() ? null : collita
+        );
+    
+        Vi result = botiga.cerca(plantilla);
+        if (result != null) {
+            System.out.println(String.format("Trobat:%s", result.toString()));
+        } else {
+            System.out.println("No trobat");
         }
     }
 
