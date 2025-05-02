@@ -1,3 +1,10 @@
+/*
+ * Iker Rivera Garcia
+ * 24/03/2025
+ * Classe UsaHora, que utilitza la classe Hora i mostra com es poden produir excepcions
+ * en el moment d'assignar valors a les hores, minuts i segons.
+ */
+
 public class UsaHora {
     private static void canviaHora(Hora hora, int hores, int minuts, int segons) {
         try {
