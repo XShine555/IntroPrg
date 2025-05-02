@@ -163,12 +163,17 @@ public class Vi {
             return null;
         }
 
-        String nom = array[0];
+        String ref = array[0];
+        if (ref.isBlank()) {
+            return null;
+        }
+
+        String nom = array[1];
         if (nom.isBlank()) {
             return null;
         }
 
-        String preuString = array[1];
+        String preuString = array[2];
         int preu = 0;
         try {
             preu = Integer.parseInt(preuString);
@@ -179,7 +184,7 @@ public class Vi {
             return null;
         }
 
-        String estocString = array[2];
+        String estocString = array[3];
         int estoc = 0;
         try {
             estoc = Integer.parseInt(estocString);
@@ -190,7 +195,6 @@ public class Vi {
             return null;
         }
 
-        String ref = array[3];
         String lloc = array[4];
         String origen = array[5];
         String tipus = array[6];

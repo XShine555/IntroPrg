@@ -39,7 +39,9 @@ public class Botiga {
 
     public Vi afegeix(Vi vi) {
         if (!vi.esValid())
+        {
             return null;
+        }
 
         if (cerca(vi.getNom()) != null)
             return null;
