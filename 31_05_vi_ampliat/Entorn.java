@@ -21,26 +21,20 @@ public class Entorn {
     public static void main(String[] args) throws IOException {
         System.out.println("Celler La Bona Estrella. Escriviu ajuda per veure opcions.");
         String comanda = "";
-
+    
         carregaCsv();
-
+    
         while (!comanda.equals("surt")) {
             System.out.print("botiga> ");
             comanda = Entrada.readLine();
-
+    
             switch (comanda) {
                 case "ajuda" -> ajuda();
                 case "cerca" -> cerca();
-                //case "afegeix" -> afegeix();
-                //case "modifica" -> modifica();
-                //case "elimina" -> elimina();
                 case "afegeix" -> System.out.println("Comanda temporalment no disponible");
                 case "modifica" -> System.out.println("Comanda temporalment no disponible");
                 case "elimina" -> System.out.println("Comanda temporalment no disponible");
-                case "surt" -> { 
-                    //guardaCsv();
-                    System.out.println("adéu");
-                }
+                case "surt" -> System.out.println("adéu");
                 default -> System.out.println("ERROR: comanda no reconeguda. Escriviu help per ajuda");
             }
         }
