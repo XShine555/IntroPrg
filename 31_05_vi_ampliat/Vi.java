@@ -70,7 +70,7 @@ public class Vi {
     }
 
     public void setLloc(String lloc) {
-        this.lloc = lloc;
+        this.lloc = Vi.normalitzaString(lloc);
     }
 
     public String getNom() {
