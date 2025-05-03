@@ -152,9 +152,14 @@ public class Vi {
 
     public String[] aArrayString() {
         return new String[] {
+                this.ref,
                 this.nom,
                 String.valueOf(this.preu),
                 String.valueOf(this.estoc),
+                this.lloc,
+                this.origen,
+                this.tipus,
+                this.collita,
         };
     }
 
