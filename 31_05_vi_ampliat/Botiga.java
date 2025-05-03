@@ -59,6 +59,7 @@ public class Botiga {
         if (ref == null || ref.isEmpty()) {
             return null;
         }
+        ref = Vi.normalitzaString(ref);
 
         for (int i = 0; i < vins.length; i++) {
             Vi vi = vins[i];
