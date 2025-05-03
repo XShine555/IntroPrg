@@ -54,7 +54,7 @@ public class Vi {
     }
 
     public String getLloc() {
-        return lloc;
+        return this.lloc;
     }
 
     public String getOrigen() {
@@ -70,7 +70,11 @@ public class Vi {
     }
 
     public void setLloc(String value) {
-        this.lloc = Vi.normalitzaString(value);
+        value = Vi.normalitzaString(value);
+        if (value == null)
+            return;
+
+        this.lloc = value;
     }
 
     public String getNom() {
@@ -113,7 +117,7 @@ public class Vi {
 
     public static String normalitzaString(String nom) {
         if (nom == null || nom.isBlank()) {
-            return INVALID_NAME;
+            return null;
         }
 
         String result = "";
