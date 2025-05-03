@@ -56,7 +56,7 @@ public class Botiga {
         return null;
     }
 
-    public Vi elimina(String nom) {
+    /*public Vi elimina(String nom) {
         nom = Vi.normalitzaString(nom);
 
         for (int i = 0; i < vins.length; i++) {
@@ -73,7 +73,7 @@ public class Botiga {
         }
 
         return null;
-    }
+    }*/
 
     public Vi cerca(String ref) {
         for (int i = 0; i < vins.length; i++) {
