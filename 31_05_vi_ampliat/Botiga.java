@@ -78,6 +78,11 @@ public class Botiga {
     }
 
     public Vi cerca(String ref) {
+        if (ref == null || ref.isEmpty()) {
+            return null;
+        }
+        ref = Vi.normalitzaString(ref);
+
         for (int i = 0; i < vins.length; i++) {
             Vi vi = vins[i];
 
