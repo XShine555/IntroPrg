@@ -56,13 +56,15 @@ public class Botiga {
         return null;
     }
 
-    /*public Vi elimina(String nom) {
-        nom = Vi.normalitzaString(nom);
+    public Vi elimina(String ref) {
+        if (ref == null || ref.isEmpty()) {
+            return null;
+        }
 
         for (int i = 0; i < vins.length; i++) {
             Vi vi = vins[i];
 
-            if (vi != null && vi.getNom().equals(nom)) {
+            if (vi != null && vi.getRef().equals(ref)) {
                 if (vi.getEstoc() > 0) {
                     return null;
                 }
@@ -73,7 +75,7 @@ public class Botiga {
         }
 
         return null;
-    }*/
+    }
 
     public Vi cerca(String ref) {
         for (int i = 0; i < vins.length; i++) {
