@@ -43,7 +43,7 @@ public class Botiga {
             return null;
         }
 
-        if (cerca(vi.getNom()) != null)
+        if (cerca(vi.getRef()) != null)
             return null;
 
         for (int i = 0; i < vins.length; i++) {
@@ -86,7 +86,7 @@ public class Botiga {
         for (int i = 0; i < vins.length; i++) {
             Vi vi = vins[i];
 
-            if (vi != null && vi.getRef().equals(ref)) {
+            if (vi != null && vi.getRef().equalsIgnoreCase(ref)) {
                 return vi;
             }
         }
