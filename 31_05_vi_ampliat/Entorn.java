@@ -235,13 +235,7 @@ public class Entorn {
         }
 
         if (ref.equals("!")) {
-            Vi plantilla = new Vi(null, null, -1, -1, null, null, null, null);
-                Vi result = botiga.cerca(plantilla);
-                if (result != null) {
-                    System.out.println(String.format("Trobat:%s", result.toString()));
-                } else {
-                    System.out.println("No trobat");
-                }
+            return;
         }
 
         System.out.print("nom> ");
