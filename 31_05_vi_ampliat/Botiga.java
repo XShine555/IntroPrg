@@ -81,7 +81,7 @@ public class Botiga {
         if (ref == null || ref.isEmpty()) {
             return null;
         }
-        ref = Vi.normalitzaString(ref);
+        ref = normalitzaRef(ref);
 
         for (int i = 0; i < vins.length; i++) {
             Vi vi = vins[i];
@@ -93,6 +93,31 @@ public class Botiga {
 
         return null;
     }
+
+    private String normalitzaRef(String ref) {
+        String result = "";
+
+        for (int i = 0; i < ref.length(); i++) {
+            char thisChar = ref.charAt(i);
+
+            if (i > 0) {
+                char lastChar = ref.charAt(i - 1);
+
+                if (Character.isLetterOrDigit(thisChar)
+                        || (Character.isWhitespace(thisChar) && !Character.isWhitespace(lastChar))
+                        || Vi.isSpecialChar(thisChar)) {
+                    result += thisChar;
+                }
+            }
+            else {
+                if (Character.isLetterOrDigit(thisChar)) {
+                    result += thisChar;
+                }
+            }
+        }
+
+        return result;
+    } 
 
     public Vi cerca(Vi plantilla) {
         for (Vi vi : vins) {

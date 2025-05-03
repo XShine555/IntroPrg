@@ -140,7 +140,7 @@ public class Vi {
         return result.trim();
     }
 
-    private static boolean isSpecialChar(char character) {
+    public static boolean isSpecialChar(char character) {
         for (char specialChar : SPECIAL_CHARS) {
             if (character == specialChar) {
                 return true;
