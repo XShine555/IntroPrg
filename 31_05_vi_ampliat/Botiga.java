@@ -22,7 +22,7 @@ public class Botiga {
     public void iniciaRecorregut() {
         currentIndex = 0;
     }
-    
+
     public Vi getSeguent() {
         if (currentIndex >= vins.length) {
             return null;
@@ -38,8 +38,7 @@ public class Botiga {
     }
 
     public Vi afegeix(Vi vi) {
-        if (!vi.esValid())
-        {
+        if (!vi.esValid()) {
             return null;
         }
 
@@ -96,38 +95,39 @@ public class Botiga {
 
     public Vi cerca(Vi plantilla) {
         for (Vi vi : vins) {
-            if (vi == null) continue;
-    
-            if (plantilla.getRef() != null && !plantilla.getRef().isEmpty() && 
-                !plantilla.getRef().equalsIgnoreCase(vi.getRef())) 
+            if (vi == null)
                 continue;
-    
-            if (plantilla.getNom() != null && !plantilla.getNom().isEmpty() && 
-                !plantilla.getNom().equalsIgnoreCase(vi.getNom())) 
+
+            if (plantilla.getRef() != null && !plantilla.getRef().isEmpty() &&
+                    !Vi.normalitzaString(plantilla.getRef()).equalsIgnoreCase(vi.getRef()))
                 continue;
-    
-            if (plantilla.getPreu() >= 0 && plantilla.getPreu() < vi.getPreu()) 
+
+            if (plantilla.getNom() != null && !plantilla.getNom().isEmpty() &&
+                    !plantilla.getNom().equalsIgnoreCase(vi.getNom()))
                 continue;
-    
-            if (plantilla.getLloc() != null && !plantilla.getLloc().isEmpty() && 
-                !plantilla.getLloc().equalsIgnoreCase(vi.getLloc())) 
+
+            if (plantilla.getPreu() >= 0 && plantilla.getPreu() < vi.getPreu())
                 continue;
-    
-            if (plantilla.getOrigen() != null && !plantilla.getOrigen().isEmpty() && 
-                !plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen())) 
+
+            if (plantilla.getLloc() != null && !plantilla.getLloc().isEmpty() &&
+                    !plantilla.getLloc().equalsIgnoreCase(vi.getLloc()))
                 continue;
-    
-            if (plantilla.getTipus() != null && !plantilla.getTipus().isEmpty() && 
-                !plantilla.getTipus().equalsIgnoreCase(vi.getTipus())) 
+
+            if (plantilla.getOrigen() != null && !plantilla.getOrigen().isEmpty() &&
+                    !plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen()))
                 continue;
-    
-            if (plantilla.getCollita() != null && !plantilla.getCollita().isEmpty() && 
-                !plantilla.getCollita().equalsIgnoreCase(vi.getCollita())) 
+
+            if (plantilla.getTipus() != null && !plantilla.getTipus().isEmpty() &&
+                    !plantilla.getTipus().equalsIgnoreCase(vi.getTipus()))
                 continue;
-    
-            if (plantilla.getEstoc() >= 0 && plantilla.getEstoc() > vi.getEstoc()) 
+
+            if (plantilla.getCollita() != null && !plantilla.getCollita().isEmpty() &&
+                    !plantilla.getCollita().equalsIgnoreCase(vi.getCollita()))
                 continue;
-    
+
+            if (plantilla.getEstoc() >= 0 && plantilla.getEstoc() > vi.getEstoc())
+                continue;
+
             return vi;
         }
         return null;
