@@ -15,7 +15,7 @@ public class Botiga {
 
     public Botiga(int maxVins) throws IllegalArgumentException {
         if (maxVins <= 0) {
-            throw new IllegalArgumentException("No o es pot crear una botiga amb menys d'un vi");
+            throw new IllegalArgumentException("No es pot crear una botiga amb menys d'un vi");
         }
 
         this.vins = new Vi[maxVins];
