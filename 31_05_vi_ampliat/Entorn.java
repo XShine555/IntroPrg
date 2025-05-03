@@ -232,6 +232,7 @@ public class Entorn {
             } else {
                 System.out.println("No trobat");
             }
+            return;
         }
 
         if (ref.equals("!")) {
