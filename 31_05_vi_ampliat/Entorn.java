@@ -379,9 +379,6 @@ public class Entorn {
                 Comandes disponibles:
                 ajuda
                 cerca
-                afegeix
-                modifica
-                elimina
                 surt
                 """);
     }
