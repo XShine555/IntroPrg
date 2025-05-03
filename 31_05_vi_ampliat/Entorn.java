@@ -23,6 +23,10 @@ public class Entorn {
         String comanda = "";
 
         carregaCsv();
+        var i = new Vi("REF01", "NOMBRE", 100, 100, "comanda", "comanda", "comanda", "comanda");
+        botiga.afegeix(i);
+        i.setLloc("P  2    1 E 4 5 N       5   5E");
+        System.out.println(i.getLloc());
 
         while (!comanda.equals("surt")) {
             System.out.print("botiga> ");
