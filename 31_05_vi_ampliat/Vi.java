@@ -42,11 +42,11 @@ public class Vi {
         this.preu = preu;
         this.estoc = estoc;
 
-        this.ref = ref;
-        this.lloc = lloc;
-        this.origen = origen;
-        this.tipus = tipus;
-        this.collita = collita;
+        this.ref = Vi.normalitzaString(ref);
+        this.lloc = Vi.normalitzaString(lloc);
+        this.origen = Vi.normalitzaString(origen);
+        this.tipus = Vi.normalitzaString(tipus);
+        this.collita = Vi.normalitzaString(collita);
     }
 
     public String getRef() {
