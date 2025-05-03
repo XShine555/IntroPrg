@@ -64,7 +64,7 @@ public class Botiga {
         for (int i = 0; i < vins.length; i++) {
             Vi vi = vins[i];
 
-            if (vi != null && vi.getRef().equals(ref)) {
+            if (vi != null && vi.getRef().equalsIgnoreCase(ref)) {
                 if (vi.getEstoc() > 0) {
                     return null;
                 }
