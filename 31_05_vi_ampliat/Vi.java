@@ -69,8 +69,8 @@ public class Vi {
         return collita;
     }
 
-    public void setLloc(String lloc) {
-        this.lloc = Vi.normalitzaString(lloc);
+    public void setLloc(String value) {
+        this.lloc = Vi.normalitzaString(value);
     }
 
     public String getNom() {
