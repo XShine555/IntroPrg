@@ -103,7 +103,7 @@ public class Botiga {
                 continue;
 
             if (plantilla.getNom() != null && !plantilla.getNom().isEmpty() &&
-                    !plantilla.getNom().equalsIgnoreCase(vi.getNom()))
+                    !Vi.normalitzaString(plantilla.getNom()).equalsIgnoreCase(vi.getNom()))
                 continue;
 
             if (plantilla.getPreu() >= 0 && plantilla.getPreu() < vi.getPreu())
@@ -114,7 +114,7 @@ public class Botiga {
                 continue;
 
             if (plantilla.getOrigen() != null && !plantilla.getOrigen().isEmpty() &&
-                    !plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen()))
+                    !Vi.normalitzaString(plantilla.getOrigen()).equalsIgnoreCase(vi.getOrigen()))
                 continue;
 
             if (plantilla.getTipus() != null && !plantilla.getTipus().isEmpty() &&
