@@ -1,3 +1,10 @@
+/*
+ * Clase ComptaParaules
+ * Llegeix un text i compta les paraules que conté.
+ * Cada vegada que es llegeix una nova línia, es mostren les paraules
+ * i el nombre de vegades que apareixen.
+ */
+
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
