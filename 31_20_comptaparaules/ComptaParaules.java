@@ -10,6 +10,9 @@ public class ComptaParaules {
     private static String normalizaString(String input) {
         String result = "";
         for (char character : input.toCharArray()) {
+            if (character == ',')
+                continue;
+
             char newChar = switch (character){
                 case 'à', 'á', 'â', 'ä' -> 'a';
                 case 'è', 'é', 'ê', 'ë' -> 'e';
