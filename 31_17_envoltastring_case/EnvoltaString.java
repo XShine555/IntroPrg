@@ -11,7 +11,7 @@ public class EnvoltaString {
         }
         if (obj instanceof EnvoltaString) {
             EnvoltaString other = (EnvoltaString) obj;
-            return this.string.toUpperCase().equals(other.string.toUpperCase());
+            return this.string.equalsIgnoreCase(other.string);
         }
         return false;
     }
