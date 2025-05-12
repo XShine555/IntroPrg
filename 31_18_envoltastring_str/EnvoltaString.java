@@ -12,8 +12,17 @@ public class EnvoltaString {
         this.string = string;
     }
 
-    public boolean equals(String other) {
-        return this.string.equalsIgnoreCase(other);
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof EnvoltaString) {
+            EnvoltaString other = (EnvoltaString) obj;
+            return this.string.equalsIgnoreCase(other.string);
+        }
+        if (obj instanceof String) {
+            return this.string.equalsIgnoreCase((String) obj);
+        }
+
+        return super.equals(obj);
     }
 
     @Override
