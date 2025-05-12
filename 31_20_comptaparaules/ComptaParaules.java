@@ -60,6 +60,8 @@ public class ComptaParaules {
                 System.out.printf("%s -> %d%n", kvp.key, kvp.value);
             }
             System.out.println();
+            order.clear();
+            paraules.clear();
 
             text = Entrada.readLine();
         }
