@@ -11,7 +11,7 @@ public class ComptaParaules {
         System.out.println("Ves introduint frases. Enter per finalitzar.");
         String text = Entrada.readLine();
         while (!text.isBlank()) {
-            String[] split = text.replaceAll(" ([^ ]+)", "$1").split(" ");
+            String[] split = text.strip().split(" ");
             for (String string : split) {
                 String lowerCase = string.toLowerCase();
 
