@@ -1,9 +1,11 @@
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ComptaParaules {
     private static Map<String, Integer> paraules = new LinkedHashMap<>();
+    private static List<String> order = new ArrayList<>();
 
     public static void main(String[] args) {
         System.out.println("Ves introduint frases. Enter per finalitzar.");
@@ -18,12 +20,15 @@ public class ComptaParaules {
                 } else {
                     paraules.put(lowerCase, 1);
                 }
+
+                order.add(lowerCase);
             }
             text = Entrada.readLine();
         }
-        
-        for (Map.Entry<String, Integer> entry : paraules.entrySet()) {
-            System.out.printf("%s -> %d%n", entry.getKey(), entry.getValue());
+
+        for (String string : order) {
+            int count = paraules.get(string);
+            System.out.printf("%s -> %d%n", string, count);
         }
         
         System.out.println("adéu");
