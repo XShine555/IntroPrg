@@ -16,10 +16,6 @@ public class ComptaParaules {
                 || character == ':'
                 || character == '!'
                 || character == '?'
-                || character == ' '
-                || character == '\n'
-                || character == '\t'
-                || character == '\r'
             )
                 continue;
 
