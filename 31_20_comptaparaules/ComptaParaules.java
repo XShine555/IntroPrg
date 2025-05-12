@@ -14,7 +14,10 @@ public class ComptaParaules {
             text = text.replaceAll("/  +/g", "");
             String[] split = text.split(" ");
             for (String string : split) {
-                String lowerCase = string.toLowerCase();
+                String lowerCase = string.toLowerCase().strip();
+                if (lowerCase.isBlank()) {
+                    continue;
+                }
 
                 if (paraules.containsKey(lowerCase)) {
                     paraules.put(lowerCase, paraules.get(lowerCase) + 1);
