@@ -11,7 +11,8 @@ public class ComptaParaules {
         System.out.println("Ves introduint frases. Enter per finalitzar.");
         String text = Entrada.readLine();
         while (!text.isBlank()) {
-            String[] split = text.replaceAll("\\s", "").split(" ");
+            text = text.replaceAll("/  +/g", "");
+            String[] split = text.split(" ");
             for (String string : split) {
                 String lowerCase = string.toLowerCase();
 
@@ -23,13 +24,14 @@ public class ComptaParaules {
 
                 order.add(new KeyValuePair(lowerCase, paraules.get(lowerCase)));
             }
+
+            for (KeyValuePair kvp : order) {
+                System.out.printf("%s -> %d%n", kvp.key, kvp.value);
+            }
+
             text = Entrada.readLine();
         }
 
-        for (KeyValuePair kvp : order) {
-            System.out.printf("%s -> %d%n", kvp.key, kvp.value);
-        }
-        
         System.out.println("adéu");
     }
 }
