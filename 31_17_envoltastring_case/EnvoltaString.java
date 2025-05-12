@@ -11,6 +11,6 @@ public class EnvoltaString {
 
     @Override
     public String toString() {
-        return "ENVOLAT(" + "\"" + string + "\"" + ")";
+        return "ENVOLTAT(" + "\"" + string + "\"" + ")";
     }
 }
