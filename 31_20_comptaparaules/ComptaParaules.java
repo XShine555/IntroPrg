@@ -61,7 +61,6 @@ public class ComptaParaules {
             }
             System.out.println();
             order.clear();
-            paraules.clear();
 
             text = Entrada.readLine();
         }
