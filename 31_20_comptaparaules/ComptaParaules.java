@@ -4,16 +4,6 @@ import java.util.List;
 import java.util.Map;
 
 public class ComptaParaules {
-    static class KeyValuePair {
-        String key;
-        int value;
-
-        KeyValuePair(String key, int value) {
-            this.key = key;
-            this.value = value;
-        }
-    }
-
     private static Map<String, Integer> paraules = new LinkedHashMap<>();
     private static List<KeyValuePair> order = new ArrayList<>();
 
