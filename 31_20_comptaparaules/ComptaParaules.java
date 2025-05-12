@@ -59,6 +59,7 @@ public class ComptaParaules {
             for (KeyValuePair kvp : order) {
                 System.out.printf("%s -> %d%n", kvp.key, kvp.value);
             }
+            System.out.println();
 
             text = Entrada.readLine();
         }
