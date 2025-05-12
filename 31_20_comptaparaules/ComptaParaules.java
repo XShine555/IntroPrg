@@ -7,11 +7,33 @@ public class ComptaParaules {
     private static Map<String, Integer> paraules = new LinkedHashMap<>();
     private static List<KeyValuePair> order = new ArrayList<>();
 
+    private static String normalizaString(String input) {
+        String result = "";
+        for (char character : input.toCharArray()) {
+            if (Character.isWhitespace(character))
+                continue;
+            
+            char newChar = switch (character){
+                case 'à', 'á', 'â', 'ä' -> 'a';
+                case 'è', 'é', 'ê', 'ë' -> 'e';
+                case 'ì', 'í', 'î', 'ï' -> 'i';
+                case 'ò', 'ó', 'ô', 'ö' -> 'o';
+                case 'ù', 'ú', 'û', 'ü' -> 'u';
+                case 'ç' -> 'c';
+                default -> character;
+            };
+            newChar = Character.toLowerCase(newChar);
+            result += newChar;
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         System.out.println("Ves introduint frases. Enter per finalitzar.");
         String text = Entrada.readLine();
         while (!text.isBlank()) {
             text = text.replaceAll("/  +/g", "");
+            text = normalizaString(text);
             String[] split = text.split(" ");
             for (String string : split) {
                 String lowerCase = string.toLowerCase().strip();
