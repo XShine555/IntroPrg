@@ -12,10 +12,6 @@ public class EnvoltaString {
         this.string = string;
     }
 
-    public boolean equals(EnvoltaString other) {
-        return this.string.equalsIgnoreCase(other.string);
-    }
-
     public boolean equals(String other) {
         return this.string.equalsIgnoreCase(other);
     }
