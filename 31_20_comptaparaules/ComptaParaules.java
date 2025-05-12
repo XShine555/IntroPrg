@@ -19,13 +19,13 @@ public class ComptaParaules {
                     paraules.put(lowerCase, 1);
                 }
             }
-
-            for (Map.Entry<String, Integer> entry : paraules.entrySet()) {
-                System.out.printf("%s -> %d%n", entry.getKey(), entry.getValue());
-            }
-
             text = Entrada.readLine();
         }
+        
+        for (Map.Entry<String, Integer> entry : paraules.entrySet()) {
+            System.out.printf("%s -> %d%n", entry.getKey(), entry.getValue());
+        }
+        
         System.out.println("adéu");
     }
 }
