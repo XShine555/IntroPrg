@@ -5,6 +5,7 @@ public class ComptaParaules {
     private static Map<String, Integer> paraules = new HashMap<>();
 
     public static void main(String[] args) {
+        System.out.println("Ves introduint frases. Enter per finalitzar.");
         String text = Entrada.readLine();
         while (!text.isBlank()) {
             String[] split = text.split(" ");
@@ -24,5 +25,6 @@ public class ComptaParaules {
 
             text = Entrada.readLine();
         }
+        System.out.println("adéu");
     }
 }
