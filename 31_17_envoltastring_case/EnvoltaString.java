@@ -5,8 +5,7 @@ public class EnvoltaString {
         this.string = string;
     }
 
-    @Override
-    public boolean equals(Object obj) {
+    public boolean equals(EnvoltaString obj) {
         if (this == obj) {
             return true;
         }
