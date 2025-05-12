@@ -14,7 +14,7 @@ public class ComptaParaules {
                 String lowerCase = string.toLowerCase();
 
                 if (paraules.containsKey(lowerCase)) {
-                    paraules.replace(lowerCase, paraules.get(lowerCase) + 1);
+                    paraules.put(lowerCase, paraules.get(lowerCase) + 1);
                 } else {
                     paraules.put(lowerCase, 1);
                 }
