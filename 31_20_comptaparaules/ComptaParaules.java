@@ -4,8 +4,18 @@ import java.util.List;
 import java.util.Map;
 
 public class ComptaParaules {
+    static class KeyValuePair {
+        String key;
+        int value;
+
+        KeyValuePair(String key, int value) {
+            this.key = key;
+            this.value = value;
+        }
+    }
+
     private static Map<String, Integer> paraules = new LinkedHashMap<>();
-    private static List<String> order = new ArrayList<>();
+    private static List<KeyValuePair> order = new ArrayList<>();
 
     public static void main(String[] args) {
         System.out.println("Ves introduint frases. Enter per finalitzar.");
@@ -21,14 +31,13 @@ public class ComptaParaules {
                     paraules.put(lowerCase, 1);
                 }
 
-                order.add(lowerCase);
+                order.add(new KeyValuePair(lowerCase, paraules.get(lowerCase)));
             }
             text = Entrada.readLine();
         }
 
-        for (String string : order) {
-            int count = paraules.get(string);
-            System.out.printf("%s -> %d%n", string, count);
+        for (KeyValuePair kvp : order) {
+            System.out.printf("%s -> %d%n", kvp.key, kvp.value);
         }
         
         System.out.println("adéu");
