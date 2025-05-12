@@ -5,14 +5,12 @@ public class EnvoltaString {
         this.string = string;
     }
 
-    public boolean equals(EnvoltaString obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj instanceof EnvoltaString) {
-            EnvoltaString other = (EnvoltaString) obj;
-            return this.string.equalsIgnoreCase(other.string);
-        }
-        return false;
+    public boolean equals(EnvoltaString other) {
+        return this.string.equalsIgnoreCase(other.string);
+    }
+
+    @Override
+    public String toString() {
+        return "ENVOLAT(" + string + ")";
     }
 }
