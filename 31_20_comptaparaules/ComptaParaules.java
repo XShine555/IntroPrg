@@ -20,8 +20,8 @@ public class ComptaParaules {
                 }
             }
 
-            for (String string : paraules.keySet()) {
-                System.out.printf("%s -> %d%n", string, paraules.get(string));
+            for (Map.Entry<String, Integer> entry : paraules.entrySet()) {
+                System.out.printf("%s -> %d%n", entry.getKey(), entry.getValue());
             }
 
             text = Entrada.readLine();
