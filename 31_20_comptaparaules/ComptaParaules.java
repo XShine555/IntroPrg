@@ -1,8 +1,9 @@
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class ComptaParaules {
-    private static Map<String, Integer> paraules = new HashMap<>();
+    private static Map<String, Integer> paraules = new LinkedHashMap<>();
 
     public static void main(String[] args) {
         System.out.println("Ves introduint frases. Enter per finalitzar.");
