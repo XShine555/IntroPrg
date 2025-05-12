@@ -10,7 +10,17 @@ public class ComptaParaules {
     private static String normalizaString(String input) {
         String result = "";
         for (char character : input.toCharArray()) {
-            if (character == ',')
+            if (character == ','
+                || character == '.'
+                || character == ';'
+                || character == ':'
+                || character == '!'
+                || character == '?'
+                || character == ' '
+                || character == '\n'
+                || character == '\t'
+                || character == '\r'
+            )
                 continue;
 
             char newChar = switch (character){
