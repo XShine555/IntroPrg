@@ -1,4 +1,8 @@
-/* XXX */
+/* 
+ * Exemple d'ús de la classe EnvoltaString.
+ * Demostra com comparar dues cadenes de text
+ * i dues instàncies de la classe EnvoltaString.
+*/
 public class UsaEnvoltaString {
     public static void main(String[] args) {
         String nom1 = "Renat";

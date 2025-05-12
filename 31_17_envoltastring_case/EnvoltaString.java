@@ -1,3 +1,10 @@
+/*
+ * EnvoltaString.java
+ * Clase EnvoltaString, que encapsula una cadena de text i proporciona
+ * un mètode equals que compara dues instàncies de la classe sense tenir en compte
+ * les majúscules i minúscules.
+ */
+
 public class EnvoltaString {
     private String string;
 
