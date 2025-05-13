@@ -33,11 +33,14 @@ public class UtilString {
         if (plantilla == null || text == null) {
             return false;
         }
+        if (text.length() > plantilla.length())
+        {
+            return false;
+        }
 
-        char firstChar = plantilla.charAt(0);
-        char firstTextChar = text.charAt(0);
-
-        return firstChar == firstTextChar;
+        plantilla = normalitzaString(plantilla).toLowerCase();
+        text = normalitzaString(text).toLowerCase();
+        return plantilla.startsWith(text);
     }
 
     public static boolean isSpecialChar(char character) {

@@ -94,8 +94,13 @@ public class Botiga {
                     !UtilString.normalitzaString(plantilla.getRef()).equalsIgnoreCase(vi.getRef()))
                 continue;
 
-            if (plantilla.getNom() != null && !plantilla.getNom().isEmpty() &&
-                    !UtilString.normalitzaString(plantilla.getNom()).equalsIgnoreCase(vi.getNom()))
+            var nom = plantilla.getNom();
+            var nomPlantilla = vi.getNom();
+
+            if (
+                nomPlantilla != null && nom != null &&
+                !UtilString.esPlantillaDeText(nomPlantilla, nom)
+            )
                 continue;
 
             if (plantilla.getPreu() >= 0 && plantilla.getPreu() < vi.getPreu())
