@@ -54,11 +54,13 @@ public class UtilString {
     }
 
     public static void main(String[] args) {
-        var n1 = "no";
-        var n2 = "nom";
+        var n1 = "mat".toLowerCase();
+        var n2 = "Matís Negre".toLowerCase();
+        System.out.println(n1);
+        System.out.println(n2);
 
         System.out.println(
-            n1.startsWith(n2) || n2.startsWith(n1)
+            n2.startsWith(n1)
         );
     }
 }
