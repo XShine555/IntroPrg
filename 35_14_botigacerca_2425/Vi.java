@@ -70,7 +70,7 @@ public class Vi {
     }
 
     public void setLloc(String value) {
-        value = Vi.normalitzaString(value);
+        value = UtilString.normalitzaString(value);
         if (value == null)
             return;
 
@@ -113,45 +113,6 @@ public class Vi {
             (collita != null && !collita.isBlank()) &&
             estoc != INVALID_VALUE && 
             preu != INVALID_VALUE;
-    }
-
-    public static String normalitzaString(String nom) {
-        if (nom == null || nom.isBlank()) {
-            return null;
-        }
-
-        String result = "";
-
-        for (int i = 0; i < nom.length(); i++) {
-            char thisChar = nom.charAt(i);
-
-            if (i > 0) {
-                char lastChar = nom.charAt(i - 1);
-
-                if (Character.isLetterOrDigit(thisChar)
-                        || (Character.isWhitespace(thisChar) && !Character.isWhitespace(lastChar))
-                        || isSpecialChar(thisChar)) {
-                    result += thisChar;
-                }
-            }
-            else {
-                if (Character.isLetterOrDigit(thisChar)) {
-                    result += thisChar;
-                }
-            }
-        }
-
-        return result.trim();
-    }
-
-    public static boolean isSpecialChar(char character) {
-        for (char specialChar : SPECIAL_CHARS) {
-            if (character == specialChar) {
-                return true;
-            }
-        }
-
-        return false;
     }
 
     public String[] aArrayString() {
