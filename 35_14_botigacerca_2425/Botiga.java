@@ -58,7 +58,7 @@ public class Botiga {
         if (ref == null || ref.isEmpty()) {
             throw new IllegalArgumentException("La referència no pot ser null");
         }
-        ref = Vi.normalitzaString(ref);
+        ref = UtilString.normalitzaString(ref);
 
         for (int i = 0; i < vins.size(); i++) {
             Vi vi = vins.get(i);
@@ -80,7 +80,7 @@ public class Botiga {
         if (ref == null || ref.isEmpty()) {
             throw new IllegalArgumentException("La referència no pot ser null");
         }
-        ref = Vi.normalitzaString(ref);
+        ref = UtilString.normalitzaString(ref);
 
         for (int i = 0; i < vins.size(); i++) {
             Vi vi = vins.get(i);
@@ -104,30 +104,30 @@ public class Botiga {
                 continue;
 
             if (plantilla.getRef() != null && !plantilla.getRef().isEmpty() &&
-                    !Vi.normalitzaString(plantilla.getRef()).equalsIgnoreCase(vi.getRef()))
+                    !UtilString.normalitzaString(plantilla.getRef()).equalsIgnoreCase(vi.getRef()))
                 continue;
 
             if (plantilla.getNom() != null && !plantilla.getNom().isEmpty() &&
-                    !Vi.normalitzaString(plantilla.getNom()).equalsIgnoreCase(vi.getNom()))
+                    !UtilString.normalitzaString(plantilla.getNom()).equalsIgnoreCase(vi.getNom()))
                 continue;
 
             if (plantilla.getPreu() >= 0 && plantilla.getPreu() < vi.getPreu())
                 continue;
 
             if (plantilla.getLloc() != null && !plantilla.getLloc().isEmpty() &&
-                    !Vi.normalitzaString(plantilla.getLloc()).equalsIgnoreCase(vi.getLloc()))
+                    !UtilString.normalitzaString(plantilla.getLloc()).equalsIgnoreCase(vi.getLloc()))
                 continue;
 
             if (plantilla.getOrigen() != null && !plantilla.getOrigen().isEmpty() &&
-                    !Vi.normalitzaString(plantilla.getOrigen()).equalsIgnoreCase(vi.getOrigen()))
+                    !UtilString.normalitzaString(plantilla.getOrigen()).equalsIgnoreCase(vi.getOrigen()))
                 continue;
 
             if (plantilla.getTipus() != null && !plantilla.getTipus().isEmpty() &&
-                    !Vi.normalitzaString(plantilla.getTipus()).equalsIgnoreCase(vi.getTipus()))
+                    !UtilString.normalitzaString(plantilla.getTipus()).equalsIgnoreCase(vi.getTipus()))
                 continue;
 
             if (plantilla.getCollita() != null && !plantilla.getCollita().isEmpty() &&
-                    !Vi.normalitzaString(plantilla.getCollita()).equalsIgnoreCase(vi.getCollita()))
+                    !UtilString.normalitzaString(plantilla.getCollita()).equalsIgnoreCase(vi.getCollita()))
                 continue;
 
             if (plantilla.getEstoc() >= 0 && plantilla.getEstoc() > vi.getEstoc())

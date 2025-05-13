@@ -31,7 +31,7 @@ public class Vi {
             String tipus,
             String collita
         ) {
-        this.nom = normalitzaString(nom);
+        this.nom = UtilString.normalitzaString(nom);
 
         if (estoc < 0)
             estoc = INVALID_VALUE;
@@ -42,11 +42,11 @@ public class Vi {
         this.preu = preu;
         this.estoc = estoc;
 
-        this.ref = Vi.normalitzaString(ref);
-        this.lloc = Vi.normalitzaString(lloc);
-        this.origen = Vi.normalitzaString(origen);
-        this.tipus = Vi.normalitzaString(tipus);
-        this.collita = Vi.normalitzaString(collita);
+        this.ref = UtilString.normalitzaString(ref);
+        this.lloc = UtilString.normalitzaString(lloc);
+        this.origen = UtilString.normalitzaString(origen);
+        this.tipus = UtilString.normalitzaString(tipus);
+        this.collita = UtilString.normalitzaString(collita);
     }
 
     public String getRef() {
