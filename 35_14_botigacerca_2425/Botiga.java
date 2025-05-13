@@ -24,7 +24,7 @@ public class Botiga {
         return false;
     }
 
-    public Vi afegeix(Vi vi) throws IllegalArgumentException, BotigaException {
+    public Vi afegeix(Vi vi) throws IllegalArgumentException {
         if (vi == null) {
             throw new IllegalArgumentException("El vi no pot ser null");
         }
