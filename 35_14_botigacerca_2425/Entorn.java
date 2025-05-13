@@ -237,7 +237,7 @@ public class Entorn {
             Vi plantilla = new Vi(null, null, -1, -1, null, null, null, null);
             List<Vi> results = botiga.cerca(plantilla);
             if (results != null && !results.isEmpty()) {
-                System.out.println("Trobats:");
+                System.out.println("Trobat:");
                 for (Vi vi : results) {
                     System.out.println(vi.toString());
                 }
@@ -266,7 +266,7 @@ public class Entorn {
                     null, null);
             List<Vi> results = botiga.cerca(plantilla);
             if (results != null && !results.isEmpty()) {
-                System.out.println("Trobats:");
+                System.out.println("Trobat:");
                 for (Vi vi : results) {
                     System.out.println(vi.toString());
                 }
@@ -295,7 +295,7 @@ public class Entorn {
                     null, null);
             List<Vi> results = botiga.cerca(plantilla);
             if (results != null && !results.isEmpty()) {
-                System.out.println("Trobats:");
+                System.out.println("Trobat:");
                 for (Vi vi : results) {
                     System.out.println(vi.toString());
                 }
@@ -312,7 +312,7 @@ public class Entorn {
                     null, null, null);
             List<Vi> results = botiga.cerca(plantilla);
             if (results != null && !results.isEmpty()) {
-                System.out.println("Trobats:");
+                System.out.println("Trobat:");
                 for (Vi vi : results) {
                     System.out.println(vi.toString());
                 }
@@ -330,7 +330,7 @@ public class Entorn {
                     null, null);
             List<Vi> results = botiga.cerca(plantilla);
             if (results != null && !results.isEmpty()) {
-                System.out.println("Trobats:");
+                System.out.println("Trobat:");
                 for (Vi vi : results) {
                     System.out.println(vi.toString());
                 }
@@ -348,7 +348,7 @@ public class Entorn {
                     origen.isBlank() ? null : origen, null, null);
             List<Vi> results = botiga.cerca(plantilla);
             if (results != null && !results.isEmpty()) {
-                System.out.println("Trobats:");
+                System.out.println("Trobat:");
                 for (Vi vi : results) {
                     System.out.println(vi.toString());
                 }
@@ -366,7 +366,7 @@ public class Entorn {
                     origen.isBlank() ? null : origen, tipus.isBlank() ? null : tipus, null);
             List<Vi> results = botiga.cerca(plantilla);
             if (results != null && !results.isEmpty()) {
-                System.out.println("Trobats:");
+                System.out.println("Trobat:");
                 for (Vi vi : results) {
                     System.out.println(vi.toString());
                 }
@@ -388,7 +388,7 @@ public class Entorn {
 
         List<Vi> results = botiga.cerca(plantilla);
         if (results != null && !results.isEmpty()) {
-            System.out.println("Trobats:");
+            System.out.println("Trobat:");
             for (Vi vi : results) {
                 System.out.println(vi.toString());
             }
