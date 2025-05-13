@@ -2,7 +2,7 @@ public class Adressa implements Comparable {
     private String identificador;
     private String domini;
 
-    public Adressa(String identificador, String domini) {
+    private Adressa(String identificador, String domini) {
         this.identificador = identificador;
         this.domini = domini;
     }
