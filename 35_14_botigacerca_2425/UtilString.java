@@ -39,7 +39,8 @@ public class UtilString {
 
         text = normalitzaString(text).toLowerCase();
         plantilla = normalitzaString(plantilla).toLowerCase();
-        return text.startsWith(plantilla);
+
+        return text.startsWith(plantilla) || plantilla.startsWith(text);
     }
 
     public static boolean isSpecialChar(char character) {
@@ -50,5 +51,14 @@ public class UtilString {
         }
 
         return false;
+    }
+
+    public static void main(String[] args) {
+        var n1 = "no";
+        var n2 = "nom";
+
+        System.out.println(
+            n1.startsWith(n2) || n2.startsWith(n1)
+        );
     }
 }
