@@ -1,3 +1,10 @@
+/*
+ * Clase UtilString.java
+ * Classe UtilString, utilitats per a la manipulació de strings.
+ * 13_05_2025
+ * Iker Rivera Garcia
+ */
+
 public class UtilString {
     private static final char[] SPECIAL_CHARS = { '\'' };
 
