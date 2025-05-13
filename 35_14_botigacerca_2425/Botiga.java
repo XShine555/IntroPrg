@@ -13,23 +13,15 @@ public class Botiga {
     private List<Vi> vins;
 
     public Botiga() {
-        this(DEFAULT_MAX_VINS);
+        this.vins = new ArrayList<>();
     }
 
     public List<Vi> getVins() {
         return vins;
     }
 
-    public Botiga(int maxVins) throws IllegalArgumentException {
-        if (maxVins <= 0) {
-            throw new IllegalArgumentException("No es pot crear una botiga amb menys d'un vi");
-        }
-
-        this.vins = new ArrayList<>(maxVins);
-    }
-
     public boolean isPlena() {
-        return vins.size() >= DEFAULT_MAX_VINS;
+        return false;
     }
 
     public Vi afegeix(Vi vi) throws IllegalArgumentException, BotigaException {
