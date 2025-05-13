@@ -5,12 +5,19 @@
  * Classe Botiga, representa una botiga de vins
  */
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Botiga {
     private static final int DEFAULT_MAX_VINS = 10;
-    private Vi[] vins;
+    private List<Vi> vins;
 
     public Botiga() {
         this(DEFAULT_MAX_VINS);
+    }
+
+    public List<Vi> getVins() {
+        return vins;
     }
 
     public Botiga(int maxVins) throws IllegalArgumentException {
@@ -18,36 +25,11 @@ public class Botiga {
             throw new IllegalArgumentException("No es pot crear una botiga amb menys d'un vi");
         }
 
-        this.vins = new Vi[maxVins];
+        this.vins = new ArrayList<>(maxVins);
     }
 
     public boolean isPlena() {
-        for (Vi vi : vins) {
-            if (vi == null) {
-                return false;
-            }
-        }
-        return true;
-    }
-    
-    private int currentIndex = 0;
-
-    public void iniciaRecorregut() {
-        currentIndex = 0;
-    }
-
-    public Vi getSeguent() {
-        if (currentIndex >= vins.length) {
-            return null;
-        }
-
-        Vi vi = vins[currentIndex++];
-        while (vi == null && currentIndex < vins.length - 1) {
-            vi = vins[currentIndex];
-            currentIndex++;
-        }
-
-        return vi;
+        return vins.size() >= DEFAULT_MAX_VINS;
     }
 
     public Vi afegeix(Vi vi) throws IllegalArgumentException, BotigaException {
@@ -62,9 +44,9 @@ public class Botiga {
         if (cerca(vi.getRef()) != null)
             throw new IllegalArgumentException("Referència de vi repetida");
 
-        for (int i = 0; i < vins.length; i++) {
-            if (vins[i] == null) {
-                vins[i] = vi;
+        for (int i = 0; i < vins.size(); i++) {
+            if (vins.get(i) == null) {
+                vins.set(i, vi);
                 return vi;
             }
         }
@@ -78,15 +60,15 @@ public class Botiga {
         }
         ref = Vi.normalitzaString(ref);
 
-        for (int i = 0; i < vins.length; i++) {
-            Vi vi = vins[i];
+        for (int i = 0; i < vins.size(); i++) {
+            Vi vi = vins.get(i);
 
             if (vi != null && vi.getRef().equalsIgnoreCase(ref)) {
                 if (vi.getEstoc() > 0) {
                     throw new IllegalArgumentException("El vi a eliminar no pot tenir estoc");
                 }
 
-                vins[i] = null;
+                vins.remove(i);
                 return vi;
             }
         }
@@ -100,8 +82,8 @@ public class Botiga {
         }
         ref = Vi.normalitzaString(ref);
 
-        for (int i = 0; i < vins.length; i++) {
-            Vi vi = vins[i];
+        for (int i = 0; i < vins.size(); i++) {
+            Vi vi = vins.get(i);
 
             if (vi != null && vi.getRef().equalsIgnoreCase(ref)) {
                 return vi;
@@ -111,10 +93,11 @@ public class Botiga {
         return null;
     }
 
-    public Vi cerca(Vi plantilla) throws IllegalArgumentException {
+    public List<Vi> cerca(Vi plantilla) throws IllegalArgumentException {
         if (plantilla == null) {
             throw new IllegalArgumentException("La plantilla no pot ser null");
         }
+        List<Vi> resultats = new ArrayList<>();
 
         for (Vi vi : vins) {
             if (vi == null)
@@ -150,8 +133,8 @@ public class Botiga {
             if (plantilla.getEstoc() >= 0 && plantilla.getEstoc() > vi.getEstoc())
                 continue;
 
-            return vi;
+            resultats.add(vi);
         }
-        return null;
+        return resultats;
     }
 }

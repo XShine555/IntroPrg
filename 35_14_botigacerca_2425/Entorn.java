@@ -30,7 +30,7 @@ public class Entorn {
 
             switch (comanda) {
                 case "ajuda" -> ajuda();
-                case "cerca" -> cerca();
+                //case "cerca" -> cerca();
                 case "afegeix" -> System.out.println("Comanda temporalment no disponible");
                 case "modifica" -> System.out.println("Comanda temporalment no disponible");
                 case "elimina" -> System.out.println("Comanda temporalment no disponible");
@@ -77,13 +77,9 @@ public class Entorn {
     }
 
     private static void guardaCsv() throws IOException {
-        botiga.iniciaRecorregut();
         String text = "";
 
-        while (true) {
-            Vi vi = botiga.getSeguent();
-            if (vi == null)
-                break;
+        for (Vi vi : botiga.getVins()) {
             text += String.join(";", vi.aArrayString()) + "\n";
         }
 
@@ -227,7 +223,7 @@ public class Entorn {
      * }
      */
 
-    private static void cerca() {
+    /*private static void cerca() {
         System.out.print("ref> ");
         String ref = Entrada.readLine();
 
@@ -379,7 +375,7 @@ public class Entorn {
         } else {
             System.out.println("No trobat");
         }
-    }
+    }*/
 
     private static void ajuda() {
         System.out.print("""
