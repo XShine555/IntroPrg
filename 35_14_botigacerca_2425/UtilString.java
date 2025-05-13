@@ -29,20 +29,17 @@ public class UtilString {
         return result.trim();
     }
 
-    public static boolean esPlantillaDeText(String plantilla, String text) {
+    public static boolean esPlantillaDeText(String text, String plantilla) {
         if (plantilla == null || text == null) {
             return false;
         }
-        if (text.length() > plantilla.length())
-        {
+        if (plantilla.length() > text.length()) {
             return false;
         }
 
-        plantilla = normalitzaString(plantilla).toLowerCase();
         text = normalitzaString(text).toLowerCase();
-        return plantilla.startsWith(text)
-            || text.startsWith(plantilla)
-        ;
+        plantilla = normalitzaString(plantilla).toLowerCase();
+        return text.startsWith(plantilla);
     }
 
     public static boolean isSpecialChar(char character) {
