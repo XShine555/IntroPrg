@@ -38,7 +38,7 @@ public class Botiga {
 
         vins.add(vi);
 
-        return null;
+        return vi;
     }
 
     public Vi elimina(String ref) throws IllegalArgumentException {

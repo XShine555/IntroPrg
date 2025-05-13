@@ -62,14 +62,7 @@ public class Entorn {
                 continue;
 
             Vi result = botiga.afegeix(vi);
-
-            if (result != null)
-                loadedRefs++;
-
-            if (botiga.isPlena()) {
-                System.out.println("ERROR: massa entrades a botiga.csv");
-                break;
-            }
+            loadedRefs++;
         }
 
         System.out.println(String.format("Referències llegides: %s", loadedRefs));
