@@ -40,7 +40,9 @@ public class UtilString {
 
         plantilla = normalitzaString(plantilla).toLowerCase();
         text = normalitzaString(text).toLowerCase();
-        return plantilla.startsWith(text);
+        return plantilla.startsWith(text)
+            || text.startsWith(plantilla)
+        ;
     }
 
     public static boolean isSpecialChar(char character) {
