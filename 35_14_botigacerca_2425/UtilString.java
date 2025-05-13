@@ -29,16 +29,15 @@ public class UtilString {
         return result.trim();
     }
 
-    public static boolean esPlantillaDeText(Vi plantilla, String text) {
+    public static boolean esPlantillaDeText(String plantilla, String text) {
         if (plantilla == null || text == null) {
             return false;
         }
 
-        String plantillaNormalitzada = normalitzaString(plantilla.getNom());
-        String textNormalitzat = normalitzaString(text);
+        char firstChar = plantilla.charAt(0);
+        char firstTextChar = text.charAt(0);
 
-        return plantillaNormalitzada != null && textNormalitzat != null
-                && textNormalitzat.toLowerCase().contains(plantillaNormalitzada.toLowerCase());
+        return firstChar == firstTextChar;
     }
 
     public static boolean isSpecialChar(char character) {
