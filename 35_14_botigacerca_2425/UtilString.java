@@ -30,7 +30,7 @@ public class UtilString {
     }
 
     public static boolean esPlantillaDeText(String text, String plantilla) {
-        if (plantilla == null || text == null) {
+        if (plantilla == null || text == null || text.isBlank() || plantilla.isBlank()) {
             return false;
         }
 
