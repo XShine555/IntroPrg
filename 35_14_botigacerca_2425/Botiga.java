@@ -95,26 +95,26 @@ public class Botiga {
                 continue;
 
             if (plantilla.getNom() != null && !plantilla.getNom().isEmpty() &&
-                    !UtilString.esPlantillaDeText(vi.getNom(), plantilla.getNom()))
+                    !UtilString.esPlantillaDeText(plantilla.getNom(), vi.getNom()))
                 continue;
 
             if (plantilla.getPreu() >= 0 && plantilla.getPreu() < vi.getPreu())
                 continue;
 
             if (plantilla.getLloc() != null && !plantilla.getLloc().isEmpty() &&
-                    !UtilString.esPlantillaDeText(vi.getLloc(), plantilla.getLloc()))
+                    !UtilString.esPlantillaDeText(plantilla.getLloc(), vi.getLloc()))
                 continue;
 
             if (plantilla.getOrigen() != null && !plantilla.getOrigen().isEmpty() &&
-                    !UtilString.esPlantillaDeText(vi.getOrigen(), plantilla.getOrigen()))
+                    !UtilString.esPlantillaDeText(plantilla.getOrigen(), vi.getOrigen()))
                 continue;
 
             if (plantilla.getTipus() != null && !plantilla.getTipus().isEmpty() &&
-                    !UtilString.esPlantillaDeText(vi.getTipus(), plantilla.getTipus()))
+                    !UtilString.esPlantillaDeText(plantilla.getTipus(), vi.getTipus()))
                 continue;
 
             if (plantilla.getCollita() != null && !plantilla.getCollita().isEmpty() &&
-                    !UtilString.esPlantillaDeText(vi.getCollita(), plantilla.getCollita()))
+                    !UtilString.esPlantillaDeText(plantilla.getCollita(), vi.getCollita()))
                 continue;
 
             if (plantilla.getEstoc() >= 0 && plantilla.getEstoc() > vi.getEstoc())
