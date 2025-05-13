@@ -24,17 +24,17 @@ public class Botiga {
         return false;
     }
 
-    public Vi afegeix(Vi vi) {
+    public Vi afegeix(Vi vi) throws IllegalArgumentException, BotigaException {
         if (vi == null) {
-            return null;
+            throw new IllegalArgumentException("El vi no pot ser null");
         }
 
         if (!vi.esValid()) {
-            return null;
+            throw new IllegalArgumentException("El vi ha de ser vàlid");
         }
 
         if (cerca(vi.getRef()) != null)
-            return null;
+            throw new IllegalArgumentException("Referència de vi repetida");
 
         vins.add(vi);
 
