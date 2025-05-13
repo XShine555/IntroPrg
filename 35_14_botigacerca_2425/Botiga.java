@@ -94,32 +94,27 @@ public class Botiga {
                     !UtilString.normalitzaString(plantilla.getRef()).equalsIgnoreCase(vi.getRef()))
                 continue;
 
-            var nom = plantilla.getNom();
-            var nomPlantilla = vi.getNom();
-
-            if (
-                nomPlantilla != null && nom != null &&
-                !UtilString.esPlantillaDeText(nomPlantilla, nom)
-            )
+            if (plantilla.getNom() != null && !plantilla.getNom().isEmpty() &&
+                    !UtilString.esPlantillaDeText(vi.getNom(), plantilla.getNom()))
                 continue;
 
             if (plantilla.getPreu() >= 0 && plantilla.getPreu() < vi.getPreu())
                 continue;
 
             if (plantilla.getLloc() != null && !plantilla.getLloc().isEmpty() &&
-                    !UtilString.normalitzaString(plantilla.getLloc()).equalsIgnoreCase(vi.getLloc()))
+                    !UtilString.esPlantillaDeText(vi.getLloc(), plantilla.getLloc()))
                 continue;
 
             if (plantilla.getOrigen() != null && !plantilla.getOrigen().isEmpty() &&
-                    !UtilString.normalitzaString(plantilla.getOrigen()).equalsIgnoreCase(vi.getOrigen()))
+                    !UtilString.esPlantillaDeText(vi.getOrigen(), plantilla.getOrigen()))
                 continue;
 
             if (plantilla.getTipus() != null && !plantilla.getTipus().isEmpty() &&
-                    !UtilString.normalitzaString(plantilla.getTipus()).equalsIgnoreCase(vi.getTipus()))
+                    !UtilString.esPlantillaDeText(vi.getTipus(), plantilla.getTipus()))
                 continue;
 
             if (plantilla.getCollita() != null && !plantilla.getCollita().isEmpty() &&
-                    !UtilString.normalitzaString(plantilla.getCollita()).equalsIgnoreCase(vi.getCollita()))
+                    !UtilString.esPlantillaDeText(vi.getCollita(), plantilla.getCollita()))
                 continue;
 
             if (plantilla.getEstoc() >= 0 && plantilla.getEstoc() > vi.getEstoc())
