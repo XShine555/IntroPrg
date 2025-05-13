@@ -33,9 +33,6 @@ public class UtilString {
         if (plantilla == null || text == null) {
             return false;
         }
-        if (plantilla.length() > text.length()) {
-            return false;
-        }
 
         text = normalitzaString(text).toLowerCase();
         plantilla = normalitzaString(plantilla).toLowerCase();
