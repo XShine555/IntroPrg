@@ -24,26 +24,21 @@ public class Botiga {
         return false;
     }
 
-    public Vi afegeix(Vi vi) throws IllegalArgumentException, BotigaException {
+    public Vi afegeix(Vi vi) {
         if (vi == null) {
-            throw new IllegalArgumentException("El vi no pot ser null");
+            return null;
         }
 
         if (!vi.esValid()) {
-            throw new IllegalArgumentException("El vi ha de ser vàlid");
+            return null;
         }
 
         if (cerca(vi.getRef()) != null)
-            throw new IllegalArgumentException("Referència de vi repetida");
+            return null;
 
-        for (int i = 0; i < vins.size(); i++) {
-            if (vins.get(i) == null) {
-                vins.set(i, vi);
-                return vi;
-            }
-        }
+        vins.add(vi);
 
-        throw new BotigaException("Botiga plena");
+        return null;
     }
 
     public Vi elimina(String ref) throws IllegalArgumentException {
