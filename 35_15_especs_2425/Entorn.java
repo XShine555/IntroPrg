@@ -411,7 +411,7 @@ public class Entorn {
             collita
         );
 
-        List<Vi> results = botiga.cerca(plantilla);
+        List<Vi> results = botiga.cerca(plantilla, preu, estoc);
         if (results != null && !results.isEmpty()) {
             System.out.println("Trobat:");
             for (Vi vi : results) {
