@@ -1,3 +1,10 @@
+/*
+ * Iker Rivera Garcia
+ * Clase Especificacio.java
+ * Classe Especificacio, representa una especificació d'un vi
+ * 13/05/2025
+ */
+
 public class Especificacio {
     private String nom;
     private String origen;
