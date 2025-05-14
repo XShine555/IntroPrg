@@ -137,7 +137,7 @@ public class Botiga {
                     !UtilString.esPlantillaDeText(espec.getNom(), vi.getNom()))
                 continue;
 
-            if (preuMax >= 0 && preuMax < vi.getPreu())
+            if (preuMax >= 0 && vi.getPreu() > preuMax)
                 continue;
 
             if (espec.getOrigen() != null && !espec.getOrigen().isEmpty() &&
