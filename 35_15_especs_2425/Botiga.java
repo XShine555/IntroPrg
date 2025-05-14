@@ -29,7 +29,16 @@ public class Botiga {
             throw new IllegalArgumentException("El vi no pot ser null");
         }
 
-        if (!vi.esValid()) {
+        if (!Vi.esValid(
+                vi.getRef(),
+                vi.getNom(),
+                vi.getPreu(),
+                vi.getEstoc(),
+                vi.getLloc(),
+                vi.getOrigen(),
+                vi.getTipus(),
+                vi.getCollita()
+        )) {
             throw new IllegalArgumentException("El vi ha de ser vàlid");
         }
 

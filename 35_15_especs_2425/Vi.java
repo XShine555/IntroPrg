@@ -103,7 +103,16 @@ public class Vi {
         this.estoc = estoc;
     }
 
-    public boolean esValid() {
+    public static boolean esValid(
+        String ref,
+        String nom,
+        int preu,
+        int estoc,
+        String lloc,
+        String origen,
+        String tipus,
+        String collita
+    ) {
         return 
             (nom != null && !nom.isBlank()) &&
             (ref != null && !ref.isBlank()) &&
