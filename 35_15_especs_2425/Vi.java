@@ -147,8 +147,8 @@ public class Vi {
             (origen != null && !origen.isBlank()) &&
             (tipus != null && !tipus.isBlank()) &&
             (collita != null && !collita.isBlank()) &&
-            estoc > 0 && 
-            preu > 0;
+            preu != INVALID_VALUE &&
+            estoc != INVALID_VALUE;
     }
 
     public String[] aArrayString() {
