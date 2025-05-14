@@ -114,9 +114,11 @@ public class Vi {
         return preu;
     }
 
-    public void setPreu(int preu) {
+    public void setPreu(int preu) throws IllegalArgumentException {
         if (preu < 0)
-            return;
+        {
+            throw new IllegalArgumentException("El preu no pot ser negatiu");
+        }
 
         this.preu = preu;
     }
@@ -125,9 +127,11 @@ public class Vi {
         return estoc;
     }
 
-    public void setEstoc(int estoc) {
+    public void setEstoc(int estoc) throws IllegalArgumentException {
         if (estoc < 0)
-            return;
+        {
+            throw new IllegalArgumentException("L'estoc no pot ser negatiu");
+        }
 
         this.estoc = estoc;
     }
