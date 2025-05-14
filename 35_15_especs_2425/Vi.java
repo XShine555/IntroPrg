@@ -69,7 +69,11 @@ public class Vi {
         return collita;
     }
 
-    public void setLloc(String value) {
+    public void setLloc(String value) throws IllegalArgumentException {
+        if (value == null || value.isBlank()) {
+            throw new IllegalArgumentException("El lloc no pot ser null o buit");
+        }
+
         value = UtilString.normalitzaString(value);
         if (value == null)
             return;
