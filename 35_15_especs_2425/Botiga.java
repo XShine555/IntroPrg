@@ -122,9 +122,9 @@ public class Botiga {
         return resultats;
     }
 
-        public List<Vi> cerca(Especificacio espec, int preuMax, int estocMin) throws IllegalArgumentException {
+    public List<Vi> cerca(Especificacio espec, int preuMax, int estocMin) throws IllegalArgumentException {
         if (espec == null) {
-            throw new IllegalArgumentException("La especificacio no pot ser null");
+            throw new IllegalArgumentException("espec no pot ser null");
         }
 
         List<Vi> resultats = new ArrayList<>();
