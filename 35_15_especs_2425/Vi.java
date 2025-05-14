@@ -49,12 +49,6 @@ public class Vi {
         if (collita == null || collita.isBlank()) {
             throw new IllegalArgumentException("La collita no pot ser null o buida");
         }
-        if (estoc < 0) {
-            throw new IllegalArgumentException("L'estoc no pot ser negatiu");
-        }
-        if (preu < 0) {
-            throw new IllegalArgumentException("El preu no pot ser negatiu");
-        }
 
         this.nom = UtilString.normalitzaString(nom);
 
