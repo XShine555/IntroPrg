@@ -30,7 +30,32 @@ public class Vi {
             String origen,
             String tipus,
             String collita
-        ) {
+        ) throws IllegalArgumentException {
+        if (ref == null || ref.isBlank()) {
+            throw new IllegalArgumentException("La referència no pot ser null o buida");
+        }
+        if (nom == null || nom.isBlank()) {
+            throw new IllegalArgumentException("El nom no pot ser null o buit");
+        }
+        if (lloc == null || lloc.isBlank()) {
+            throw new IllegalArgumentException("El lloc no pot ser null o buit");
+        }
+        if (origen == null || origen.isBlank()) {
+            throw new IllegalArgumentException("L'origen no pot ser null o buit");
+        }
+        if (tipus == null || tipus.isBlank()) {
+            throw new IllegalArgumentException("El tipus no pot ser null o buit");
+        }
+        if (collita == null || collita.isBlank()) {
+            throw new IllegalArgumentException("La collita no pot ser null o buida");
+        }
+        if (estoc < 0) {
+            throw new IllegalArgumentException("L'estoc no pot ser negatiu");
+        }
+        if (preu < 0) {
+            throw new IllegalArgumentException("El preu no pot ser negatiu");
+        }
+
         this.nom = UtilString.normalitzaString(nom);
 
         if (estoc < 0)
