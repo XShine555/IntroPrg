@@ -49,6 +49,12 @@ public class Vi {
         if (collita == null || collita.isBlank()) {
             throw new IllegalArgumentException("La collita no pot ser null o buida");
         }
+        if (estoc < 0) {
+            throw new IllegalArgumentException("L'estoc no pot ser negatiu");
+        }
+        if (preu < 0) {
+            throw new IllegalArgumentException("El preu no pot ser negatiu");
+        }
 
         this.nom = UtilString.normalitzaString(nom);
 
@@ -141,14 +147,18 @@ public class Vi {
         String collita
     ) {
         return 
-            (nom != null && !nom.isBlank()) &&
-            (ref != null && !ref.isBlank()) &&
-            (lloc != null && !lloc.isBlank()) &&
-            (origen != null && !origen.isBlank()) &&
-            (tipus != null && !tipus.isBlank()) &&
-            (collita != null && !collita.isBlank()) &&
-            preu != INVALID_VALUE &&
-            estoc != INVALID_VALUE;
+            esValidString(ref) &&
+            esValidString(nom) &&
+            esValidString(lloc) &&
+            esValidString(origen) &&
+            esValidString(tipus) &&
+            esValidString(collita) &&
+            preu >= 0 &&
+            estoc >= 0;
+    }
+
+    private static boolean esValidString(String str) {
+        return str != null && !str.isBlank();
     }
 
     public String[] aArrayString() {
