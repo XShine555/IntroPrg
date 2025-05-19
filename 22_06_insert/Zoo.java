@@ -46,7 +46,7 @@ public class Zoo {
         }
     }
 
-    public int afegeixAnimal(Animal animal) throws SQLException {
+    public void afegeixAnimal(Animal animal) throws SQLException {
         String sql = "INSERT INTO ANIMALS (nom, categoria) VALUES ('" +
                 animal.getNom() + "', " +
                 animal.getCategoria().getId() + ")";
@@ -54,7 +54,7 @@ public class Zoo {
         try {
             st = conn.createStatement();
             st.executeUpdate(sql);
-            return st.getGeneratedKeys().getInt(1);
+            animal.setId(st.getGeneratedKeys().getInt(1));
         } finally {
             if (st != null) {
                 st.close();
