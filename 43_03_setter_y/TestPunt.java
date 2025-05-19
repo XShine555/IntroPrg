@@ -21,9 +21,23 @@ public class TestPunt {
     }
 
     @org.junit.jupiter.api.Test
-    public void constructorDefecteXYPositiu() {
+    public void xPositiu() {
         Punt punt = new Punt();
         assert(punt.getX() >= 0);
+    }
+
+    @org.junit.jupiter.api.Test
+    public void yPositiu() {
+        Punt punt = new Punt();
         assert(punt.getY() >= 0);
+    }
+
+    @org.junit.jupiter.api.Test
+    public void comprobaSetters() {
+        Punt punt = new Punt();
+        punt.setX(5);
+        punt.setY(10);
+        assert(punt.getX() == 5);
+        assert(punt.getY() == 10);
     }
 }
