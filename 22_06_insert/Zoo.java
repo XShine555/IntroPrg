@@ -47,7 +47,7 @@ public class Zoo {
     }
 
     public void afegeixAnimal(Animal animal) throws SQLException {
-        if (animal.idIndefinit())
+        if (!animal.idIndefinit())
             return;
 
         if (animal.getCategoria().idIndefinit()) {
