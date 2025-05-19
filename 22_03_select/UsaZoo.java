@@ -27,8 +27,8 @@ public class UsaZoo {
         System.out.println("Inserim les categories: ");
         System.out.println("\t" + ocell);
         System.out.println("\t" + mamifer);
-        zoo.afegeixCategoria(mamifer);
         zoo.afegeixCategoria(ocell);
+        zoo.afegeixCategoria(mamifer);
 
         System.out.println();
         System.out.println("Mostrem les categories disponibles ara");
