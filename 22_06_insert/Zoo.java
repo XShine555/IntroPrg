@@ -50,9 +50,23 @@ public class Zoo {
         if (!animal.idIndefinit())
             return;
 
+        int categoriaId;
+        if (animal.getCategoria().idIndefinit()) {
+            Categoria categoria = obteCategoriaPerNom(animal.getCategoria().getNom());
+            if (categoria == null) {
+                afegeixCategoria(animal.getCategoria());
+                categoriaId = animal.getCategoria().getId();
+            } else {
+                categoriaId = categoria.getId();
+            }
+        }
+        else {
+            categoriaId = animal.getCategoria().getId();
+        }
+
         String sql = "INSERT INTO ANIMALS (nom, categoria) VALUES ('" +
                 animal.getNom() + "', " +
-                animal.getCategoria().getId() + ")";
+                categoriaId + ")";
         Statement st = null;
         try {
             st = conn.createStatement();
