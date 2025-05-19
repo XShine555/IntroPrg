@@ -1,3 +1,10 @@
+/*
+ * Iker Rivera Garcia
+ * 19/05/2024
+ * Test de la classe Punt, usa JUnit per fer les proves
+ * de les funcionalitats de la classe Punt.
+ */
+
 public class TestPunt {
     @org.junit.jupiter.api.Test
     public void constructorDefecteYZero() {
