@@ -51,7 +51,6 @@ public class Zoo {
             return;
 
         if (animal.getCategoria().idIndefinit()) {
-            Categoria categoria = obteCategoriaPerNom(animal.getCategoria().getNom());
             afegeixCategoria(animal.getCategoria());
         }
 
