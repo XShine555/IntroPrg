@@ -21,14 +21,14 @@ public class UsaZoo {
         System.out.println("Mostrem les categories disponibles inicialment");
         ZooUtils.mostraCategories(zoo.recuperaCategories());
 
-        Categoria ocell = new Categoria("ocell");
         Categoria mamifer = new Categoria("mamífer");
+        Categoria ocell = new Categoria("ocell");
         System.out.println();
         System.out.println("Inserim les categories: ");
         System.out.println("\t" + ocell);
         System.out.println("\t" + mamifer);
-        zoo.afegeixCategoria(ocell);
         zoo.afegeixCategoria(mamifer);
+        zoo.afegeixCategoria(ocell);
 
         System.out.println();
         System.out.println("Mostrem les categories disponibles ara");
