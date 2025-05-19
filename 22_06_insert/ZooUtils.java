@@ -19,17 +19,4 @@ public class ZooUtils {
             System.out.println("\t" + array[i]);
         }
     }
-
-    public static void mostraAnimals(Collection<Animal> animals) {
-        if (animals.isEmpty()) {
-            System.out.println("Cap animal");
-            return;
-        }
-        Animal[] array = animals.toArray(new Animal[0]);
-
-        System.out.format("Nombre d'animals: %s%n", array.length);
-        for (int i = array.length - 1; i >= 0; i--) {
-            System.out.println("\t" + array[i]);
-        }
-    }
 }
