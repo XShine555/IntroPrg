@@ -41,6 +41,6 @@ public class Segment {
     @Override
     public String toString() {
         //Segment(Punt(2, 3), Punt(4, 5)) s1.longitud: 2,83
-        return String.format("Segment(%s, %s) s1.longitud: %.2f", p1.toString(), p2.toString(), longitud());
+        return String.format("Segment(%s, %s)", p1.toString(), p2.toString());
     }
 }
