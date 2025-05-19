@@ -40,4 +40,20 @@ public class TestPunt {
         assert(punt.getX() == 5);
         assert(punt.getY() == 10);
     }
+
+    @org.junit.jupiter.api.Test
+    public void constructorCustomParams() {
+        Punt punt = new Punt(5, 10);
+        assert(punt.getX() == 5);
+        assert(punt.getY() == 10);
+    }
+
+    @org.junit.jupiter.api.Test
+    public void sumaDosPunts() {
+        Punt punt1 = new Punt(5, 10);
+        Punt punt2 = new Punt(3, 7);
+        punt1.suma(punt2);
+        assert(punt1.getX() == 8);
+        assert(punt1.getY() == 17);
+    }
 }

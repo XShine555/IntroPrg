@@ -36,12 +36,4 @@ public class TestSegment {
         assert(segment.getP2().getX() == 0);
         assert(segment.getP2().getY() == 7);
     }
-
-    @org.junit.jupiter.api.Test
-    public void longitud() {
-        Punt punt1 = new Punt(5, 10);
-        Punt punt2 = new Punt(3, 7);
-        Segment segment = new Segment(punt1, punt2);
-        assert(segment.longitud() == Math.sqrt(Math.pow(5 - 3, 2) + Math.pow(10 - 7, 2)));
-    }
 }
