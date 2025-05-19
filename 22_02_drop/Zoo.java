@@ -23,7 +23,7 @@ public class Zoo {
     }
 
     public void creaTaulaCategories() throws SQLException {
-        String sql = "CREATE TABLE  CATEGORIES (" +
+        String sql = "CREATE TABLE IF NOT EXISTS CATEGORIES (" +
                 "       id        INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "       nom       VARCHAR(40))";
         Statement st = null;
