@@ -8,6 +8,11 @@ public class Segment {
     private Punt p1;
     private Punt p2;
 
+    public Segment() {
+        this.p1 = new Punt();
+        this.p2 = new Punt();
+    }
+
     public Segment(Punt p1, Punt p2) {
         this.p1 = p1;
         this.p2 = p2;
