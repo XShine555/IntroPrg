@@ -28,8 +28,8 @@ public class ZooUtils {
         Animal[] array = animals.toArray(new Animal[0]);
 
         System.out.format("Nombre d'animals: %s%n", array.length);
-        for (int i = array.length - 1; i >= 0; i--) {
-            System.out.println("\t" + array[i]);
+        for (Animal animal : array) {
+            System.out.println("\t" + animal);
         }
     }
 }
