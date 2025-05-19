@@ -1,5 +1,5 @@
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 public class ZooUtils {
@@ -8,8 +8,21 @@ public class ZooUtils {
             System.out.println("Cap categoria");
             return;
         }
-        List<Categoria> categoriesList = List.copyOf(categories);
-        Collections.sort(categoriesList, (c1, c2) -> c1.getId() - c2.getId());
+        List<Categoria> categoriesList = new ArrayList<>(categories);
+        categoriesList.sort((c1, c2) -> {
+            boolean c1Indef = c1.idIndefinit();
+            boolean c2Indef = c2.idIndefinit();
+
+            if (c1Indef && c2Indef) 
+                return 0;
+            if (c1Indef) 
+                return 1;
+            if (c2Indef) 
+                return -1;
+
+            return Integer.compare(c1.getId(), c2.getId());
+        });
+
         
         System.out.format("Nombre de categories: %s%n", categoriesList.size());
         for (Categoria categoria : categoriesList) {
