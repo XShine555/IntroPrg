@@ -13,6 +13,9 @@ public class Animal {
         if (nom == null || nom.isBlank()) {
             throw new IllegalArgumentException("El nom no pot ser null ni blanc");
         }
+        if (categoria == null) {
+            throw new IllegalArgumentException("La categoria no pot ser null");
+        }
         this.nom = nom;
         this.categoria = categoria;
     }
