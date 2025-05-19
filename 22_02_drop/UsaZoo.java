@@ -1,3 +1,9 @@
+/*
+ * Iker Rivera Garcia
+ * 19/05/2025
+ * Classe UsaZoo, que conté el mètode main per executar les operacions de la classe Zoo.
+ */
+
 import java.sql.SQLException;
 
 public class UsaZoo {

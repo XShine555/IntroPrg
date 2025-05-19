@@ -1,3 +1,9 @@
+/*
+ * Iker Rivera Garcia
+ * 19/05/2025
+ * Clase Categoria, que representa una categoria d'animals en un zoològic.
+ */
+
 public class Categoria {
     private int id = -1; // -1 indica no assignat/indefinit
     private String nom;

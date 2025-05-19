@@ -1,3 +1,9 @@
+/*
+ * Iker Rivera Garcia
+ * 19/05/2025
+ * Clase Zoo, que representa un zoològic i gestiona la connexió amb una base de dades SQLite.
+ */
+
 import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.SQLException;
