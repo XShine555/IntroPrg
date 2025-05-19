@@ -27,6 +27,13 @@ public class Categoria {
         return id < 0;
     }
 
+    public void setId(int id) {
+        if (id < 0) {
+            throw new IllegalArgumentException("L'identificador ha de ser positiu");
+        }
+        this.id = id;
+    }
+
     public int getId() {
         if (idIndefinit()) {
             throw new UnsupportedOperationException("L'identificador no està disponible");

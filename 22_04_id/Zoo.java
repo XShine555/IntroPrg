@@ -64,6 +64,7 @@ public class Zoo {
         try {
             st = conn.createStatement();
             st.executeUpdate(sql);
+            categoria.setId(st.getGeneratedKeys().getInt(1));
         } finally {
             if (st != null) {
                 st.close();
