@@ -15,37 +15,32 @@ public class UsaZoo {
         System.out.println("connectat");
 
         System.out.println();
-        System.out.println("Creació en l'ordre correcte");
-        System.out.println("===========================");
-        System.out.println(
-                "L'ordre correcte és primer eliminar ANIMALS, després CATEGORIES, a continuació crear CATEGORIES i finalment ANIMALS");
-        zoo.eliminaTaulaAnimals();
-        zoo.eliminaTaulaCategories();
-        zoo.creaTaulaCategories();
+        System.out.println("Creem les taules");
         zoo.creaTaulaAnimals();
         System.out.println("Taules resultants: " + zoo.getNomTaules());
 
         System.out.println();
-        System.out.println("Eliminació de ANIMALS");
-        System.out.println("=====================");
-        System.out.println("Eliminar la taula ANIMALS no ha d'afectar a CATEGORIES");
-        zoo.eliminaTaulaAnimals();
-        System.out.println("Taules resultants: " + zoo.getNomTaules());
+        System.out.println("Introduïm categories amb una de repetida");
+        Categoria peix = new Categoria("peix");
+        zoo.afegeixCategoria(new Categoria("ocell"));
+        zoo.afegeixCategoria(peix);
+        zoo.afegeixCategoria(new Categoria("ocell"));
+        ZooUtils.mostraCategories(zoo.recuperaCategories());
 
         System.out.println();
-        System.out.println("Creació de ANIMALS");
-        System.out.println("==================");
-        System.out.println("Quan no hi ha la taula CATEGORIES, es crearà per poder crear ANIMALS");
-        zoo.eliminaTaulaCategories();
-        zoo.creaTaulaAnimals();
-        System.out.println("Taules resultants: " + zoo.getNomTaules());
+        System.out.println("Afegim guppy amb " + peix);
+        zoo.afegeixAnimal(new Animal("guppy", peix));
+        ZooUtils.mostraCategories(zoo.recuperaCategories());
 
         System.out.println();
-        System.out.println("Eliminació de CATEGORIES");
-        System.out.println("========================");
-        System.out.println("Quan hi són les taules CATEGORIES i ANIMALS, en eliminar CATEGORIES s'eliminarà ANIMALS");
-        zoo.eliminaTaulaCategories();
-        System.out.println("Taules resultants: " + zoo.getNomTaules());
+        System.out.println("Afegim pardal dins d'una categoria coneguda");
+        zoo.afegeixAnimal(new Animal("pardal", new Categoria("ocell")));
+        ZooUtils.mostraCategories(zoo.recuperaCategories());
+
+        System.out.println();
+        System.out.println("Afegim un animal d'una nova categoria");
+        zoo.afegeixAnimal(new Animal("gat", new Categoria("mamífer")));
+        ZooUtils.mostraCategories(zoo.recuperaCategories());
 
         System.out.println();
         System.out.print("Finalment tanquem la connexió amb la base de dades: ");
