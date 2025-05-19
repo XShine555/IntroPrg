@@ -10,7 +10,7 @@ public class ZooUtils {
 
         System.out.format("Nombre de categories: %s%n", array.length);
         for (int i = array.length - 1; i >= 0; i--) {
-            System.out.format("Categoria %d: %s%n", i, array[i]);
+            System.out.format("Categoria(id:%d: %s%n)", i, array[i]);
         }
     }
 }
