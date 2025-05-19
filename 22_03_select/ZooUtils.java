@@ -1,3 +1,9 @@
+/*
+ * Iker Rivera Garcia
+ * 19/05/2025
+ * Classe Categoria, que representa una categoria d'animal en un zoològic.
+ */
+
 import java.util.Collection;
 
 public class ZooUtils {
