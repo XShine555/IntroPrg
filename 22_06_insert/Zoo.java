@@ -79,6 +79,69 @@ public class Zoo {
         }
     }
 
+    public Categoria obteCategoriaPerId(int id) throws SQLException {
+        String sql = "SELECT * FROM CATEGORIES WHERE id = " + id;
+        Statement st = null;
+        try {
+            st = conn.createStatement();
+            var rs = st.executeQuery(sql);
+            if (rs.next()) {
+                String nom = rs.getString("nom");
+                return new Categoria(id, nom);
+            } else {
+                return null;
+            }
+        } finally {
+            if (st != null) {
+                st.close();
+            }
+        }
+    }
+
+    public Animal obteAnimalPerNom(String nom) throws SQLException {
+        String sql = "SELECT * FROM ANIMALS WHERE nom = '" + nom + "'";
+        Statement st = null;
+        try {
+            st = conn.createStatement();
+            var rs = st.executeQuery(sql);
+            if (rs.next()) {
+                int id = rs.getInt("id");
+                String nomAnimal = rs.getString("nom");
+                int categoriaId = rs.getInt("categoria");
+                Categoria categoria = obteCategoriaPerId(categoriaId);
+                return new Animal(id, nomAnimal, categoria);
+            } else {
+                return null;
+            }
+        } finally {
+            if (st != null) {
+                st.close();
+            }
+        }
+    }
+
+    public List<Animal> recuperaAnimals() throws SQLException {
+        String sql = "SELECT * FROM ANIMALS ORDER BY nom DESC, id DESC";
+        Statement st = null;
+        try {
+            st = conn.createStatement();
+            var rs = st.executeQuery(sql);
+            List<Animal> animals = new ArrayList<>();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String nom = rs.getString("nom");
+                int categoriaId = rs.getInt("categoria");
+                Categoria categoria = obteCategoriaPerId(categoriaId);
+                animals.add(new Animal(id, nom, categoria));
+            }
+            return animals;
+        } finally {
+            if (st != null) {
+                st.close();
+            }
+        }
+    }
+
     public void eliminaTaulaCategories() throws SQLException {
         String sql = "DROP TABLE IF EXISTS CATEGORIES";
         Statement st = null;
