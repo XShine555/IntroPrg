@@ -9,7 +9,7 @@ public class Animal {
     private String nom;
     private Categoria categoria;
 
-    public Animal(String nom, Categoria categoria) {
+    public Animal(String nom, Categoria categoria) throws IllegalArgumentException {
         if (nom == null || nom.isBlank()) {
             throw new IllegalArgumentException("El nom no pot ser null ni blanc");
         }
@@ -17,7 +17,7 @@ public class Animal {
         this.categoria = categoria;
     }
 
-    public Animal(int id, String nom, Categoria categoria) {
+    public Animal(int id, String nom, Categoria categoria) throws IllegalArgumentException {
         this(nom, categoria);
         if (id < 0) {
             throw new IllegalArgumentException("L'identificador ha de ser positiu");
