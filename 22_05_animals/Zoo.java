@@ -57,6 +57,7 @@ public class Zoo {
                 st.close();
             }
         }
+        eliminaTaulaAnimals();
     }
 
     public void creaTaulaAnimals() throws SQLException {
