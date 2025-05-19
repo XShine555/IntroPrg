@@ -23,8 +23,8 @@ public class UsaZoo {
         System.out.println("Introduïm categories amb una de repetida");
         Categoria peix = new Categoria("peix");
         zoo.afegeixCategoria(new Categoria("ocell"));
-        zoo.afegeixCategoria(peix);
         zoo.afegeixCategoria(new Categoria("ocell"));
+        zoo.afegeixCategoria(peix);
         ZooUtils.mostraCategories(zoo.recuperaCategories());
 
         System.out.println();
