@@ -47,6 +47,9 @@ public class Zoo {
     }
 
     public void afegeixAnimal(Animal animal) throws SQLException {
+        if (animal.idIndefinit())
+            return;
+
         String sql = "INSERT INTO ANIMALS (nom, categoria) VALUES ('" +
                 animal.getNom() + "', " +
                 animal.getCategoria().getId() + ")";
