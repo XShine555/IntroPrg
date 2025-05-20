@@ -5,25 +5,19 @@
  * de les funcionalitats de la classe Punt.
  */
 
-public class TestPunt {
-    @org.junit.jupiter.api.Test
-    public void constructorDefecteYZero() {
-        Punt punt = new Punt();
-        assert(punt.getX() == 0);
-        assert(punt.getY() == 0);
-    }
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
-    @org.junit.jupiter.api.Test
+public class TestPunt {
+    @Test
     public void constructorDefecteXZero() {
         Punt punt = new Punt();
-        assert(punt.getX() == 0);
-        assert(punt.getY() == 0);
+        Assertions.assertEquals(0, punt.getX());
     }
 
-    @org.junit.jupiter.api.Test
-    public void constructorDefecteXYPositiu() {
+    @Test
+    public void constructorDefecteYZero() {
         Punt punt = new Punt();
-        assert(punt.getX() >= 0);
-        assert(punt.getY() >= 0);
+        Assertions.assertEquals(0, punt.getY());
     }
 }
