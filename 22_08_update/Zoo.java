@@ -53,14 +53,20 @@ public class Zoo {
     public void canviaCategoria(Animal animal, Categoria categoria) throws SQLException {
         if (animal.idIndefinit()) {
             afegeixAnimal(animal);
+            animal.getCategoria().setId(categoria.getId());
             return;
         }
         if (categoria.idIndefinit()) {
             categoria = returnValidCategoria(categoria);
-            animal.getCategoria().setId(categoria.getId());
-            animal.getCategoria().setNom(categoria.getNom());
         }
 
+        /*
+         * ANIMALS (" +
+         * "       id        INTEGER PRIMARY KEY AUTOINCREMENT," +
+         * "       nom       VARCHAR(40)," +
+         * "       categoria INTEGER," +
+         * " FOREIGN KEY (categoria) REFERENCES CATEGORIES(id))
+         */
         String sql = "UPDATE ANIMALS SET categoria = " + categoria.getId() +
                 " WHERE id = " + animal.getId();
         Statement st = null;
@@ -69,9 +75,9 @@ public class Zoo {
             int rowsAffected = st.executeUpdate(sql);
             if (rowsAffected == 0) {
                 afegeixAnimal(animal);
+                animal.getCategoria().setId(categoria.getId());
             } else {
                 animal.getCategoria().setId(categoria.getId());
-                animal.getCategoria().setNom(categoria.getNom());
             }
         } finally {
             if (st != null) {
