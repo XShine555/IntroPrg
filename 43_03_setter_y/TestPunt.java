@@ -5,39 +5,42 @@
  * de les funcionalitats de la classe Punt.
  */
 
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
+
 public class TestPunt {
-    @org.junit.jupiter.api.Test
+    @Test
     public void constructorDefecteYZero() {
         Punt punt = new Punt();
-        assert(punt.getX() == 0);
-        assert(punt.getY() == 0);
+        Assertions.assertEquals(0, punt.getY());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void constructorDefecteXZero() {
         Punt punt = new Punt();
-        assert(punt.getX() == 0);
-        assert(punt.getY() == 0);
+        Assertions.assertEquals(0, punt.getY());
     }
 
-    @org.junit.jupiter.api.Test
-    public void xPositiu() {
+    @Test
+    public void settersX() {
         Punt punt = new Punt();
-        assert(punt.getX() >= 0);
+        punt.setX(5);
+        Assertions.assertEquals(5, punt.getX());
     }
 
-    @org.junit.jupiter.api.Test
-    public void yPositiu() {
+    @Test
+    public void settersY() {
         Punt punt = new Punt();
-        assert(punt.getY() >= 0);
+        punt.setY(5);
+        Assertions.assertEquals(5, punt.getY());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void comprobaSetters() {
         Punt punt = new Punt();
         punt.setX(5);
         punt.setY(10);
-        assert(punt.getX() == 5);
-        assert(punt.getY() == 10);
+        Assertions.assertEquals(5, punt.getX());
+        Assertions.assertEquals(10, punt.getY());
     }
 }
