@@ -72,7 +72,7 @@ public class Zoo {
     }
 
     public List<Animal> recuperaAnimals() throws SQLException {
-        String sql = "SELECT * FROM ANIMALS ORDER BY nom DESC, id DESC";
+        String sql = "SELECT * FROM ANIMALS ORDER BY nom ASC, id ASC";
         Statement st = null;
         try {
             st = conn.createStatement();
