@@ -52,15 +52,21 @@ public class Zoo {
 
     public void canviaCategoria(Animal animal, Categoria categoria) throws SQLException {
         if (categoria.idIndefinit()) {
-            afegeixCategoria(categoria);
+            categoria = returnValidCategoria(categoria);
         }
+
         String sql = "UPDATE ANIMALS SET categoria = " + categoria.getId() +
                 " WHERE id = " + animal.getId();
         Statement st = null;
         try {
             st = conn.createStatement();
             st.executeUpdate(sql);
-            animal.setCategoria(categoria);
+
+            if (st.getUpdateCount() == 0) {
+                afegeixAnimal(animal);
+            } else {
+                animal.getCategoria().setId(categoria.getId());
+            }
         } finally {
             if (st != null) {
                 st.close();
