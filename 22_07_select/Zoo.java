@@ -125,6 +125,7 @@ public class Zoo {
         else {
             categoriaId = animal.getCategoria().getId();
         }
+        animal.getCategoria().setId(categoriaId);
 
         String sql = "INSERT INTO ANIMALS (nom, categoria) VALUES ('" +
                 animal.getNom() + "', " +
