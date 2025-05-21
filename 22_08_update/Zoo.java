@@ -56,8 +56,6 @@ public class Zoo {
         }
         if (animal.idIndefinit()) {
             afegeixAnimal(animal);
-            animal.getCategoria().setId(categoria.getId());
-            return;
         }
 
         /*
@@ -75,10 +73,8 @@ public class Zoo {
             int rowsAffected = st.executeUpdate(sql);
             if (rowsAffected == 0) {
                 afegeixAnimal(animal);
-                animal.getCategoria().setId(categoria.getId());
-            } else {
-                animal.getCategoria().setId(categoria.getId());
             }
+            animal.getCategoria().setId(categoria.getId());
         } finally {
             if (st != null) {
                 st.close();
