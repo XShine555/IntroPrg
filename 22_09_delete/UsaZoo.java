@@ -18,6 +18,7 @@ public class UsaZoo {
 
         System.out.println();
         System.out.println("Creem les taules");
+        zoo.creaTaulaCategories();
         zoo.creaTaulaAnimals();
         System.out.println("Taules resultants: " + zoo.getNomTaules());
 
