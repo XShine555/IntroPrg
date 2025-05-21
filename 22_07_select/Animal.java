@@ -56,8 +56,8 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal(id:" +
-                (id < 0 ? "indefinit" : id) +
-                ", " + nom + ", " + categoria + ")";
+        String id = idIndefinit() ? "indefinit" : String.valueOf(this.id);
+
+        return String.format("Animal(id: %s, nom: %s, categoria: %s)", id, nom, categoria);
     }
 }

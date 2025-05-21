@@ -120,7 +120,6 @@ public class Zoo {
                 categoriaId = animal.getCategoria().getId();
             } else {
                 categoriaId = categoria.getId();
-                //System.out.println("Categoria id found: " + categoriaId + " for " + animal.getNom());
             }
         }
         else {

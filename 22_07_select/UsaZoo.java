@@ -34,7 +34,7 @@ public class UsaZoo {
             new Animal("gat", new Categoria("mamífer")),
             new Animal("guppy", new Categoria("peix")),
             new Animal("gat", new Categoria("mamífer"))
-            );
+        );
 
         System.out.println();
         System.out.println("Considerem els següents animals");
