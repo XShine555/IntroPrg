@@ -202,7 +202,7 @@ public class Zoo {
     }
 
     public List<Categoria> recuperaCategories() throws SQLException {
-        String sql = "SELECT * FROM CATEGORIES ORDER BY nom DESC, id DESC";
+        String sql = "SELECT * FROM CATEGORIES ORDER BY nom ASC, id ASC";
         Statement st = null;
         try {
             st = conn.createStatement();
