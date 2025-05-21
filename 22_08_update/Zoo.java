@@ -58,6 +58,7 @@ public class Zoo {
         if (categoria.idIndefinit()) {
             categoria = returnValidCategoria(categoria);
             animal.getCategoria().setId(categoria.getId());
+            animal.getCategoria().setNom(categoria.getNom());
         }
 
         String sql = "UPDATE ANIMALS SET categoria = " + categoria.getId() +
@@ -70,6 +71,7 @@ public class Zoo {
                 afegeixAnimal(animal);
             } else {
                 animal.getCategoria().setId(categoria.getId());
+                animal.getCategoria().setNom(categoria.getNom());
             }
         } finally {
             if (st != null) {

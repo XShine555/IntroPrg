@@ -41,6 +41,14 @@ public class Categoria {
         return id;
     }
 
+    
+    public void setNom(String nom) {
+        if (nom == null || nom.isBlank()) {
+            throw new IllegalArgumentException("El nom no pot ser null ni blanc");
+        }
+        this.nom = nom;
+    }
+
     public String getNom() {
         return nom;
     }
