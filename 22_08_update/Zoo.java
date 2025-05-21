@@ -52,7 +52,7 @@ public class Zoo {
 
     public void canviaCategoria(Animal animal, Categoria categoria) throws SQLException {
         if (animal.idIndefinit()) {
-            //afegeixAnimal(animal);
+            afegeixAnimal(animal);
             return;
         }
         if (categoria.idIndefinit()) {
