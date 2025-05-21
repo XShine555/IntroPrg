@@ -50,6 +50,24 @@ public class Zoo {
         }
     }
 
+    public void canviaCategoria(Animal animal, Categoria categoria) throws SQLException {
+        if (categoria.idIndefinit()) {
+            afegeixCategoria(categoria);
+        }
+        String sql = "UPDATE ANIMALS SET categoria = " + categoria.getId() +
+                " WHERE id = " + animal.getId();
+        Statement st = null;
+        try {
+            st = conn.createStatement();
+            st.executeUpdate(sql);
+            animal.setCategoria(categoria);
+        } finally {
+            if (st != null) {
+                st.close();
+            }
+        }
+    }
+
     public Animal obteAnimalPerNom(String nom) throws SQLException {
         String sql = "SELECT * FROM ANIMALS WHERE nom = '" + nom + "'";
         Statement st = null;
@@ -108,23 +126,25 @@ public class Zoo {
         }
     }
 
+    public Categoria returnValidCategoria(Categoria categoria) throws SQLException {
+        if (categoria.idIndefinit()) {
+            Categoria c = obteCategoriaPerNom(categoria.getNom());
+            if (c == null) {
+                afegeixCategoria(categoria);
+                return categoria;
+            } else {
+                return c;
+            }
+        } else {
+            return obteCategoriaPerId(categoria.getId());
+        }
+    }
+
     public void afegeixAnimal(Animal animal) throws SQLException {
         if (!animal.idIndefinit())
             return;
 
-        int categoriaId;
-        if (animal.getCategoria().idIndefinit()) {
-            Categoria categoria = obteCategoriaPerNom(animal.getCategoria().getNom());
-            if (categoria == null) {
-                afegeixCategoria(animal.getCategoria());
-                categoriaId = animal.getCategoria().getId();
-            } else {
-                categoriaId = categoria.getId();
-            }
-        }
-        else {
-            categoriaId = animal.getCategoria().getId();
-        }
+        int categoriaId = returnValidCategoria(animal.getCategoria()).getId();
         animal.getCategoria().setId(categoriaId);
 
         String sql = "INSERT INTO ANIMALS (nom, categoria) VALUES ('" +

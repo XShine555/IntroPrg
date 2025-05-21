@@ -108,23 +108,25 @@ public class Zoo {
         }
     }
 
+    public Categoria returnValidCategoria(Categoria categoria) throws SQLException {
+        if (categoria.idIndefinit()) {
+            Categoria c = obteCategoriaPerNom(categoria.getNom());
+            if (c == null) {
+                afegeixCategoria(categoria);
+                return categoria;
+            } else {
+                return c;
+            }
+        } else {
+            return obteCategoriaPerId(categoria.getId());
+        }
+    }
+
     public void afegeixAnimal(Animal animal) throws SQLException {
         if (!animal.idIndefinit())
             return;
-
-        int categoriaId;
-        if (animal.getCategoria().idIndefinit()) {
-            Categoria categoria = obteCategoriaPerNom(animal.getCategoria().getNom());
-            if (categoria == null) {
-                afegeixCategoria(animal.getCategoria());
-                categoriaId = animal.getCategoria().getId();
-            } else {
-                categoriaId = categoria.getId();
-            }
-        }
-        else {
-            categoriaId = animal.getCategoria().getId();
-        }
+            
+        int categoriaId = returnValidCategoria(animal.getCategoria()).getId();
         animal.getCategoria().setId(categoriaId);
 
         String sql = "INSERT INTO ANIMALS (nom, categoria) VALUES ('" +
