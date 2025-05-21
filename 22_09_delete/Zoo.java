@@ -22,6 +22,8 @@ public class Zoo {
         if (conn != null)
             return; // ja connectat
         conn = DriverManager.getConnection(CADENA_DE_CONNEXIO);
+        Statement stmt = conn.createStatement();
+        stmt.execute("PRAGMA foreign_keys = ON;");
     }
 
     public void desconnecta() throws SQLException {
