@@ -67,7 +67,7 @@ public class Zoo {
             int rowsAffected = st.executeUpdate(sql);
 
             if (rowsAffected == 0) {
-                afegeixAnimal(animal);
+                //afegeixAnimal(animal);
             } else {
                 animal.getCategoria().setId(categoria.getId());
             }
