@@ -47,8 +47,8 @@ public class Categoria {
 
     @Override
     public String toString() {
-        return "Categoria(id:" +
-                (id < 0 ? "indefinit" : id) +
-                ", " + nom + ")";
+        String stringId = idIndefinit() ? "indefinit" : String.valueOf(getId());
+
+        return String.format("Categoria(id:%s, %s)", stringId, getNom());
     }
 }
