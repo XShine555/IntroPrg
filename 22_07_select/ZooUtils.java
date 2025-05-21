@@ -5,6 +5,7 @@
  */
 
 import java.util.Collection;
+import java.util.List;
 
 public class ZooUtils {
     public static void mostraCategories(Collection<Categoria> categories) {
@@ -20,7 +21,7 @@ public class ZooUtils {
         }
     }
 
-    public static void mostraAnimals(Collection<Animal> animals) {
+    public static void mostraAnimals(List<Animal> animals) {
         if (animals.isEmpty()) {
             System.out.println("Cap animal");
             return;
