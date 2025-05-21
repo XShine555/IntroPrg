@@ -51,13 +51,13 @@ public class Zoo {
     }
 
     public void canviaCategoria(Animal animal, Categoria categoria) throws SQLException {
+        if (categoria.idIndefinit()) {
+            categoria = returnValidCategoria(categoria);
+        }
         if (animal.idIndefinit()) {
             afegeixAnimal(animal);
             animal.getCategoria().setId(categoria.getId());
             return;
-        }
-        if (categoria.idIndefinit()) {
-            categoria = returnValidCategoria(categoria);
         }
 
         /*
