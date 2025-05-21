@@ -20,4 +20,11 @@ public class TestPunt {
         Punt punt = new Punt();
         Assertions.assertEquals(0, punt.getY());
     }
+
+    @Test
+    public void constructorDDefecteXYZero() {
+        Punt punt = new Punt();
+        Assertions.assertEquals(0, punt.getX());
+        Assertions.assertEquals(0, punt.getY());
+    }
 }
