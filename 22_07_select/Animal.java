@@ -58,6 +58,6 @@ public class Animal {
     public String toString() {
         String stringId = idIndefinit() ? "indefinit" : String.valueOf(id);
 
-        return String.format("Animal(id: %s, nom: %s)", stringId, nom, categoria);
+        return String.format("Animal(id:%s, nom: %s)", stringId, nom, categoria);
     }
 }
