@@ -65,7 +65,6 @@ public class Zoo {
         try {
             st = conn.createStatement();
             int rowsAffected = st.executeUpdate(sql);
-            System.out.println(rowsAffected);
             if (rowsAffected == 0) {
                 afegeixAnimal(animal);
             } else {
