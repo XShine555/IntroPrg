@@ -228,10 +228,8 @@ public class Zoo {
                 "       id        INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "       nom       VARCHAR(40)," +
                 "       categoria INTEGER," +
-                "       CONSTRAINT fk_categoria" + 
-                "       FOREIGN KEY (categoria)" + 
-                "       REFERENCES CATEGORIES(id))" +
-                "       ON DELETE CASCADE";
+                "       FOREIGN KEY (categoria) REFERENCES CATEGORIES(id)" +
+                "       ON DELETE CASCADE)";
         Statement st = null;
         try {
             st = conn.createStatement();
